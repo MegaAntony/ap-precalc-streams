@@ -1,0 +1,206 @@
+# 📐 AP Precalculus Course Archive & Video Stream Portal
+
+This repository and backup archive serves as the centralized offline and cloud hub for **AP Precalculus (Grade 9)**. It contains lesson video archives, direct MP4 streaming links, textbooks, worksheets, and answer keys hosted publicly with **zero authentication required**.
+
+---
+
+## 🌐 Live Web Portal & Repository Details
+* **GitHub Username**: `MegaAntony`
+* **Live Website**: [https://megaantony.github.io/ap-precalc-streams/](https://megaantony.github.io/ap-precalc-streams/)
+* **GitHub Repository**: [https://github.com/MegaAntony/ap-precalc-streams](https://github.com/MegaAntony/ap-precalc-streams)
+* **Local Git Repo Path**: `/Users/anish/ap-precalc-streams/`
+* **Backup & Materials Path**: `/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/`
+
+---
+
+## 🔑 GitHub SSH Key & Authentication Details
+
+### 1. Your Public SSH Key
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKNMmVVgIknZ8nylByh9K74/GnaXwQ4gJ/Go24lWEy82 MegaAntony@github
+```
+
+### 2. Key File Paths on macOS
+* **Public Key**: `~/.ssh/id_ed25519.pub` (`/Users/anish/.ssh/id_ed25519.pub`)
+* **Private Key**: `~/.ssh/id_ed25519` (`/Users/anish/.ssh/id_ed25519`)
+* **SSH Config**: `~/.ssh/config` (`/Users/anish/.ssh/config`)
+
+### 3. Quick Terminal Commands
+* **Copy Public Key to Clipboard**:
+  ```bash
+  pbcopy < ~/.ssh/id_ed25519.pub
+  ```
+* **Test GitHub SSH Authentication**:
+  ```bash
+  ssh -T git@github.com
+  ```
+* **Re-add Key to macOS Keychain (if ever needed)**:
+  ```bash
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+  ```
+
+---
+
+## 📁 Directory Structure & Existing Units
+
+```text
+/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/
+├── README.md                                  # Complete course and setup documentation
+├── AP_Precalculus_Direct_MP4_Streams.html     # Mirror copy of the stream portal HTML
+├── Unit 1 - Unit Circle/
+│   ├── Unit_01_all-Lesson_Videos.md           # 12 videos with direct MP4 streams & curl commands
+│   ├── Unit_01_Complete_Reference.md          # Textbook links, Worksheets A-D, solution keys
+│   └── unit_01_metadata.json                  # Raw parsed Canvas data
+├── Unit 2 - Graphing Trigonometric Functions/
+│   ├── Unit_02_all-Lesson_Videos.md           # 12 direct MP4 streams for current & older AP lessons
+│   ├── Unit_02_Complete_Reference.md          # Worksheets A-F, class graphs, test reviews
+│   └── unit_02_metadata.json                  # Raw parsed Canvas data
+└── Unit 3 - Inverse & Composite Trigonometric Functions/
+    ├── Unit_03_all-Lesson_Videos.md           # Direct MP4 streams for 13 lessons & examples
+    ├── Unit_03_Complete_Reference.md          # Worksheets A-E, oblique triangles, test reviews
+    ├── unit_03_metadata.json                  # Raw parsed Canvas data for 15 pages
+    └── worksheets/                            # 16 offline local PDF worksheets & answer keys
+        ├── APPCU03_WkstA_EvalInvFxns.pdf
+        ├── APPCU03_WkstA_EvalInvFxns_Answers.pdf
+        ├── APPCU03_WkstB_EvalArcTrig.pdf
+        ├── APPCU03_WkstB_EvalArcTrig_Answers.pdf
+        ├── APPCU03_WkstB_AppsObliqueTriangles.pdf
+        ├── APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf
+        ├── APPCU03_WkstC_Applications.pdf
+        ├── APPCU03_WkstC_Applications_Answers.pdf
+        ├── APPCU03_WkstC_ExtraPracSSA.pdf
+        ├── APPCU03_WkstC_ExtraPracSSA_Answers.pdf
+        ├── APPCU03_WkstD_MorePracticeApps.pdf
+        ├── APPCU03_WkstD_MorePracticeApps_Answers.pdf
+        ├── APPCU03_WkstD_UnitReview.pdf
+        ├── APPCU03_WkstD_UnitReview_Answers.pdf
+        ├── APPCU03_WkstE_Review.pdf
+        └── APPCU03_WkstE_Review_Answers.pdf
+```
+
+Hosted public repository layout:
+```text
+/Users/anish/ap-precalc-streams/
+├── index.html                                 # Live portal with nav bar, videos & worksheets
+└── docs/                                      # Public PDF hosting (bypasses Microsoft / SharePoint login)
+    ├── APPCU03_WkstA_EvalInvFxns.pdf
+    ├── APPCU03_WkstA_EvalInvFxns_Answers.pdf
+    └── ... (16 Unit 3 PDFs)
+```
+
+---
+
+## 📖 Units Breakdown
+
+### 1. [Unit 1 - Unit Circle](./Unit%201%20-%20Unit%20Circle/)
+* **Video Archive**: [`Unit_01_all-Lesson_Videos.md`](./Unit%201%20-%20Unit%20Circle/Unit_01_all-Lesson_Videos.md) (12 Videos)
+  * Standard Position, Radians, Coterminal Angles, Comp/Supp, Unit Circle, Angular/Linear Speed, Quadrant System, Reference Angles.
+* **Reference & Worksheets**: [`Unit_01_Complete_Reference.md`](./Unit%201%20-%20Unit%20Circle/Unit_01_Complete_Reference.md)
+  * Official Trig Identities Sheet, Blank Unit Circle, Worksheets A–D & Full Answer Keys.
+
+### 2. [Unit 2 - Graphing Trigonometric Functions](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/)
+* **Video Archive**: [`Unit_02_all-Lesson_Videos.md`](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_all-Lesson_Videos.md) (12 Videos)
+  * Khan Academy Sine graphs, ScreenPal lessons 1–5 & 10, Older versions (2.1a–d), Secant/Cosecant, Writing Equations from Graphs.
+* **Reference & Worksheets**: [`Unit_02_Complete_Reference.md`](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_Complete_Reference.md)
+  * Worksheets A–F (Sine/Cosine, Secant/Cosecant, Tangent/Cotangent, Writing Equations from Graphs, Test Review, Harmonic Applications).
+
+### 3. [Unit 3 - Inverse & Composite Trigonometric Functions](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/)
+* **Video Archive**: [`Unit_03_all-Lesson_Videos.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.md) (13 Videos)
+  * **Lesson 1**: Review of Inverses & Rational Zero Test (Synthetic Division)
+  * **Lesson 2**: Evaluating Arctrig Functions
+  * **Lesson 3**: Composite Trig Expressions, Numeric Only & Variable Ratios
+  * **Lesson 4**: Pythagorean & Reciprocal Identities, SAS & Heron's Triangle Area
+  * **Lesson 5**: Oblique Triangles and Law of Cosines
+  * **Lesson 6**: Law of Sines
+  * **Lesson 7**: Ambiguous Case of Law of Sines & Worked 2-Triangle Example (Mr. O'Connor notation)
+* **Reference & Worksheets**: [`Unit_03_Complete_Reference.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_Complete_Reference.md)
+  * All 16 PDFs saved locally in [`worksheets/`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/) and hosted live in `docs/` on GitHub Pages.
+
+---
+
+## 🛠️ Case Study: How We Built Unit 3
+
+### Step 1: Read Canvas Home Page with 5-Second Delay
+Using the student's Canvas session cookie, we scraped `https://forsyth.instructure.com/courses/276219` with `sleep 5` to avoid bot detection. We parsed the weekly plan (`AP Precalc 26/27 Week 7`) and discovered Unit 3 was newly active.
+
+### Step 2: Query Canvas Modules API
+We pulled all module items via:
+```bash
+curl -s "https://forsyth.instructure.com/api/v1/courses/276219/modules?include[]=items&per_page=50" \
+  -H "accept: application/json" -b "canvas_session=..."
+```
+This returned the exact page slugs for all 7 video lessons and 8 worksheet pages.
+
+### Step 3: Scrape All Unit Pages with 5s Delay
+A Python script fetched each of the 15 pages with `time.sleep(5)` intervals and exported `unit_03_metadata.json`.
+
+### Step 4: Extract Direct Video Streams
+1. **MyVRSpot Videos**: Queried the embed player iframe (`https://live.myvrspot.com/iframe?v=<ID>`) which returned direct, high-res signed CloudFront MP4 stream URLs (`https://d1drabmetuo3qr.cloudfront.net/...mp4`).
+2. **ScreenPal Videos**: Extracted the direct player stream endpoint (`https://go.screenpal.com/player/stream/<ID>`), usable with `curl -L -H "Referer: ..."` or downloadable in-browser.
+3. **Canvas Studio**: Extracted the Studio embed player URLs.
+
+### Step 5: Solve the SharePoint Login Issue (Auth-Free PDFs)
+* School SharePoint links (`forsythk12org.sharepoint.com/:b:/s/SFHMath/...`) require Microsoft 365 student login and return HTTP 403 / redirect to Azure AD if accessed by external visitors.
+* **The Solution**: We downloaded all 16 PDFs using the authenticated browser session into a temporary staging folder (`/Volumes/Backup/scrap/x/`).
+* Copied all 16 PDFs to:
+  1. `/Volumes/Backup/.../Unit 3 - .../worksheets/` (permanent local backup)
+  2. `/Users/anish/ap-precalc-streams/docs/` (public web hosting)
+* Configured `index.html` buttons to link to `./docs/<filename>.pdf`. GitHub Pages serves these as native static files with **zero authentication required**!
+
+### Step 6: Web Portal UI Enhancements
+* Added a **sticky navigation bar** at the top with jump links (`#unit-1`, `#unit-2`, `#unit-3`, and `#unit-3-review`).
+* Added `html { scroll-behavior: smooth; }` and a JavaScript pulse animation that highlights the selected unit card with a glowing blue border.
+* Committed and pushed to `main` branch:
+  ```bash
+  cd ~/ap-precalc-streams
+  git add index.html docs/
+  git commit -m "Publish Unit 3 worksheets and answer key PDFs (auth-free public access)"
+  git push
+  ```
+
+---
+
+## 🚀 How to Add Next Chapters (Unit 4, 5, etc.)
+
+Whenever a new unit is posted on Canvas, follow this standard 4-step workflow:
+
+### Step 1: Copy Canvas Cookie & Run Initial Extraction
+1. Open Chrome DevTools (`Cmd + Option + I`) on Canvas -> Network tab.
+2. Refresh `https://forsyth.instructure.com/courses/276219`.
+3. Right click the document request -> **Copy as cURL**.
+4. In chat prompt, say:
+   > *"Extract Unit X with 5s delay and update the hosted website"*
+
+### Step 2: Automatic Scrape & Video Stream Resolution
+The assistant will:
+1. Fetch `https://forsyth.instructure.com/api/v1/courses/276219/modules`.
+2. Extract all Lesson pages and Worksheet pages for Unit X with 5-second delays.
+3. Resolve all MyVRSpot iframes to CloudFront MP4 URLs and ScreenPal stream endpoints.
+4. Create the folder:
+   `/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/Unit X - <Title>/`
+   containing `unit_0X_metadata.json`, `Unit_0X_all-Lesson_Videos.md`, and `Unit_0X_Complete_Reference.md`.
+
+### Step 3: Download Worksheets for Zero-Auth Hosting
+To make worksheets public without school login:
+1. Open the SharePoint links for Unit X in your browser (since you are logged into Microsoft 365).
+2. Download the worksheet PDFs and answer keys (either via browser Save As or into a staging folder like `~/Downloads` or `/Volumes/Backup/scrap/x/`).
+3. Tell the assistant:
+   > *"Downloaded Unit X worksheets to <path>. Copy to right folder and publish"*
+4. The assistant will copy them to `docs/` and `worksheets/`, update the portal buttons to point to the local `./docs/...` files, and update `Unit_0X_Complete_Reference.md`.
+
+### Step 4: Publish Live to GitHub Pages
+The assistant will commit and push the updates:
+```bash
+cd ~/ap-precalc-streams
+git add index.html docs/
+git commit -m "Add Unit X lessons, video streams, and auth-free worksheets"
+git push
+```
+The website at [https://megaantony.github.io/ap-precalc-streams/](https://megaantony.github.io/ap-precalc-streams/) will update automatically in ~30 seconds.
+
+---
+
+### 💡 Quick Refresh Tip
+GitHub Pages sends `Cache-Control: max-age=600` (10-minute cache). When viewing a newly published unit, either:
+* Press **`Cmd + Shift + R`** in your browser.
+* Or add a query parameter to the URL (e.g. `https://megaantony.github.io/ap-precalc-streams/?v=4#unit-4`).
