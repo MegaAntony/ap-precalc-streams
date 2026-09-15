@@ -18,6 +18,9 @@
             --key-bg: #059669;
             --key-hover: #10b981;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
@@ -48,7 +51,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
-            background: rgba(30, 41, 59, 0.85);
+            background: rgba(30, 41, 59, 0.92);
             backdrop-filter: blur(12px);
             border: 1px solid var(--border);
             border-radius: 12px;
@@ -68,18 +71,28 @@
         .nav-pill {
             color: #ffffff;
             background: rgba(56, 189, 248, 0.15);
-            border: 1px solid rgba(56, 189, 248, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.35);
             text-decoration: none;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
             transition: all 0.15s ease;
+            cursor: pointer;
         }
         .nav-pill:hover {
             background: var(--accent);
             color: #0f172a;
             font-weight: 600;
+        }
+        .nav-pill.review-pill {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+            color: #6ee7b7;
+        }
+        .nav-pill.review-pill:hover {
+            background: #10b981;
+            color: #0f172a;
         }
         /* Unit Section */
         .unit-section {
@@ -89,7 +102,16 @@
             padding: 26px 30px;
             margin-bottom: 36px;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-            scroll-margin-top: 85px;
+            scroll-margin-top: 90px;
+            transition: box-shadow 0.3s ease;
+        }
+        .highlight-pulse {
+            animation: pulseGlow 2s ease-out;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+            40% { box-shadow: 0 0 28px 6px rgba(56, 189, 248, 0.85); }
+            100% { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); }
         }
         .unit-title {
             font-size: 1.55rem;
@@ -142,6 +164,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            scroll-margin-top: 100px;
         }
         .resource-title {
             font-size: 0.88rem;
@@ -254,9 +277,10 @@
         <!-- Navigation Bar -->
         <nav class="nav-bar">
             <span class="nav-label">Jump to:</span>
-            <a href="#unit-1" class="nav-pill">Unit 1: Unit Circle</a>
-            <a href="#unit-2" class="nav-pill">Unit 2: Graphing Trig Functions</a>
-            <a href="#unit-3" class="nav-pill">Unit 3: Inverse &amp; Composite Trig</a>
+            <a href="#unit-1" onclick="jumpTo('unit-1'); return true;" class="nav-pill">Unit 1: Unit Circle</a>
+            <a href="#unit-2" onclick="jumpTo('unit-2'); return true;" class="nav-pill">Unit 2: Graphing Trig</a>
+            <a href="#unit-3" onclick="jumpTo('unit-3'); return true;" class="nav-pill">Unit 3: Inverse &amp; Composite Trig</a>
+            <a href="#unit-3-review" onclick="jumpTo('unit-3-review'); return true;" class="nav-pill review-pill">Unit 3 Review (Worksheets D &amp; E)</a>
         </nav>
 
         <!-- Unit 1 -->
@@ -311,8 +335,8 @@
                 </div>
             </div>
             <h3 class="video-section-heading">🎥 Lesson Video Streams</h3>
-<ul class="video-list">
-                <li class="video-item">
+            <ul class="video-list">
+<li class="video-item">
                     <span class="video-name">Video 1: AccPreCalc Unit 4 Lesson 1 (Standard Position, Radians, Coterminal Angles)</span>
                     <div class="url-row">
                         <a class="video-url" href="https://go.screenpal.com/player/stream/c36OYfVuqho" target="_blank">https://go.screenpal.com/player/stream/c36OYfVuqho</a>
@@ -458,8 +482,8 @@
                 </div>
             </div>
             <h3 class="video-section-heading">🎥 Lesson Video Streams</h3>
-<ul class="video-list">
-                <li class="video-item">
+            <ul class="video-list">
+<li class="video-item">
                     <span class="video-name">Video 1: Unit 2, Lesson 1, Part 0: Graph, domain, and range of sine function | Trigonometry | Khan Academy</span>
                     <div class="url-row">
                         <a class="video-url" href="https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1787364170&Signature=jxVD56jL2Kij5-6tlRkVPRbz-N-OOhdTG7JQSu-Gq5bJJX-aQs54ZkxQNsercq4m2SuPPaHzyk~3IIG~EgdxOaRjQYCYKLxMAJ-HGrcTDAYagm-zNFx9pZkauQLU7rVQ-G~O7gGf5m~Y~wwGlOPXuVF95Umfz3ByXRwgXgLSDF0madBkBClYZ5zs9er7ow06IhTcf-drIZW5si0~BPedEQTtNmA0PnBXf~J-LK8wJgrElu-p6IPk~Htr6qFr8nmnm0SMlJrwtrXN~Ut9uNJnhuSW9ymqFlOe7PJuBoxNtR1B0MMI~PDqMtFXmlqAQ4WL7eL7U0vHr2Mo73lhAJO4cg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1787364170&Signature=jxVD56jL2Kij5-6tlRkVPRbz-N-OOhdTG7JQSu-Gq5bJJX-aQs54ZkxQNsercq4m2SuPPaHzyk~3IIG~EgdxOaRjQYCYKLxMAJ-HGrcTDAYagm-zNFx9pZkauQLU7rVQ-G~O7gGf5m~Y~wwGlOPXuVF95Umfz3ByXRwgXgLSDF0madBkBClYZ5zs9er7ow06IhTcf-drIZW5si0~BPedEQTtNmA0PnBXf~J-LK8wJgrElu-p6IPk~Htr6qFr8nmnm0SMlJrwtrXN~Ut9uNJnhuSW9ymqFlOe7PJuBoxNtR1B0MMI~PDqMtFXmlqAQ4WL7eL7U0vHr2Mo73lhAJO4cg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA</a>
@@ -576,7 +600,7 @@
                             <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EeNQOeE82xlMnWJC47wYfuQB0T5nNBQakYo8kmPiexcfIg?e=vpgGx0" target="_blank">Answer Key</a>
                         </div>
                     </div>
-                    <div class="resource-card">
+                    <div class="resource-card" id="unit-3-review">
                         <span class="resource-title">Worksheet D - Test Review</span>
                         <div class="btn-group">
                             <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EbQsPDQrG49Do0aK89vhw48BPoF6uBKa0KDDAmSn1CpbPA?e=YvFdLB" target="_blank">Worksheet PDF</a>
@@ -604,7 +628,7 @@
                             <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EY8x053ZRwNBrHsG6vmxWC0BlK-X8pIHb33YDO17DY1fRw?e=0NutWo" target="_blank">Answer Key</a>
                         </div>
                     </div>
-                    <div class="resource-card">
+                    <div class="resource-card" id="unit-3-review-problems">
                         <span class="resource-title">Worksheet E - Review Problems</span>
                         <div class="btn-group">
                             <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EV9YFcJ9pjlFtql827heNGkBjsNza2LU-8uwn3KjOIb6KQ?e=YYWFbW" target="_blank">Worksheet PDF</a>
@@ -709,5 +733,24 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        function jumpTo(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+                el.classList.add('highlight-pulse');
+                setTimeout(() => el.classList.remove('highlight-pulse'), 2000);
+            }
+        }
+
+        // Handle direct load with hash in URL
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                const targetId = window.location.hash.substring(1);
+                setTimeout(() => jumpTo(targetId), 200);
+            }
+        });
+    </script>
 </body>
 </html>
