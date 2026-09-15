@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Precalculus - Direct MP4 Stream Links</title>
+    <title>AP Precalculus - Lesson Videos &amp; Worksheets Portal</title>
     <style>
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
+            --card-sub: #162032;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent: #38bdf8;
             --accent-hover: #0ea5e9;
             --border: #334155;
             --badge-bg: #0369a1;
+            --key-bg: #059669;
+            --key-hover: #10b981;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
+            padding: 30px 20px 80px 20px;
             line-height: 1.6;
         }
         .container {
-            max-width: 960px;
+            max-width: 980px;
             margin: 0 auto;
         }
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 700;
             letter-spacing: -0.02em;
             color: #ffffff;
@@ -37,19 +40,60 @@
         .subtitle {
             color: var(--text-muted);
             font-size: 1.05rem;
-            margin-bottom: 36px;
+            margin-bottom: 24px;
         }
+        /* Quick Nav Bar */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 36px;
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+        .nav-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-right: 6px;
+        }
+        .nav-pill {
+            color: #ffffff;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+        .nav-pill:hover {
+            background: var(--accent);
+            color: #0f172a;
+            font-weight: 600;
+        }
+        /* Unit Section */
         .unit-section {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px 28px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            border-radius: 14px;
+            padding: 26px 30px;
+            margin-bottom: 36px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+            scroll-margin-top: 85px;
         }
         .unit-title {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.55rem;
+            font-weight: 700;
             color: var(--accent);
             margin-top: 0;
             margin-bottom: 20px;
@@ -57,7 +101,91 @@
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
+            justify-content: space-between;
+        }
+        .unit-badge {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.18);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        /* Resource / Worksheet Box */
+        .resource-box {
+            background: var(--card-sub);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+        }
+        .resource-heading {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        .resource-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             gap: 10px;
+        }
+        .resource-title {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #f1f5f9;
+        }
+        .btn-group {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .btn-pdf {
+            background: var(--badge-bg);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: background 0.15s ease;
+        }
+        .btn-pdf:hover {
+            background: var(--accent-hover);
+        }
+        .btn-key {
+            background: var(--key-bg);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: background 0.15s ease;
+        }
+        .btn-key:hover {
+            background: var(--key-hover);
+        }
+        /* Video Section */
+        .video-section-heading {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #e2e8f0;
         }
         .video-list {
             list-style: none;
@@ -65,7 +193,7 @@
             margin: 0;
         }
         .video-item {
-            padding: 14px 0;
+            padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             display: flex;
             flex-direction: column;
@@ -76,26 +204,26 @@
         }
         .video-name {
             font-weight: 600;
-            font-size: 1.02rem;
+            font-size: 0.96rem;
             color: #e2e8f0;
         }
         .url-row {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
         .video-url {
             color: var(--accent);
             text-decoration: none;
             word-break: break-all;
-            font-size: 0.88rem;
+            font-size: 0.84rem;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             background: rgba(15, 23, 42, 0.6);
             padding: 6px 10px;
             border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             flex-grow: 1;
-            transition: color 0.15s ease, background 0.15s ease;
+            transition: all 0.15s ease;
         }
         .video-url:hover {
             color: #ffffff;
@@ -106,9 +234,9 @@
             background: var(--badge-bg);
             color: #ffffff;
             text-decoration: none;
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 6px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 500;
             white-space: nowrap;
             transition: background 0.15s ease;
@@ -120,13 +248,70 @@
 </head>
 <body>
     <div class="container">
-        <h1>AP Precalculus Video Streams</h1>
-        <p class="subtitle">Direct MP4 Video Stream Links by Unit</p>
+        <h1>📐 AP Precalculus Portal</h1>
+        <p class="subtitle">Direct MP4 Video Streams, Lesson Archives &amp; Worksheet Answer Keys</p>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <span class="nav-label">Jump to:</span>
+            <a href="#unit-1" class="nav-pill">Unit 1: Unit Circle</a>
+            <a href="#unit-2" class="nav-pill">Unit 2: Graphing Trig Functions</a>
+            <a href="#unit-3" class="nav-pill">Unit 3: Inverse &amp; Composite Trig</a>
+        </nav>
 
         <!-- Unit 1 -->
-        <div class="unit-section">
-            <h2 class="unit-title">Unit 1 - Unit Circle</h2>
-            <ul class="video-list">
+        <div class="unit-section" id="unit-1">
+            <h2 class="unit-title">
+                Unit 1 - Unit Circle
+                <span class="unit-badge">12 Videos • 4 Worksheets</span>
+            </h2>
+            <div class="resource-box">
+                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys</h3>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-title">Official Trig Identities Sheet</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQhXW1vd8GBNlGITJtBzIjMBxdbNjGJPbwKZgfRPNSgGCg?e=0YDkyq" target="_blank">Worksheet PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Blank Unit Circle Sheet</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQu-KjQiuQJLs1RpA7tRmsIBX5v2jf1JQriybUE---4NUQ?e=v0WcwW" target="_blank">Worksheet PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet A (Angular & Linear Speed)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EaxR0Z4OTglDu00Vs2UkGmIBlCDRpp6HSNW-gzKQ5S_CWQ?e=hz8dCw" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EczOAueq4FhFk6RL42ptAicBscgFi1C7RPgxjxvBN06b2Q?e=emOyl6" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet B (Extra Quiz Practice)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EdRljFklydtGicrnthvyEYcBoGv9326LnWQ1z6tereACAA?e=lJ6ocU" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Ee31W2WDUURLkHI15m0r_1QBkUsyGBB7gEmtC4u_l8-IwA?e=mogNMR" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet C (Reference Angles)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQnZOF-CFspAjpAkUDDu3GYBzCc6gGgioDi_E5YnYLHsJQ?e=4a4iDh" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ERwkj7qrs45EjvNc-3MpCKIB48whi5guwX4iVxQHA49I3w?e=KMCtfb" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet D (Test Review)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQVs9OnjARVOqY0mTzhYj4EBXzMDGyb_B376j9zPaR2u5A?e=4R7n9p" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EdqudKM5Pc1GlmgQcMWa4SEBbjYWVPwz243RaPUZKTGieg?e=1gd0BK" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="video-section-heading">🎥 Lesson Video Streams</h3>
+<ul class="video-list">
                 <li class="video-item">
                     <span class="video-name">Video 1: AccPreCalc Unit 4 Lesson 1 (Standard Position, Radians, Coterminal Angles)</span>
                     <div class="url-row">
@@ -215,9 +400,65 @@
         </div>
 
         <!-- Unit 2 -->
-        <div class="unit-section">
-            <h2 class="unit-title">Unit 2 - Graphing Trigonometric Functions</h2>
-            <ul class="video-list">
+        <div class="unit-section" id="unit-2">
+            <h2 class="unit-title">
+                Unit 2 - Graphing Trigonometric Functions
+                <span class="unit-badge">12 Videos • 6 Worksheets</span>
+            </h2>
+            <div class="resource-box">
+                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys</h3>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet A - Graphing Sine & Cosine</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EUR6bWfjkfRCk1nWSm5HgJ0BmmRX8tDK6d51TPD_URoxqg?e=a3Hq8D" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ET52OMrq23xLpzBE-uuKL3cB3MNnlfBEmRzEwG7sOuU-HA?e=uIIAD6" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet B - Graphing Secant & Cosecant</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ETAOIrIDxUtDuGr9cwOscFQBVnXzGbg71drzTcuRTwtAiw?e=ygVYCp" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EUGHz8FIl-dPsbNRNGszKwgBL7BCk83c22KVL8CnbNa6Kw?e=XOd9p2" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet C - Graphing Tangent & Cotangent</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Ea4B_BE_NPFKq77dy5OzYb0BxX1GmMN-ztfPiD7rAidKLw?e=fb7Cen" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EeHp95eNT9pEvtd08QxXGEUBNtvu823mF1L5lMIZ-czY9Q?e=kFfpfw" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Lesson 4 In-Class Graphs</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ETohJs8_UyhPs8M1L8VIqroBL0rsrqeE0dbwh6lmxO3QxQ?e=PhIPHf" target="_blank">Worksheet PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet D - Writing Equations from Graphs</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EfIIahAMEGJLtQhYjhe5eYkBKb4ZXCI9uN02H8Vv9HFGRw?e=tWwnI2" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EcM4gjshEgxErdKVZGpoUZEBqWLiHFE461HMRx4AOCm7ag?e=BmAjgw" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet E - Test Review</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ERdYAQmGA_REiMtjw9llkKkBNSTL0a1rhEuN_6aEpvfSBA?e=qNfDGo" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EdxnkxwCEttNihP2Abc5UYsBV5Qvy9aDtGtZ_yx8RhdZdg?e=cdLZlA" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet F - Harmonic Application Problems</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQBuvFv0ZolOjBwZAgUv8esBOSKUcSX7pJbhDqsLk5ICcg?e=ipejVi" target="_blank">Worksheet PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="video-section-heading">🎥 Lesson Video Streams</h3>
+<ul class="video-list">
                 <li class="video-item">
                     <span class="video-name">Video 1: Unit 2, Lesson 1, Part 0: Graph, domain, and range of sine function | Trigonometry | Khan Academy</span>
                     <div class="url-row">
@@ -304,9 +545,75 @@
                 </li>
             </ul>
         </div>
+
         <!-- Unit 3 -->
-        <div class="unit-section">
-            <h2 class="unit-title">Unit 3 - Inverse &amp; Composite Trigonometric Functions</h2>
+        <div class="unit-section" id="unit-3">
+            <h2 class="unit-title">
+                Unit 3 - Inverse &amp; Composite Trigonometric Functions
+                <span class="unit-badge">13 Videos • 8 Worksheets</span>
+            </h2>
+            <div class="resource-box">
+                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys</h3>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet A - Evaluating Inverse Trig Functions</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EfGSEhVjKLZPqTJQZ3PVFzwB0wTLJpW-RaJLyuXCt86Hrg?e=3ZCFWY" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EaS9NVAQx39BoovxJLQ46scB5MNrD510912t1RD4LqcLog?e=KILscM" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet B - Evaluating Arc Trig Functions</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EWniL12PurtHu1YOLAW0WhoBYwsHzTFvx7Hae9lEwG4Fjg?e=tSiy7N" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EdMBDMxFgFxLuRLC-tjtEuUBPo5vKcLhgdJcnfinbf8tfQ?e=tM2vYO" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet C - Applications of Inverse Trig Functions</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EZ3G5KuYK4FEvS04CG6DrgUBPoDJ_v18glChTu5hC5pkCQ?e=ks172G" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EeNQOeE82xlMnWJC47wYfuQB0T5nNBQakYo8kmPiexcfIg?e=vpgGx0" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet D - Test Review</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EbQsPDQrG49Do0aK89vhw48BPoF6uBKa0KDDAmSn1CpbPA?e=YvFdLB" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EVx0C-cJVRJGhnjWExrvAH0BQaLbnRSMaYAzjvEbc5qdZg?e=ZFSxXX" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet B - Applications of Oblique Triangles</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EaqDLA8t9WpDqtHNW3Htk_cBeaBnwVzZXmljDnGhydDXTQ?e=xcKOeB" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQlxpZHCvKJNh8rziu8v-fQB67Aw166PEkyRdzyiCYkvfA?e=IGPRth" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet C - Extra Practice with SSA (Law of Sines)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Efro7o-x6AhPolF5HheMDLsBpwgTt3OYJ9OZQKU-ESWrnQ?e=2LemBr" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Ec0D5E8XHbJCq26CkV_rRpsBEYbNaVSOwYqAiIJj146XcQ?e=fRCgyC" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet D - More Practice with Oblique Triangles</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EUZvp86woaxHth1g6TJzZpkBSOjzuP0amXt7TFshbyADwg?e=c0afaq" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EY8x053ZRwNBrHsG6vmxWC0BlK-X8pIHb33YDO17DY1fRw?e=0NutWo" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Worksheet E - Review Problems</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EV9YFcJ9pjlFtql827heNGkBjsNza2LU-8uwn3KjOIb6KQ?e=YYWFbW" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/ERKYwAyKZ-NJu2iGQGcczZEBAnX508u21-lKtsxN_gVt3g?e=6gyorf" target="_blank">Answer Key</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="video-section-heading">🎥 Lesson Video Streams</h3>
             <ul class="video-list">
                 <li class="video-item">
                     <span class="video-name">Video 1: Unit 3 Lesson 1: Review of Inverses (from Algebra)</span>
