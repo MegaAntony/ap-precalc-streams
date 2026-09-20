@@ -517,6 +517,32 @@
             display: block;
         }
 
+        
+        /* KaTeX Typography Polish */
+        .katex {
+            font-size: 1.14em !important;
+            color: #f8fafc;
+        }
+        .katex-display {
+            margin: 0.25em 0 !important;
+        }
+        .formula-row .katex-display {
+            margin: 0 !important;
+            width: 100%;
+            text-align: left;
+        }
+        .formula-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8px 14px;
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+            min-height: 44px;
+        }
+
         /* Formula Card Blocks & Beautiful Math Typography */
         .formula-grid {
             display: grid;
@@ -657,6 +683,17 @@
         }
 
     </style>
+    <!-- KaTeX: Modern Standard for Mathematical Typography -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
 </head>
 <body>
 
@@ -816,7 +853,7 @@
             <div style="margin-top: 10px;">
                 <strong>Example from Worksheet A:</strong> If <span class="math"><i>f</i>(<i>x</i>) = <i>x</i><sup>3</sup> &minus; 7<i>x</i><sup>2</sup> &minus; 8<i>x</i> + 5</span>, evaluate <span class="math"><i>f</i><sup>&minus;1</sup>(5)</span>.<br>
                 <div class="math-block">
-                    <span class="math"><i>x</i><sup>3</sup> &minus; 7<i>x</i><sup>2</sup> &minus; 8<i>x</i> + 5 = 5 &implies; <i>x</i>(<i>x</i><sup>2</sup> &minus; 7<i>x</i> &minus; 8) = 0 &implies; <i>x</i>(<i>x</i> &minus; 8)(<i>x</i> + 1) = 0</span><br>
+                    <span class="math"><i>x</i><sup>3</sup> &minus; 7<i>x</i><sup>2</sup> &minus; 8<i>x</i> + 5 = 5 &rArr; <i>x</i>(<i>x</i><sup>2</sup> &minus; 7<i>x</i> &minus; 8) = 0 &rArr; <i>x</i>(<i>x</i> &minus; 8)(<i>x</i> + 1) = 0</span><br>
                     <strong style="color: #6ee7b7;">&there4; <i>f</i><sup>&minus;1</sup>(5) = { 0, 8, &minus;1 }</strong>
                 </div>
             </div>
@@ -900,8 +937,8 @@
             <span class="math">arcsin(sin &theta;) = &theta;</span> <strong>ONLY IF</strong> <span class="math">&theta; &isin; [&minus;&pi;/2, &pi;/2]</span>.<br>
             If &theta; is outside this range, evaluate in 2 steps:<br>
             <div class="math-block">
-                <span class="math">arcsin(sin(<span class="frac"><span class="frac-num">5&pi;</span><span class="frac-den">6</span></span>)) &implies; sin(<span class="frac"><span class="frac-num">5&pi;</span><span class="frac-den">6</span></span>) = <span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span> &implies; arcsin(<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>) = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">6</span></span></strong></span><br>
-                <span class="math">arccos(cos(<span class="frac"><span class="frac-num">7&pi;</span><span class="frac-den">4</span></span>)) &implies; cos(<span class="frac"><span class="frac-num">7&pi;</span><span class="frac-den">4</span></span>) = <span class="frac"><span class="frac-num">&radic;2</span><span class="frac-den">2</span></span> &implies; arccos(<span class="frac"><span class="frac-num">&radic;2</span><span class="frac-den">2</span></span>) = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">4</span></span></strong></span>
+                <span class="math">arcsin(sin(<span class="frac"><span class="frac-num">5&pi;</span><span class="frac-den">6</span></span>)) &rArr; sin(<span class="frac"><span class="frac-num">5&pi;</span><span class="frac-den">6</span></span>) = <span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span> &rArr; arcsin(<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>) = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">6</span></span></strong></span><br>
+                <span class="math">arccos(cos(<span class="frac"><span class="frac-num">7&pi;</span><span class="frac-den">4</span></span>)) &rArr; cos(<span class="frac"><span class="frac-num">7&pi;</span><span class="frac-den">4</span></span>) = <span class="frac"><span class="frac-num">&radic;2</span><span class="frac-den">2</span></span> &rArr; arccos(<span class="frac"><span class="frac-num">&radic;2</span><span class="frac-den">2</span></span>) = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">4</span></span></strong></span>
             </div>
         </div>
 
@@ -1068,11 +1105,11 @@
         </div>
     </section>
 
-            <!-- Trig Identities Bank -->
+                <!-- Trig Identities Bank -->
     <section class="section-card" id="identities">
         <div class="section-header">
             <h2 class="section-title">🧠 Trig Identities Memorization Bank (TD 23–25)</h2>
-            <span class="badge-pill">Daily Drill Formulas • 100% Required</span>
+            <span class="badge-pill">Daily Drill Formulas • KaTeX Powered</span>
         </div>
         <p style="color: var(--text-muted); margin-bottom: 16px;">Required for daily class drills starting Monday (9/21). Memorize every identity until you can write them out instantly from memory:</p>
 
@@ -1080,54 +1117,35 @@
             <!-- Double-Angle -->
             <div class="formula-box">
                 <h4>Double-Angle Formulas</h4>
-                <div class="formula-row">sin(2θ) = 2 sin θ cos θ</div>
-                <div class="formula-row">cos(2θ) = cos²θ − sin²θ</div>
-                <div class="formula-row">cos(2θ) = 2cos²θ − 1</div>
-                <div class="formula-row">cos(2θ) = 1 − 2sin²θ</div>
-                <div class="formula-row">
-                    tan(2θ) = &nbsp;<span class="frac"><span class="frac-num">2 tan θ</span><span class="frac-den">1 − tan²θ</span></span>
-                </div>
+                <div class="formula-row">$$\sin(2\theta) = 2\sin\theta\cos\theta$$</div>
+                <div class="formula-row">$$\cos(2\theta) = \cos^2\theta - \sin^2\theta$$</div>
+                <div class="formula-row">$$\cos(2\theta) = 2\cos^2\theta - 1$$</div>
+                <div class="formula-row">$$\cos(2\theta) = 1 - 2\sin^2\theta$$</div>
+                <div class="formula-row">$$\tan(2\theta) = \frac{2\tan\theta}{1 - \tan^2\theta}$$</div>
             </div>
 
             <!-- Sum & Difference -->
             <div class="formula-box">
                 <h4>Sum &amp; Difference Formulas</h4>
-                <div class="formula-row">sin(<i>u</i> ± <i>v</i>) = sin <i>u</i> cos <i>v</i> ± cos <i>u</i> sin <i>v</i></div>
-                <div class="formula-row">cos(<i>u</i> ± <i>v</i>) = cos <i>u</i> cos <i>v</i> ∓ sin <i>u</i> sin <i>v</i></div>
-                <div class="formula-row">
-                    tan(<i>u</i> ± <i>v</i>) = &nbsp;<span class="frac"><span class="frac-num">tan <i>u</i> ± tan <i>v</i></span><span class="frac-den">1 ∓ tan <i>u</i> tan <i>v</i></span></span>
-                </div>
+                <div class="formula-row">$$\sin(u \pm v) = \sin u \cos v \pm \cos u \sin v$$</div>
+                <div class="formula-row">$$\cos(u \pm v) = \cos u \cos v \mp \sin u \sin v$$</div>
+                <div class="formula-row">$$\tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u \tan v}$$</div>
             </div>
 
             <!-- Half-Angle -->
             <div class="formula-box">
                 <h4>Half-Angle Formulas</h4>
-                <div class="formula-row">
-                    sin(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">2</span></span></span></span>
-                </div>
-                <div class="formula-row">
-                    cos(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 + cos <i>u</i></span><span class="frac-den">2</span></span></span></span>
-                </div>
-                <div class="formula-row">
-                    tan(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = &nbsp;<span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">sin <i>u</i></span></span>
-                </div>
-                <div class="formula-row">
-                    tan(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = &nbsp;<span class="frac"><span class="frac-num">sin <i>u</i></span><span class="frac-den">1 + cos <i>u</i></span></span>
-                </div>
+                <div class="formula-row">$$\sin\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{2}}$$</div>
+                <div class="formula-row">$$\cos\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 + \cos u}{2}}$$</div>
+                <div class="formula-row">$$\tan\left(\frac{u}{2}\right) = \frac{1 - \cos u}{\sin u} = \frac{\sin u}{1 + \cos u}$$</div>
             </div>
 
             <!-- Power-Reducing -->
             <div class="formula-box">
                 <h4>Power-Reducing Formulas</h4>
-                <div class="formula-row">
-                    sin²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 − cos(2<i>u</i>)</span><span class="frac-den">2</span></span>
-                </div>
-                <div class="formula-row">
-                    cos²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 + cos(2<i>u</i>)</span><span class="frac-den">2</span></span>
-                </div>
-                <div class="formula-row">
-                    tan²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 − cos(2<i>u</i>)</span><span class="frac-den">1 + cos(2<i>u</i>)</span></span>
-                </div>
+                <div class="formula-row">$$\sin^2 u = \frac{1 - \cos(2u)}{2}$$</div>
+                <div class="formula-row">$$\cos^2 u = \frac{1 + \cos(2u)}{2}$$</div>
+                <div class="formula-row">$$\tan^2 u = \frac{1 - \cos(2u)}{1 + \cos(2u)}$$</div>
             </div>
         </div>
     </section>
@@ -1149,11 +1167,11 @@
             <div class="q-body">
                 Set <span class="math"><i>g</i>(<i>x</i>) = 2</span>:<br>
                 <div class="math-block">
-                    <span class="math"><i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup> &minus; 4<i>x</i> &minus; 10 = 2 &implies; <i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup> &minus; 4<i>x</i> &minus; 12 = 0</span>
+                    <span class="math"><i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup> &minus; 4<i>x</i> &minus; 10 = 2 &rArr; <i>x</i><sup>3</sup> + 3<i>x</i><sup>2</sup> &minus; 4<i>x</i> &minus; 12 = 0</span>
                 </div>
                 Factor by grouping:<br>
                 <div class="math-block">
-                    <span class="math"><i>x</i><sup>2</sup>(<i>x</i> + 3) &minus; 4(<i>x</i> + 3) = 0 &implies; (<i>x</i><sup>2</sup> &minus; 4)(<i>x</i> + 3) = 0 &implies; (<i>x</i> &minus; 2)(<i>x</i> + 2)(<i>x</i> + 3) = 0</span>
+                    <span class="math"><i>x</i><sup>2</sup>(<i>x</i> + 3) &minus; 4(<i>x</i> + 3) = 0 &rArr; (<i>x</i><sup>2</sup> &minus; 4)(<i>x</i> + 3) = 0 &rArr; (<i>x</i> &minus; 2)(<i>x</i> + 2)(<i>x</i> + 3) = 0</span>
                 </div>
                 <strong style="color: #6ee7b7;">Answer: <i>g</i><sup>&minus;1</sup>(2) = { &minus;3, &minus;2, 2 }</strong>
             </div>
@@ -1196,7 +1214,7 @@
             <div class="q-body">
                 <span class="math">arccos</span> range is <span class="math">[0, &pi;]</span> (Quadrants I &amp; II).<br>
                 Negative inputs go into Quadrant II.<br>
-                Reference angle is <span class="math">&pi;/4</span> &implies; <span class="math">&theta; = &pi; &minus; <span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">4</span></span> = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">3&pi;</span><span class="frac-den">4</span></span></strong></span>.
+                Reference angle is <span class="math">&pi;/4</span> &rArr; <span class="math">&theta; = &pi; &minus; <span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">4</span></span> = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">3&pi;</span><span class="frac-den">4</span></span></strong></span>.
             </div>
         </div>
 
@@ -1208,7 +1226,7 @@
             </div>
             <div class="q-body">
                 <span class="math">arcsec(&minus;2) = arccos(&minus;1/2)</span> in Quadrant II.<br>
-                Reference angle is <span class="math">&pi;/3</span> &implies; <span class="math">&theta; = &pi; &minus; <span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">3</span></span> = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">2&pi;</span><span class="frac-den">3</span></span></strong></span>.
+                Reference angle is <span class="math">&pi;/3</span> &rArr; <span class="math">&theta; = &pi; &minus; <span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">3</span></span> = <strong style="color: #6ee7b7;"><span class="frac"><span class="frac-num">2&pi;</span><span class="frac-den">3</span></span></strong></span>.
             </div>
         </div>
 
@@ -1258,7 +1276,7 @@
                 <span class="q-toggle">▼ Show Solution</span>
             </div>
             <div class="q-body">
-                Let <span class="math">&theta; = arccos(2<i>x</i>/1) &implies; cos &theta; = <span class="frac"><span class="frac-num">2<i>x</i></span><span class="frac-den">1</span></span></span>.<br>
+                Let <span class="math">&theta; = arccos(2<i>x</i>/1) &rArr; cos &theta; = <span class="frac"><span class="frac-num">2<i>x</i></span><span class="frac-den">1</span></span></span>.<br>
                 <span class="math">Adjacent = 2<i>x</i>, Hypotenuse = 1</span>.<br>
                 <span class="math">Opposite = &radic;(1<sup>2</sup> &minus; (2<i>x</i>)<sup>2</sup>) = &radic;(1 &minus; 4<i>x</i><sup>2</sup>)</span>.<br>
                 <span class="math">sin &theta; = <span class="frac"><span class="frac-num">Opposite</span><span class="frac-den">Hypotenuse</span></span> = <strong style="color: #6ee7b7;">&radic;(1 &minus; 4<i>x</i><sup>2</sup>)</strong></span>.
