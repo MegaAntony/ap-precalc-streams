@@ -53,14 +53,46 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKNMmVVgIknZ8nylByh9K74/GnaXwQ4gJ/Go24lWEy82
 │   ├── Week_08_Sep_21_Sep_25.md               # Right Triangles, Area Formulas, Unit 3 Quiz (9/22), Law of Cosines
 │   ├── Week_Fall_Break_Sep_28_Oct_02.md       # Fall Break (no school, covers Oct 1 & Oct 2)
 │   └── Week_09_Oct_05_Oct_09.md               # October First Week: Law of Sines, Ambiguous Case SSA, Review
+├── Textbook/                                  # 5 offline textbook PDF chapters & solution keys
+│   ├── Precalculus_Chapter_04_Trigonometric_Functions.pdf
+│   ├── Precalculus_Chapter_05_Analytic_Trigonometry.pdf
+│   ├── Precalculus_Chapter_06_Additional_Topics_Trig.pdf
+│   ├── Precalculus_Answers_to_Odd_Problems.pdf
+│   └── Precalculus_Index_and_Formula_Pages.pdf
 ├── Unit 1 - Unit Circle/
 │   ├── Unit_01_all-Lesson_Videos.md           # 12 videos with direct MP4 streams & curl commands
-│   ├── Unit_01_Complete_Reference.md          # Textbook links, Worksheets A-D, solution keys
-│   └── unit_01_metadata.json                  # Raw parsed Canvas data
+│   ├── Unit_01_Complete_Reference.md          # Local textbook links, Worksheets A-D, solution keys
+│   ├── unit_01_metadata.json                  # Raw parsed Canvas data
+│   ├── handouts/                              # 5 offline reference PDFs (Identities, Unit Circle, Graph Paper)
+│   │   ├── Official_Trig_Identities_Sheet.pdf
+│   │   ├── Blank_Unit_Circle_Sheet.pdf
+│   │   └── ... (3 graph paper PDFs)
+│   └── worksheets/                            # 8 offline local PDF worksheets & answer keys
+│       ├── APPCU01_WkstA_AngularLinearSpeed.pdf
+│       ├── APPCU01_WkstA_AngularLinearSpeed_Answers.pdf
+│       ├── APPCU01_WkstB_ExtraPracticeQuiz.pdf
+│       ├── APPCU01_WkstB_ExtraPracticeQuiz_Answers.pdf
+│       ├── APPCU01_WkstC_ReferenceAngles.pdf
+│       ├── APPCU01_WkstC_ReferenceAngles_Answers.pdf
+│       ├── APPCU01_WkstD_ReviewForTest.pdf
+│       └── APPCU01_WkstD_ReviewForTest_Answers.pdf
 ├── Unit 2 - Graphing Trigonometric Functions/
 │   ├── Unit_02_all-Lesson_Videos.md           # 12 direct MP4 streams for current & older AP lessons
-│   ├── Unit_02_Complete_Reference.md          # Worksheets A-F, class graphs, test reviews
-│   └── unit_02_metadata.json                  # Raw parsed Canvas data
+│   ├── Unit_02_Complete_Reference.md          # Offline local Worksheets A-F, graphs, test reviews
+│   ├── unit_02_metadata.json                  # Raw parsed Canvas data
+│   └── worksheets/                            # 12 offline local PDF worksheets & answer keys
+│       ├── APPCU02_WkstA_GraphingSineCosine.pdf
+│       ├── APPCU02_WkstA_GraphingSineCosine_Answers.pdf
+│       ├── APPCU02_WkstB_GraphingSecantCosecant.pdf
+│       ├── APPCU02_WkstB_GraphingSecantCosecant_Answers.pdf
+│       ├── APPCU02_WkstC_GraphingTangentCotangent.pdf
+│       ├── APPCU02_WkstC_GraphingTangentCotangent_Answers.pdf
+│       ├── APPCU02_Lesson4_Graphs.pdf
+│       ├── APPCU02_WkstD_WritingEquationsFromGraphs.pdf
+│       ├── APPCU02_WkstD_WritingEquationsFromGraphs_Answers.pdf
+│       ├── APPCU02_WkstE_TestReview.pdf
+│       ├── APPCU02_WkstE_TestReview_Answers.pdf
+│       └── APPCU02_WkstF_Applications.pdf
 └── Unit 3 - Inverse & Composite Trigonometric Functions/
     ├── Unit_03_all-Lesson_Videos.md           # Direct MP4 streams for 13 lessons & examples
     ├── Unit_03_Complete_Reference.md          # Worksheets A-E, oblique triangles, test reviews
