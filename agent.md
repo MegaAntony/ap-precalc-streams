@@ -17,7 +17,95 @@ School resources (CTLS, Cobb Virtual Academy, MyVRSpot) protect learning resourc
 
 ---
 
-## 2. Playbook A: Downloading Protected PDFs & Worksheets
+## 2. Playwright MCP Configuration & Setup
+
+When direct cURL cannot reach dynamic Single Page Apps (SPAs) or behind SSO logins (Office 365 / Google Workspace for Education), use **Playwright MCP** to automate browser interactions.
+
+### MCP Server Registration
+Add the Playwright MCP server to your agent configuration:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-playwright"
+      ],
+      "env": {
+        "HEADLESS": "true"
+      }
+    }
+  }
+}
+```
+
+### Preserving Session State (Persistent Profile)
+To avoid repeated multi-factor authentication (MFA) prompts, launch Playwright with a persistent user data directory:
+```bash
+# Launch with persistent profile storing cookies/localStorage
+npx playwright launch --user-data-dir="/Users/anish/.school-browser-profile"
+```
+
+---
+
+## 3. "Act Like a Human" Anti-Bot & Stealth Protocol
+
+> [!CAUTION]
+> **CRITICAL RULE**: Never execute requests like an automated machine. Firing bursts of automated actions triggers school Web Application Firewalls (AWS WAF, Cloudflare, Akamai), causing IP rate-limiting, CAPTCHA challenges, or session invalidation.
+
+### Core Anti-Detection Rules:
+
+1. **Human-Paced Delays (No 0ms Bursts)**:
+   - Always inject randomized jitter between page navigation, clicks, and downloads:
+     ```python
+     import time, random
+     # Normal human pause while reading or deciding
+     time.sleep(random.uniform(1.8, 3.8))
+     ```
+   - Never fire 10+ download requests in parallel. Throttle batch downloads to **1 request every 2 to 4 seconds**.
+
+2. **Human Typing Simulation**:
+   - When filling forms (search queries, login fields), do not use instantaneous assignment (`element.value = "..."`).
+   - Type character-by-character with randomized keystroke intervals (50ms to 160ms):
+     ```python
+     await page.type('#searchInput', 'Unit 3 Inverse Trigonometry', delay=random.randint(60, 140))
+     ```
+
+3. **Natural Mouse Trajectory & Scrolling**:
+   - Hover before clicking: move the mouse to the element, pause 200–400ms, then click:
+     ```python
+     await page.hover('a.download-link')
+     await page.wait_for_timeout(random.randint(250, 450))
+     await page.click('a.download-link')
+     ```
+   - Before clicking elements below the fold, scroll naturally in increments:
+     ```python
+     await page.evaluate('''window.scrollBy({
+         top: window.innerHeight * 0.6,
+         behavior: 'smooth'
+     });''')
+     await page.wait_for_timeout(random.randint(600, 1100))
+     ```
+
+4. **Realistic Browser Fingerprint**:
+   - Set a genuine desktop viewport (`1440x900` or `1920x1080`), never default headless dimensions (`800x600`).
+   - Use standard macOS Safari or Chrome User-Agents:
+     ```
+     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+     ```
+
+5. **Headed Fallback for Initial Login / MFA**:
+   - If the portal presents a CAPTCHA, Microsoft 2FA push, or SSO challenge, switch Playwright to **headed mode (`headless: false`)** or attach to Chrome via Remote Debugging:
+     ```bash
+     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/tmp/chrome_debug_profile"
+     ```
+   - Allow the user to complete the one-time authentication. Once authenticated, reuse the live session cookies.
+
+---
+
+## 4. Playbook A: Downloading Protected PDFs & Worksheets
 
 When new worksheets, test reviews, or answer keys are assigned on CTLS:
 
@@ -27,10 +115,12 @@ Ask the user for or grab a single `curl` command from DevTools (Network tab) for
 Cookie: AWSALBTG=...; AWSALBTGCORS=...; PHPSESSID=...; _csrf=...
 ```
 
-### Step 2: Batch Download via Session Reuse
-Use the captured cookie in a Python script or loop to download all required documents directly into the corresponding course folder.
+### Step 2: Batch Download via Session Reuse (Human Throttled)
+Use the captured cookie in a Python script to download all required documents directly into the corresponding course folder with human-like pacing:
 
 ```python
+import time
+import random
 import requests
 
 cookies = {
@@ -38,7 +128,9 @@ cookies = {
     'AWSALBTGCORS': '<PASTE_COOKIE_HERE>'
 }
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
 }
 
 docs = {
@@ -47,6 +139,9 @@ docs = {
 }
 
 for filename, url in docs.items():
+    # Human-like delay between file downloads
+    time.sleep(random.uniform(2.2, 4.5))
+    
     r = requests.get(url, cookies=cookies, headers=headers, stream=True)
     if r.status_code == 200:
         with open(filename, 'wb') as f:
@@ -66,7 +161,7 @@ file "Worksheet_Name.pdf"
 
 ---
 
-## 3. Playbook B: Downloading Protected CloudFront Videos (MyVRSpot)
+## 5. Playbook B: Downloading Protected CloudFront Videos (MyVRSpot)
 
 Direct links to CloudFront MP4s (`d1drabmetuo3qr.cloudfront.net/....mp4?Expires=...`) expire and **must never be hardcoded**. Instead, use the dynamic embed endpoint to generate fresh signed download streams on demand.
 
@@ -125,7 +220,7 @@ def download_myvrspot_video(media_id, output_filename):
 
 ---
 
-## 4. Playbook C: YouTube Supplementary Video Handling
+## 6. Playbook C: YouTube Supplementary Video Handling
 
 When the teacher embeds third-party lessons (e.g., Mario's Math Tutoring):
 - Extract the 11-character YouTube video ID (e.g. `4XytYH35AP0`).
@@ -136,7 +231,7 @@ When the teacher embeds third-party lessons (e.g., Mario's Math Tutoring):
 
 ---
 
-## 5. Directory Organization & Git Synchronization
+## 7. Directory Organization & Git Synchronization
 
 ### Mandatory File Paths
 All downloaded files must be organized by course and unit under `/Volumes/Backup/Antony/HighSchool/Grade9/`:
@@ -154,7 +249,8 @@ All downloaded files must be organized by course and unit under `/Volumes/Backup
 │               └── Video_4_Composite_Trig_Part1.mp4     # Local 100% offline
 ├── Biology-Honors-V2/
 ├── HumanGeography/
-└── Intro to Software Tech/
+├── Intro to Software Tech/
+└── agent.md                                             # This manual
 ```
 
 ### GitHub Pages Web Mirror (`ap-precalc-streams`)
@@ -165,7 +261,7 @@ All downloaded files must be organized by course and unit under `/Volumes/Backup
 
 ---
 
-## 6. HTML Portal Dual-Mode Player Pattern
+## 8. HTML Portal Dual-Mode Player Pattern
 
 When creating study portals for Antony, always use the **Dual-Mode Player Engine**:
 1. **Local Mode (`file://`)**: Automatically selects the local `.mp4` file on disk for instantaneous playback with zero buffering.
