@@ -1,269 +1,296 @@
-# Agent Operations Manual: Cloud Document & Stream Downloader
-**Target Scope**: Cobb County High School Grade 9 (Antony)  
-**Location**: `/Volumes/Backup/Antony/HighSchool/Grade9`  
-**Purpose**: Playbook for future AI agents to authenticate, extract, batch-download, and publish protected school materials (PDFs, Videos, Answer Keys) without manual browser intervention.
+# Grade 9 Agent Master Operating Manual & Weekly Playbook
+**Scope**: Cobb County High School Grade 9 (Antony)  
+**Permanent Archive Location**: `/Volumes/Backup/Antony/HighSchool/Grade9`  
+**GitHub Pages Web Mirror**: `/Users/anish/ap-precalc-streams` → `https://megaantony.github.io/ap-precalc-streams/`  
+**Target Subjects**: AP Precalculus, Biology Honors, AP Human Geography, Intro to Software Tech  
 
 ---
 
-## 1. System Architecture & Auth Mechanics
+## 0. Quick Resume Protocol (Start Here After Restart)
 
-School resources (CTLS, Cobb Virtual Academy, MyVRSpot) protect learning resources across two layers:
+When the user asks you to **"refer to agent.md and help me"**, follow this exact diagnostic sequence:
 
-| Resource Type | Hosting Platform | Protection Mechanism | Expiration Behavior |
-| :--- | :--- | :--- | :--- |
-| **Worksheets & Answer Keys** | CTLS / Cobb County Portal | AWS Application Load Balancer (`AWSALBTG`, `AWSALBTGCORS`) + Session Cookies | Bound to user login session; cookies expire after inactivity. |
-| **Teacher Recorded Lessons** | MyVRSpot via AWS CloudFront CDN | AWS CloudFront Signed URLs (`Expires`, `Signature`, `Key-Pair-Id`) | Query tokens expire quickly (hours/days); hardcoded links return `403 Forbidden`. |
-| **Supplementary Lessons** | YouTube (e.g. Mario's Math) | Public video IDs with iframe embedding | Permanent; no auth required. |
+```mermaid
+flowchart TD
+    A["Step 1: Check Current Calendar & Scope"] --> B["Step 2: Inspect Disk for Existing Materials"]
+    B --> C["Step 3: Check Git Status & Synced Repos"]
+    C --> D["Step 4: Execute Weekly 6-Phase SOP"]
+    D --> E["Step 5: Verify Typography & Video Playback"]
+    E --> F["Step 6: Deploy to GitHub Pages & Deliver Report"]
+```
+
+1. **Identify the Target Week & Subject**:
+   - Check current date.
+   - Read the corresponding syllabus or weekly agenda in:
+     - `/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/Weekly Plans/`
+     - Or the target subject's folder (`Biology-Honors-V2`, `HumanGeography`, etc.).
+   - Confirm upcoming quizzes, tests, homework deadlines, or identity drills.
+2. **Audit Local Assets**:
+   - Check if all required worksheets, answer keys, and teacher videos for that lesson already exist on disk.
+   - If any are missing or link to expiring cloud streams, run the extraction playbooks below.
+3. **Sync Check**:
+   - Run `cd /Users/anish/ap-precalc-streams && git status` to verify synchronization.
 
 ---
 
-## 2. Playwright MCP Configuration & Setup
+## 1. Weekly 6-Phase Standard Operating Procedure (SOP)
 
-When direct cURL cannot reach dynamic Single Page Apps (SPAs) or behind SSO logins (Office 365 / Google Workspace for Education), use **Playwright MCP** to automate browser interactions.
+Every week or for every upcoming quiz/test, the agent must execute these 6 phases:
 
-### MCP Server Registration
-Add the Playwright MCP server to your agent configuration:
+### Phase 1: Syllabus & Scope Detection
+- Read the teacher's lesson plans, calendar, and assignment list.
+- Pinpoint:
+  1. Exact test/quiz dates and formats.
+  2. Required lessons, sections, and worksheets.
+  3. Daily drills (e.g. Trig Identities TD 23–25).
+  4. Online assignments (DeltaMath, Edgenuity, etc.).
+
+### Phase 2: 100% Zero-Auth Local Extraction
+Never rely on live school logins during study sessions. All assets must be downloaded and archived locally:
+- **Worksheets & Answer Keys**: Downloaded as clean PDFs (see [Section 4](#4-playbook-a-downloading-protected-pdfs--worksheets)).
+- **Teacher Video Lessons (MyVRSpot)**: Extracted and downloaded as full `.mp4` files into the unit folder (see [Section 5](#5-playbook-b-downloading-protected-cloudfront-videos-myvrspot)).
+- **External Video Lessons (YouTube)**: Extracted as clean 11-character video IDs for embedding without ads or tracking.
+
+### Phase 3: Comprehensive Markdown Master Study Guide
+Create a master Markdown study guide in the assessment subfolder:
+- **Pillar-Based Concept Breakdown**: Deep, rigorous explanations covering:
+  - Exact algebraic/geometric rules.
+  - Strict domain/range constraints.
+  - Out-of-bounds traps and common student pitfalls.
+- **Identity & Formula Banks**: Memorization drills formatted cleanly.
+- **10-Question Self-Test Simulation**: Realistic exam-level problems with full, step-by-step worked solutions.
+- **2-Day Hour-by-Hour Study Schedule**: Concrete daily roadmap leading up to test morning.
+
+### Phase 4: Publication-Grade Interactive HTML Study Portal
+Build a modern dark-mode HTML study portal:
+- **Interactive Mastery Checklist**: Checkboxes linked to a dynamic progress bar (`0%` to `100%`) with direct action buttons (`[▶ Play Video]`, `[📄 PDF]`, `[🔑 Answer Key]`).
+- **Interactive Video Theater**: Responsive 16:9 player embedded at the top of the video section with smooth scrolling.
+- **Dual-Mode Video Engine**:
+  - Automatically plays local `.mp4` files offline when opened from disk (`file://`).
+  - Automatically falls back to responsive embeds (`youtube-nocookie.com` or MyVRSpot) when hosted online.
+  - Provides instant toggle buttons in the theater header (`[💾 Local MP4]` vs `[🌐 Web Stream]`).
+- **Accordion Active Recall Questions**: Collapsible question cards with hidden answers so Antony can self-test before revealing solutions.
+- **Mathematical Typography Standards**: (See [Section 7](#7-mathematical-typography--rendering-standards)).
+
+### Phase 5: Visual QA & Media Verification
+- Verify that every video in the checklist plays properly without 403 errors.
+- Verify that math typography renders clean vertical fractions and continuous square roots (no raw LaTeX strings or flat monospace code blocks).
+- Test layout on desktop and mobile viewports.
+
+### Phase 6: Cloud Mirror & GitHub Pages Deployment
+- Copy the final HTML portal and all PDFs to `/Users/anish/ap-precalc-streams/`.
+- Add link in `index.html` navigation bar (e.g. `🔥 Unit X Quiz Hub`).
+- Ensure `*.mp4` is ignored in `.gitignore` (large videos stay local on disk).
+- Commit and push to `origin/main`.
+- Verify live deployment using `curl -I https://megaantony.github.io/ap-precalc-streams/<portal>.html`.
+
+---
+
+## 2. Directory Structure & File Standards
+
+All permanent course assets belong strictly under `/Volumes/Backup/Antony/HighSchool/Grade9/`:
+
+```
+/Volumes/Backup/Antony/HighSchool/Grade9/
+├── agent.md                                             # This Master Operations Manual
+├── Math/
+│   └── AP Precalculus/
+│       ├── Unit 1 - Unit Circle/
+│       ├── Unit 2 - Graphing Trigonometric Functions/
+│       ├── Unit 3 - Inverse & Composite Trigonometric Functions/
+│       │   └── Unit 3 Quiz-9-22/
+│       │       ├── Unit_03_Quiz_Master_Study_Guide.md   # Markdown Master Guide
+│       │       ├── Unit_03_Quiz_Study_Portal.html       # Interactive Study Portal
+│       │       ├── tex-svg.js                           # Offline MathJax SVG Engine
+│       │       ├── Video_1_Review_of_Inverses.mp4       # 100% Local Offline Video
+│       │       └── Video_4_Composite_Trig_Part1.mp4     # 100% Local Offline Video
+│       └── Weekly Plans/
+├── Biology-Honors-V2/
+├── HumanGeography/
+└── Intro to Software Tech/
+```
+
+---
+
+## 3. Playwright MCP Configuration & Setup
+
+When interacting with dynamic school Single Page Apps (CTLS, Cobb County Microsoft Azure SSO, Canvas):
 
 ```json
 {
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-playwright"
-      ],
-      "env": {
-        "HEADLESS": "true"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-playwright"],
+      "env": { "HEADLESS": "true" }
     }
   }
 }
 ```
 
-### Preserving Session State (Persistent Profile)
-To avoid repeated multi-factor authentication (MFA) prompts, launch Playwright with a persistent user data directory:
-```bash
-# Launch with persistent profile storing cookies/localStorage
-npx playwright launch --user-data-dir="/Users/anish/.school-browser-profile"
-```
+- **Persistent Profile**: Use `--user-data-dir="/Users/anish/.school-browser-profile"` to preserve SSO cookies and avoid repeated multi-factor authentication (MFA).
 
 ---
 
-## 3. "Act Like a Human" Anti-Bot & Stealth Protocol
+## 4. "Act Like a Human" Anti-Bot Protocol
 
 > [!CAUTION]
-> **CRITICAL RULE**: Never execute requests like an automated machine. Firing bursts of automated actions triggers school Web Application Firewalls (AWS WAF, Cloudflare, Akamai), causing IP rate-limiting, CAPTCHA challenges, or session invalidation.
+> **CRITICAL RULE**: Never execute automated bursts. School Web Application Firewalls (AWS WAF, Cloudflare, Akamai) monitor request velocity and immediately issue IP rate-limits or CAPTCHAs if requests appear machine-generated.
 
-### Core Anti-Detection Rules:
-
-1. **Human-Paced Delays (No 0ms Bursts)**:
-   - Always inject randomized jitter between page navigation, clicks, and downloads:
-     ```python
-     import time, random
-     # Normal human pause while reading or deciding
-     time.sleep(random.uniform(1.8, 3.8))
-     ```
-   - Never fire 10+ download requests in parallel. Throttle batch downloads to **1 request every 2 to 4 seconds**.
-
-2. **Human Typing Simulation**:
-   - When filling forms (search queries, login fields), do not use instantaneous assignment (`element.value = "..."`).
-   - Type character-by-character with randomized keystroke intervals (50ms to 160ms):
-     ```python
-     await page.type('#searchInput', 'Unit 3 Inverse Trigonometry', delay=random.randint(60, 140))
-     ```
-
-3. **Natural Mouse Trajectory & Scrolling**:
-   - Hover before clicking: move the mouse to the element, pause 200–400ms, then click:
-     ```python
-     await page.hover('a.download-link')
-     await page.wait_for_timeout(random.randint(250, 450))
-     await page.click('a.download-link')
-     ```
-   - Before clicking elements below the fold, scroll naturally in increments:
-     ```python
-     await page.evaluate('''window.scrollBy({
-         top: window.innerHeight * 0.6,
-         behavior: 'smooth'
-     });''')
-     await page.wait_for_timeout(random.randint(600, 1100))
-     ```
-
-4. **Realistic Browser Fingerprint**:
-   - Set a genuine desktop viewport (`1440x900` or `1920x1080`), never default headless dimensions (`800x600`).
-   - Use standard macOS Safari or Chrome User-Agents:
-     ```
-     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
-     ```
-
-5. **Headed Fallback for Initial Login / MFA**:
-   - If the portal presents a CAPTCHA, Microsoft 2FA push, or SSO challenge, switch Playwright to **headed mode (`headless: false`)** or attach to Chrome via Remote Debugging:
-     ```bash
-     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir="/tmp/chrome_debug_profile"
-     ```
-   - Allow the user to complete the one-time authentication. Once authenticated, reuse the live session cookies.
+1. **Human-Paced Delays**: Inject 1.8s–4.5s random pauses between page navigations and clicks:
+   ```python
+   import time, random
+   time.sleep(random.uniform(2.0, 4.2))
+   ```
+2. **Download Throttling**: Never download multiple PDFs in parallel. Limit to **1 file every 2.5 to 5.0 seconds**.
+3. **Human Typing Simulation**: Type queries with 50ms–150ms keystroke jitter instead of instant form fills.
+4. **Natural Scrolling & Hovering**: Scroll incrementally (`window.scrollBy({ behavior: 'smooth' })`) and hover over buttons for 200–400ms before clicking.
+5. **Authentic Browser Viewport**: Use desktop dimensions (`1440x900` or `1920x1080`) and real macOS Safari/Chrome User-Agents.
+6. **Headed Fallback for MFA**: If a 2FA prompt appears, switch Playwright to headed mode or attach via Chrome Remote Debugging (`--remote-debugging-port=9222`) for a one-time human login.
 
 ---
 
-## 4. Playbook A: Downloading Protected PDFs & Worksheets
+## 5. Playbook A: Downloading Protected PDFs & Worksheets
 
-When new worksheets, test reviews, or answer keys are assigned on CTLS:
+1. **Capture Session Cookies**: From an authenticated browser network request, grab the `Cookie` header:
+   ```http
+   Cookie: AWSALBTG=...; AWSALBTGCORS=...; PHPSESSID=...; _csrf=...
+   ```
+2. **Human-Paced Batch Download**:
+   ```python
+   import time, random, requests
 
-### Step 1: Capture Session Cookies
-Ask the user for or grab a single `curl` command from DevTools (Network tab) for any protected PDF on CTLS. The header will look like:
-```http
-Cookie: AWSALBTG=...; AWSALBTGCORS=...; PHPSESSID=...; _csrf=...
-```
+   cookies = {'AWSALBTG': '<COOKIE>', 'AWSALBTGCORS': '<COOKIE>'}
+   headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
+   docs = {
+       "Worksheet.pdf": "https://school.portal.url/Worksheet.pdf",
+       "Answer_Key.pdf": "https://school.portal.url/Answer_Key.pdf"
+   }
 
-### Step 2: Batch Download via Session Reuse (Human Throttled)
-Use the captured cookie in a Python script to download all required documents directly into the corresponding course folder with human-like pacing:
+   for filename, url in docs.items():
+       time.sleep(random.uniform(2.5, 4.5)) # Human delay
+       r = requests.get(url, cookies=cookies, headers=headers, stream=True)
+       if r.status_code == 200:
+           with open(filename, 'wb') as f:
+               for chunk in r.iter_content(chunk_size=8192):
+                   f.write(chunk)
+           print(f"Downloaded: {filename}")
+   ```
+3. **Verify File Headers**: Confirm file is a genuine PDF (`file filename.pdf`).
 
-```python
-import time
-import random
-import requests
+---
 
-cookies = {
-    'AWSALBTG': '<PASTE_COOKIE_HERE>',
-    'AWSALBTGCORS': '<PASTE_COOKIE_HERE>'
+## 6. Playbook B: Downloading Protected CloudFront Videos (MyVRSpot)
+
+Direct links to CloudFront MP4s (`d1drabmetuo3qr.cloudfront.net/....mp4?Expires=...`) expire quickly. **Never hardcode direct CloudFront signed links.**
+
+1. **Extract Fresh Stream from Iframe**:
+   MyVRSpot embed endpoints (`https://live.myvrspot.com/iframe?v=<MEDIA_ID>`) dynamically generate fresh, valid CloudFront signatures in real-time.
+2. **Download Automation Script**:
+   ```python
+   import re, requests
+
+   def download_myvrspot_mp4(media_id, output_filename):
+       res = requests.get(f"https://live.myvrspot.com/iframe?v={media_id}")
+       matches = re.findall(r'https://d1drabmetuo3qr\.cloudfront\.net/[^\'\"\s]+\.mp4\?[^\'\"\s]+', res.text)
+       if not matches:
+           raise ValueError("No signed CloudFront stream found.")
+       
+       stream_url = matches[0].replace("&amp;", "&")
+       print(f"Streaming from CloudFront: {stream_url[:65]}...")
+       
+       with requests.get(stream_url, stream=True) as stream_res:
+           stream_res.raise_for_status()
+           with open(output_filename, 'wb') as f:
+               for chunk in stream_res.iter_content(chunk_size=1048576):
+                   f.write(chunk)
+       print(f"Saved: {output_filename}")
+   ```
+
+---
+
+## 7. Mathematical Typography & Rendering Standards
+
+AP Precalculus materials must display authentic mathematical typography. **Do not display raw unrendered LaTeX markup (`$\frac{\pi}{2}$`) or flat monospace code (`tan(2θ) = 2tan θ / (1 - tan²θ)`).**
+
+### CSS Typography Engine
+Every study portal must include this CSS:
+```css
+/* Authentic Math Serif Typography */
+.math {
+    font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+    font-size: 1.08em;
+    color: #ffffff;
 }
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-    'Accept-Language': 'en-US,en;q=0.9',
+
+/* Stacked Vertical Fractions */
+.frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 3px;
+    font-size: 0.88em;
+    line-height: 1.05;
+}
+.frac-num {
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 1px;
+    font-weight: 500;
+}
+.frac-den {
+    padding-top: 1px;
+    font-weight: 500;
 }
 
-docs = {
-    "Worksheet_Name.pdf": "https://school.portal.url/path/to/document.pdf",
-    "Worksheet_Answers.pdf": "https://school.portal.url/path/to/answers.pdf"
+/* Square Root Radicals with Continuous Vinculum */
+.radical {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
 }
-
-for filename, url in docs.items():
-    # Human-like delay between file downloads
-    time.sleep(random.uniform(2.2, 4.5))
-    
-    r = requests.get(url, cookies=cookies, headers=headers, stream=True)
-    if r.status_code == 200:
-        with open(filename, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=8192):
-                f.write(chunk)
-        print(f"Downloaded: {filename}")
-    else:
-        print(f"Failed {filename}: HTTP {r.status_code}")
+.rad-sym {
+    font-size: 1.35em;
+    line-height: 1;
+    margin-right: 1px;
+    vertical-align: -0.1em;
+}
+.rad-body {
+    border-top: 1.5px solid currentColor;
+    padding: 2px 4px 0 2px;
+    display: inline-flex;
+    align-items: center;
+}
 ```
 
-### Step 3: Verify Integrity
-Always verify downloaded files are actual PDFs and not HTML login redirects:
-```bash
-file "Worksheet_Name.pdf"
-# Must output: PDF document, version ...
-```
+### HTML Implementation Patterns:
+- **Fraction**: `<span class="frac"><span class="frac-num">2 tan θ</span><span class="frac-den">1 − tan²θ</span></span>`
+- **Square Root**: `<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos u</span><span class="frac-den">2</span></span></span></span>`
+- **Offline MathJax**: Bundle local `tex-svg.js` in the folder for 100% offline vector rendering.
 
 ---
 
-## 5. Playbook B: Downloading Protected CloudFront Videos (MyVRSpot)
+## 8. Multi-Subject Expansion Guide
 
-Direct links to CloudFront MP4s (`d1drabmetuo3qr.cloudfront.net/....mp4?Expires=...`) expire and **must never be hardcoded**. Instead, use the dynamic embed endpoint to generate fresh signed download streams on demand.
+This exact architecture applies across all of Antony's Grade 9 courses:
 
-### Step 1: Identify the MyVRSpot Media ID
-The school provides links in one of two forms:
-- Full URL: `https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM`
-- Media Key / Hash: `MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM`
-
-### Step 2: Extract Live Signed Stream URL
-MyVRSpot's `/iframe?v=<ID>` endpoint dynamically injects fresh CloudFront signatures into the HTML `<source>` tags. Fetch and grep it:
-
-```bash
-# One-liner to extract the current valid high-res MP4 URL:
-curl -s "https://live.myvrspot.com/iframe?v=<MEDIA_ID>" | grep -o "https://d1drabmetuo3qr.cloudfront.net/[^'\" ]*.mp4?[^'\"]*" | head -n 1
-```
-
-### Step 3: Stream and Save the MP4 Directly to Disk
-Immediately pipe the signed URL into `curl` to download before token expiration:
-
-```bash
-STREAM_URL=$(curl -s "https://live.myvrspot.com/iframe?v=<MEDIA_ID>" | grep -o "https://d1drabmetuo3qr.cloudfront.net/[^'\" ]*.mp4?[^'\"]*" | head -n 1)
-
-curl -o "Lesson_Video.mp4" "$STREAM_URL"
-```
-
-### Automated Python Script for MyVRSpot Videos
-```python
-import re
-import requests
-
-def download_myvrspot_video(media_id, output_filename):
-    iframe_url = f"https://live.myvrspot.com/iframe?v={media_id}"
-    res = requests.get(iframe_url)
-    if res.status_code != 200:
-        raise RuntimeError(f"Failed to access iframe: HTTP {res.status_code}")
-    
-    # Extract CloudFront signed MP4 link
-    matches = re.findall(r'https://d1drabmetuo3qr\.cloudfront\.net/[^\'\"\s]+\.mp4\?[^\'\"\s]+', res.text)
-    if not matches:
-        raise ValueError("Could not find signed CloudFront stream in page source.")
-    
-    stream_url = matches[0].replace("&amp;", "&")
-    print(f"Streaming from CloudFront: {stream_url[:60]}...")
-    
-    with requests.get(stream_url, stream=True) as stream_res:
-        stream_res.raise_for_status()
-        with open(output_filename, 'wb') as f:
-            for chunk in stream_res.iter_content(chunk_size=1048576): # 1 MB chunks
-                if chunk:
-                    f.write(chunk)
-    print(f"Successfully saved {output_filename}")
-
-# Example:
-# download_myvrspot_video("MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM", "Video_1_Review_of_Inverses.mp4")
-```
+| Course | Key Folder | Primary Asset Types | Study Portal Components |
+| :--- | :--- | :--- | :--- |
+| **AP Precalculus** | `Math/AP Precalculus/` | Worksheets, Solution Keys, Teacher Videos, DeltaMath | Formula Banks, Unit Circle exact values, Graph models, Step-by-step simulations. |
+| **Biology Honors** | `Biology-Honors-V2/` | Lab manuals, Concept Maps, Diagrams, Vocabulary | Cell/Genetics diagrams, Vocabulary flashcard grids, Practice multiple-choice simulations. |
+| **AP Human Geography** | `HumanGeography/` | Models, Case Studies, FRQ Rubrics, Maps | Demographic Transition Models, Map analyses, FRQ step-by-step templates. |
+| **Intro to Software Tech**| `Intro to Software Tech/` | Python/HTML projects, Quizzes, Specs | Code snippets, Live output previews, Algorithm walkthroughs. |
 
 ---
 
-## 6. Playbook C: YouTube Supplementary Video Handling
+## 9. Git Repository Rules (`ap-precalc-streams`)
 
-When the teacher embeds third-party lessons (e.g., Mario's Math Tutoring):
-- Extract the 11-character YouTube video ID (e.g. `4XytYH35AP0`).
-- Embed in the study portal using the privacy-enhanced domain:
-  `https://www.youtube-nocookie.com/embed/4XytYH35AP0?autoplay=1&rel=0`
-- Provide direct link: `https://www.youtube.com/watch?v=4XytYH35AP0`.
-- Do not attempt to re-host large YouTube MP4s unless strictly requested for offline flight mode.
-
----
-
-## 7. Directory Organization & Git Synchronization
-
-### Mandatory File Paths
-All downloaded files must be organized by course and unit under `/Volumes/Backup/Antony/HighSchool/Grade9/`:
-```
-/Volumes/Backup/Antony/HighSchool/Grade9/
-├── Math/
-│   └── AP Precalculus/
-│       ├── Unit 1 - Unit Circle/
-│       ├── Unit 2 - Graphing Trigonometric Functions/
-│       └── Unit 3 - Inverse & Composite Trigonometric Functions/
-│           └── Unit 3 Quiz-9-22/
-│               ├── Unit_03_Quiz_Study_Portal.html
-│               ├── Unit_03_Quiz_Master_Study_Guide.md
-│               ├── Video_1_Review_of_Inverses.mp4       # Local 100% offline
-│               └── Video_4_Composite_Trig_Part1.mp4     # Local 100% offline
-├── Biology-Honors-V2/
-├── HumanGeography/
-├── Intro to Software Tech/
-└── agent.md                                             # This manual
-```
-
-### GitHub Pages Web Mirror (`ap-precalc-streams`)
-- Local clone: `/Users/anish/ap-precalc-streams/`
-- Remote URL: `https://github.com/MegaAntony/ap-precalc-streams.git`
-- Live URL: `https://megaantony.github.io/ap-precalc-streams/`
-- **Rule for Large MP4s**: Always keep `*.mp4` in `.gitignore` inside the git repository to avoid bloating GitHub limits. PDFs and HTML portals belong in the `docs/` folder for instant cloud viewing.
-
----
-
-## 8. HTML Portal Dual-Mode Player Pattern
-
-When creating study portals for Antony, always use the **Dual-Mode Player Engine**:
-1. **Local Mode (`file://`)**: Automatically selects the local `.mp4` file on disk for instantaneous playback with zero buffering.
-2. **Web Mode (`https://`)**: Automatically streams via responsive YouTube embeds or the official MyVRSpot iframe player.
-3. Provide switcher buttons in the theater header (`[💾 Local MP4]` vs `[🌐 Web Stream]`) so Antony has complete control regardless of network connectivity.
+- **Repo Path**: `/Users/anish/ap-precalc-streams/`
+- **Remote**: `https://github.com/MegaAntony/ap-precalc-streams.git`
+- **Branch**: `main`
+- **Git Ignore Policy**: Keep `*.mp4` in `.gitignore` at all times. Large binary videos stay on the local drive (`/Volumes/Backup/...`), while HTML study portals, CSS, SVGs, and PDFs are committed to GitHub for web access.
+- **Verification Command**: After every push, run:
+  ```bash
+  curl -s -I "https://megaantony.github.io/ap-precalc-streams/<new_portal>.html" | head -n 5
+  # Verify HTTP/2 200 OK
+  ```
