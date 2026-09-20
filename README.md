@@ -47,6 +47,11 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKNMmVVgIknZ8nylByh9K74/GnaXwQ4gJ/Go24lWEy82
 /Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/
 ├── README.md                                  # Complete course and setup documentation
 ├── AP_Precalculus_Direct_MP4_Streams.html     # Mirror copy of the stream portal HTML
+├── Weekly Plans/                              # Master calendar, weekly schedules, & daily assignments
+│   ├── README.md                              # Semester 1 schedule, milestones & deadlines
+│   ├── Week_07_Sep_14_Sep_18.md               # Unit 2 Test, Intro to Inverses & Composites
+│   ├── Week_08_Sep_21_Sep_25.md               # Right Triangles, Area Formulas, Unit 3 Quiz (9/22), Law of Cosines
+│   └── Week_09_Oct_05_Oct_09.md               # Law of Sines, Ambiguous Case SSA, Unit 3 Test Review
 ├── Unit 1 - Unit Circle/
 │   ├── Unit_01_all-Lesson_Videos.md           # 12 videos with direct MP4 streams & curl commands
 │   ├── Unit_01_Complete_Reference.md          # Textbook links, Worksheets A-D, solution keys
@@ -115,6 +120,12 @@ Hosted public repository layout:
   * **Lesson 7**: Ambiguous Case of Law of Sines & Worked 2-Triangle Example (Mr. O'Connor notation)
 * **Reference & Worksheets**: [`Unit_03_Complete_Reference.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_Complete_Reference.md)
   * All 16 PDFs saved locally in [`worksheets/`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/) and hosted live in `docs/` on GitHub Pages.
+
+### 4. [Weekly Plans & Assignment Tracker](./Weekly%20Plans/)
+* **Master Schedule & Milestones**: [`Weekly Plans/README.md`](./Weekly%20Plans/README.md)
+* **[Week 7 (9/14 – 9/18)](./Weekly%20Plans/Week_07_Sep_14_Sep_18.md)**: Unit 2 Test, Begin Unit 3 (Lessons 1–3, Inverse Functions & Graphing).
+* **[Week 8 (9/21 – 9/25)](./Weekly%20Plans/Week_08_Sep_21_Sep_25.md)**: Right Triangles, Area Formulas ($SAS$ & Heron's), **Unit 3 Quiz (Tue 9/22)**, Law of Cosines, DeltaMath Practice 1 (due 9/21) & Practice 2 (due 9/27).
+* **[Week 9 (10/5 – 10/9)](./Weekly%20Plans/Week_09_Oct_05_Oct_09.md)**: Law of Sines, Ambiguous Case (SSA Two-Triangle Case), Unit 3 Review, DeltaMath Practice 3 (due 10/8), Unit 3 Test (10/12–10/13).
 
 ---
 
