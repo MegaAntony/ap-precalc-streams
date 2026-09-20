@@ -120,11 +120,41 @@ Hosted public repository layout:
 ```text
 /Users/anish/ap-precalc-streams/
 ├── index.html                                 # Live portal with nav bar, videos & worksheets
-└── docs/                                      # Public PDF hosting (bypasses Microsoft / SharePoint login)
-    ├── APPCU03_WkstA_EvalInvFxns.pdf
-    ├── APPCU03_WkstA_EvalInvFxns_Answers.pdf
-    └── ... (16 Unit 3 PDFs)
+├── docs/                                      # 46 Zero-Auth PDFs (Textbook, Handouts, Worksheets, Keys)
+│   ├── Precalculus_Chapter_04_Trigonometric_Functions.pdf
+│   ├── Precalculus_Chapter_05_Analytic_Trigonometry.pdf
+│   ├── Precalculus_Chapter_06_Additional_Topics_Trig.pdf
+│   ├── Precalculus_Answers_to_Odd_Problems.pdf
+│   ├── Precalculus_Index_and_Formula_Pages.pdf
+│   ├── Official_Trig_Identities_Sheet.pdf
+│   ├── Blank_Unit_Circle_Sheet.pdf
+│   ├── Graph_Paper_4_blocks.pdf / Graph_Paper_10_blocks.pdf / Polar_Graph_Paper.pdf
+│   ├── APPCU01_... (8 Unit 1 PDFs)
+│   ├── APPCU02_... (12 Unit 2 PDFs)
+│   └── APPCU03_... (16 Unit 3 PDFs)
+├── Unit 1 - Unit Circle/                      # Unit 1 reference docs & video index
+├── Unit 2 - Graphing Trigonometric Functions/ # Unit 2 reference docs & video index
+├── Unit 3 - Inverse & Composite Trigonometric Functions/ # Unit 3 reference docs & video index
+└── Weekly Plans/                              # Master calendar & weekly schedule trackers
 ```
+
+---
+
+## 📖 Complete Course Materials (100% Zero-Auth Links)
+
+### 📚 Official Course Textbook (Larson Precalculus)
+* **Chapter 4 - Trigonometric Functions (pgs 257–350)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_04_Trigonometric_Functions.pdf)
+* **Chapter 5 - Analytic Trigonometry (pgs 351–406)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_05_Analytic_Trigonometry.pdf)
+* **Chapter 6 - Additional Topics in Trigonometry (pgs 407–472)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_06_Additional_Topics_Trig.pdf)
+* **Answers to Odd Problems (Complete Solution Key)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Answers_to_Odd_Problems.pdf)
+* **Index and Reference Formula Pages**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Index_and_Formula_Pages.pdf)
+
+### 📐 Reference Handouts & Graph Paper
+* **Official Trig Identities Sheet**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Official_Trig_Identities_Sheet.pdf)
+* **Blank Unit Circle Practice Sheet**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Blank_Unit_Circle_Sheet.pdf)
+* **Cartesian Graph Paper (4 blocks/inch)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_4_blocks.pdf)
+* **Cartesian Graph Paper (10 blocks/inch)**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_10_blocks.pdf)
+* **Polar Coordinate Graph Paper**: [Download Web PDF](https://megaantony.github.io/ap-precalc-streams/docs/Polar_Graph_Paper.pdf)
 
 ---
 
@@ -134,13 +164,13 @@ Hosted public repository layout:
 * **Video Archive**: [`Unit_01_all-Lesson_Videos.md`](./Unit%201%20-%20Unit%20Circle/Unit_01_all-Lesson_Videos.md) (12 Videos)
   * Standard Position, Radians, Coterminal Angles, Comp/Supp, Unit Circle, Angular/Linear Speed, Quadrant System, Reference Angles.
 * **Reference & Worksheets**: [`Unit_01_Complete_Reference.md`](./Unit%201%20-%20Unit%20Circle/Unit_01_Complete_Reference.md)
-  * Official Trig Identities Sheet, Blank Unit Circle, Worksheets A–D & Full Answer Keys.
+  * Worksheets A–D & Full Answer Keys (8 PDFs hosted live in `docs/` with zero authentication).
 
 ### 2. [Unit 2 - Graphing Trigonometric Functions](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/)
 * **Video Archive**: [`Unit_02_all-Lesson_Videos.md`](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_all-Lesson_Videos.md) (12 Videos)
   * Khan Academy Sine graphs, ScreenPal lessons 1–5 & 10, Older versions (2.1a–d), Secant/Cosecant, Writing Equations from Graphs.
 * **Reference & Worksheets**: [`Unit_02_Complete_Reference.md`](./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_Complete_Reference.md)
-  * Worksheets A–F (Sine/Cosine, Secant/Cosecant, Tangent/Cotangent, Writing Equations from Graphs, Test Review, Harmonic Applications).
+  * Worksheets A–F, Lesson 4 graphs, test reviews (12 PDFs hosted live in `docs/` with zero authentication).
 
 ### 3. [Unit 3 - Inverse & Composite Trigonometric Functions](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/)
 * **Video Archive**: [`Unit_03_all-Lesson_Videos.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.md) (13 Videos)
@@ -152,7 +182,7 @@ Hosted public repository layout:
   * **Lesson 6**: Law of Sines
   * **Lesson 7**: Ambiguous Case of Law of Sines & Worked 2-Triangle Example (Mr. O'Connor notation)
 * **Reference & Worksheets**: [`Unit_03_Complete_Reference.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_Complete_Reference.md)
-  * All 16 PDFs saved locally in [`worksheets/`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/) and hosted live in `docs/` on GitHub Pages.
+  * Worksheets A–E, oblique triangles, test reviews (16 PDFs hosted live in `docs/` with zero authentication).
 
 ### 4. [Weekly Plans & Assignment Tracker](./Weekly%20Plans/)
 * **Master Schedule & Milestones**: [`Weekly Plans/README.md`](./Weekly%20Plans/README.md)

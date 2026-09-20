@@ -287,13 +287,102 @@
         <p class="subtitle">Direct MP4 Video Streams, Lesson Archives &amp; Worksheet Answer Keys</p>
 
         <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
         <nav class="nav-bar">
             <span class="nav-label">Jump to:</span>
+            <a href="#textbook" onclick="jumpTo('textbook'); return true;" class="nav-pill">📚 Textbook</a>
+            <a href="#handouts" onclick="jumpTo('handouts'); return true;" class="nav-pill">📐 Handouts &amp; Grids</a>
             <a href="#unit-1" onclick="jumpTo('unit-1'); return true;" class="nav-pill">Unit 1: Unit Circle</a>
             <a href="#unit-2" onclick="jumpTo('unit-2'); return true;" class="nav-pill">Unit 2: Graphing Trig</a>
             <a href="#unit-3" onclick="jumpTo('unit-3'); return true;" class="nav-pill">Unit 3: Inverse &amp; Composite Trig</a>
             <a href="#unit-3-review" onclick="jumpTo('unit-3-review'); return true;" class="nav-pill review-pill">Unit 3 Review (Worksheets D &amp; E)</a>
         </nav>
+
+        <!-- Course Textbook -->
+        <div class="unit-section" id="textbook">
+            <h2 class="unit-title">
+                📚 Course Textbook (Larson Precalculus)
+                <span class="unit-badge">5 Offline PDF Chapters &amp; Keys</span>
+            </h2>
+            <div class="resource-box">
+                <h3 class="resource-heading">📖 Chapters &amp; Reference Formulas <span class="badge-public">⚡ Public / No Login Required</span></h3>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-title">Chapter 4: Trigonometric Functions (pgs 257–350)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Precalculus_Chapter_04_Trigonometric_Functions.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Chapter 5: Analytic Trigonometry (pgs 351–406)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Precalculus_Chapter_05_Analytic_Trigonometry.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Chapter 6: Additional Topics in Trig (pgs 407–472)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Precalculus_Chapter_06_Additional_Topics_Trig.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Answers to Odd Problems (Complete Solutions Key)</span>
+                        <div class="btn-group">
+                            <a class="btn-key" href="./docs/Precalculus_Answers_to_Odd_Problems.pdf" target="_blank">Solutions PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Index and Reference Formula Pages</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Precalculus_Index_and_Formula_Pages.pdf" target="_blank">Formulas PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reference Handouts & Graph Paper -->
+        <div class="unit-section" id="handouts">
+            <h2 class="unit-title">
+                📐 Printable Handouts &amp; Graph Papers
+                <span class="unit-badge">5 Reference Sheets</span>
+            </h2>
+            <div class="resource-box">
+                <h3 class="resource-heading">📄 Formula Charts, Unit Circles &amp; Coordinate Grids <span class="badge-public">⚡ Public / No Login Required</span></h3>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <span class="resource-title">Official Trig Identities Sheet</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Official_Trig_Identities_Sheet.pdf" target="_blank">Identities PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Blank Unit Circle Practice Sheet</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Blank_Unit_Circle_Sheet.pdf" target="_blank">Unit Circle PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Cartesian Graph Paper (4 blocks / inch)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Graph_Paper_4_blocks.pdf" target="_blank">4-Block Grid PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Cartesian Graph Paper (10 blocks / inch)</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Graph_Paper_10_blocks.pdf" target="_blank">10-Block Grid PDF</a>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-title">Polar Coordinate Graph Paper</span>
+                        <div class="btn-group">
+                            <a class="btn-pdf" href="./docs/Polar_Graph_Paper.pdf" target="_blank">Polar Grid PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Unit 1 -->
         <div class="unit-section" id="unit-1">
@@ -302,7 +391,7 @@
                 <span class="unit-badge">12 Videos • 4 Worksheets</span>
             </h2>
             <div class="resource-box">
-                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys</h3>
+                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys <span class="badge-public">⚡ Public / No Login Required</span></h3>
                 <div class="resource-grid">
                     <div class="resource-card">
                         <span class="resource-title">Official Trig Identities Sheet</span>
@@ -442,7 +531,7 @@
                 <span class="unit-badge">12 Videos • 6 Worksheets</span>
             </h2>
             <div class="resource-box">
-                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys</h3>
+                <h3 class="resource-heading">📄 Worksheets &amp; Solution Keys <span class="badge-public">⚡ Public / No Login Required</span></h3>
                 <div class="resource-grid">
                     <div class="resource-card">
                         <span class="resource-title">Worksheet A - Graphing Sine & Cosine</span>
@@ -594,57 +683,57 @@
                     <div class="resource-card">
                         <span class="resource-title">Worksheet A - Evaluating Inverse Trig Functions</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstA_EvalInvFxns.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstA_EvalInvFxns.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Worksheet B - Evaluating Arc Trig Functions</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstB_EvalArcTrig.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstB_EvalArcTrig.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Worksheet C - Applications of Inverse Trig Functions</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstC_Applications.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstC_Applications_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstC_Applications.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstC_Applications_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card" id="unit-3-review">
                         <span class="resource-title">Worksheet D - Test Review</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstD_UnitReview.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstD_UnitReview_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstD_UnitReview.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstD_UnitReview_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Worksheet B - Applications of Oblique Triangles</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstB_AppsObliqueTriangles.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstB_AppsObliqueTriangles.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Worksheet C - Extra Practice with SSA (Law of Sines)</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstC_ExtraPracSSA.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstC_ExtraPracSSA_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstC_ExtraPracSSA.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstC_ExtraPracSSA_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Worksheet D - More Practice with Oblique Triangles</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstD_MorePracticeApps.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstD_MorePracticeApps_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstD_MorePracticeApps.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstD_MorePracticeApps_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                     <div class="resource-card" id="unit-3-review-problems">
                         <span class="resource-title">Worksheet E - Review Problems</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="docs/APPCU03_WkstE_Review.pdf" target="_blank">Worksheet PDF</a>
-                            <a class="btn-key" href="docs/APPCU03_WkstE_Review_Answers.pdf" target="_blank">Answer Key</a>
+                            <a class="btn-pdf" href="./docs/APPCU03_WkstE_Review.pdf" target="_blank">Worksheet PDF</a>
+                            <a class="btn-key" href="./docs/APPCU03_WkstE_Review_Answers.pdf" target="_blank">Answer Key</a>
                         </div>
                     </div>
                 </div>
