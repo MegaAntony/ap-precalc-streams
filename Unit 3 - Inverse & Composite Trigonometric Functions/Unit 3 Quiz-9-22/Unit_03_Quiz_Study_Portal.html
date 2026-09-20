@@ -892,56 +892,64 @@
         </div>
     </section>
 
-    <!-- Video Stream Center -->
         <!-- Video Stream Center -->
     <section class="section-card" id="videos">
         <div class="section-header">
             <h2 class="section-title">🎥 Video Lessons Stream Center (Lessons 1–3)</h2>
-            <span class="badge-pill">6 Videos • Watch Directly on Page</span>
+            <span class="badge-pill">6 Videos • Built-in Player &amp; Direct Links</span>
         </div>
 
         <!-- Built-in Interactive Video Player Theater -->
-        <div id="video-theater" style="display: none; margin-bottom: 24px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
-            <div style="padding: 12px 16px; background: #131b2e; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
-                <span id="theater-title" style="font-weight: 700; color: var(--accent); font-size: 0.98rem;">▶ Now Playing</span>
-                <button onclick="closeTheater()" style="background: rgba(255,255,255,0.1); color: #fff; border: none; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight:600;">✕ Close Player</button>
+        <div id="video-theater" style="display: none; margin-bottom: 24px; background: #0b0f19; border-radius: 12px; overflow: hidden; border: 2px solid var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.85);">
+            <div style="padding: 12px 18px; background: #131b2e; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; border-bottom: 1px solid var(--border);">
+                <div>
+                    <span id="theater-title" style="font-weight: 700; color: var(--accent); font-size: 1.02rem;">▶ Now Playing</span>
+                </div>
+                <div id="theater-controls" style="display: flex; gap: 8px; align-items: center;">
+                    <span id="theater-source-switch"></span>
+                    <button onclick="closeTheater()" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight:600; transition: background 0.2s;" onmouseover="this.style.background='rgba(239,68,68,0.4)'" onmouseout="this.style.background='rgba(239,68,68,0.2)'">✕ Close Player</button>
+                </div>
             </div>
-            <div id="theater-player-container" style="position: relative; width: 100%; padding-top: 56.25%;"></div>
+            <div id="theater-player-container" style="position: relative; width: 100%; padding-top: 56.25%; background: #000;"></div>
         </div>
+
         <div class="grid-cards">
             <!-- Video 1 -->
             <div class="item-card">
                 <div>
                     <span class="item-title">Video 1: Review of Inverses (from Algebra)</span>
-                    <p class="item-desc">Inverse definitions, domain/range swapping, HLT, symmetry over y=x.</p>
+                    <p class="item-desc">Inverse definitions, domain/range swapping, Horizontal Line Test, reflection over y = x. (Teacher Lesson)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(1); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank">Embed Player</a>
-                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(1); return false;">▶ Play on Page</a>
+                    <a class="btn btn-pdf" href="Video_1_Review_of_Inverses.mp4" target="_blank" download>💾 Local MP4</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank">🌐 Web Player</a>
                 </div>
             </div>
 
             <!-- Video 2 -->
             <div class="item-card">
                 <div>
-                    <span class="item-title">Video 2: Rational Zero Test &amp; Synthetic Division</span>
-                    <p class="item-desc">Finding pre-images of polynomial inverses by factoring and division.</p>
+                    <span class="item-title">Video 2: Rational Root Theorem &amp; Synthetic Division</span>
+                    <p class="item-desc">Finding pre-images of polynomial inverses by synthetic division and factoring. (Mario's Math Tutoring)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(2); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank">Embed Player</a>
-                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(2); return false;">▶ Play on Page</a>
+                    <a class="btn btn-yt" href="https://www.youtube.com/watch?v=4XytYH35AP0" target="_blank">▶ YouTube</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank">🌐 MyVRSpot</a>
                 </div>
             </div>
 
             <!-- Video 3 -->
             <div class="item-card">
                 <div>
-                    <span class="item-title">Video 3: Evaluating Arctrig Functions</span>
-                    <p class="item-desc">Unit circle exact values, strict quadrant restrictions, reciprocal arc functions.</p>
+                    <span class="item-title">Video 3: Evaluating ArcTrig Functions</span>
+                    <p class="item-desc">Unit circle exact values, strict quadrant restrictions (arcsin, arccos, arctan). (Mario's Math Tutoring)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(3); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank">Embed Player</a>
-                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(3); return false;">▶ Play on Page</a>
+                    <a class="btn btn-yt" href="https://www.youtube.com/watch?v=8oDUbIYDpno" target="_blank">▶ YouTube</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank">🌐 MyVRSpot</a>
                 </div>
             </div>
 
@@ -949,11 +957,12 @@
             <div class="item-card">
                 <div>
                     <span class="item-title">Video 4: Composite Trig Expressions (Part 1)</span>
-                    <p class="item-desc">Composition properties, cancellations, and out-of-range corrections.</p>
+                    <p class="item-desc">Inverse &amp; trig cancellations, out-of-range corrections, step-by-step logic. (Teacher Lesson)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(4); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank">Embed Player</a>
-                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(4); return false;">▶ Play on Page</a>
+                    <a class="btn btn-pdf" href="Video_4_Composite_Trig_Part1.mp4" target="_blank" download>💾 Local MP4</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank">🌐 Web Player</a>
                 </div>
             </div>
 
@@ -961,11 +970,12 @@
             <div class="item-card">
                 <div>
                     <span class="item-title">Video 5: Numeric Composite Inverses (Part 2)</span>
-                    <p class="item-desc">Numeric ratios, right triangle evaluation.</p>
+                    <p class="item-desc">Numeric ratios, 4-step right triangle reference angle evaluation. (Mario's Math Tutoring)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(5); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(5); return false;">▶ Play on Page</a>
                     <a class="btn btn-yt" href="https://www.youtube.com/watch?v=FttVzfrk5L8" target="_blank">▶ YouTube</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank">🌐 MyVRSpot</a>
                 </div>
             </div>
 
@@ -973,11 +983,12 @@
             <div class="item-card">
                 <div>
                     <span class="item-title">Video 6: Variable Ratios Composites (Part 3)</span>
-                    <p class="item-desc">Algebraic expressions with variable x, algebraic right triangle formulas.</p>
+                    <p class="item-desc">Algebraic expressions with variable x, algebraic right triangle formulas. (Mario's Math Tutoring)</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(6); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(6); return false;">▶ Play on Page</a>
                     <a class="btn btn-yt" href="https://www.youtube.com/watch?v=OLCNPVCMQPw" target="_blank">▶ YouTube</a>
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank">🌐 MyVRSpot</a>
                 </div>
             </div>
         </div>
@@ -1258,53 +1269,103 @@
     const videoSources = {
         1: {
             title: "Unit 3 Lesson 1: Review of Inverses (from Algebra)",
-            type: "mp4",
-            src: "https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+            type: "dual",
+            localSrc: "Video_1_Review_of_Inverses.mp4",
+            webSrc: "https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM",
+            ytSrc: null
         },
         2: {
-            title: "Unit 3 Lesson 1: Rational Zero Test (Synthetic Division)",
-            type: "mp4",
-            src: "https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+            title: "Unit 3 Lesson 1: Rational Root Theorem & Synthetic Division",
+            type: "yt",
+            localSrc: null,
+            webSrc: "https://www.youtube-nocookie.com/embed/4XytYH35AP0?autoplay=1&rel=0",
+            ytSrc: "https://www.youtube.com/watch?v=4XytYH35AP0"
         },
         3: {
-            title: "Unit 3 Lesson 2: Evaluating Arctrig Functions",
-            type: "mp4",
-            src: "https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+            title: "Unit 3 Lesson 2: Evaluating ArcTrig Functions (arcsin, arccos, arctan)",
+            type: "yt",
+            localSrc: null,
+            webSrc: "https://www.youtube-nocookie.com/embed/8oDUbIYDpno?autoplay=1&rel=0",
+            ytSrc: "https://www.youtube.com/watch?v=8oDUbIYDpno"
         },
         4: {
-            title: "Unit 3 Lesson 3: Composite Trig Expressions (Part 1)",
-            type: "mp4",
-            src: "https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+            title: "Unit 3 Lesson 3: Composite Trig Expressions (Part 1 - Teacher Lesson)",
+            type: "dual",
+            localSrc: "Video_4_Composite_Trig_Part1.mp4",
+            webSrc: "https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI",
+            ytSrc: null
         },
         5: {
-            title: "Unit 3 Lesson 3: Numeric Composite Inverses (Part 2)",
-            type: "iframe",
-            src: "https://www.youtube-nocookie.com/embed/FttVzfrk5L8?autoplay=1"
+            title: "Unit 3 Lesson 3: Numeric Composite Inverses (Part 2 - Mario's Math)",
+            type: "yt",
+            localSrc: null,
+            webSrc: "https://www.youtube-nocookie.com/embed/FttVzfrk5L8?autoplay=1&rel=0",
+            ytSrc: "https://www.youtube.com/watch?v=FttVzfrk5L8"
         },
         6: {
-            title: "Unit 3 Lesson 3: Variable Ratios Composites (Part 3)",
-            type: "iframe",
-            src: "https://www.youtube-nocookie.com/embed/OLCNPVCMQPw?autoplay=1"
+            title: "Unit 3 Lesson 3: Variable Ratios Composites (Part 3 - Mario's Math)",
+            type: "yt",
+            localSrc: null,
+            webSrc: "https://www.youtube-nocookie.com/embed/OLCNPVCMQPw?autoplay=1&rel=0",
+            ytSrc: "https://www.youtube.com/watch?v=OLCNPVCMQPw"
         }
     };
 
-    function playInlineVideo(num) {
+    let currentVideoNum = null;
+
+    function playInlineVideo(num, forceMode) {
         const v = videoSources[num];
         if (!v) return;
+        currentVideoNum = num;
+        
         const theater = document.getElementById('video-theater');
         const titleEl = document.getElementById('theater-title');
         const container = document.getElementById('theater-player-container');
+        const switchEl = document.getElementById('theater-source-switch');
         
-        titleEl.textContent = '▶ Now Playing: ' + v.title;
         theater.style.display = 'block';
         
-        if (v.type === 'mp4') {
-            container.innerHTML = `<video controls autoplay playsinline style="position: absolute; top:0; left:0; width:100%; height:100%; background:#000;">
-                <source src="${v.src}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>`;
+        // Determine mode: if forceMode given use it, else default:
+        // If file: protocol and localSrc exists -> use 'local'
+        // If http/https or no localSrc -> use 'web'
+        let mode = forceMode;
+        if (!mode) {
+            const isLocalFile = window.location.protocol === 'file:';
+            if (v.localSrc && (isLocalFile || !v.webSrc)) {
+                mode = 'local';
+            } else {
+                mode = 'web';
+            }
+        }
+        
+        // Build Source Switcher buttons
+        let switchButtons = '';
+        if (v.localSrc) {
+            const localActive = mode === 'local' ? 'background: var(--accent); color: #0b0f19;' : 'background: rgba(255,255,255,0.1); color: #fff;';
+            const webActive = mode === 'web' ? 'background: var(--accent); color: #0b0f19;' : 'background: rgba(255,255,255,0.1); color: #fff;';
+            switchButtons = `
+                <button onclick="playInlineVideo(${num}, 'local')" style="${localActive} border:none; padding: 4px 10px; border-radius: 5px; font-size: 0.8rem; font-weight:600; cursor:pointer;">💾 Local MP4</button>
+                <button onclick="playInlineVideo(${num}, 'web')" style="${webActive} border:none; padding: 4px 10px; border-radius: 5px; font-size: 0.8rem; font-weight:600; cursor:pointer;">🌐 Web Stream</button>
+            `;
+        } else if (v.ytSrc) {
+            switchButtons = `
+                <a href="${v.ytSrc}" target="_blank" style="background: #ef4444; color: #fff; padding: 4px 10px; border-radius: 5px; font-size: 0.8rem; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">↗ YouTube Tab</a>
+            `;
+        }
+        switchEl.innerHTML = switchButtons;
+        
+        const modeLabel = mode === 'local' ? ' [Offline Local MP4]' : (v.type === 'yt' ? ' [YouTube]' : ' [Web Stream]');
+        titleEl.textContent = '▶ Now Playing: ' + v.title + modeLabel;
+        
+        if (mode === 'local' && v.localSrc) {
+            container.innerHTML = `
+                <video controls autoplay playsinline style="position: absolute; top:0; left:0; width:100%; height:100%; background:#000;">
+                    <source src="${v.localSrc}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>`;
         } else {
-            container.innerHTML = `<iframe src="${v.src}" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.innerHTML = `
+                <iframe src="${v.webSrc}" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         }
         
         theater.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1315,6 +1376,7 @@
         const container = document.getElementById('theater-player-container');
         container.innerHTML = '';
         theater.style.display = 'none';
+        currentVideoNum = null;
     }
 
     // Accordion Toggle
