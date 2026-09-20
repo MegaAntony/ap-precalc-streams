@@ -51,7 +51,8 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKNMmVVgIknZ8nylByh9K74/GnaXwQ4gJ/Go24lWEy82
 │   ├── README.md                              # Semester 1 schedule, milestones & deadlines
 │   ├── Week_07_Sep_14_Sep_18.md               # Unit 2 Test, Intro to Inverses & Composites
 │   ├── Week_08_Sep_21_Sep_25.md               # Right Triangles, Area Formulas, Unit 3 Quiz (9/22), Law of Cosines
-│   └── Week_09_Oct_05_Oct_09.md               # Law of Sines, Ambiguous Case SSA, Unit 3 Test Review
+│   ├── Week_Fall_Break_Sep_28_Oct_02.md       # Fall Break (no school, covers Oct 1 & Oct 2)
+│   └── Week_09_Oct_05_Oct_09.md               # October First Week: Law of Sines, Ambiguous Case SSA, Review
 ├── Unit 1 - Unit Circle/
 │   ├── Unit_01_all-Lesson_Videos.md           # 12 videos with direct MP4 streams & curl commands
 │   ├── Unit_01_Complete_Reference.md          # Textbook links, Worksheets A-D, solution keys
@@ -125,7 +126,8 @@ Hosted public repository layout:
 * **Master Schedule & Milestones**: [`Weekly Plans/README.md`](./Weekly%20Plans/README.md)
 * **[Week 7 (9/14 – 9/18)](./Weekly%20Plans/Week_07_Sep_14_Sep_18.md)**: Unit 2 Test, Begin Unit 3 (Lessons 1–3, Inverse Functions & Graphing).
 * **[Week 8 (9/21 – 9/25)](./Weekly%20Plans/Week_08_Sep_21_Sep_25.md)**: Right Triangles, Area Formulas ($SAS$ & Heron's), **Unit 3 Quiz (Tue 9/22)**, Law of Cosines, DeltaMath Practice 1 (due 9/21) & Practice 2 (due 9/27).
-* **[Week 9 (10/5 – 10/9)](./Weekly%20Plans/Week_09_Oct_05_Oct_09.md)**: Law of Sines, Ambiguous Case (SSA Two-Triangle Case), Unit 3 Review, DeltaMath Practice 3 (due 10/8), Unit 3 Test (10/12–10/13).
+* **[Fall Break (9/28 – 10/2)](./Weekly%20Plans/Week_Fall_Break_Sep_28_Oct_02.md)**: Fall Break review & identity practice (covers Oct 1 & Oct 2).
+* **[Week 9 — October First Week (10/5 – 10/9)](./Weekly%20Plans/Week_09_Oct_05_Oct_09.md)**: Law of Sines, Ambiguous Case (SSA Two-Triangle Case), Unit 3 Review, DeltaMath Practice 3 (due 10/8), Unit 3 Test Prep (Test: 10/12–10/13).
 
 ---
 
