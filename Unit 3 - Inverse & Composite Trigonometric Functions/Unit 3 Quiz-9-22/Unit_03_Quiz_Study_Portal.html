@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Precalculus - Unit 3 Quiz (9/22) Complete Master Study Portal</title>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --surface: #131b2e;
+            --surface-card: #1c2640;
+            --surface-hover: #243254;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --accent-hover: #0284c7;
+            --key-bg: #10b981;
+            --key-hover: #059669;
+            --warning-bg: #f59e0b;
+            --danger-bg: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(56, 189, 248, 0.4);
+            --radius: 12px;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px 16px 60px 16px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding: 32px 20px;
+            background: linear-gradient(180deg, #16223d 0%, var(--surface) 100%);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 100px;
+            background: var(--accent);
+            filter: blur(80px);
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0 0 16px 0;
+        }
+
+        .meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tag-date {
+            background: rgba(239, 68, 68, 0.18);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        .tag-target {
+            background: rgba(16, 185, 129, 0.18);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .tag-scope {
+            background: rgba(56, 189, 248, 0.18);
+            color: #7dd3fc;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+
+        /* Sticky Navigation Bar */
+        .nav-bar {
+            position: sticky;
+            top: 16px;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(14px);
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            margin-bottom: 28px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav-pill {
+            background: rgba(255, 255, 255, 0.05);
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-pill:hover, .nav-pill.active {
+            background: var(--accent);
+            color: #0b0f19;
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+
+        /* Progress Card */
+        .progress-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 28px;
+        }
+
+        .progress-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .progress-bar-bg {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #10b981);
+            transition: width 0.4s ease;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+        }
+
+        .checklist-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background 0.15s ease;
+            user-select: none;
+        }
+
+        .checklist-item:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .checklist-item input {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            accent-color: #10b981;
+        }
+
+        .checklist-item.done {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        /* Section Layout */
+        .section-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 28px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .badge-pill {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* Resource Grid */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 16px;
+        }
+
+        .item-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .item-title {
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .item-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-pdf {
+            background: #0284c7;
+            color: #ffffff;
+        }
+        .btn-pdf:hover {
+            background: #0369a1;
+        }
+
+        .btn-key {
+            background: var(--key-bg);
+            color: #ffffff;
+        }
+        .btn-key:hover {
+            background: var(--key-hover);
+        }
+
+        .btn-video {
+            background: #6366f1;
+            color: #ffffff;
+        }
+        .btn-video:hover {
+            background: #4f46e5;
+        }
+
+        .btn-yt {
+            background: #ef4444;
+            color: #ffffff;
+        }
+        .btn-yt:hover {
+            background: #dc2626;
+        }
+
+        /* Rules & Callouts */
+        .callout {
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.88rem;
+            border-left: 4px solid transparent;
+        }
+
+        .callout-danger {
+            background: rgba(239, 68, 68, 0.1);
+            border-left-color: #ef4444;
+            color: #fca5a5;
+        }
+
+        .callout-success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left-color: #10b981;
+            color: #6ee7b7;
+        }
+
+        .callout-info {
+            background: rgba(56, 189, 248, 0.1);
+            border-left-color: #38bdf8;
+            color: #bae6fd;
+        }
+
+        /* Tables */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--accent);
+            padding: 10px 14px;
+            border-bottom: 2px solid var(--border);
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            color: #e2e8f0;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Self-Testing Accordion */
+        .q-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .q-header {
+            padding: 14px 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.02);
+            transition: background 0.15s ease;
+        }
+
+        .q-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .q-toggle {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .q-body {
+            padding: 16px 18px;
+            background: rgba(15, 23, 42, 0.5);
+            border-top: 1px solid var(--border);
+            display: none;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .q-body.open {
+            display: block;
+        }
+
+        /* Formula Card Blocks */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .formula-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .formula-box h4 {
+            margin: 0 0 8px 0;
+            color: var(--accent);
+            font-size: 0.92rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 4px;
+        }
+
+        .formula-box code {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: #f1f5f9;
+            margin: 4px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📐 AP Precalculus: Unit 3 Quiz Master Study Hub</h1>
+        <p class="subtitle">100% Score Preparation Protocol • Lessons 1 through 3 + Identity Drills</p>
+        <div class="meta-tags">
+            <span class="tag tag-date">📅 Exam Date: Tuesday, Sep 22, 2026 (In-Class)</span>
+            <span class="tag tag-target">🎯 Goal: 100% Mastery</span>
+            <span class="tag tag-scope">📖 Scope: Inverses, Arc Trig &amp; Composite Trig</span>
+            <span class="tag tag-target">⚡ 100% Auth-Free Cloud &amp; Local Access</span>
+        </div>
+    </header>
+
+    <!-- Sticky Navigation -->
+    <nav class="nav-bar">
+        <a href="#checklist" class="nav-pill">✅ Mastery Checklist</a>
+        <a href="#pillars" class="nav-pill">🏛️ The 4 Core Pillars</a>
+        <a href="#videos" class="nav-pill">🎥 Video Lessons (1–6)</a>
+        <a href="#worksheets" class="nav-pill">📑 Worksheets A, B, C</a>
+        <a href="#identities" class="nav-pill">🧠 Trig Identities Bank</a>
+        <a href="#simulation" class="nav-pill">📝 10-Q Practice Quiz</a>
+        <a href="#schedule" class="nav-pill">🗓️ 2-Day Study Plan</a>
+    </nav>
+
+    <!-- Mastery Progress Tracker -->
+    <section class="progress-box" id="checklist">
+        <div class="progress-title">
+            <span>🎯 Unit 3 Quiz Mastery Progress: <span id="progress-percent">0%</span></span>
+            <span style="font-size: 0.85rem; color: var(--accent);" id="progress-count">0 of 8 Completed</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+        <div class="checklist-grid">
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v12"> Watch Videos 1 &amp; 2 (Inverses &amp; Rational Zero)</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="wA"> Solve Worksheet A &amp; Verify with Answer Key</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v3"> Watch Video 3 (Evaluating Arc Trig)</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="wB"> Solve Worksheet B &amp; Master Range Restrictions</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v456"> Watch Videos 4, 5, 6 (Composite Inverses)</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="ident"> Memorize TD 23–25 Trig Identities (Double/Half/Sum)</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="delta"> Complete DeltaMath Unit 3 Practice 1 (Due Mon 9/21)</label>
+            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="quiz"> Complete 10-Question Quiz Simulation Below (100%)</label>
+        </div>
+    </section>
+
+    <!-- Pillar 1: General Inverses & Function Tables -->
+    <section class="section-card" id="pillars">
+        <div class="section-header">
+            <h2 class="section-title">🏛️ Pillar 1: General Inverses &amp; Function Tables (Lesson 1)</h2>
+            <span class="badge-pill">Worksheet A Focus</span>
+        </div>
+        <p>Inverses swap domain and range: $(x, y) \to (y, x)$. A function has an inverse function <strong>if and only if</strong> it passes the <strong>Horizontal Line Test (one-to-one)</strong>.</p>
+        
+        <div class="callout callout-info">
+            <strong>Key Composition Property:</strong>
+            $$(f \circ g)^{-1}(x) = (g^{-1} \circ f^{-1})(x) = g^{-1}(f^{-1}(x))$$
+            <em>Notice the order flips! Always evaluate the inner function first.</em>
+        </div>
+
+        <div class="callout callout-success">
+            <strong>Evaluating Polynomial Inverses $f^{-1}(c)$:</strong>
+            <ol style="margin: 6px 0 0 20px; padding: 0;">
+                <li>Set $f(x) = c$.</li>
+                <li>Subtract $c$ to get $f(x) - c = 0$.</li>
+                <li>Factor by grouping or synthetic division. <em>(Remember: because polynomials can have multiple pre-images, $f^{-1}(c)$ can yield multiple values!)</em></li>
+            </ol>
+            <strong>Example:</strong> If $f(x) = x^3 - 7x^2 - 8x + 5$, evaluate $f^{-1}(5)$.<br>
+            $x^3 - 7x^2 - 8x + 5 = 5 \implies x(x^2 - 7x - 8) = 0 \implies x(x - 8)(x + 1) = 0 \implies \mathbf{x = 0, 8, -1}$.
+        </div>
+    </section>
+
+    <!-- Pillar 2: Arc Trig Strict Range Restrictions -->
+    <section class="section-card">
+        <div class="section-header">
+            <h2 class="section-title">🏛️ Pillar 2: Arc Trig Strict Range Restrictions (Lesson 2)</h2>
+            <span class="badge-pill">Worksheet B Focus</span>
+        </div>
+        <p>Because trig functions are periodic, their domains were strictly restricted to define inverses. You MUST memorize these output boundaries:</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Input Domain</th>
+                        <th>Strict Output Range ($\theta$)</th>
+                        <th>Active Quadrants</th>
+                        <th>Critical Pitfall Alert</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>$\theta = \arcsin(x)$</strong></td>
+                        <td>$[-1, 1]$</td>
+                        <td>$\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$</td>
+                        <td><strong>Quadrants I &amp; IV</strong></td>
+                        <td>Negative angles MUST be written as negative acute (e.g. $-\frac{\pi}{6}$), NEVER $11\pi/6$!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$\theta = \arccos(x)$</strong></td>
+                        <td>$[-1, 1]$</td>
+                        <td>$[0, \pi]$</td>
+                        <td><strong>Quadrants I &amp; II</strong></td>
+                        <td>Negative inputs produce obtuse angles in Quadrant II (e.g. $\frac{2\pi}{3}, \frac{3\pi}{4}, \frac{5\pi}{6}$).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$\theta = \arctan(x)$</strong></td>
+                        <td>$(-\infty, \infty)$</td>
+                        <td>$\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$</td>
+                        <td><strong>Quadrants I &amp; IV</strong></td>
+                        <td>Open interval due to vertical asymptotes at $\pm\pi/2$.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$\theta = \text{arcsec}(x)$</strong></td>
+                        <td>$(-\infty, -1] \cup [1, \infty)$</td>
+                        <td>$[0, \pi], \theta \neq \frac{\pi}{2}$</td>
+                        <td><strong>Quadrants I &amp; II</strong></td>
+                        <td>Equal to $\arccos(1/x)$. $\text{arcsec}(-2) = \arccos(-1/2) = \mathbf{\frac{2\pi}{3}}$.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>$\theta = \text{arccsc}(x)$</strong></td>
+                        <td>$(-\infty, -1] \cup [1, \infty)$</td>
+                        <td>$\left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \theta \neq 0$</td>
+                        <td><strong>Quadrants I &amp; IV</strong></td>
+                        <td>Equal to $\arcsin(1/x)$. $\text{arccsc}(\sqrt{2}) = \arcsin(\sqrt{2}/2) = \mathbf{\frac{\pi}{4}}$.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-danger">
+            <strong>🚨 The #1 Mistake on Unit 3 Quizzes:</strong><br>
+            Evaluating $\arcsin(-1/2)$ as $11\pi/6$ or $7\pi/6$. In AP Precalculus, the range is strictly $[-\pi/2, \pi/2]$, so you will get 0 credit for $11\pi/6$. The ONLY correct answer is <strong>$-\frac{\pi}{6}$</strong>!
+        </div>
+    </section>
+
+    <!-- Pillar 3: Composite Trig Expressions -->
+    <section class="section-card">
+        <div class="section-header">
+            <h2 class="section-title">🏛️ Pillar 3: Composite Trig &amp; Right Triangle Modeling (Lesson 3)</h2>
+            <span class="badge-pill">Videos 4, 5, 6</span>
+        </div>
+        
+        <div class="callout callout-info">
+            <strong>Rule A — Out-of-Bounds Cancellation:</strong><br>
+            $\arcsin(\sin\theta) = \theta$ <strong>ONLY IF</strong> $\theta \in [-\pi/2, \pi/2]$.<br>
+            If $\theta$ is outside this range, evaluate in 2 steps:<br>
+            $$\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right) \implies \sin\left(\frac{5\pi}{6}\right) = \frac{1}{2} \implies \arcsin\left(\frac{1}{2}\right) = \mathbf{\frac{\pi}{6}}$$
+            $$\arccos\left(\cos\left(\frac{7\pi}{4}\right)\right) \implies \cos\left(\frac{7\pi}{4}\right) = \frac{\sqrt{2}}{2} \implies \arccos\left(\frac{\sqrt{2}}{2}\right) = \mathbf{\frac{\pi}{4}}$$
+        </div>
+
+        <div class="callout callout-success">
+            <strong>Rule B — 4-Step Right Triangle Method for Variable Algebraic Composites:</strong>
+            <ol style="margin: 6px 0 0 20px; padding: 0;">
+                <li>Let $\theta = \text{inner arc function}$. For example, $\theta = \arccos(2x)$.</li>
+                <li>Write ratio: $\cos\theta = \frac{2x}{1} = \frac{\text{Adjacent}}{\text{Hypotenuse}}$.</li>
+                <li>Draw right triangle and use $a^2 + b^2 = c^2$: $\text{Opposite} = \sqrt{1^2 - (2x)^2} = \sqrt{1 - 4x^2}$.</li>
+                <li>Evaluate outer function: $\tan(\arccos(2x)) = \frac{\text{Opposite}}{\text{Adjacent}} = \mathbf{\frac{\sqrt{1 - 4x^2}}{2x}}$.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Video Stream Center -->
+    <section class="section-card" id="videos">
+        <div class="section-header">
+            <h2 class="section-title">🎥 Video Lessons Stream Center (Lessons 1–3)</h2>
+            <span class="badge-pill">6 Videos • Direct MP4 &amp; YouTube</span>
+        </div>
+        <div class="grid-cards">
+            <!-- Video 1 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 1: Review of Inverses (from Algebra)</span>
+                    <p class="item-desc">Inverse definitions, domain/range swapping, HLT, symmetry over y=x.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank">Embed Player</a>
+                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 2: Rational Zero Test &amp; Synthetic Division</span>
+                    <p class="item-desc">Finding pre-images of polynomial inverses by factoring and division.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank">Embed Player</a>
+                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 3: Evaluating Arctrig Functions</span>
+                    <p class="item-desc">Unit circle exact values, strict quadrant restrictions, reciprocal arc functions.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank">Embed Player</a>
+                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 4: Composite Trig Expressions (Part 1)</span>
+                    <p class="item-desc">Composition properties, cancellations, and out-of-range corrections.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank">Embed Player</a>
+                    <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 5: Numeric Composite Inverses (Part 2)</span>
+                    <p class="item-desc">Numeric triangles, right triangle Pythagorean theorem modeling.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank">Embed Player</a>
+                    <a class="btn btn-yt" href="https://www.youtube.com/watch?v=FttVzfrk5L8" target="_blank">▶ YouTube</a>
+                </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Video 6: Variable Ratios Composites (Part 3)</span>
+                    <p class="item-desc">Algebraic expressions with variable x, algebraic right triangle formulas.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank">Embed Player</a>
+                    <a class="btn btn-yt" href="https://www.youtube.com/watch?v=OLCNPVCMQPw" target="_blank">▶ YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worksheets & Answer Keys -->
+    <section class="section-card" id="worksheets">
+        <div class="section-header">
+            <h2 class="section-title">📑 Official Worksheets &amp; Solution Keys</h2>
+            <span class="badge-pill">100% Zero-Auth PDFs</span>
+        </div>
+        <div class="grid-cards">
+            <!-- Worksheet A -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Worksheet A: Evaluating Inverse Functions</span>
+                    <p class="item-desc">Function tables, compositions, and polynomial pre-images.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-pdf" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns.pdf" target="_blank">📄 Worksheet PDF</a>
+                    <a class="btn btn-key" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf" target="_blank">🔑 Full Answer Key</a>
+                </div>
+            </div>
+
+            <!-- Worksheet B -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Worksheet B: Evaluating Arc Trig Functions</span>
+                    <p class="item-desc">18 exact value unit circle evaluations with strict range limits.</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-pdf" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig.pdf" target="_blank">📄 Worksheet PDF</a>
+                    <a class="btn btn-key" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf" target="_blank">🔑 Full Answer Key</a>
+                </div>
+            </div>
+
+            <!-- Worksheet C -->
+            <div class="item-card">
+                <div>
+                    <span class="item-title">Worksheet C: Application Problems</span>
+                    <p class="item-desc">Real-world right triangle word problems (elevation, descent, ladders).</p>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-pdf" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstC_Applications.pdf" target="_blank">📄 Worksheet PDF</a>
+                    <a class="btn btn-key" href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstC_Applications_Answers.pdf" target="_blank">🔑 Full Answer Key</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trig Identities Bank -->
+    <section class="section-card" id="identities">
+        <div class="section-header">
+            <h2 class="section-title">🧠 Trig Identities Memorization Bank (TD 23–25)</h2>
+            <span class="badge-pill">Daily Drill Formulas</span>
+        </div>
+        <p>Required for daily class drills starting Monday (9/21). Write these out until you can recall all of them instantly:</p>
+
+        <div class="formula-grid">
+            <div class="formula-box">
+                <h4>Double-Angle Formulas</h4>
+                <code>sin(2θ) = 2 sin θ cos θ</code>
+                <code>cos(2θ) = cos²θ - sin²θ</code>
+                <code>cos(2θ) = 2cos²θ - 1</code>
+                <code>cos(2θ) = 1 - 2sin²θ</code>
+                <code>tan(2θ) = 2tan θ / (1 - tan²θ)</code>
+            </div>
+
+            <div class="formula-box">
+                <h4>Sum &amp; Difference Formulas</h4>
+                <code>sin(u ± v) = sin u cos v ± cos u sin v</code>
+                <code>cos(u ± v) = cos u cos v ∓ sin u sin v</code>
+                <code>tan(u ± v) = (tan u ± tan v) / (1 ∓ tan u tan v)</code>
+            </div>
+
+            <div class="formula-box">
+                <h4>Half-Angle Formulas</h4>
+                <code>sin(u/2) = ±√[(1 - cos u) / 2]</code>
+                <code>cos(u/2) = ±√[(1 + cos u) / 2]</code>
+                <code>tan(u/2) = (1 - cos u) / sin u</code>
+                <code>tan(u/2) = sin u / (1 + cos u)</code>
+            </div>
+
+            <div class="formula-box">
+                <h4>Power-Reducing Formulas</h4>
+                <code>sin²u = [1 - cos(2u)] / 2</code>
+                <code>cos²u = [1 + cos(2u)] / 2</code>
+                <code>tan²u = [1 - cos(2u)] / [1 + cos(2u)]</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10-Question Self-Test Simulation -->
+    <section class="section-card" id="simulation">
+        <div class="section-header">
+            <h2 class="section-title">📝 10-Question Practice Quiz Simulation</h2>
+            <span class="badge-pill">Click Any Question to Reveal Solution</span>
+        </div>
+        <p>Attempt each problem on paper first, then click to reveal the step-by-step verified solution:</p>
+
+        <!-- Q1 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q1: If $g(x) = x^3 + 3x^2 - 4x - 10$, evaluate $g^{-1}(2)$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Set $g(x) = 2$:<br>
+                $$x^3 + 3x^2 - 4x - 10 = 2 \implies x^3 + 3x^2 - 4x - 12 = 0$$
+                Factor by grouping:<br>
+                $$x^2(x + 3) - 4(x + 3) = 0 \implies (x^2 - 4)(x + 3) = 0 \implies (x - 2)(x + 2)(x + 3) = 0$$
+                <strong>Answer: $\mathbf{g^{-1}(2) = -3, -2, 2}$</strong>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q2: Given $(f \circ g)^{-1}(x) = (g^{-1} \circ f^{-1})(x)$. If $f(2) = 3$ and $g(3) = 2$, find $(f \circ g)^{-1}(3)$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Using property $(f \circ g)^{-1}(3) = g^{-1}(f^{-1}(3))$.<br>
+                Since $f(2) = 3$, $f^{-1}(3) = 2$.<br>
+                Now find $g^{-1}(2)$: since $g(3) = 2$, $g^{-1}(2) = 3$.<br>
+                <strong>Answer: $\mathbf{3}$</strong>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q3: Evaluate $\arcsin\left(-\frac{\sqrt{3}}{2}\right)$ in exact radians.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                $\arcsin$ range is $[-\pi/2, \pi/2]$ (Quadrants I &amp; IV).<br>
+                Negative values go into Quadrant IV as a negative acute angle.<br>
+                Reference angle is $\pi/3$, so in QIV: $\mathbf{-\frac{\pi}{3}}$.<br>
+                <em>(Caution: $5\pi/3$ will receive 0 credit!)</em>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q4: Evaluate $\arccos\left(-\frac{\sqrt{2}}{2}\right)$ in exact radians.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                $\arccos$ range is $[0, \pi]$ (Quadrants I &amp; II).<br>
+                Negative values go into Quadrant II.<br>
+                Reference angle is $\pi/4 \implies \theta = \pi - \frac{\pi}{4} = \mathbf{\frac{3\pi}{4}}$.
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q5: Evaluate $\text{arcsec}(-2)$ in exact radians.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                $\text{arcsec}(-2) = \arccos\left(-\frac{1}{2}\right)$ in Quadrant II.<br>
+                Reference angle is $\pi/3 \implies \theta = \pi - \frac{\pi}{3} = \mathbf{\frac{2\pi}{3}}$.
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q6: Evaluate $\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right)$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Notice $\frac{5\pi}{6} \notin [-\pi/2, \pi/2]$, so they DO NOT just cancel!<br>
+                Step 1: Evaluate inner function: $\sin\left(\frac{5\pi}{6}\right) = \frac{1}{2}$.<br>
+                Step 2: Evaluate outer function: $\arcsin\left(\frac{1}{2}\right) = \mathbf{\frac{\pi}{6}}$.
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q7: Evaluate $\arccos\left(\cos\left(-\frac{\pi}{3}\right)\right)$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Step 1: $\cos(-\pi/3) = \cos(\pi/3) = \frac{1}{2}$.<br>
+                Step 2: $\arccos(1/2) = \mathbf{\frac{\pi}{3}}$.
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q8: Evaluate $\tan\left(\arccos\left(-\frac{5}{13}\right)\right)$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Let $\theta = \arccos(-5/13) \implies \theta \in \text{Quadrant II}$.<br>
+                In QII: $\text{Adjacent} = -5$, $\text{Hypotenuse} = 13$.<br>
+                $\text{Opposite} = \sqrt{13^2 - (-5)^2} = \sqrt{144} = 12$ (positive in QII).<br>
+                $\tan\theta = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{12}{-5} = \mathbf{-\frac{12}{5}}$.
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q9: Write $\sin(\arccos(2x))$ as an algebraic expression in $x$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Let $\theta = \arccos(2x/1) \implies \cos\theta = \frac{2x}{1}$.<br>
+                $\text{Adjacent} = 2x$, $\text{Hypotenuse} = 1$.<br>
+                $\text{Opposite} = \sqrt{1^2 - (2x)^2} = \sqrt{1 - 4x^2}$.<br>
+                $\sin\theta = \frac{\text{Opposite}}{\text{Hypotenuse}} = \mathbf{\sqrt{1 - 4x^2}}$.
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggleAnswer(this)">
+                <span>Q10: Write $\tan\left(\arcsin\left(\frac{x}{\sqrt{x^2 + 25}}\right)\right)$ as an algebraic expression in $x$.</span>
+                <span class="q-toggle">▼ Show Solution</span>
+            </div>
+            <div class="q-body">
+                Let $\theta = \arcsin\left(\frac{x}{\sqrt{x^2+25}}\right) \implies \text{Opposite} = x, \text{Hypotenuse} = \sqrt{x^2+25}$.<br>
+                $\text{Adjacent} = \sqrt{(\sqrt{x^2+25})^2 - x^2} = \sqrt{x^2 + 25 - x^2} = \sqrt{25} = 5$.<br>
+                $\tan\theta = \frac{\text{Opposite}}{\text{Adjacent}} = \mathbf{\frac{x}{5}}$.
+            </div>
+        </div>
+    </section>
+
+    <!-- 2-Day Study Plan -->
+    <section class="section-card" id="schedule">
+        <div class="section-header">
+            <h2 class="section-title">🗓️ 2-Day Hour-by-Hour Master Plan (Sunday &amp; Monday)</h2>
+            <span class="badge-pill">Execute for 100% Score</span>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <h3 style="color: var(--accent); margin-bottom: 8px;">Sunday, September 20: Concept Lockdown</h3>
+            <ul style="padding-left: 20px; line-height: 1.8;">
+                <li><strong>2:00 PM – 3:15 PM:</strong> Watch Videos 1 &amp; 2. Complete Worksheet A on paper and check answers.</li>
+                <li><strong>3:30 PM – 4:45 PM:</strong> Watch Video 3. Complete Worksheet B, strictly writing negative angles in $[-\pi/2, \pi/2]$.</li>
+                <li><strong>5:00 PM – 6:15 PM:</strong> Watch Videos 4, 5, 6. Practice the 4-step right triangle modeling for composites.</li>
+                <li><strong>7:30 PM – 8:30 PM:</strong> Write out all 4 Trig Identity families (Double, Sum/Diff, Half, Power-Reducing) from memory 3 times.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="color: #10b981; margin-bottom: 8px;">Monday, September 21: Assignment &amp; Timed Simulation</h3>
+            <ul style="padding-left: 20px; line-height: 1.8;">
+                <li><strong>In School:</strong> Ace Trig Drill <strong>TD 23</strong>.</li>
+                <li><strong>4:30 PM – 6:00 PM:</strong> Complete <strong>DeltaMath – Unit 3: Practice 1</strong> (Due tonight at 11:59 PM!).</li>
+                <li><strong>6:30 PM – 7:30 PM:</strong> Review Worksheet C word problems (elevation &amp; descent).</li>
+                <li><strong>7:45 PM – 8:15 PM:</strong> Take the 10-Question Self-Test above in under 20 minutes with zero notes.</li>
+                <li><strong>8:30 PM – 9:00 PM:</strong> Quick review of the Range Restrictions Table. Sleep early for 100% peak mental acuity on Tuesday!</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>📐 AP Precalculus Study Portal • South Forsyth High School • Grade 9 • 100% Auth-Free Local &amp; Cloud Hub</p>
+    </footer>
+</div>
+
+<script>
+    // Accordion Toggle
+    function toggleAnswer(header) {
+        const body = header.nextElementSibling;
+        const toggle = header.querySelector('.q-toggle');
+        if (body.classList.contains('open')) {
+            body.classList.remove('open');
+            toggle.textContent = '▼ Show Solution';
+        } else {
+            body.classList.add('open');
+            toggle.textContent = '▲ Hide Solution';
+        }
+    }
+
+    // Interactive Checklist Storage
+    const TOTAL_ITEMS = 8;
+    function updateProgress(checkbox) {
+        const parent = checkbox.closest('.checklist-item');
+        if (checkbox.checked) {
+            parent.classList.add('done');
+            localStorage.setItem('u3q_' + checkbox.dataset.id, 'true');
+        } else {
+            parent.classList.remove('done');
+            localStorage.removeItem('u3q_' + checkbox.dataset.id);
+        }
+        recalcProgress();
+    }
+
+    function recalcProgress() {
+        const checkboxes = document.querySelectorAll('.checklist-item input');
+        let checkedCount = 0;
+        checkboxes.forEach(cb => {
+            if (cb.checked) checkedCount++;
+        });
+        const percent = Math.round((checkedCount / TOTAL_ITEMS) * 100);
+        document.getElementById('progress-bar').style.width = percent + '%';
+        document.getElementById('progress-percent').textContent = percent + '%';
+        document.getElementById('progress-count').textContent = checkedCount + ' of ' + TOTAL_ITEMS + ' Completed';
+    }
+
+    // Load saved checklist state on load
+    window.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('.checklist-item input');
+        checkboxes.forEach(cb => {
+            if (localStorage.getItem('u3q_' + cb.dataset.id) === 'true') {
+                cb.checked = true;
+                cb.closest('.checklist-item').classList.add('done');
+            }
+        });
+        recalcProgress();
+    });
+</script>
+
+</body>
+</html>
