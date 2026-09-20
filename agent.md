@@ -209,195 +209,102 @@ Direct links to CloudFront MP4s (`d1drabmetuo3qr.cloudfront.net/....mp4?Expires=
 
 ---
 
-## 7. Mathematical Typography & HTML Formatting Standards (Zero-Error Protocol)
+## 7. Mathematical Typography: KaTeX Official Framework & Zero-Error Protocol
 
 > [!IMPORTANT]
-> **PREVENTION OF REPEATED FONT & FORMULA BUGS**:
-> In earlier sessions, math was improperly rendered due to three specific errors:
-> 1. **Raw Unrendered LaTeX Markup**: Strings like `$\theta = \arcsin(x)$` or `\frac{\pi}{2}` were placed in HTML without an active client-side renderer, displaying raw backslashes and dollar signs on screen.
-> 2. **Monospace Terminal Wrapping (`<code>`)**: Formulas were wrapped in `<code>...</code>` or `<pre>`, which applied programming terminal fonts (`Courier`, `Consolas`) with low legibility.
-> 3. **Flat ASCII Slashes & Bracket Soups**: Fractions were written horizontally with slashes (`(tan u ± tan v) / (1 ∓ tan u tan v)`) and radicals with brackets (`±√[(1 - cos u) / 2]`), instead of 2-story stacked fractions and continuous square root bars.
+> **OFFICIAL MATHEMATICAL FRAMEWORK**:
+> **KaTeX (by Khan Academy)** is the designated official mathematical typography framework across all Grade 9 study materials, portals, and review documents.
+> Older methods (manual HTML fraction spans, flat monospace code blocks, or heavy MathJax bundles) are superseded by KaTeX.
 
-### The 6 Mandatory Formatting Rules:
-
-1. **Mathematical Serif Font Family**:
-   Always apply the standard mathematical font stack. Never let math fall back to sans-serif or monospace:
-   ```css
-   font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
-   ```
-
-2. **Strict Italicization Rules**:
-   - **Italicize Variables**: Single-letter variables and angles must always be italicized: `<i>x</i>`, `<i>y</i>`, `<i>u</i>`, `<i>v</i>`, `<i>θ</i>`.
-   - **Keep Functions Upright (Roman)**: Function abbreviations must **never** be italicized: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `log`, `ln`.
-   - *Example*: `sin(2<i>θ</i>) = 2 sin <i>θ</i> cos <i>θ</i>` (NOT `<i>sin(2θ)</i>`).
-
-3. **Stacked Vertical Fractions (2-Story)**:
-   Every principal division must use the `.frac` CSS construct. Never use horizontal slashes `/` in formula cards:
-   ```html
-   <span class="frac"><span class="frac-num">Numerator</span><span class="frac-den">Denominator</span></span>
-   ```
-
-4. **Square Root Radicals with Continuous Vinculum**:
-   Radicals must have a proper radical sign `&radic;` and a horizontal overbar (`vinculum`) that spans the entire radicand:
-   ```html
-   <span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body">Radicand</span></span>
-   ```
-
-5. **Micro-Typography: True Operators & Spacing**:
-   - Use true Unicode minus `−` (`&minus;` or `−`), **never** the ASCII hyphen `-`.
-   - Use true `±` and `∓` with non-breaking spaces around binary relations: `&nbsp;=&nbsp;`, `&nbsp;±&nbsp;`.
-   - Superscripts and powers: use Unicode `²`, `³`, `⁻¹` or `<sup>2</sup>`, `<sup>-1</sup>`. **Never** use carets `^2` or `^-1`.
-
-6. **Formula Cards vs Inline Math**:
-   - Wrap formula entries in styled rows: `.formula-row` with a clean left border highlight (`border-left: 3px solid var(--accent)`).
-   - Display stand-alone equations in centered `.math-block` containers.
+### Why KaTeX is Mandatory:
+1. **Zero Human Authoring Errors**: Write standard textbook LaTeX (`\frac{a}{b}`, `\sqrt{x}`, `\sin(2\theta)`). You never have to handcraft nested `<span>` tags.
+2. **Synchronous & Blazing Fast**: Renders synchronously ~100x faster than MathJax with **zero layout shift (FOUC)**.
+3. **Publication-Grade Computer Modern TeX Typography**: Scalable vector radicals, true mathematical italic kerning, and automated fraction alignment.
+4. **Lightweight & Offline Ready**: KaTeX core is only ~250 KB and bundled locally in `./katex/` for 100% offline flight mode.
 
 ---
 
-### Complete CSS Mathematical Engine Specification
+### The Standard 3-Line KaTeX Header (Required in All HTML Portals)
 
-Include this exact block in the `<style>` tag of every generated HTML study portal:
+Every study portal must include this in the `<head>`:
+
+```html
+<!-- KaTeX: Modern Standard for Mathematical Typography -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+```
+
+#### Local Offline Fallback:
+In offline environments (where CDN is unreachable), point the paths to the bundled local directory:
+`./katex/katex.min.css`, `./katex/katex.min.js`, and `./katex/auto-render.min.js`.
+
+---
+
+### KaTeX Dark-Mode Styling Polish (CSS)
+
+Include this CSS block in every study portal to ensure high contrast, proper sizing, and clean left borders on formula cards:
 
 ```css
-/* ==========================================================================
-   MATHEMATICAL TYPOGRAPHY & NOTATION ENGINE
-   ========================================================================== */
-
-/* 1. Base Math Serif */
-.math, .formula-row, .math-block {
-    font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+/* KaTeX Typography Polish */
+.katex {
+    font-size: 1.14em !important;
     color: #f8fafc;
-    letter-spacing: 0.015em;
 }
-
-.math i, .formula-row i {
-    font-style: italic;
-    font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+.katex-display {
+    margin: 0.25em 0 !important;
 }
-
-/* 2. Centered Display Equations */
-.math-block {
-    display: block;
-    text-align: center;
-    padding: 12px 16px;
-    margin: 14px 0;
-    background: rgba(15, 23, 42, 0.7);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    font-size: 1.18em;
+.formula-row .katex-display {
+    margin: 0 !important;
+    width: 100%;
+    text-align: left;
 }
-
-/* 3. Two-Story Stacked Fractions */
-.frac {
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0 3px;
-    font-size: 0.88em;
-    line-height: 1.05;
-}
-
-.frac-num {
-    border-bottom: 1.5px solid currentColor;
-    padding-bottom: 1px;
-    font-weight: 500;
-}
-
-.frac-den {
-    padding-top: 1px;
-    font-weight: 500;
-}
-
-/* 4. Square Root Radicals with Continuous Vinculum Bar */
-.radical {
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-}
-
-.rad-sym {
-    font-size: 1.35em;
-    line-height: 1;
-    margin-right: 1px;
-    vertical-align: -0.1em;
-}
-
-.rad-body {
-    border-top: 1.5px solid currentColor;
-    padding: 2px 4px 0 2px;
-    display: inline-flex;
-    align-items: center;
-}
-
-/* 5. Formula Memorization Cards */
-.formula-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.formula-box {
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 10px;
-    padding: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.formula-box h4 {
-    margin: 0 0 12px 0;
-    color: var(--accent, #38bdf8);
-    font-size: 1rem;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 6px;
-}
-
 .formula-row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    font-size: 1.05rem;
-    margin: 7px 0;
-    background: rgba(255, 255, 255, 0.035);
-    padding: 7px 12px;
+    justify-content: flex-start;
+    padding: 8px 14px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 6px;
     border-left: 3px solid var(--accent, #38bdf8);
-    min-height: 42px;
+    min-height: 44px;
 }
 ```
 
 ---
 
-### Formula Comparison: Anti-Patterns vs Required Publication HTML
+### Formula Comparison: Anti-Patterns vs Required KaTeX Syntax
 
-| Formula Concept | ❌ DO NOT USE (Forbidden Bug) | ✅ REQUIRED PUBLICATION HTML |
+| Formula Concept | ❌ FORBIDDEN BUG (Do Not Use) | ✅ REQUIRED KATEX PUBLICATION SYNTAX |
 | :--- | :--- | :--- |
-| **Double Angle Tangent** | `<code>tan(2θ) = 2tan θ / (1 - tan²θ)</code>` | `tan(2<i>θ</i>) =&nbsp;<span class="frac"><span class="frac-num">2 tan <i>θ</i></span><span class="frac-den">1 − tan²<i>θ</i></span></span>` |
-| **Half Angle Sine** | `<code>sin(u/2) = ±√[(1 - cos u) / 2]</code>` | `sin(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">2</span></span></span></span>` |
-| **Arc Sine Range** | `$\theta \in [-\frac{\pi}{2}, \frac{\pi}{2}]$` | `<i>θ</i>&nbsp;&isin;&nbsp;[<span class="frac"><span class="frac-num">−&pi;</span><span class="frac-den">2</span></span>,&nbsp;<span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">2</span></span>]` |
-| **Algebraic Composite** | `$\cos(\arcsin(x)) = \sqrt{1 - x^2}$` | `cos(arcsin(<i>x</i>)) = <span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body">1 − <i>x</i>²</span></span>` |
+| **Double Angle Tangent** | `<code>tan(2θ) = 2tan θ / (1 - tan²θ)</code>` | `$$\tan(2\theta) = \frac{2\tan\theta}{1 - \tan^2\theta}$$` |
+| **Half Angle Sine** | `<code>sin(u/2) = ±√[(1 - cos u) / 2]</code>` | `$$\sin\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{2}}$$` |
+| **Sum/Difference Tangent**| `tan(u ± v) = (tan u ± tan v) / (1 ∓ tan u tan v)` | `$$\tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u \tan v}$$` |
+| **Arc Sine Range** | Raw unrendered `$\theta \in [-\frac{\pi}{2}, \frac{\pi}{2}]$` | Inline KaTeX: `$\theta \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$` |
+| **Algebraic Composite** | `cos(arcsin(x)) = sqrt(1 - x^2)` | `$$\cos(\arcsin x) = \sqrt{1 - x^2}$$` |
+| **Polynomial Pre-Image** | `x^3 - 7x^2 - 8x + 5 = 5 => ...` | `$$x(x - 8)(x + 1) = 0 \implies x \in \{0, 8, -1\}$$` |
 
 ---
 
-### Compulsory Typography QA Step (Before Completing Any Task)
-
-Before presenting any new or modified study portal to the user, run this automated visual sanity check:
-
-```bash
-# 1. Render headlessly using Chrome to an inspection screenshot:
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --screenshot=/tmp/typography_qa.png \
-  --window-size=1280,800 "file:///path/to/portal.html"
-
-# 2. Inspect the screenshot with view_file to confirm:
-#    - All fractions are 2-story stacked.
-#    - Square roots have continuous overbars.
-#    - No raw LaTeX markup ($, \) appears.
-#    - No monospace terminal font is used for math.
-```
+### The 4 Non-Negotiable Rules for AI Agents Authoring Math:
+1. **Never Wrap Math in `<code>` or `<pre>`**: Monospace terminal fonts ruin mathematical readability and prevent KaTeX auto-rendering.
+2. **Never Use Flat Horizontal Slashes for Fractions**: Always use `\frac{numerator}{denominator}`.
+3. **Proper Parentheses Scaling**: When enclosing fractions in parentheses, always use `\left(` and `\right)` so delimiters dynamically scale to the fraction's height.
+4. **Automated Visual QA Verification**: Before delivering any study portal, run headless Chrome screenshot verification:
+   ```bash
+   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+     --headless --disable-gpu --screenshot=/tmp/math_qa.png \
+     --window-size=1280,800 "file:///path/to/portal.html#identities"
+   ```
+   Inspect `/tmp/math_qa.png` using `view_file` to visually verify 100% vector math rendering without unparsed LaTeX markup.
 
 ---
 
