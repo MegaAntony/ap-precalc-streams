@@ -517,38 +517,67 @@
             display: block;
         }
 
-        /* Formula Card Blocks */
+        /* Formula Card Blocks & Beautiful Math Typography */
         .formula-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 14px;
-            margin-top: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
         }
 
         .formula-box {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            padding: 14px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         }
 
         .formula-box h4 {
-            margin: 0 0 8px 0;
+            margin: 0 0 12px 0;
             color: var(--accent);
-            font-size: 0.92rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding-bottom: 4px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .formula-box code {
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: #f1f5f9;
-            margin: 5px 0;
-            background: rgba(255, 255, 255, 0.04);
-            padding: 3px 6px;
-            border-radius: 4px;
+        .formula-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+            font-size: 1.05rem;
+            color: #f8fafc;
+            margin: 7px 0;
+            background: rgba(255, 255, 255, 0.035);
+            padding: 7px 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+            min-height: 42px;
+        }
+
+        .radical {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .rad-sym {
+            font-size: 1.35em;
+            line-height: 1;
+            margin-right: 1px;
+            vertical-align: -0.1em;
+        }
+
+        .rad-body {
+            border-top: 1.5px solid currentColor;
+            padding: 2px 4px 0 2px;
+            display: inline-flex;
+            align-items: center;
         }
 
         footer {
@@ -1039,44 +1068,66 @@
         </div>
     </section>
 
-    <!-- Trig Identities Bank -->
+            <!-- Trig Identities Bank -->
     <section class="section-card" id="identities">
         <div class="section-header">
             <h2 class="section-title">🧠 Trig Identities Memorization Bank (TD 23–25)</h2>
-            <span class="badge-pill">Daily Drill Formulas</span>
+            <span class="badge-pill">Daily Drill Formulas • 100% Required</span>
         </div>
-        <p>Required for daily class drills starting Monday (9/21). Write these out until you can recall all of them instantly:</p>
+        <p style="color: var(--text-muted); margin-bottom: 16px;">Required for daily class drills starting Monday (9/21). Memorize every identity until you can write them out instantly from memory:</p>
 
         <div class="formula-grid">
+            <!-- Double-Angle -->
             <div class="formula-box">
                 <h4>Double-Angle Formulas</h4>
-                <code>sin(2θ) = 2 sin θ cos θ</code>
-                <code>cos(2θ) = cos²θ - sin²θ</code>
-                <code>cos(2θ) = 2cos²θ - 1</code>
-                <code>cos(2θ) = 1 - 2sin²θ</code>
-                <code>tan(2θ) = 2tan θ / (1 - tan²θ)</code>
+                <div class="formula-row">sin(2θ) = 2 sin θ cos θ</div>
+                <div class="formula-row">cos(2θ) = cos²θ − sin²θ</div>
+                <div class="formula-row">cos(2θ) = 2cos²θ − 1</div>
+                <div class="formula-row">cos(2θ) = 1 − 2sin²θ</div>
+                <div class="formula-row">
+                    tan(2θ) = &nbsp;<span class="frac"><span class="frac-num">2 tan θ</span><span class="frac-den">1 − tan²θ</span></span>
+                </div>
             </div>
 
+            <!-- Sum & Difference -->
             <div class="formula-box">
                 <h4>Sum &amp; Difference Formulas</h4>
-                <code>sin(u ± v) = sin u cos v ± cos u sin v</code>
-                <code>cos(u ± v) = cos u cos v ∓ sin u sin v</code>
-                <code>tan(u ± v) = (tan u ± tan v) / (1 ∓ tan u tan v)</code>
+                <div class="formula-row">sin(<i>u</i> ± <i>v</i>) = sin <i>u</i> cos <i>v</i> ± cos <i>u</i> sin <i>v</i></div>
+                <div class="formula-row">cos(<i>u</i> ± <i>v</i>) = cos <i>u</i> cos <i>v</i> ∓ sin <i>u</i> sin <i>v</i></div>
+                <div class="formula-row">
+                    tan(<i>u</i> ± <i>v</i>) = &nbsp;<span class="frac"><span class="frac-num">tan <i>u</i> ± tan <i>v</i></span><span class="frac-den">1 ∓ tan <i>u</i> tan <i>v</i></span></span>
+                </div>
             </div>
 
+            <!-- Half-Angle -->
             <div class="formula-box">
                 <h4>Half-Angle Formulas</h4>
-                <code>sin(u/2) = ±√[(1 - cos u) / 2]</code>
-                <code>cos(u/2) = ±√[(1 + cos u) / 2]</code>
-                <code>tan(u/2) = (1 - cos u) / sin u</code>
-                <code>tan(u/2) = sin u / (1 + cos u)</code>
+                <div class="formula-row">
+                    sin(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">2</span></span></span></span>
+                </div>
+                <div class="formula-row">
+                    cos(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 + cos <i>u</i></span><span class="frac-den">2</span></span></span></span>
+                </div>
+                <div class="formula-row">
+                    tan(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = &nbsp;<span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">sin <i>u</i></span></span>
+                </div>
+                <div class="formula-row">
+                    tan(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = &nbsp;<span class="frac"><span class="frac-num">sin <i>u</i></span><span class="frac-den">1 + cos <i>u</i></span></span>
+                </div>
             </div>
 
+            <!-- Power-Reducing -->
             <div class="formula-box">
                 <h4>Power-Reducing Formulas</h4>
-                <code>sin²u = [1 - cos(2u)] / 2</code>
-                <code>cos²u = [1 + cos(2u)] / 2</code>
-                <code>tan²u = [1 - cos(2u)] / [1 + cos(2u)]</code>
+                <div class="formula-row">
+                    sin²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 − cos(2<i>u</i>)</span><span class="frac-den">2</span></span>
+                </div>
+                <div class="formula-row">
+                    cos²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 + cos(2<i>u</i>)</span><span class="frac-den">2</span></span>
+                </div>
+                <div class="formula-row">
+                    tan²<i>u</i> = &nbsp;<span class="frac"><span class="frac-num">1 − cos(2<i>u</i>)</span><span class="frac-den">1 + cos(2<i>u</i>)</span></span>
+                </div>
             </div>
         </div>
     </section>
