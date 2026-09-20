@@ -557,6 +557,76 @@
             color: var(--text-muted);
             font-size: 0.82rem;
         }
+    
+        .check-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+        }
+        .check-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            font-weight: 600;
+        }
+        .check-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .mini-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.74rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            border: 1px solid transparent;
+        }
+        .mini-play {
+            background: rgba(56, 189, 248, 0.18);
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .mini-play:hover {
+            background: var(--accent);
+            color: #0b0f19;
+            box-shadow: 0 0 8px var(--accent-glow);
+        }
+        .mini-doc {
+            background: rgba(16, 185, 129, 0.18);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        .mini-doc:hover {
+            background: var(--key-bg);
+            color: #ffffff;
+        }
+        .mini-key {
+            background: rgba(245, 158, 11, 0.18);
+            color: #fbbf24;
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+        .mini-key:hover {
+            background: var(--warning-bg);
+            color: #ffffff;
+        }
+        .mini-jump {
+            background: rgba(148, 163, 184, 0.15);
+            color: #cbd5e1;
+            border-color: rgba(148, 163, 184, 0.3);
+        }
+        .mini-jump:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
     </style>
 </head>
 <body>
@@ -595,15 +665,99 @@
         <div class="progress-bar-bg">
             <div class="progress-bar-fill" id="progress-bar"></div>
         </div>
-        <div class="checklist-grid">
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v12"> Watch Videos 1 &amp; 2 (Inverses &amp; Rational Zero)</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="wA"> Solve Worksheet A &amp; Verify with Answer Key</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v3"> Watch Video 3 (Evaluating Arc Trig)</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="wB"> Solve Worksheet B &amp; Master Range Restrictions</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="v456"> Watch Videos 4, 5, 6 (Composite Inverses)</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="ident"> Memorize TD 23–25 Trig Identities (Double/Half/Sum)</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="delta"> Complete DeltaMath Unit 3 Practice 1 (Due Mon 9/21)</label>
-            <label class="checklist-item"><input type="checkbox" onchange="updateProgress(this)" data-id="quiz"> Complete 10-Question Quiz Simulation Below (100%)</label>
+                <div class="checklist-grid">
+            <!-- Item 1: Videos 1 & 2 -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="v12">
+                <div class="check-content">
+                    <span class="check-title-row">Watch Videos 1 &amp; 2 (Inverses &amp; Rational Zero)</span>
+                    <div class="check-actions">
+                        <a href="#videos" onclick="playInlineVideo(1); return false;" class="mini-btn mini-play">▶ Play Video 1</a>
+                        <a href="#videos" onclick="playInlineVideo(2); return false;" class="mini-btn mini-play">▶ Play Video 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Worksheet A -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="wA">
+                <div class="check-content">
+                    <span class="check-title-row">Solve Worksheet A &amp; Check Answers</span>
+                    <div class="check-actions">
+                        <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns.pdf" target="_blank" class="mini-btn mini-doc">📄 Worksheet A PDF</a>
+                        <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf" target="_blank" class="mini-btn mini-key">🔑 Answer Key</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Video 3 -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="v3">
+                <div class="check-content">
+                    <span class="check-title-row">Watch Video 3 (Evaluating Arc Trig)</span>
+                    <div class="check-actions">
+                        <a href="#videos" onclick="playInlineVideo(3); return false;" class="mini-btn mini-play">▶ Play Video 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Worksheet B -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="wB">
+                <div class="check-content">
+                    <span class="check-title-row">Solve Worksheet B &amp; Master Ranges</span>
+                    <div class="check-actions">
+                        <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig.pdf" target="_blank" class="mini-btn mini-doc">📄 Worksheet B PDF</a>
+                        <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf" target="_blank" class="mini-btn mini-key">🔑 Answer Key</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: Videos 4, 5, 6 -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="v456">
+                <div class="check-content">
+                    <span class="check-title-row">Watch Videos 4, 5, 6 (Composite Inverses)</span>
+                    <div class="check-actions">
+                        <a href="#videos" onclick="playInlineVideo(4); return false;" class="mini-btn mini-play">▶ Video 4</a>
+                        <a href="#videos" onclick="playInlineVideo(5); return false;" class="mini-btn mini-play">▶ Video 5</a>
+                        <a href="#videos" onclick="playInlineVideo(6); return false;" class="mini-btn mini-play">▶ Video 6</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: Identities -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="ident">
+                <div class="check-content">
+                    <span class="check-title-row">Memorize TD 23–25 Trig Identities</span>
+                    <div class="check-actions">
+                        <a href="#identities" class="mini-btn mini-jump">🧠 View Identity Bank</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7: DeltaMath -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="delta">
+                <div class="check-content">
+                    <span class="check-title-row">Complete DeltaMath Practice 1 (Due Mon 9/21)</span>
+                    <div class="check-actions">
+                        <a href="http://www.deltamath.com" target="_blank" class="mini-btn mini-doc">🎯 Open DeltaMath</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8: Simulation -->
+            <div class="checklist-item">
+                <input type="checkbox" onchange="updateProgress(this)" data-id="quiz">
+                <div class="check-content">
+                    <span class="check-title-row">Take 10-Question Quiz Simulation Below</span>
+                    <div class="check-actions">
+                        <a href="#simulation" class="mini-btn mini-jump">📝 Start Practice Quiz</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -739,10 +893,20 @@
     </section>
 
     <!-- Video Stream Center -->
+        <!-- Video Stream Center -->
     <section class="section-card" id="videos">
         <div class="section-header">
             <h2 class="section-title">🎥 Video Lessons Stream Center (Lessons 1–3)</h2>
-            <span class="badge-pill">6 Videos • Direct MP4 &amp; YouTube</span>
+            <span class="badge-pill">6 Videos • Watch Directly on Page</span>
+        </div>
+
+        <!-- Built-in Interactive Video Player Theater -->
+        <div id="video-theater" style="display: none; margin-bottom: 24px; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+            <div style="padding: 12px 16px; background: #131b2e; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+                <span id="theater-title" style="font-weight: 700; color: var(--accent); font-size: 0.98rem;">▶ Now Playing</span>
+                <button onclick="closeTheater()" style="background: rgba(255,255,255,0.1); color: #fff; border: none; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight:600;">✕ Close Player</button>
+            </div>
+            <div id="theater-player-container" style="position: relative; width: 100%; padding-top: 56.25%;"></div>
         </div>
         <div class="grid-cards">
             <!-- Video 1 -->
@@ -752,7 +916,7 @@
                     <p class="item-desc">Inverse definitions, domain/range swapping, HLT, symmetry over y=x.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(1); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank">Embed Player</a>
                     <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
                 </div>
             </div>
@@ -764,7 +928,7 @@
                     <p class="item-desc">Finding pre-images of polynomial inverses by factoring and division.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(2); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank">Embed Player</a>
                     <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
                 </div>
             </div>
@@ -776,7 +940,7 @@
                     <p class="item-desc">Unit circle exact values, strict quadrant restrictions, reciprocal arc functions.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(3); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank">Embed Player</a>
                     <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
                 </div>
             </div>
@@ -788,7 +952,7 @@
                     <p class="item-desc">Composition properties, cancellations, and out-of-range corrections.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(4); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank">Embed Player</a>
                     <a class="btn btn-pdf" href="https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" target="_blank">Direct MP4</a>
                 </div>
             </div>
@@ -800,7 +964,7 @@
                     <p class="item-desc">Numeric ratios, right triangle evaluation.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(5); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank">Embed Player</a>
                     <a class="btn btn-yt" href="https://www.youtube.com/watch?v=FttVzfrk5L8" target="_blank">▶ YouTube</a>
                 </div>
             </div>
@@ -812,7 +976,7 @@
                     <p class="item-desc">Algebraic expressions with variable x, algebraic right triangle formulas.</p>
                 </div>
                 <div class="btn-group">
-                    <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank">Embed Player</a>
+                    <a class="btn btn-key" href="#videos" onclick="playInlineVideo(6); return false;">▶ Play on Page</a> <a class="btn btn-video" href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank">Embed Player</a>
                     <a class="btn btn-yt" href="https://www.youtube.com/watch?v=OLCNPVCMQPw" target="_blank">▶ YouTube</a>
                 </div>
             </div>
@@ -1089,6 +1253,70 @@
 </div>
 
 <script>
+
+    // Interactive Video Player Engine
+    const videoSources = {
+        1: {
+            title: "Unit 3 Lesson 1: Review of Inverses (from Algebra)",
+            type: "mp4",
+            src: "https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        },
+        2: {
+            title: "Unit 3 Lesson 1: Rational Zero Test (Synthetic Division)",
+            type: "mp4",
+            src: "https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        },
+        3: {
+            title: "Unit 3 Lesson 2: Evaluating Arctrig Functions",
+            type: "mp4",
+            src: "https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        },
+        4: {
+            title: "Unit 3 Lesson 3: Composite Trig Expressions (Part 1)",
+            type: "mp4",
+            src: "https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        },
+        5: {
+            title: "Unit 3 Lesson 3: Numeric Composite Inverses (Part 2)",
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/FttVzfrk5L8?autoplay=1"
+        },
+        6: {
+            title: "Unit 3 Lesson 3: Variable Ratios Composites (Part 3)",
+            type: "iframe",
+            src: "https://www.youtube-nocookie.com/embed/OLCNPVCMQPw?autoplay=1"
+        }
+    };
+
+    function playInlineVideo(num) {
+        const v = videoSources[num];
+        if (!v) return;
+        const theater = document.getElementById('video-theater');
+        const titleEl = document.getElementById('theater-title');
+        const container = document.getElementById('theater-player-container');
+        
+        titleEl.textContent = '▶ Now Playing: ' + v.title;
+        theater.style.display = 'block';
+        
+        if (v.type === 'mp4') {
+            container.innerHTML = `<video controls autoplay playsinline style="position: absolute; top:0; left:0; width:100%; height:100%; background:#000;">
+                <source src="${v.src}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>`;
+        } else {
+            container.innerHTML = `<iframe src="${v.src}" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        }
+        
+        theater.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function closeTheater() {
+        const theater = document.getElementById('video-theater');
+        const container = document.getElementById('theater-player-container');
+        container.innerHTML = '';
+        theater.style.display = 'none';
+    }
+
     // Accordion Toggle
     function toggleAnswer(header) {
         const body = header.nextElementSibling;
