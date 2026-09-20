@@ -499,12 +499,31 @@
         }
 
         footer {
-            text-align: center;
-            margin-top: 40px;
-            color: var(--text-muted);
             font-size: 0.82rem;
         }
     </style>
+    <!-- MathJax 3 for Crisp Mathematical Typography (Offline & Online) -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="./tex-svg.js"></script>
+    <script>
+        if (!window.MathJax || !window.MathJax.version) {
+            document.write('<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"><\/script>');
+        }
+    </script>
 </head>
 <body>
 
@@ -1025,6 +1044,9 @@
         } else {
             body.classList.add('open');
             toggle.textContent = '▲ Hide Solution';
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([body]);
+            }
         }
     }
 
