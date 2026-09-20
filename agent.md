@@ -47,8 +47,8 @@ Every week or for every upcoming quiz/test, the agent must execute these 6 phase
 
 ### Phase 2: 100% Zero-Auth Local Extraction
 Never rely on live school logins during study sessions. All assets must be downloaded and archived locally:
-- **Worksheets & Answer Keys**: Downloaded as clean PDFs (see [Section 4](#4-playbook-a-downloading-protected-pdfs--worksheets)).
-- **Teacher Video Lessons (MyVRSpot)**: Extracted and downloaded as full `.mp4` files into the unit folder (see [Section 5](#5-playbook-b-downloading-protected-cloudfront-videos-myvrspot)).
+- **Worksheets & Answer Keys**: Downloaded as clean PDFs (see [Section 5](#5-playbook-a-downloading-protected-pdfs--worksheets)).
+- **Teacher Video Lessons (MyVRSpot)**: Extracted and downloaded as full `.mp4` files into the unit folder (see [Section 6](#6-playbook-b-downloading-protected-cloudfront-videos-myvrspot)).
 - **External Video Lessons (YouTube)**: Extracted as clean 11-character video IDs for embedding without ads or tracking.
 
 ### Phase 3: Comprehensive Markdown Master Study Guide
@@ -70,7 +70,7 @@ Build a modern dark-mode HTML study portal:
   - Automatically falls back to responsive embeds (`youtube-nocookie.com` or MyVRSpot) when hosted online.
   - Provides instant toggle buttons in the theater header (`[💾 Local MP4]` vs `[🌐 Web Stream]`).
 - **Accordion Active Recall Questions**: Collapsible question cards with hidden answers so Antony can self-test before revealing solutions.
-- **Mathematical Typography Standards**: (See [Section 7](#7-mathematical-typography--rendering-standards)).
+- **Mathematical Typography Standards**: (See [Section 7](#7-mathematical-typography--html-formatting-standards-zero-error-protocol)).
 
 ### Phase 5: Visual QA & Media Verification
 - Verify that every video in the checklist plays properly without 403 errors.
@@ -209,21 +209,85 @@ Direct links to CloudFront MP4s (`d1drabmetuo3qr.cloudfront.net/....mp4?Expires=
 
 ---
 
-## 7. Mathematical Typography & Rendering Standards
+## 7. Mathematical Typography & HTML Formatting Standards (Zero-Error Protocol)
 
-AP Precalculus materials must display authentic mathematical typography. **Do not display raw unrendered LaTeX markup (`$\frac{\pi}{2}$`) or flat monospace code (`tan(2θ) = 2tan θ / (1 - tan²θ)`).**
+> [!IMPORTANT]
+> **PREVENTION OF REPEATED FONT & FORMULA BUGS**:
+> In earlier sessions, math was improperly rendered due to three specific errors:
+> 1. **Raw Unrendered LaTeX Markup**: Strings like `$\theta = \arcsin(x)$` or `\frac{\pi}{2}` were placed in HTML without an active client-side renderer, displaying raw backslashes and dollar signs on screen.
+> 2. **Monospace Terminal Wrapping (`<code>`)**: Formulas were wrapped in `<code>...</code>` or `<pre>`, which applied programming terminal fonts (`Courier`, `Consolas`) with low legibility.
+> 3. **Flat ASCII Slashes & Bracket Soups**: Fractions were written horizontally with slashes (`(tan u ± tan v) / (1 ∓ tan u tan v)`) and radicals with brackets (`±√[(1 - cos u) / 2]`), instead of 2-story stacked fractions and continuous square root bars.
 
-### CSS Typography Engine
-Every study portal must include this CSS:
+### The 6 Mandatory Formatting Rules:
+
+1. **Mathematical Serif Font Family**:
+   Always apply the standard mathematical font stack. Never let math fall back to sans-serif or monospace:
+   ```css
+   font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+   ```
+
+2. **Strict Italicization Rules**:
+   - **Italicize Variables**: Single-letter variables and angles must always be italicized: `<i>x</i>`, `<i>y</i>`, `<i>u</i>`, `<i>v</i>`, `<i>θ</i>`.
+   - **Keep Functions Upright (Roman)**: Function abbreviations must **never** be italicized: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `log`, `ln`.
+   - *Example*: `sin(2<i>θ</i>) = 2 sin <i>θ</i> cos <i>θ</i>` (NOT `<i>sin(2θ)</i>`).
+
+3. **Stacked Vertical Fractions (2-Story)**:
+   Every principal division must use the `.frac` CSS construct. Never use horizontal slashes `/` in formula cards:
+   ```html
+   <span class="frac"><span class="frac-num">Numerator</span><span class="frac-den">Denominator</span></span>
+   ```
+
+4. **Square Root Radicals with Continuous Vinculum**:
+   Radicals must have a proper radical sign `&radic;` and a horizontal overbar (`vinculum`) that spans the entire radicand:
+   ```html
+   <span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body">Radicand</span></span>
+   ```
+
+5. **Micro-Typography: True Operators & Spacing**:
+   - Use true Unicode minus `−` (`&minus;` or `−`), **never** the ASCII hyphen `-`.
+   - Use true `±` and `∓` with non-breaking spaces around binary relations: `&nbsp;=&nbsp;`, `&nbsp;±&nbsp;`.
+   - Superscripts and powers: use Unicode `²`, `³`, `⁻¹` or `<sup>2</sup>`, `<sup>-1</sup>`. **Never** use carets `^2` or `^-1`.
+
+6. **Formula Cards vs Inline Math**:
+   - Wrap formula entries in styled rows: `.formula-row` with a clean left border highlight (`border-left: 3px solid var(--accent)`).
+   - Display stand-alone equations in centered `.math-block` containers.
+
+---
+
+### Complete CSS Mathematical Engine Specification
+
+Include this exact block in the `<style>` tag of every generated HTML study portal:
+
 ```css
-/* Authentic Math Serif Typography */
-.math {
+/* ==========================================================================
+   MATHEMATICAL TYPOGRAPHY & NOTATION ENGINE
+   ========================================================================== */
+
+/* 1. Base Math Serif */
+.math, .formula-row, .math-block {
     font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
-    font-size: 1.08em;
-    color: #ffffff;
+    color: #f8fafc;
+    letter-spacing: 0.015em;
 }
 
-/* Stacked Vertical Fractions */
+.math i, .formula-row i {
+    font-style: italic;
+    font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', Georgia, serif;
+}
+
+/* 2. Centered Display Equations */
+.math-block {
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    margin: 14px 0;
+    background: rgba(15, 23, 42, 0.7);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 1.18em;
+}
+
+/* 3. Two-Story Stacked Fractions */
 .frac {
     display: inline-flex;
     flex-direction: column;
@@ -233,40 +297,107 @@ Every study portal must include this CSS:
     font-size: 0.88em;
     line-height: 1.05;
 }
+
 .frac-num {
     border-bottom: 1.5px solid currentColor;
     padding-bottom: 1px;
     font-weight: 500;
 }
+
 .frac-den {
     padding-top: 1px;
     font-weight: 500;
 }
 
-/* Square Root Radicals with Continuous Vinculum */
+/* 4. Square Root Radicals with Continuous Vinculum Bar */
 .radical {
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
 }
+
 .rad-sym {
     font-size: 1.35em;
     line-height: 1;
     margin-right: 1px;
     vertical-align: -0.1em;
 }
+
 .rad-body {
     border-top: 1.5px solid currentColor;
     padding: 2px 4px 0 2px;
     display: inline-flex;
     align-items: center;
 }
+
+/* 5. Formula Memorization Cards */
+.formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.formula-box {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.formula-box h4 {
+    margin: 0 0 12px 0;
+    color: var(--accent, #38bdf8);
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 6px;
+}
+
+.formula-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.05rem;
+    margin: 7px 0;
+    background: rgba(255, 255, 255, 0.035);
+    padding: 7px 12px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent, #38bdf8);
+    min-height: 42px;
+}
 ```
 
-### HTML Implementation Patterns:
-- **Fraction**: `<span class="frac"><span class="frac-num">2 tan θ</span><span class="frac-den">1 − tan²θ</span></span>`
-- **Square Root**: `<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos u</span><span class="frac-den">2</span></span></span></span>`
-- **Offline MathJax**: Bundle local `tex-svg.js` in the folder for 100% offline vector rendering.
+---
+
+### Formula Comparison: Anti-Patterns vs Required Publication HTML
+
+| Formula Concept | ❌ DO NOT USE (Forbidden Bug) | ✅ REQUIRED PUBLICATION HTML |
+| :--- | :--- | :--- |
+| **Double Angle Tangent** | `<code>tan(2θ) = 2tan θ / (1 - tan²θ)</code>` | `tan(2<i>θ</i>) =&nbsp;<span class="frac"><span class="frac-num">2 tan <i>θ</i></span><span class="frac-den">1 − tan²<i>θ</i></span></span>` |
+| **Half Angle Sine** | `<code>sin(u/2) = ±√[(1 - cos u) / 2]</code>` | `sin(<span class="frac"><span class="frac-num"><i>u</i></span><span class="frac-den">2</span></span>) = ±<span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body"><span class="frac"><span class="frac-num">1 − cos <i>u</i></span><span class="frac-den">2</span></span></span></span>` |
+| **Arc Sine Range** | `$\theta \in [-\frac{\pi}{2}, \frac{\pi}{2}]$` | `<i>θ</i>&nbsp;&isin;&nbsp;[<span class="frac"><span class="frac-num">−&pi;</span><span class="frac-den">2</span></span>,&nbsp;<span class="frac"><span class="frac-num">&pi;</span><span class="frac-den">2</span></span>]` |
+| **Algebraic Composite** | `$\cos(\arcsin(x)) = \sqrt{1 - x^2}$` | `cos(arcsin(<i>x</i>)) = <span class="radical"><span class="rad-sym">&radic;</span><span class="rad-body">1 − <i>x</i>²</span></span>` |
+
+---
+
+### Compulsory Typography QA Step (Before Completing Any Task)
+
+Before presenting any new or modified study portal to the user, run this automated visual sanity check:
+
+```bash
+# 1. Render headlessly using Chrome to an inspection screenshot:
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless --disable-gpu --screenshot=/tmp/typography_qa.png \
+  --window-size=1280,800 "file:///path/to/portal.html"
+
+# 2. Inspect the screenshot with view_file to confirm:
+#    - All fractions are 2-story stacked.
+#    - Square roots have continuous overbars.
+#    - No raw LaTeX markup ($, \) appears.
+#    - No monospace terminal font is used for math.
+```
 
 ---
 
