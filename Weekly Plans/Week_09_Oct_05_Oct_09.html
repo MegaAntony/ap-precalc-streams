@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Precalculus: Week 9  October First Instructional Week (10/5  10/9) - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Weekly Plans</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">📅 AP Precalculus: Week 9 — October First Inst...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="ap-precalculus-week-9-october-first-instructional-week-105-109">📅 AP Precalculus: Week 9 — October First Instructional Week (10/5 – 10/9)</h1>
+<ul>
+<li><strong>Unit</strong>: Unit 3 (Law of Sines, Ambiguous Case SSA, and Unit 3 Test Review)</li>
+<li><strong>Canvas Reference</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/ap-precalc-26-slash-27-week-9-10-slash-5-10-slash-9">AP Precalc 26/27 Week 9 (10/5-10/9)</a></li>
+<li><strong>Preceding Week</strong>: September 28 – October 2 (Fall Break — No School)</li>
+</ul>
+<hr />
+<h2 id="daily-schedule-work-plan">📋 Daily Schedule &amp; Work Plan</h2>
+<h3 id="monday-105"><strong>Monday (10/5)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 29</strong> (Includes full set of memorized trig identities)</li>
+<li><strong>Lesson Covered:</strong></li>
+<li><strong>Lesson 6 – Law of Sines</strong> (<a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.html#video-11-unit-3-lesson-6-law-of-sines">Lesson 6 Video Notes &amp; Direct Stream</a>)</li>
+<li>Key Concepts:<ul>
+<li>Solving oblique (non-right) triangles using:<br />
+  $$\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$$</li>
+<li>Applications of Law of Sines in $AAS$ and $ASA$ configurations</li>
+</ul>
+</li>
+<li><strong>Graded Practice Assigned:</strong></li>
+<li><strong>DeltaMath – Unit 3: Practice 3</strong> (Law of Sines &amp; Ambiguous Case)</li>
+<li><strong>Due Date:</strong> Thursday, <strong>10/8 at 11:59 PM</strong></li>
+<li><em>(Note: You can begin the Law of Sines problems today; ambiguous case problems require Tuesday's Lesson 7).</em></li>
+<li><strong>Practice Assignments:</strong></li>
+<li>Applications of Law of Sines:<ul>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstB_AppsObliqueTriangles.pdf">Unit 3 Worksheet B (Oblique Triangles)</a>: <strong>#1–4, 9, 10</strong> • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf">Answer Key</a></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_MorePracticeApps.pdf">Unit 3 Worksheet D (More Applications)</a>: extra practice with LoC or LoS • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_MorePracticeApps_Answers.pdf">Answer Key</a></li>
+<li>Textbook p. 415: <strong>#27, 28, 30–32</strong></li>
+</ul>
+</li>
+<li>Extra Law of Sines Practice:<ul>
+<li>Textbook p. 414: <strong>#1–13 odd</strong></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="tuesday-106"><strong>Tuesday (10/6)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 30</strong></li>
+<li><strong>Lesson Covered:</strong></li>
+<li><strong>Lesson 7 – Ambiguous Case of the Law of Sines ($SSA$)</strong></li>
+<li>Videos:<ul>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.html#video-12-unit-3-lesson-7-ambiguous-case-of-the-law-of-sines">Lesson 7 Video: Theory &amp; Identification</a></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.html#video-13-unit-3-lesson-7-worked-out-example---2-triangle-ambiguous-case-mr-oconnor">Mr. O'Connor Worked Example: 2-Triangle Ambiguous Case</a></li>
+</ul>
+</li>
+<li>Key Concepts:<ul>
+<li>Altitude condition: $h = b\sin A$</li>
+<li>0 Triangles ($a &lt; h$)</li>
+<li>1 Right Triangle ($a = h$)</li>
+<li>2 Oblique Triangles ($h &lt; a &lt; b$)</li>
+<li>1 Oblique Triangle ($a \ge b$)</li>
+</ul>
+</li>
+<li><strong>Practice Assignments:</strong></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstC_ExtraPracSSA.pdf">Unit 3 Worksheet C (Extra Practice with SSA)</a> • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstC_ExtraPracSSA_Answers.pdf">Answer Key</a></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_MorePracticeApps.pdf">Unit 3 Worksheet D (More Practice with Applications)</a> • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_MorePracticeApps_Answers.pdf">Answer Key</a></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_UnitReview.pdf">Unit 3 Worksheet D (Inverses &amp; Composition Test Review)</a> • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstD_UnitReview_Answers.pdf">Answer Key</a></li>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstE_Review.pdf">Unit 3 Worksheet E (Oblique Triangles Review Problems)</a> • <a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstE_Review_Answers.pdf">Answer Key</a></li>
+</ul>
+<hr />
+<h3 id="wednesday-thursday-107-108-block-evenodd"><strong>Wednesday / Thursday (10/7 – 10/8, Block Even/Odd)</strong></h3>
+<ul>
+<li><strong>Drills &amp; In-Class Activities:</strong></li>
+<li><strong>FD 9, TD Bonus</strong></li>
+<li>Finish Lesson 7 as needed</li>
+<li>Return and review <strong>Unit 3 Quiz</strong> (taken 9/22)</li>
+<li>Return and review <strong>Unit 2 Test</strong> (taken 9/14–9/15)</li>
+<li>In-depth practice on Law of Sines, specifically the two-triangle ambiguous case</li>
+<li><strong>Practice Assignments:</strong></li>
+<li>Complete Worksheet C (SSA) and begin test review on Worksheets D &amp; E</li>
+<li>⏰ <strong>Due Tonight (Thursday, 10/8 at 11:59 PM):</strong> <strong>DeltaMath – Unit 3: Practice 3</strong></li>
+</ul>
+<hr />
+<h3 id="friday-109"><strong>Friday (10/9)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 31/32</strong></li>
+<li><strong>In-Class:</strong> <strong>Comprehensive Unit 3 Review &amp; Practice Day</strong></li>
+<li>Final question-and-answer session on Lessons 1 through 7</li>
+<li>Finalize all practice worksheets and review packet</li>
+<li>🚨 <strong>Sunday, 10/11 at 11:59 PM:</strong> <strong>Final Hard Deadline for ALL Unit 3 DeltaMath</strong> (Practice 1, Practice 2, and Practice 3 close permanently)</li>
+</ul>
+<hr />
+<h2 id="success-criteria-learning-objectives">🎯 Success Criteria &amp; Learning Objectives</h2>
+<p>By the end of this week, students will be able to:<br />
+1. Solve an acute or obtuse oblique triangle using the <strong>Law of Sines</strong>.<br />
+2. Read an application word problem involving an oblique triangle, determine whether the <strong>Law of Cosines</strong> ($SAS$, $SSS$) or <strong>Law of Sines</strong> ($AAS$, $ASA$, $SSA$) applies, and solve.<br />
+3. Rapidly determine the number of possible triangles (0, 1, or 2) in an <strong>Ambiguous Case of the Law of Sines ($SSA$)</strong>.<br />
+4. Systematically calculate both solutions for the 2-triangle case using Mr. O'Connor's angle-supplement method ($B_2 = 180^\circ - B_1$).<br />
+5. Solve multi-step geometric application problems blending right triangle trig and oblique triangle techniques.</p>
+<hr />
+<h2 id="unit-3-test-readiness-checklist-next-week-mon-1012-tue-1013">📝 Unit 3 Test Readiness Checklist (Next Week: Mon 10/12 &amp; Tue 10/13)</h2>
+<ul>
+<li>[ ] <strong>Inverse Function Basics</strong>: Finding algebraic inverses, restricted domains.</li>
+<li>[ ] <strong>Arc Trig Evaluations</strong>: Evaluating $\arcsin$, $\arccos$, $\arctan$ within proper principal branches:</li>
+<li>$\arcsin x \in [-\frac{\pi}{2}, \frac{\pi}{2}]$ (Quadrants I &amp; IV)</li>
+<li>$\arccos x \in [0, \pi]$ (Quadrants I &amp; II)</li>
+<li>$\arctan x \in (-\frac{\pi}{2}, \frac{\pi}{2})$ (Quadrants I &amp; IV)</li>
+<li>[ ] <strong>Composite Expressions</strong>:</li>
+<li>Numerical compositions (e.g. $\cos(\arcsin(-\frac{3}{5}))$)</li>
+<li>Algebraic compositions using reference triangles (e.g. $\tan(\arccos(x))$)</li>
+<li>[ ] <strong>Triangle Area Formulas</strong>:</li>
+<li>$SAS$: $\text{Area} = \frac{1}{2}ab\sin C$</li>
+<li>$SSS$ (Heron's): $s = \frac{a+b+c}{2}$, $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$</li>
+<li>[ ] <strong>Law of Cosines</strong>: $c^2 = a^2 + b^2 - 2ab\cos C$ (and solving for angle: $\cos C = \frac{a^2 + b^2 - c^2}{2ab}$)</li>
+<li>[ ] <strong>Law of Sines &amp; SSA</strong>: Single triangle, no triangle, and two-triangle cases.</li>
+<li>[ ] <strong>Trig Identities Drills</strong>: Double angle, half angle, sum &amp; difference, and power reducing formulas.</li>
+</ul>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

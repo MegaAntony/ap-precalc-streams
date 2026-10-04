@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Precalculus: Week 8 (9/21  9/25) - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Weekly Plans</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">📅 AP Precalculus: Week 8 (9/21 – 9/25)</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="ap-precalculus-week-8-921-925">📅 AP Precalculus: Week 8 (9/21 – 9/25)</h1>
+<ul>
+<li><strong>Unit</strong>: Unit 3 (Inverse &amp; Composite Trig Functions, Triangle Applications)</li>
+<li><strong>Canvas Reference</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/ap-precalc-26-slash-27-week-8-9-slash-21-9-slash-25">AP Precalc 26/27 Week 8 (9/21-9/25)</a></li>
+</ul>
+<hr />
+<h2 id="daily-schedule">📋 Daily Schedule</h2>
+<h3 id="monday-921"><strong>Monday (9/21)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 23</strong> (Now includes newly added identities: double angle, sum/difference, half angle, power reducing)</li>
+<li><strong>Lesson Covered:</strong></li>
+<li><a href="https://forsyth.instructure.com/courses/276219/pages/gf4fc9c332c9140c5d30dc47e0b348b61">Lesson 4 – Intro to Applications of Trig Functions and Inverse Trig Functions</a><ul>
+<li>Review solving right triangles</li>
+<li>2 new triangle area formulas:</li>
+<li><strong>$SAS$ Formula</strong>: $\text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ac\sin B$</li>
+<li><strong>Heron's Formula ($SSS$)</strong>: $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$ where $s = \frac{a+b+c}{2}$</li>
+</ul>
+</li>
+<li>Questions and review from Lessons 1 through 3</li>
+<li><strong>Practice Assignments:</strong></li>
+<li>Textbook p. 414: #19–24</li>
+<li>Textbook p. 421–422: #27–33</li>
+<li>⏰ <strong>Due Tonight:</strong> <strong>DeltaMath – Unit 3: Practice 1</strong> (Due at <strong>11:59 PM</strong>)</li>
+</ul>
+<h3 id="tuesday-922"><strong>Tuesday (9/22)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 24/25</strong> (including new identities)</li>
+<li><strong>In-Class Assessment:</strong> 📝 <strong>Unit 3 Quiz</strong> (over <strong>Lessons 1 through 3</strong>)</li>
+<li>Topics: Review of inverses, evaluating arc trig functions, composite trig functions (numerical and algebraic expressions).</li>
+</ul>
+<h3 id="wednesday-thursday-923-924-block-evenodd"><strong>Wednesday / Thursday (9/23 – 9/24, Block Even/Odd)</strong></h3>
+<ul>
+<li><strong>Drills:</strong> <strong>FD 8</strong>, <strong>TD 26/27</strong> (including new identities)</li>
+<li><strong>Lesson Covered:</strong></li>
+<li><a href="https://forsyth.instructure.com/courses/276219/pages/g6e18f0eba6917ee904cf31b28ef8532c">Lesson 5 – Law of Cosines</a><ul>
+<li>Using the Law of Cosines to solve oblique triangles:</li>
+<li>$a^2 = b^2 + c^2 - 2bc\cos A$</li>
+<li>$b^2 = a^2 + c^2 - 2ac\cos B$</li>
+<li>$c^2 = a^2 + b^2 - 2ab\cos C$</li>
+</ul>
+</li>
+<li><strong>Graded Practice Assigned:</strong></li>
+<li><strong>DeltaMath – Unit 3: Practice 2</strong> (Area of Triangles &amp; Law of Cosines) — <em>Due Sunday, 9/27 at 11:59 PM</em></li>
+<li><strong>Practice Assignments:</strong></li>
+<li>Applications of Law of Cosines:<ul>
+<li><a href="../Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/worksheets/APPCU03_WkstB_AppsObliqueTriangles.pdf">Unit 3 Worksheet B (Oblique Triangles)</a>: #5–8</li>
+<li>Textbook p. 422: #37–41</li>
+</ul>
+</li>
+<li>Extra Law of Cosines Practice:<ul>
+<li>Textbook p. 421: #1–19 odd</li>
+</ul>
+</li>
+</ul>
+<h3 id="friday-925"><strong>Friday (9/25)</strong></h3>
+<ul>
+<li><strong>Drill:</strong> <strong>TD 28</strong> (including new identities)</li>
+<li><strong>In-Class:</strong> Work on Law of Cosines practice; get help as needed</li>
+<li><strong>Graded Practice:</strong> Continue working on <strong>DeltaMath – Unit 3: Practice 2</strong> (Due <strong>Sunday, 9/27 at 11:59 PM</strong>)</li>
+</ul>
+<hr />
+<h2 id="success-criteria">🎯 Success Criteria</h2>
+<p>By the end of this week, students will be able to:<br />
+1. Solve right triangles.<br />
+2. Find the area of triangles using 2 sides and the included angle ($SAS$).<br />
+3. Find the area of triangles using all 3 sides ($SSS$ / Heron’s formula).<br />
+4. Solve an oblique (non-right) triangle using the <strong>Law of Cosines</strong>.</p>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3 - Inverse  Composite Trigonometric Functions: Complete Lesson Video Archive - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Unit 3   Inverse &amp; Composite Trigonometric Functions</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">Unit 3 - Inverse &amp; Composite Trigonometric Fu...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="unit-3-inverse-composite-trigonometric-functions-complete-lesson-video-archive">Unit 3 - Inverse &amp; Composite Trigonometric Functions: Complete Lesson Video Archive</h1>
+<hr />
+<h2 id="unit-03-lesson-1">📖 Unit 03 - Lesson 1</h2>
+<h3 id="video-1-unit-3-lesson-1-review-of-inverses-from-algebra">📹 Video 1: Unit 3 Lesson 1: Review of Inverses (from Algebra)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&amp;Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_1___Review_of_Inverses__from_Algebra.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&amp;Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-2-unit-3-lesson-1-review-of-rational-zero-test-solving-polynomials-using-synthetic-division">📹 Video 2: Unit 3 Lesson 1: Review of Rational Zero Test (Solving Polynomials using Synthetic Division)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&amp;Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_1___Review_of_Rational_Zero_Test__Solving_Polynomials_using_Synthetic_Division.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&amp;Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="unit-03-lesson-2">📖 Unit 03 - Lesson 2</h2>
+<h3 id="video-3-unit-3-lesson-2-evaluating-arctrig-functions">📹 Video 3: Unit 3 Lesson 2: Evaluating Arctrig functions</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&amp;Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_2___Evaluating_Arctrig_functions.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&amp;Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="unit-03-lesson-3">📖 Unit 03 - Lesson 3</h2>
+<h3 id="video-4-unit-3-lesson-3-composite-trig-expressions-part-1">📹 Video 4: Unit 3 Lesson 3: Composite Trig Expressions (Part 1)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&amp;Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_3___Composite_Trig_Expressions__Part_1.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&amp;Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-5-unit-3-lesson-3-composite-inverses-numeric-only-examples-part-2">📹 Video 5: Unit 3 Lesson 3: Composite Inverses - Numeric Only Examples (Part 2)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I</li>
+<li><strong>Stream / Embed Player</strong>: https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I</li>
+</ul>
+<hr />
+<h3 id="video-6-unit-3-lesson-3-composite-inverses-variable-ratios-examples-part-3">📹 Video 6: Unit 3 Lesson 3: Composite Inverses - Variable Ratios Examples (Part 3)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY</li>
+<li><strong>Stream / Embed Player</strong>: https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY</li>
+</ul>
+<hr />
+<h2 id="unit-03-lesson-4">📖 Unit 03 - Lesson 4</h2>
+<h3 id="video-7-unit-3-lesson-4-pythagorean-theorem-reciprocal-identities">📹 Video 7: Unit 3 Lesson 4: Pythagorean Theorem &amp; Reciprocal Identities</h3>
+<ul>
+<li><strong>Platform</strong>: Canvas Studio</li>
+<li><strong>Embed Player</strong>: https://forsyth.instructuremedia.com/embed/5fee7cfe-e359-4640-a7be-a96c6b6d4b0d</li>
+<li><strong>Stream / Embed Player</strong>: https://forsyth.instructuremedia.com/embed/5fee7cfe-e359-4640-a7be-a96c6b6d4b0d</li>
+</ul>
+<hr />
+<h3 id="video-8-unit-3-lesson-4-trig-inverse-trig-functions">📹 Video 8: Unit 3 Lesson 4: Trig &amp; Inverse Trig Functions</h3>
+<ul>
+<li><strong>Platform</strong>: Canvas Studio</li>
+<li><strong>Embed Player</strong>: https://forsyth.instructuremedia.com/embed/528c62be-4ea5-4138-a044-b6c2472989b6</li>
+<li><strong>Stream / Embed Player</strong>: https://forsyth.instructuremedia.com/embed/528c62be-4ea5-4138-a044-b6c2472989b6</li>
+</ul>
+<hr />
+<h3 id="video-9-unit-3-lesson-4-area-of-a-triangle-sas-formula-and-herons-formula">📹 Video 9: Unit 3 Lesson 4: Area of a Triangle - SAS Formula and Heron's Formula</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1789532250&amp;Signature=NKb3MAdO15VK9-1J0l42WxIGLgk0dzkgc-h9FKM0xiMhmqbR44-9LPQZTE4XM9bUh1zIyOlXzluW0PPSg0XWCDz0v2D4qoLJfLopgQUIHkHqClC6-NwqnSyfzI7sE6V4wRGNzkZ5IuK-ukysrfA--sgFFBSrkATlomsZvUx7ESRyGiZyaL18ZvhvQP4CkStYUumExg9BWhvoocRTQWXrg1Jkm~5mv4kfi2cjHA8GgR8SauO39Lxj5s2NNaY3F8U8MQJWrWHwonFmtzXPFqmWOuHGAdEoHC3AxggoRIWvUv-nsJ0sfI68~j~m0HMvkf5mhtph1fQk7xEto~MrUpXwCQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_4___Area_of_a_Triangle___SAS_Formula_and_Heron_s_Formula.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1789532250&amp;Signature=NKb3MAdO15VK9-1J0l42WxIGLgk0dzkgc-h9FKM0xiMhmqbR44-9LPQZTE4XM9bUh1zIyOlXzluW0PPSg0XWCDz0v2D4qoLJfLopgQUIHkHqClC6-NwqnSyfzI7sE6V4wRGNzkZ5IuK-ukysrfA--sgFFBSrkATlomsZvUx7ESRyGiZyaL18ZvhvQP4CkStYUumExg9BWhvoocRTQWXrg1Jkm~5mv4kfi2cjHA8GgR8SauO39Lxj5s2NNaY3F8U8MQJWrWHwonFmtzXPFqmWOuHGAdEoHC3AxggoRIWvUv-nsJ0sfI68~j~m0HMvkf5mhtph1fQk7xEto~MrUpXwCQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="unit-03-lesson-5">📖 Unit 03 - Lesson 5</h2>
+<h3 id="video-10-unit-3-lesson-5-intro-to-oblique-triangles-and-the-law-of-cosines">📹 Video 10: Unit 3 Lesson 5: Intro to Oblique Triangles and the Law of Cosines</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1789532250&amp;Signature=YvJD9PvyRV~hvxj7i4RBNWAU75G~iSblDue~cWWA2ni1Ol4E9mMr-it~NXunTievpatB8DfmYLk2~9Ikk1x5~WGXGdWoFr0wnO2xd6OZXi2-vrldetgRIDhNomYWe-8ykYpuuiow4JdqbPlfnHFN2Dk77PaCg9c1QEuzAzh1a~h0iSgWLnu9S7xAtFJqKqDPSHxdCVCQoC12~9rPLeVgsrl0zTIDn~O2kYCqdWhBfEk-znBO-8y7rKDwM9GpzorRuLwNYUV~mWecD4OwKo~KD-kBtvqOzVlQa7LmWp10Pb8Q3XlBywCAc6YZYegeDki~AeY4QTI8yy29XyzTyX6nng__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_5___Intro_to_Oblique_Triangles_and_the_Law_of_Cosines.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1789532250&amp;Signature=YvJD9PvyRV~hvxj7i4RBNWAU75G~iSblDue~cWWA2ni1Ol4E9mMr-it~NXunTievpatB8DfmYLk2~9Ikk1x5~WGXGdWoFr0wnO2xd6OZXi2-vrldetgRIDhNomYWe-8ykYpuuiow4JdqbPlfnHFN2Dk77PaCg9c1QEuzAzh1a~h0iSgWLnu9S7xAtFJqKqDPSHxdCVCQoC12~9rPLeVgsrl0zTIDn~O2kYCqdWhBfEk-znBO-8y7rKDwM9GpzorRuLwNYUV~mWecD4OwKo~KD-kBtvqOzVlQa7LmWp10Pb8Q3XlBywCAc6YZYegeDki~AeY4QTI8yy29XyzTyX6nng__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="unit-03-lesson-6">📖 Unit 03 - Lesson 6</h2>
+<h3 id="video-11-unit-3-lesson-6-law-of-sines">📹 Video 11: Unit 3 Lesson 6: Law of Sines</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1789532251&amp;Signature=t3xaiGIRBb80gewemwGObf32ZG9k08DCPUxQZLaU1fZJLQlcggDUISWJfQbz-rOeF0yB6CdKlw4nBtK3T-DgDgXpiGvzwj32sp5Z0V3zO1nW8KFa9Y1rMGiD8dgGsvNH0y90MQ2uTZjcdGEVIt5ZeDW5YyhGZBQ3AQNbv248tsu1fcoRa~TbKPYSWhEGAoDPEJ3cVul96maXJdqdnI6NXkIu5cmxqGaQhFwUZOpq~ccvWoUxb2OyoSxuB5zXnn01lRGI9~o6w3HTIqN0JgD-aeNt8VljOs-BV6fNNWL1K5uCzi4pOCl4l3NEO8FXv6XFVgJQXj73T1YE1gC99ytDZA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_6___Law_of_Sines.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1789532251&amp;Signature=t3xaiGIRBb80gewemwGObf32ZG9k08DCPUxQZLaU1fZJLQlcggDUISWJfQbz-rOeF0yB6CdKlw4nBtK3T-DgDgXpiGvzwj32sp5Z0V3zO1nW8KFa9Y1rMGiD8dgGsvNH0y90MQ2uTZjcdGEVIt5ZeDW5YyhGZBQ3AQNbv248tsu1fcoRa~TbKPYSWhEGAoDPEJ3cVul96maXJdqdnI6NXkIu5cmxqGaQhFwUZOpq~ccvWoUxb2OyoSxuB5zXnn01lRGI9~o6w3HTIqN0JgD-aeNt8VljOs-BV6fNNWL1K5uCzi4pOCl4l3NEO8FXv6XFVgJQXj73T1YE1gC99ytDZA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="unit-03-lesson-7">📖 Unit 03 - Lesson 7</h2>
+<h3 id="video-12-unit-3-lesson-7-ambiguous-case-of-the-law-of-sines">📹 Video 12: Unit 3 Lesson 7: Ambiguous Case of the Law of Sines</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1789532251&amp;Signature=HTa3sVhjRnJw2C62~Mk756Ojiu1xnUU6gzE7vwqae4A2TYJyHM~gmo2qvomtpa2NuMIiV3raRGUlJZSVgoB27vrJG8-r14do6MLhEroIb-MAOv7vhNft8yHsVbQJvC9~W6FJM8aymo1xaTT9j1NYYZbdH~ndVIOTJGxVgSO69YdRHvl7ZSTNvUNiYdCO~EzZYijxInF9qmNf~iSgXlVk7n6Sp6OS9dU-5AanSdwb25RBwUClBA4~9wATPcmhf9iMvIdc5UdS0L5eiPmfn2DpcZItu4CT~53mw3pWSAq48c~W6msWn-wQ351GBMkpf3~h~~y8ToNyC-hdyoxngurJzg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;Unit_3_Lesson_7___Ambiguous_Case_of_the_Law_of_Sines.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1789532251&amp;Signature=HTa3sVhjRnJw2C62~Mk756Ojiu1xnUU6gzE7vwqae4A2TYJyHM~gmo2qvomtpa2NuMIiV3raRGUlJZSVgoB27vrJG8-r14do6MLhEroIb-MAOv7vhNft8yHsVbQJvC9~W6FJM8aymo1xaTT9j1NYYZbdH~ndVIOTJGxVgSO69YdRHvl7ZSTNvUNiYdCO~EzZYijxInF9qmNf~iSgXlVk7n6Sp6OS9dU-5AanSdwb25RBwUClBA4~9wATPcmhf9iMvIdc5UdS0L5eiPmfn2DpcZItu4CT~53mw3pWSAq48c~W6msWn-wQ351GBMkpf3~h~~y8ToNyC-hdyoxngurJzg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-13-unit-3-lesson-7-worked-out-example-2-triangle-ambiguous-case-mr-oconnor">📹 Video 13: Unit 3 Lesson 7: Worked Out Example - 2-Triangle Ambiguous Case (Mr. O'Connor)</h3>
+<ul>
+<li><strong>Platform</strong>: ScreenPal</li>
+<li><strong>Watch URL</strong>: https://screenpal.com/watch/c0jYryVpYmq</li>
+<li><strong>Embed Player</strong>: https://go.screenpal.com/player/c0jYryVpYmq?width=800&amp;height=600&amp;ff=1&amp;a=1&amp;download=1&amp;cl=1</li>
+<li><strong>Direct Stream Endpoint</strong>: https://go.screenpal.com/player/stream/c0jYryVpYmq</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -L -H &quot;Referer: https://go.screenpal.com/player/c0jYryVpYmq?width=800&amp;height=600&amp;ff=1&amp;a=1&amp;download=1&amp;cl=1&quot; -o &quot;Unit_3_Lesson_7___Worked_Out_Example___2_Triangle_Ambiguous_Case__Mr__O_Connor.mp4&quot; &quot;https://go.screenpal.com/player/stream/c0jYryVpYmq&quot;
+</code></pre>
+<hr />
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

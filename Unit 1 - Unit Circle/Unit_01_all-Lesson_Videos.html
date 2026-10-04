@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 - Unit Circle: Complete Lesson Video Archive - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Unit 1   Unit Circle</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">Unit 1 - Unit Circle: Complete Lesson Video A...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="unit-1-unit-circle-complete-lesson-video-archive">Unit 1 - Unit Circle: Complete Lesson Video Archive</h1>
+<hr />
+<h2 id="lesson-1">📖 Lesson 1</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-1-videos-2?module_item_id=4678975">Lesson 1 videos</a></p>
+<h3 id="video-1-accprecalc-unit-4-lesson-1-standard-position-radians-coterminal-angles">📹 Video 1: AccPreCalc Unit 4 Lesson 1 (Standard Position, Radians, Coterminal Angles)</h3>
+<ul>
+<li><strong>Platform</strong>: ScreenPal / Screencast-O-Matic</li>
+<li><strong>Watch URL</strong>: https://screencast-o-matic.com/watch/c36OYfVuqho</li>
+<li><strong>Embed Player</strong>: https://screencast-o-matic.com/player/c36OYfVuqho?width=883&amp;height=496&amp;ff=1</li>
+<li><strong>Direct Stream Endpoint</strong>: https://go.screenpal.com/player/stream/c36OYfVuqho</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -L -H &quot;Referer: https://screencast-o-matic.com/player/c36OYfVuqho?width=883&amp;height=496&amp;ff=1&quot; -o &quot;AccPreCalc_Unit_4_Lesson_1__Standard_Position__Radians__Coterminal_Angles.mp4&quot; &quot;https://go.screenpal.com/player/stream/c36OYfVuqho&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-2">📖 Lesson 2</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-2-videos-2?module_item_id=4678976">Lesson 2 videos</a></p>
+<h3 id="video-1-12a-coterminal-angles">📹 Video 1: 1.2a Coterminal Angles</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=YTFlYzMzY2Y4ZGRmZmM0ZjlhOTcwNTMzNjkyMDUyODA</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/YTFlYzMzY2Y4ZGRmZmM0ZjlhOTcwNTMzNjkyMDUyODA.highres.mp4?Expires=1787363995&amp;Signature=lUEetMyylw6AVFYqNZryHNpfEETqRvi33csa-xvXjQnCMx3kObcMEYFHtUbsKPXBw9fa6mY2VL7oiwY0s7Qdw0CYLPwly3wxE-tTUZaJJGMuMqFrh67kzO6-90~LJ~8V3lwMxULGZdmk8BrNKbGVR8a43I~JIBQKL-V24M8hO8fTdnyxS-FdKt36tcJjuZ5i82B8EPElhXLgQWeGKreSSlfEiiJw1BETq9m4Rrh3se8F1MQsMO7M-OCtOE4J6KRfjzBW5gzmELIMt3oRDXeLmabrH7Mfprhnsjt0h4K8ywP89IL~5XkR11UIohQC2W7msobMszC7MsAozlwp5KNsCg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_2a_Coterminal_Angles.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/YTFlYzMzY2Y4ZGRmZmM0ZjlhOTcwNTMzNjkyMDUyODA.highres.mp4?Expires=1787363995&amp;Signature=lUEetMyylw6AVFYqNZryHNpfEETqRvi33csa-xvXjQnCMx3kObcMEYFHtUbsKPXBw9fa6mY2VL7oiwY0s7Qdw0CYLPwly3wxE-tTUZaJJGMuMqFrh67kzO6-90~LJ~8V3lwMxULGZdmk8BrNKbGVR8a43I~JIBQKL-V24M8hO8fTdnyxS-FdKt36tcJjuZ5i82B8EPElhXLgQWeGKreSSlfEiiJw1BETq9m4Rrh3se8F1MQsMO7M-OCtOE4J6KRfjzBW5gzmELIMt3oRDXeLmabrH7Mfprhnsjt0h4K8ywP89IL~5XkR11UIohQC2W7msobMszC7MsAozlwp5KNsCg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-2-12b-complementary-supplementary-in-radians-and-degrees">📹 Video 2: 1.2b Complementary &amp; Supplementary in Radians and Degrees</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=ZDE5ODk3MmQ2NjY3NDQ2OTAwNjEyYTM4ZmYxYzc5YWY</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/ZDE5ODk3MmQ2NjY3NDQ2OTAwNjEyYTM4ZmYxYzc5YWY.highres.mp4?Expires=1787363996&amp;Signature=p5WAHyeZ1tY-d6o7zX3kE02cXE2DT1F~Atq6VIZFh2UlVRoTrDzHm06gLeOWhf3Ww4dXvwg61s6g5V5guNLvEu2ud55qxOtHkIBOaPIdADBmqEsHR5y3~nsuzFsRbkJpTjWRoSA4HvNAlqEs6jlcI3DwfYBYe3w1LZC0SgTYJpsP5vtGt4c9IKWwbSSKwsTy-nfvdZ8fmiQwYGvsQAw~nMrQ4SUYgyGQRyIZb73eZQvooC9k9COLI9DX7-JAIfoSyVnvQ9rBNX8Mn2~odMxxig5s8O88GoVpySwsncHxVC4ZzhRQuwTxXy5of3PXmGQBwPeQLQUOu-V85ECuXGeavA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_2b_Complementary___Supplementary_in_Radians_and_Degrees.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/ZDE5ODk3MmQ2NjY3NDQ2OTAwNjEyYTM4ZmYxYzc5YWY.highres.mp4?Expires=1787363996&amp;Signature=p5WAHyeZ1tY-d6o7zX3kE02cXE2DT1F~Atq6VIZFh2UlVRoTrDzHm06gLeOWhf3Ww4dXvwg61s6g5V5guNLvEu2ud55qxOtHkIBOaPIdADBmqEsHR5y3~nsuzFsRbkJpTjWRoSA4HvNAlqEs6jlcI3DwfYBYe3w1LZC0SgTYJpsP5vtGt4c9IKWwbSSKwsTy-nfvdZ8fmiQwYGvsQAw~nMrQ4SUYgyGQRyIZb73eZQvooC9k9COLI9DX7-JAIfoSyVnvQ9rBNX8Mn2~odMxxig5s8O88GoVpySwsncHxVC4ZzhRQuwTxXy5of3PXmGQBwPeQLQUOu-V85ECuXGeavA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-3-12c-converting-between-radians-and-degrees">📹 Video 3: 1.2c Converting Between Radians and Degrees</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=NjZjYzkzNmM2ODFkMmYzM2FhMGY1NTVkNjM0ZjIwNGY</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/NjZjYzkzNmM2ODFkMmYzM2FhMGY1NTVkNjM0ZjIwNGY.highres.mp4?Expires=1787363996&amp;Signature=qyFZ5eYwl3aFpkb2eW3p9WrfyDD5gvIzVRM9Sv0jwVg6LXypNUuFFAgGPI0u96n5rHwsRBL-m3dhw1AErXcKHRjimQm-n8hxnswESqkVsocO7TYKUvdl~HtiEuO4MFGfH~SBBfMGIYSzVULrPDrkSFZ6KYY0P4vdJCFZdiYC2l8SCVBu1NFxI-f1uWZF2FUxdolvxOXyMqAWrFf0BGe-VTpc1XgUJl~JhWygojEvuKc5qjVSQk~hGrjKzwB4Cgsg0W~s3VYMZTAY8lVIHS7pP-xv0FgGZ0VBPhknfK98s1WBZShIaeAGMHbuc0sJ2tgkjp8ag8nOXZIuJ8LJije8nw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_2c_Converting_Between_Radians_and_Degrees.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/NjZjYzkzNmM2ODFkMmYzM2FhMGY1NTVkNjM0ZjIwNGY.highres.mp4?Expires=1787363996&amp;Signature=qyFZ5eYwl3aFpkb2eW3p9WrfyDD5gvIzVRM9Sv0jwVg6LXypNUuFFAgGPI0u96n5rHwsRBL-m3dhw1AErXcKHRjimQm-n8hxnswESqkVsocO7TYKUvdl~HtiEuO4MFGfH~SBBfMGIYSzVULrPDrkSFZ6KYY0P4vdJCFZdiYC2l8SCVBu1NFxI-f1uWZF2FUxdolvxOXyMqAWrFf0BGe-VTpc1XgUJl~JhWygojEvuKc5qjVSQk~hGrjKzwB4Cgsg0W~s3VYMZTAY8lVIHS7pP-xv0FgGZ0VBPhknfK98s1WBZShIaeAGMHbuc0sJ2tgkjp8ag8nOXZIuJ8LJije8nw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-3">📖 Lesson 3</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-3-videos-3?module_item_id=4678977">Lesson 3 videos</a></p>
+<h3 id="video-1-13-unit-circle">📹 Video 1: 1.3 Unit Circle</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=MmQ2ODM4ZWJlODRlZWU5YzVlNGExOTg1NzRiNWRlMjM</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/MmQ2ODM4ZWJlODRlZWU5YzVlNGExOTg1NzRiNWRlMjM.highres.mp4?Expires=1787363996&amp;Signature=KUmfAeO3XN6ppZ86vIAbBs1itHaEs-gX9JuMKeBEsrpGRulrH1XLxocDVXqmWKRi5eZE06tPug4kqUa-ezrVZibcTW65p-uLSpNtVI03-ApGOKLd9U-33dJVXkDtK6gxcyy~Yvcn6MAD8PeNEv5gVzf-duLFEURF7853v4O5kS9bpmvayzOQpZKjN5-J6E45PhT4Sa17PnPu6BJBfBN5r57uuHUULHHT-Iar-zrUgg27vxpygmBtAm63Fqh3V4cz1wWX4LOv3wjmXuXAk0px59lNPaMj58zBeOuvyR2dTQPYhvkW-Z2j5r74XG7uWp-NFub1sHfmOCoWviY7pYGaaQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_3_Unit_Circle.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/MmQ2ODM4ZWJlODRlZWU5YzVlNGExOTg1NzRiNWRlMjM.highres.mp4?Expires=1787363996&amp;Signature=KUmfAeO3XN6ppZ86vIAbBs1itHaEs-gX9JuMKeBEsrpGRulrH1XLxocDVXqmWKRi5eZE06tPug4kqUa-ezrVZibcTW65p-uLSpNtVI03-ApGOKLd9U-33dJVXkDtK6gxcyy~Yvcn6MAD8PeNEv5gVzf-duLFEURF7853v4O5kS9bpmvayzOQpZKjN5-J6E45PhT4Sa17PnPu6BJBfBN5r57uuHUULHHT-Iar-zrUgg27vxpygmBtAm63Fqh3V4cz1wWX4LOv3wjmXuXAk0px59lNPaMj58zBeOuvyR2dTQPYhvkW-Z2j5r74XG7uWp-NFub1sHfmOCoWviY7pYGaaQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-2-unit-1-lesson-3-part-2-angular-linear-speed">📹 Video 2: Unit 1 Lesson 3: Part 2 - Angular &amp; Linear Speed</h3>
+<ul>
+<li><strong>Platform</strong>: ScreenPal / Screencast-O-Matic</li>
+<li><strong>Watch URL</strong>: https://screencast-o-matic.com/watch/c0QrljVC78d</li>
+<li><strong>Embed Player</strong>: https://screencast-o-matic.com/player/c0QrljVC78d?width=883&amp;height=496&amp;ff=1</li>
+<li><strong>Direct Stream Endpoint</strong>: https://go.screenpal.com/player/stream/c0QrljVC78d</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -L -H &quot;Referer: https://screencast-o-matic.com/player/c0QrljVC78d?width=883&amp;height=496&amp;ff=1&quot; -o &quot;Unit_1_Lesson_3__Part_2___Angular___Linear_Speed.mp4&quot; &quot;https://go.screenpal.com/player/stream/c0QrljVC78d&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-4">📖 Lesson 4</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-4-videos-3?module_item_id=4678978">Lesson 4 videos</a></p>
+<h3 id="video-1-14-angular-speed-and-linear-speed">📹 Video 1: 1.4 Angular Speed and Linear Speed</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=Zjg1NDkzODcwODVhYzgyYWM5NWY3YzI5ZjVmODIzOGM</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/Zjg1NDkzODcwODVhYzgyYWM5NWY3YzI5ZjVmODIzOGM.highres.mp4?Expires=1787363997&amp;Signature=EWyiH6wttwvv6wyUasJy1z8K24jKeNG5YCrIgXySe4Zig8VreCEw8fwQr2mhHIzyHfTybwCYGR8LQ-0~2Zvnv7SWLCSHQuIlN9cQlOP81IH4UrhID2VOx6CVXZWSK61t9IP1WkmBA~MGId8Tzs7pexe000X6xkByCdnjizh~TphCxXsPQeuc6zvii-TllsUkWu8u8ai04H6jwP8Sy8fOX1QbqP8c4OJ3cXq0-79Whq8c8bHq6ohlgFerEHfsdDQ3krpgiW-KVNMZ~AVtAZZgChnbr02YvfddyflraHFwz-Db3Mh0bEIDBAoySaDRzbroKQVuBv1OhaoX2ObovCyfyw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_4_Angular_Speed_and_Linear_Speed.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/Zjg1NDkzODcwODVhYzgyYWM5NWY3YzI5ZjVmODIzOGM.highres.mp4?Expires=1787363997&amp;Signature=EWyiH6wttwvv6wyUasJy1z8K24jKeNG5YCrIgXySe4Zig8VreCEw8fwQr2mhHIzyHfTybwCYGR8LQ-0~2Zvnv7SWLCSHQuIlN9cQlOP81IH4UrhID2VOx6CVXZWSK61t9IP1WkmBA~MGId8Tzs7pexe000X6xkByCdnjizh~TphCxXsPQeuc6zvii-TllsUkWu8u8ai04H6jwP8Sy8fOX1QbqP8c4OJ3cXq0-79Whq8c8bHq6ohlgFerEHfsdDQ3krpgiW-KVNMZ~AVtAZZgChnbr02YvfddyflraHFwz-Db3Mh0bEIDBAoySaDRzbroKQVuBv1OhaoX2ObovCyfyw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-5">📖 Lesson 5</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-5-videos?module_item_id=4678979">Lesson 5 videos</a></p>
+<h3 id="video-1-15a-trig-functions-on-unit-circle">📹 Video 1: 1.5a Trig Functions on Unit Circle</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=YWViMTFiNWUyZGIzNWUzMmEyYjVhZGM2MjhjODBlOTc</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/YWViMTFiNWUyZGIzNWUzMmEyYjVhZGM2MjhjODBlOTc.highres.mp4?Expires=1787363997&amp;Signature=P2ETXiVwpdE573PT8kdJN-eUB70wZHv2lc60TrnlBuc1SDVNIANJJDSU6iZorn4zGwbg-UZLpvnjwMaKUb400VjfCVm8h5m00Js2AzGhhXbHgfM2qYmWFjaNZAqZqvN1ZAjFPhdvxRDRTaBQc2lZDTeDuDihFct6Xk90C9KRADsGXnt44U8fEsB8l3S0Ir9OvZ14tpm3PGaZHyAPPrG8hF6EMLCZ5wV6ZzgFe77KeQdqQzuMIazrWg0IuPbr5vUDoZk~lrb9cE8PqjrAA4dClIq0AKUXFM6A5nNLApVFpkpP8r5yqgmYBl~N4qbcvl6ptIwkwWzBrLApbrDxQWOULA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_5a_Trig_Functions_on_Unit_Circle.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/YWViMTFiNWUyZGIzNWUzMmEyYjVhZGM2MjhjODBlOTc.highres.mp4?Expires=1787363997&amp;Signature=P2ETXiVwpdE573PT8kdJN-eUB70wZHv2lc60TrnlBuc1SDVNIANJJDSU6iZorn4zGwbg-UZLpvnjwMaKUb400VjfCVm8h5m00Js2AzGhhXbHgfM2qYmWFjaNZAqZqvN1ZAjFPhdvxRDRTaBQc2lZDTeDuDihFct6Xk90C9KRADsGXnt44U8fEsB8l3S0Ir9OvZ14tpm3PGaZHyAPPrG8hF6EMLCZ5wV6ZzgFe77KeQdqQzuMIazrWg0IuPbr5vUDoZk~lrb9cE8PqjrAA4dClIq0AKUXFM6A5nNLApVFpkpP8r5yqgmYBl~N4qbcvl6ptIwkwWzBrLApbrDxQWOULA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-2-15b-exact-values-on-unit-circle">📹 Video 2: 1.5b Exact Values on Unit Circle</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=MTA0YmZiZDU5YTA4NzdhYjI3Njk3ZDEzNzU1NDk1ZmI</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/MTA0YmZiZDU5YTA4NzdhYjI3Njk3ZDEzNzU1NDk1ZmI.highres.mp4?Expires=1787363997&amp;Signature=VKue9Km47AMXxrDH1SDaHLEPDxlgKqsBkN17NT7vuni4nKCBGlLSbWUScGOQwpNWmxzuObBN7jQSiB40dY~Bu0CoZVPDUZgYawRRVTHH7O7342nIqhp8-wSlC2w8xCVUGG7beRRmy5M0GgD27lGofwpZjUyEqTj4wLiROZMmv32rFMkP3PQ2PqgPWw4wudwNVZTrmAP9WjhYokPGxTMJeFCCUJe-tH95~Os-VXfjrhBwH1r-z~G73tFq54aH9f-o7NwVha23A6eSMrgWyjQ0Jm1uI1jhUHui41E8TzpReQgQ3Ruo343Val0jMJwk8GUVUztt8LsgOfFsbJ9k37oPKg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_5b_Exact_Values_on_Unit_Circle.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/MTA0YmZiZDU5YTA4NzdhYjI3Njk3ZDEzNzU1NDk1ZmI.highres.mp4?Expires=1787363997&amp;Signature=VKue9Km47AMXxrDH1SDaHLEPDxlgKqsBkN17NT7vuni4nKCBGlLSbWUScGOQwpNWmxzuObBN7jQSiB40dY~Bu0CoZVPDUZgYawRRVTHH7O7342nIqhp8-wSlC2w8xCVUGG7beRRmy5M0GgD27lGofwpZjUyEqTj4wLiROZMmv32rFMkP3PQ2PqgPWw4wudwNVZTrmAP9WjhYokPGxTMJeFCCUJe-tH95~Os-VXfjrhBwH1r-z~G73tFq54aH9f-o7NwVha23A6eSMrgWyjQ0Jm1uI1jhUHui41E8TzpReQgQ3Ruo343Val0jMJwk8GUVUztt8LsgOfFsbJ9k37oPKg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-6">📖 Lesson 6</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-6-videos?module_item_id=4678980">Lesson 6 videos</a></p>
+<h3 id="video-1-16-trig-ratios-in-quadrant-system">📹 Video 1: 1.6 Trig Ratios In Quadrant System</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=YzEyYzExYTc3NDllOWUxMjRiNGE5N2FiMGJlM2JmNDM</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/YzEyYzExYTc3NDllOWUxMjRiNGE5N2FiMGJlM2JmNDM.highres.mp4?Expires=1787363998&amp;Signature=QrUp-rOSNsXYhbf8wAFj9VnSRaEbg0yMYpO8jctTrEdF2Q-kW3ODPspa8JYlha0qQ6jqM8fswIv~9H5S6mIsDZnUGSz7QeapaJ51DqZR8qPtjw-EBJLuf7f7PG73tELvL-nG8ORF~1DgmIzMI~U3HBdpkWSZUpZ0CcVYNjv3KKvayhGyv0ujH5cuTkA2Alg6XhC4F3b7AbcvvpqhGAp9pQisjJhFf9UmP6HgenhZ5H1~MWm36FQHxw6E8lnH3ITymPaznAA7ukVKVcqiBHD7FqPTUR-0etlxodAKm2fsITznlhIPekV21U2YLqfuOPo-6OPj5m4ybC9F6ukz8pAVOQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_6_Trig_Ratios_In_Quadrant_System.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/YzEyYzExYTc3NDllOWUxMjRiNGE5N2FiMGJlM2JmNDM.highres.mp4?Expires=1787363998&amp;Signature=QrUp-rOSNsXYhbf8wAFj9VnSRaEbg0yMYpO8jctTrEdF2Q-kW3ODPspa8JYlha0qQ6jqM8fswIv~9H5S6mIsDZnUGSz7QeapaJ51DqZR8qPtjw-EBJLuf7f7PG73tELvL-nG8ORF~1DgmIzMI~U3HBdpkWSZUpZ0CcVYNjv3KKvayhGyv0ujH5cuTkA2Alg6XhC4F3b7AbcvvpqhGAp9pQisjJhFf9UmP6HgenhZ5H1~MWm36FQHxw6E8lnH3ITymPaznAA7ukVKVcqiBHD7FqPTUR-0etlxodAKm2fsITznlhIPekV21U2YLqfuOPo-6OPj5m4ybC9F6ukz8pAVOQ__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h2 id="lesson-7">📖 Lesson 7</h2>
+<p><strong>Canvas Page</strong>: <a href="https://forsyth.instructure.com/courses/276219/pages/unit-01-lesson-7-videos?module_item_id=4678981">Lesson 7 videos</a></p>
+<h3 id="video-1-17a-how-to-find-the-reference-angle-16-examples">📹 Video 1: 1.7a How to find the reference angle (16 Examples)</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=fOGQ1M2JmMTFmNDUyYjM5NWRkOWZhMDVkYTJhNDJhYjk</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/S05oDjdbiC0.mp4?Expires=1787363998&amp;Signature=wpyKcy8nSMGDqdxdlKVtjDPL9VJIWY3epVM7CxnUckqDc5WbdNr7cXsw9nty9o5ak5cFtnxQ8eEyO9V93YiYx8BQzaBlk5tJFNG00d5A49DCWUIH95aC5KMPmgCgFZPOygTBBuqoXSbea-J2cQ4n7ysDuJVTf3LfPTVOZhqHGod95Mrfp3RXKh04t3FnKCQ2KWwEDskebVVtPBuRNzOsMrUvqjOcrN59j-20Z0Tqxofr0BKV805UTRF7TNTLXyXBG9HPu6uGR7llCbcdMWU0OVN1dm~JH521hO5JdW6n2HRpph5YIcKMM7clvopw2eV5LaXSrw0a4ppUakEYbWsafA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_7a_How_to_find_the_reference_angle__16_Examples.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/S05oDjdbiC0.mp4?Expires=1787363998&amp;Signature=wpyKcy8nSMGDqdxdlKVtjDPL9VJIWY3epVM7CxnUckqDc5WbdNr7cXsw9nty9o5ak5cFtnxQ8eEyO9V93YiYx8BQzaBlk5tJFNG00d5A49DCWUIH95aC5KMPmgCgFZPOygTBBuqoXSbea-J2cQ4n7ysDuJVTf3LfPTVOZhqHGod95Mrfp3RXKh04t3FnKCQ2KWwEDskebVVtPBuRNzOsMrUvqjOcrN59j-20Z0Tqxofr0BKV805UTRF7TNTLXyXBG9HPu6uGR7llCbcdMWU0OVN1dm~JH521hO5JdW6n2HRpph5YIcKMM7clvopw2eV5LaXSrw0a4ppUakEYbWsafA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+<h3 id="video-2-17b-finding-angles-in-quadrants">📹 Video 2: 1.7b Finding Angles in Quadrants</h3>
+<ul>
+<li><strong>Platform</strong>: MyVRSpot</li>
+<li><strong>Embed Player</strong>: https://live.myvrspot.com/iframe?v=M2YwOGMzMjBkODg3OTBiZDFhOTI0OTYwODRhODU2MTU</li>
+<li><strong>Direct MP4 Stream</strong>: https://d1drabmetuo3qr.cloudfront.net/M2YwOGMzMjBkODg3OTBiZDFhOTI0OTYwODRhODU2MTU.highres.mp4?Expires=1787363998&amp;Signature=G5ZpYEDHS5xKD5AgFCc9aLCOumHSvKEzuoSMmTO-ZlOb88O2wSkWYzFbwFgkfNraRZgrONfN-2~zv0LEq86fPEPCau~7stAyrJNzYJm1UaN3HkojZKFyNxeDyJBnWCNHy8c6F~uC-RjnAtG8YWp4m3alb~dsIkBi9mu00vTXA9YaCunE3jWhHdmvob-ko98tL02uRHL3wZ2C1dDigfSuOdIB2SdVpHT0mIE9xYPnOrMZ6R7yq-~GHwZZLImWShHb7drlVbx3oE~jQfQF~nUmOInYumHoB95sqzeZ5aqAMCQFDs21Kw8QrZA6NMVNRW5q55jAC~pp68FMMP6Gnw8-4Q__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA</li>
+<li><strong>Download Command</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -o &quot;1_7b_Finding_Angles_in_Quadrants.mp4&quot; &quot;https://d1drabmetuo3qr.cloudfront.net/M2YwOGMzMjBkODg3OTBiZDFhOTI0OTYwODRhODU2MTU.highres.mp4?Expires=1787363998&amp;Signature=G5ZpYEDHS5xKD5AgFCc9aLCOumHSvKEzuoSMmTO-ZlOb88O2wSkWYzFbwFgkfNraRZgrONfN-2~zv0LEq86fPEPCau~7stAyrJNzYJm1UaN3HkojZKFyNxeDyJBnWCNHy8c6F~uC-RjnAtG8YWp4m3alb~dsIkBi9mu00vTXA9YaCunE3jWhHdmvob-ko98tL02uRHL3wZ2C1dDigfSuOdIB2SdVpHT0mIE9xYPnOrMZ6R7yq-~GHwZZLImWShHb7drlVbx3oE~jQfQF~nUmOInYumHoB95sqzeZ5aqAMCQFDs21Kw8QrZA6NMVNRW5q55jAC~pp68FMMP6Gnw8-4Q__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA&quot;
+</code></pre>
+<hr />
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

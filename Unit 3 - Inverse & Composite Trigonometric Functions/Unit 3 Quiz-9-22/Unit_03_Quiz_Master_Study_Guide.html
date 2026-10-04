@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Precalculus: Unit 3 Quiz Complete Master Study Guide (9/22) - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Unit 3   Inverse &amp; Composite Trigonometric Functions</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i> <span class="text-slate-400">Unit 3 Quiz 9 22</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">🎯 AP Precalculus: Unit 3 Quiz Complete Master...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="ap-precalculus-unit-3-quiz-complete-master-study-guide-922">🎯 AP Precalculus: Unit 3 Quiz Complete Master Study Guide (9/22)</h1>
+<p><strong>Assessment Date:</strong> Tuesday, September 22, 2026 (In-Class)<br />
+<strong>Target Score:</strong> 100% A+<br />
+<strong>Coverage:</strong> Lessons 1 through 3 + Trig Identity Drills (TD 23–25)<br />
+<strong>Quick Links:</strong><br />
+* 🌐 <strong>Interactive Web Study Portal</strong>: <a href="./Unit_03_Quiz_Study_Portal.html">Open Quiz Portal HTML</a> • <a href="https://megaantony.github.io/ap-precalc-streams/quiz-9-22.html">Live GitHub Mirror</a><br />
+* 📑 <strong>Worksheet A (Inverses)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns.pdf">Worksheet PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf">Answer Key PDF</a><br />
+* 📑 <strong>Worksheet B (Arc Trig)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig.pdf">Worksheet PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf">Answer Key PDF</a><br />
+* 📑 <strong>Worksheet C (Applications)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstC_Applications.pdf">Worksheet PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstC_Applications_Answers.pdf">Answer Key PDF</a><br />
+* ⏰ <strong>DeltaMath Practice 1</strong>: <a href="https://www.deltamath.com">DeltaMath Portal</a> <em>(Due Monday 9/21 at 11:59 PM)</em></p>
+<hr />
+<h2 id="executive-summary-what-is-on-this-quiz">🧭 Executive Summary: What is on this Quiz?</h2>
+<p>The Unit 3 Quiz on Tuesday (9/22) tests your mastery across <strong>4 Critical Pillars</strong>:</p>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: center;">Pillar</th>
+<th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Primary Skills Tested</th>
+<th style="text-align: center;">Associated Worksheet</th>
+<th style="text-align: center;">Key Videos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;"><strong>General Inverses &amp; Polynomials</strong></td>
+<td style="text-align: left;">Table evaluations, composition inversions $(f \circ g)^{-1}$, horizontal line test, solving $f(x)=c$</td>
+<td style="text-align: center;">Worksheet A</td>
+<td style="text-align: center;">Videos 1 &amp; 2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;"><strong>Evaluating Arc Trig Functions</strong></td>
+<td style="text-align: left;">Strict range restrictions on $\arcsin, \arccos, \arctan$, radian exact values, reciprocal arc functions</td>
+<td style="text-align: center;">Worksheet B</td>
+<td style="text-align: center;">Video 3</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;"><strong>Composite Trig Expressions</strong></td>
+<td style="text-align: left;">Cancellation rules ($\arcsin(\sin\theta)$ vs $\sin(\arcsin x)$), 4-step right triangle modeling for numeric &amp; variable ratios</td>
+<td style="text-align: center;">Worksheet C &amp; Videos</td>
+<td style="text-align: center;">Videos 4, 5, 6</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><strong>Trig Identities (Drill TD 23–25)</strong></td>
+<td style="text-align: left;">Double angle, sum &amp; difference, half-angle, power-reducing formulas</td>
+<td style="text-align: center;">Trig Ident Sheet</td>
+<td style="text-align: center;">Daily Class Drills</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="pillar-1-general-inverses-function-tables-lesson-1">🏛️ Pillar 1: General Inverses &amp; Function Tables (Lesson 1)</h2>
+<h3 id="1-fundamental-rules-of-inverses">1. Fundamental Rules of Inverses</h3>
+<ol>
+<li><strong>Definition</strong>: If $f(a) = b$, then $f^{-1}(b) = a$.</li>
+<li><strong>Domain &amp; Range Swapping</strong>: $\text{Domain}(f^{-1}) = \text{Range}(f)$ and $\text{Range}(f^{-1}) = \text{Domain}(f)$.</li>
+<li><strong>Symmetry</strong>: The graph of $y = f^{-1}(x)$ is the reflection of $y = f(x)$ across the line $y = x$.</li>
+<li><strong>Horizontal Line Test (HLT)</strong>: A function $f(x)$ has an inverse that is also a function <strong>if and only if</strong> $f$ passes the Horizontal Line Test (i.e., $f$ is strictly <strong>one-to-one</strong>). If a horizontal line crosses more than once, its inverse is NOT a function unless the domain is restricted!</li>
+<li><strong>Inversion of a Composite Function</strong>:<br />
+   $$(f \circ g)^{-1}(x) = (g^{-1} \circ f^{-1})(x) = g^{-1}(f^{-1}(x))$$<br />
+<em>(Notice the order reverses!)</em></li>
+</ol>
+<h3 id="2-table-based-inverses-as-seen-on-worksheet-a">2. Table-Based Inverses (As seen on Worksheet A)</h3>
+<p>Given a table of $x, f(x), g(x), h(x)$:<br />
+* <strong>To find $f(g(3))$</strong>: Look up $g(3) = 2$, then look up $f(2) = 3$.<br />
+* <strong>To find $h^{-1}(-2)$</strong>: Find where the output $h(x) = -2$. The corresponding input is $x = 0$. So $h^{-1}(-2) = 0$.<br />
+* <strong>To find $(f^{-1} \circ g^{-1})(0)$</strong>:<br />
+  1. Find $g^{-1}(0)$: Look for $g(x) = 0 \implies x = 0$.<br />
+  2. Find $f^{-1}(0)$: Look for $f(x) = 0 \implies x = -2$.<br />
+  3. Result: $-2$.<br />
+* <strong>To find $(f \circ g)^{-1}(4)$</strong>:<br />
+  * Using property: $(f \circ g)^{-1}(4) = g^{-1}(f^{-1}(4))$.<br />
+  * Look up $f(x) = 4 \implies x = -4$.<br />
+  * Look up $g^{-1}(-4) \implies g(x) = -4 \implies x = -2$. Result: $-2$.</p>
+<h3 id="3-evaluating-inverses-of-polynomial-functions-f-1c">3. Evaluating Inverses of Polynomial Functions $f^{-1}(c)$</h3>
+<p>To find $f^{-1}(c)$ when given an equation for $f(x)$:<br />
+1. Set $f(x) = c$.<br />
+2. Subtract $c$ from both sides so the equation equals zero: $f(x) - c = 0$.<br />
+3. Factor the polynomial or use Rational Root Theorem &amp; Synthetic Division.</p>
+<ul>
+<li>
+<p><strong>Example 1 (Factoring)</strong>: Let $f(x) = x^3 - 7x^2 - 8x + 5$. Find $f^{-1}(5)$.<br />
+  $$x^3 - 7x^2 - 8x + 5 = 5 \implies x^3 - 7x^2 - 8x = 0$$<br />
+  Factor out $x$:<br />
+  $$x(x^2 - 7x - 8) = 0 \implies x(x - 8)(x + 1) = 0$$<br />
+  $$\mathbf{f^{-1}(5) = 0, \; 8, \; -1}$$<br />
+<em>(Note: Because $f(x)$ is not one-to-one globally, there are 3 valid pre-images!)</em></p>
+</li>
+<li>
+<p><strong>Example 2 (Quadratic-in-Form)</strong>: Let $k(x) = 2x^4 - 9x^2 - 1$. Find $k^{-1}(-8)$.<br />
+  $$2x^4 - 9x^2 - 1 = -8 \implies 2x^4 - 9x^2 + 7 = 0$$<br />
+  Treat as $(2u^2 - 9u + 7 = 0)$ where $u = x^2$:<br />
+  $$(2x^2 - 7)(x^2 - 1) = 0$$<br />
+  $$x^2 = 1 \implies x = \pm 1$$<br />
+  $$x^2 = \frac{7}{2} \implies x = \pm\sqrt{\frac{7}{2}} = \pm\frac{\sqrt{14}}{2}$$<br />
+  $$\mathbf{k^{-1}(-8) = -1, \; 1, \; -\frac{\sqrt{14}}{2}, \; \frac{\sqrt{14}}{2}}$$</p>
+</li>
+</ul>
+<hr />
+<h2 id="pillar-2-arc-trigonometric-functions-strict-ranges-lesson-2">🏛️ Pillar 2: Arc Trigonometric Functions &amp; Strict Ranges (Lesson 2)</h2>
+<h3 id="1-the-strict-range-restrictions-must-memorize-100">1. The Strict Range Restrictions (MUST MEMORIZE 100%)</h3>
+<p>Because $\sin(x), \cos(x), \tan(x)$ are periodic, they fail the Horizontal Line Test. To define their inverses, mathematicians strictly <strong>restricted their domains</strong>:</p>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Function</th>
+<th style="text-align: center;">Domain (Inputs)</th>
+<th style="text-align: center;">Strict Range (Outputs $\theta$)</th>
+<th style="text-align: center;">Active Quadrants</th>
+<th style="text-align: left;">Notes / Endpoint Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$\theta = \arcsin(x) = \sin^{-1}(x)$</td>
+<td style="text-align: center;">$[-1, 1]$</td>
+<td style="text-align: center;">$\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$</td>
+<td style="text-align: center;"><strong>Quadrants I &amp; IV</strong></td>
+<td style="text-align: left;">Negative angles MUST be written as negative acute angles (e.g. $-\frac{\pi}{6}$), <strong>NEVER</strong> as $11\pi/6$!</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\theta = \arccos(x) = \cos^{-1}(x)$</td>
+<td style="text-align: center;">$[-1, 1]$</td>
+<td style="text-align: center;">$[0, \pi]$</td>
+<td style="text-align: center;"><strong>Quadrants I &amp; II</strong></td>
+<td style="text-align: left;">Negative inputs yield obtuse angles in Quadrant II (e.g. $\frac{2\pi}{3}, \frac{3\pi}{4}, \frac{5\pi}{6}$).</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\theta = \arctan(x) = \tan^{-1}(x)$</td>
+<td style="text-align: center;">$(-\infty, \infty)$</td>
+<td style="text-align: center;">$\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$</td>
+<td style="text-align: center;"><strong>Quadrants I &amp; IV</strong></td>
+<td style="text-align: left;">Open interval (vertical asymptotes at $\pm\pi/2$).</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\theta = \text{arccsc}(x)$</td>
+<td style="text-align: center;">$(-\infty, -1] \cup [1, \infty)$</td>
+<td style="text-align: center;">$\left[-\frac{\pi}{2}, \frac{\pi}{2}\right], \theta \neq 0$</td>
+<td style="text-align: center;"><strong>Quadrants I &amp; IV</strong></td>
+<td style="text-align: left;">Same as $\arcsin(1/x)$.</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\theta = \text{arcsec}(x)$</td>
+<td style="text-align: center;">$(-\infty, -1] \cup [1, \infty)$</td>
+<td style="text-align: center;">$[0, \pi], \theta \neq \frac{\pi}{2}$</td>
+<td style="text-align: center;"><strong>Quadrants I &amp; II</strong></td>
+<td style="text-align: left;">Same as $\arccos(1/x)$.</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\theta = \text{arccot}(x)$</td>
+<td style="text-align: center;">$(-\infty, \infty)$</td>
+<td style="text-align: center;">$(0, \pi)$ <em>(standard)</em> or $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$</td>
+<td style="text-align: center;"><strong>QI &amp; QII</strong> (or QI &amp; QIV)</td>
+<td style="text-align: left;"><em>Teacher note: Both definitions are accepted on Worksheet B!</em></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="2-unit-circle-exact-value-drills-worksheet-b-practice">2. Unit Circle Exact Value Drills (Worksheet B Practice)</h3>
+<ul>
+<li>$\arcsin\left(\frac{1}{2}\right) = \frac{\pi}{6}$</li>
+<li>$\arccos(0) = \frac{\pi}{2}$</li>
+<li>$\arctan(1) = \frac{\pi}{4}$</li>
+<li>$\arccos(-1) = \pi$</li>
+<li>$\arcsin\left(-\frac{\sqrt{3}}{2}\right) = -\frac{\pi}{3}$</li>
+<li>$\arctan(\sqrt{3}) = \frac{\pi}{3}$</li>
+<li>$\arctan\left(-\frac{1}{\sqrt{3}}\right) = -\frac{\pi}{6}$</li>
+<li>$\arcsin\left(-\frac{\sqrt{2}}{2}\right) = -\frac{\pi}{4}$</li>
+<li>$\arccos\left(\frac{\sqrt{2}}{2}\right) = \frac{\pi}{4}$</li>
+<li>$\text{arcsec}(-2) \implies \cos\theta = -\frac{1}{2}$ in QII $\implies \theta = \frac{2\pi}{3}$</li>
+<li>$\text{arccsc}(\sqrt{2}) \implies \sin\theta = \frac{\sqrt{2}}{2}$ in QI $\implies \theta = \frac{\pi}{4}$</li>
+<li>$\text{arcsec}\left(-\frac{2}{\sqrt{3}}\right) \implies \cos\theta = -\frac{\sqrt{3}}{2}$ in QII $\implies \theta = \frac{5\pi}{6}$</li>
+</ul>
+<blockquote>
+<p>[!CAUTION]<br />
+<strong>Common Trap Alert:</strong> $\arcsin\left(-\frac{1}{2}\right) \neq \frac{11\pi}{6}$! In AP Precalculus, the range of $\arcsin$ is $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$. Writing $\frac{11\pi}{6}$ or $\frac{7\pi}{6}$ will result in zero points. You MUST write $-\frac{\pi}{6}$.</p>
+</blockquote>
+<hr />
+<h2 id="pillar-3-composite-trig-expressions-lesson-3">🏛️ Pillar 3: Composite Trig Expressions (Lesson 3)</h2>
+<h3 id="1-inverse-on-the-inside-ff-1x">1. Inverse on the Inside: $f(f^{-1}(x))$</h3>
+<p>When the trig function is on the outside:<br />
+$$\sin(\arcsin(x)) = x \quad \text{for all } x \in [-1, 1]$$<br />
+$$\cos(\arccos(x)) = x \quad \text{for all } x \in [-1, 1]$$<br />
+$$\tan(\arctan(x)) = x \quad \text{for all } x \in (-\infty, \infty)$$<br />
+* Example: $\sin(\arcsin(0.4)) = 0.4$<br />
+* Example: $\sin(\arcsin(1.5)) =$ <strong>Undefined</strong> (because $1.5 \notin [-1, 1]$).</p>
+<h3 id="2-inverse-on-the-outside-f-1ftheta-the-biggest-trap">2. Inverse on the Outside: $f^{-1}(f(\theta))$ (THE BIGGEST TRAP!)</h3>
+<p>$$\arcsin(\sin(\theta)) = \theta \quad \textbf{ONLY if } \theta \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$$<br />
+$$\arccos(\cos(\theta)) = \theta \quad \textbf{ONLY if } \theta \in [0, \pi]$$<br />
+$$\arctan(\tan(\theta)) = \theta \quad \textbf{ONLY if } \theta \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$$</p>
+<p>If $\theta$ is <strong>outside</strong> the restricted range, follow these <strong>2 Steps</strong>:<br />
+1. Evaluate the inside trig function to get a numerical ratio.<br />
+2. Evaluate the outside inverse function using the strict range restrictions!</p>
+<ul>
+<li><strong>Case 1</strong>: Evaluate $\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right)$</li>
+<li>Step 1: $\sin\left(\frac{5\pi}{6}\right) = \frac{1}{2}$.</li>
+<li>Step 2: $\arcsin\left(\frac{1}{2}\right) = \mathbf{\frac{\pi}{6}}$ (in Quadrant I).</li>
+<li>
+<p><em>Note: $\frac{5\pi}{6} \neq \frac{\pi}{6}$! The functions DO NOT just cancel out.</em></p>
+</li>
+<li>
+<p><strong>Case 2</strong>: Evaluate $\arccos\left(\cos\left(\frac{7\pi}{4}\right)\right)$</p>
+</li>
+<li>Step 1: $\cos\left(\frac{7\pi}{4}\right) = \frac{\sqrt{2}}{2}$ (Quadrant IV).</li>
+<li>
+<p>Step 2: $\arccos\left(\frac{\sqrt{2}}{2}\right) = \mathbf{\frac{\pi}{4}}$ (must be in $[0, \pi]$).</p>
+</li>
+<li>
+<p><strong>Case 3</strong>: Evaluate $\arcsin\left(\sin\left(\frac{4\pi}{3}\right)\right)$</p>
+</li>
+<li>Step 1: $\sin\left(\frac{4\pi}{3}\right) = -\frac{\sqrt{3}}{2}$.</li>
+<li>Step 2: $\arcsin\left(-\frac{\sqrt{3}}{2}\right) = \mathbf{-\frac{\pi}{3}}$.</li>
+</ul>
+<h3 id="3-mixed-numeric-composites-right-triangle-method">3. Mixed Numeric Composites (Right Triangle Method)</h3>
+<p>To evaluate expressions like $\cos\left(\arcsin\left(\frac{3}{5}\right)\right)$ or $\tan\left(\arccos\left(-\frac{5}{13}\right)\right)$:<br />
+1. Set $\theta = \text{inside arc function}$.<br />
+2. Draw a right triangle in the appropriate quadrant:<br />
+   * For positive inputs $\implies$ Quadrant I.<br />
+   * For $\arcsin(-)$ or $\arctan(-) \implies$ Quadrant IV (angle is negative).<br />
+   * For $\arccos(-) \implies$ Quadrant II.<br />
+3. Label the two known sides (Opposite, Adjacent, Hypotenuse) and use $a^2 + b^2 = c^2$ to find the third side.<br />
+4. Read the outer trig function from the triangle.</p>
+<ul>
+<li><strong>Example 1</strong>: $\cos\left(\arcsin\left(\frac{3}{5}\right)\right)$</li>
+<li>Let $\theta = \arcsin(3/5) \implies \sin\theta = 3/5$ (QI).</li>
+<li>$\text{Opp} = 3$, $\text{Hyp} = 5 \implies \text{Adj} = \sqrt{5^2 - 3^2} = 4$.</li>
+<li>
+<p>$\cos\theta = \frac{\text{Adj}}{\text{Hyp}} = \mathbf{\frac{4}{5}}$.</p>
+</li>
+<li>
+<p><strong>Example 2</strong>: $\tan\left(\arccos\left(-\frac{5}{13}\right)\right)$</p>
+</li>
+<li>Let $\theta = \arccos(-5/13) \implies \theta \in \text{Quadrant II}$.</li>
+<li>In QII, $\cos\theta = -5/13 \implies \text{Adj} = -5$, $\text{Hyp} = 13$.</li>
+<li>$\text{Opp} = \sqrt{13^2 - (-5)^2} = \sqrt{169 - 25} = 12$ (positive in QII).</li>
+<li>$\tan\theta = \frac{\text{Opp}}{\text{Adj}} = \frac{12}{-5} = \mathbf{-\frac{12}{5}}$.</li>
+</ul>
+<h3 id="4-algebraic-variable-composites-right-triangle-modeling">4. Algebraic Variable Composites (Right Triangle Modeling)</h3>
+<p>When expressions have variable $x$, assume $x$ is in the principal domain where the triangle exists:</p>
+<ul>
+<li>
+<p><strong>Example A</strong>: Write $\cos(\arcsin(x))$ as an algebraic expression in $x$.<br />
+  1. Let $\theta = \arcsin(x) = \arcsin(x/1) \implies \sin\theta = \frac{x}{1}$.<br />
+  2. Draw right triangle: $\text{Opposite} = x$, $\text{Hypotenuse} = 1$.<br />
+  3. By Pythagorean theorem: $\text{Adjacent} = \sqrt{1^2 - x^2} = \sqrt{1 - x^2}$.<br />
+  4. $\cos\theta = \frac{\text{Adj}}{\text{Hyp}} = \mathbf{\sqrt{1 - x^2}}$.</p>
+</li>
+<li>
+<p><strong>Example B</strong>: Write $\tan\left(\arccos\left(\frac{x}{4}\right)\right)$ as an algebraic expression.<br />
+  1. Let $\theta = \arccos(x/4) \implies \cos\theta = \frac{x}{4}$.<br />
+  2. $\text{Adjacent} = x$, $\text{Hypotenuse} = 4$.<br />
+  3. $\text{Opposite} = \sqrt{4^2 - x^2} = \sqrt{16 - x^2}$.<br />
+  4. $\tan\theta = \frac{\text{Opp}}{\text{Adj}} = \mathbf{\frac{\sqrt{16 - x^2}}{x}}$.</p>
+</li>
+<li>
+<p><strong>Example C</strong>: Write $\csc(\arctan(3x))$ as an algebraic expression.<br />
+  1. Let $\theta = \arctan(3x) = \arctan(3x/1) \implies \tan\theta = \frac{3x}{1}$.<br />
+  2. $\text{Opposite} = 3x$, $\text{Adjacent} = 1$.<br />
+  3. $\text{Hypotenuse} = \sqrt{1^2 + (3x)^2} = \sqrt{1 + 9x^2}$.<br />
+  4. $\csc\theta = \frac{\text{Hyp}}{\text{Opp}} = \mathbf{\frac{\sqrt{1 + 9x^2}}{3x}}$.</p>
+</li>
+</ul>
+<hr />
+<h2 id="pillar-4-daily-trig-drills-identity-bank-td-2325">🏛️ Pillar 4: Daily Trig Drills Identity Bank (TD 23–25)</h2>
+<p>Starting Monday (9/21), the daily quizzes include the newly introduced formulas. Commit these to memory:</p>
+<h3 id="1-double-angle-formulas">1. Double-Angle Formulas</h3>
+<p>$$\sin(2\theta) = 2\sin\theta\cos\theta$$<br />
+$$\cos(2\theta) = \cos^2\theta - \sin^2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta$$<br />
+$$\tan(2\theta) = \frac{2\tan\theta}{1 - \tan^2\theta}$$</p>
+<h3 id="2-sum-and-difference-formulas">2. Sum and Difference Formulas</h3>
+<p>$$\sin(u \pm v) = \sin u \cos v \pm \cos u \sin v$$<br />
+$$\cos(u \pm v) = \cos u \cos v \mp \sin u \sin v \quad \text{(Notice sign flips!)}$$<br />
+$$\tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u \tan v}$$</p>
+<h3 id="3-half-angle-formulas">3. Half-Angle Formulas</h3>
+<p>$$\sin\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{2}}$$<br />
+$$\cos\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 + \cos u}{2}}$$<br />
+$$\tan\left(\frac{u}{2}\right) = \frac{1 - \cos u}{\sin u} = \frac{\sin u}{1 + \cos u} = \pm\sqrt{\frac{1 - \cos u}{1 + \cos u}}$$<br />
+<em>(Note: $\pm$ sign depends on which quadrant $u/2$ lies in!)</em></p>
+<h3 id="4-power-reducing-formulas">4. Power-Reducing Formulas</h3>
+<p>$$\sin^2 u = \frac{1 - \cos(2u)}{2}$$<br />
+$$\cos^2 u = \frac{1 + \cos(2u)}{2}$$<br />
+$$\tan^2 u = \frac{1 - \cos(2u)}{1 + \cos(2u)}$$</p>
+<hr />
+<h2 id="video-study-playlist-chronological-order">📹 Video Study Playlist (Chronological Order)</h2>
+<p>Watch or review these 6 lesson videos to cover 100% of the quiz concepts:</p>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th style="text-align: left;">Lesson &amp; Title</th>
+<th style="text-align: left;">Topics</th>
+<th style="text-align: left;">Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 1: Review of Inverses</strong></td>
+<td style="text-align: left;">Algebra inverse functions, HLT, domain/range swap</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM">MyVRSpot</a> • <a href="https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&amp;Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA">Direct MP4</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 1: Rational Zero Test</strong></td>
+<td style="text-align: left;">Synthetic division, factoring polynomials for $f^{-1}(c)$</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ">MyVRSpot</a> • <a href="https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&amp;Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA">Direct MP4</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 2: Evaluating Arctrig</strong></td>
+<td style="text-align: left;">Exact unit circle arc values, strict quadrant restrictions</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE">MyVRSpot</a> • <a href="https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&amp;Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA">Direct MP4</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 3: Composite Trig (Part 1)</strong></td>
+<td style="text-align: left;">Cancellation rules, out-of-range cases</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI">MyVRSpot</a> • <a href="https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&amp;Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&amp;Key-Pair-Id=APKAI62FB7DDTEKY56BA">Direct MP4</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 3: Numeric Composites (Part 2)</strong></td>
+<td style="text-align: left;">Numeric ratios, right triangle evaluation</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I">MyVRSpot</a> • <a href="https://www.youtube.com/watch?v=FttVzfrk5L8">YouTube Video</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td style="text-align: left;"><strong>Unit 3 Lesson 3: Variable Ratios (Part 3)</strong></td>
+<td style="text-align: left;">Algebraic triangle modeling with $x$</td>
+<td style="text-align: left;"><a href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY">MyVRSpot</a> • <a href="https://www.youtube.com/watch?v=OLCNPVCMQPw">YouTube Video</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="practice-quiz-simulation-self-test-with-solutions">📝 Practice Quiz Simulation (Self-Test with Solutions)</h2>
+<p>Test yourself on these 10 AP-style questions without looking at the solutions first:</p>
+<h3 id="questions">Questions</h3>
+<ol>
+<li>If $g(x) = x^3 + 3x^2 - 4x - 10$, find all values of $g^{-1}(2)$.</li>
+<li>The table gives values of $f(x)$ and $g(x)$:<br />
+   * $x = {-2, -1, 0, 1, 2}$<br />
+   * $f(x) = {0, -1, 2, -4, 3}$<br />
+   * $g(x) = {-4, 4, 0, 3, -2}$<br />
+   * Evaluate $(f \circ g)^{-1}(3)$.</li>
+<li>Evaluate $\arcsin\left(-\frac{\sqrt{3}}{2}\right)$ in exact radians.</li>
+<li>Evaluate $\arccos\left(-\frac{\sqrt{2}}{2}\right)$ in exact radians.</li>
+<li>Evaluate $\text{arcsec}(-2)$ in exact radians.</li>
+<li>Evaluate $\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right)$.</li>
+<li>Evaluate $\arccos\left(\cos\left(-\frac{\pi}{3}\right)\right)$.</li>
+<li>Evaluate $\tan\left(\arccos\left(-\frac{5}{13}\right)\right)$.</li>
+<li>Write $\sin(\arccos(2x))$ as an algebraic expression in $x$.</li>
+<li>Write $\tan\left(\arcsin\left(\frac{x}{\sqrt{x^2 + 25}}\right)\right)$ as an algebraic expression in $x$.</li>
+</ol>
+<hr />
+<h3 id="step-by-step-solutions">Step-by-Step Solutions</h3>
+<ol>
+<li><strong>$g(x) = 2 \implies x^3 + 3x^2 - 4x - 12 = 0$.</strong><br />
+   * Factor by grouping: $x^2(x + 3) - 4(x + 3) = (x^2 - 4)(x + 3) = (x - 2)(x + 2)(x + 3) = 0$.<br />
+   * <strong>Answer: $x = -3, -2, 2$</strong>.</li>
+<li><strong>$(f \circ g)^{-1}(3) = g^{-1}(f^{-1}(3))$.</strong><br />
+   * From table, $f(x) = 3 \implies x = 2$.<br />
+   * Now find $g^{-1}(2) \implies$ look for $g(x) = 2$. If not present or check table: from Worksheet A table, $g(3) = 2 \implies g^{-1}(2) = 3$.<br />
+   * <strong>Answer: 3</strong>.</li>
+<li>$\arcsin(-\sqrt{3}/2)$ must be in Quadrant IV as a negative acute angle.<br />
+   * $\sin(-\pi/3) = -\sqrt{3}/2 \implies \mathbf{-\frac{\pi}{3}}$.</li>
+<li>$\arccos(-\sqrt{2}/2)$ must be in Quadrant II.<br />
+   * Reference angle $\pi/4 \implies \pi - \pi/4 = \mathbf{\frac{3\pi}{4}}$.</li>
+<li>$\text{arcsec}(-2) \implies \cos\theta = -1/2$ in Quadrant II.<br />
+   * $\theta = \pi - \pi/3 = \mathbf{\frac{2\pi}{3}}$.</li>
+<li>$\arcsin(\sin(5\pi/6)) = \arcsin(1/2) = \mathbf{\frac{\pi}{6}}$. <em>(Not $5\pi/6$!)</em></li>
+<li>$\cos(-\pi/3) = \cos(\pi/3) = 1/2$. Then $\arccos(1/2) = \mathbf{\frac{\pi}{3}}$.</li>
+<li>Let $\theta = \arccos(-5/13)$ in QII. $\text{Adj} = -5, \text{Hyp} = 13 \implies \text{Opp} = 12$.<br />
+   * $\tan\theta = \frac{\text{Opp}}{\text{Adj}} = \mathbf{-\frac{12}{5}}$.</li>
+<li>Let $\theta = \arccos(2x/1)$. $\text{Adj} = 2x, \text{Hyp} = 1 \implies \text{Opp} = \sqrt{1 - (2x)^2} = \sqrt{1 - 4x^2}$.<br />
+   * $\sin\theta = \mathbf{\sqrt{1 - 4x^2}}$.</li>
+<li>Let $\theta = \arcsin\left(\frac{x}{\sqrt{x^2+25}}\right)$.<ul>
+<li>$\text{Opp} = x$, $\text{Hyp} = \sqrt{x^2+25}$.</li>
+<li>$\text{Adj} = \sqrt{(\sqrt{x^2+25})^2 - x^2} = \sqrt{x^2+25 - x^2} = \sqrt{25} = 5$.</li>
+<li>$\tan\theta = \frac{\text{Opp}}{\text{Adj}} = \mathbf{\frac{x}{5}}$.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="2-day-hour-by-hour-study-schedule-100-score-protocol">🗓️ 2-Day Hour-by-Hour Study Schedule (100% Score Protocol)</h2>
+<h3 id="sunday-september-20-2026-concept-mastery-video-review">Sunday, September 20, 2026 (Concept Mastery &amp; Video Review)</h3>
+<ul>
+<li><strong>2:00 PM – 3:15 PM</strong>: Watch <strong>Videos 1 &amp; 2</strong> (Inverses &amp; Rational Zero Test).</li>
+<li>Work through Worksheet A problems #1–15 on paper.</li>
+<li>Check answers against <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf">Worksheet A Answer Key</a>.</li>
+<li><strong>3:30 PM – 4:45 PM</strong>: Watch <strong>Video 3</strong> (Evaluating Arctrig Functions).</li>
+<li>Work through Worksheet B problems #1–18.</li>
+<li>Memorize the restricted ranges: $\arcsin \in [-\pi/2, \pi/2]$, $\arccos \in [0, \pi]$, $\arctan \in (-\pi/2, \pi/2)$.</li>
+<li>Verify against <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf">Worksheet B Answer Key</a>.</li>
+<li><strong>5:00 PM – 6:15 PM</strong>: Watch <strong>Videos 4, 5, 6</strong> (Composite Trig Expressions &amp; Variable Ratios).</li>
+<li>Practice the 4-step right triangle modeling technique for both numeric and algebraic ratios.</li>
+<li><strong>7:30 PM – 8:30 PM</strong>: Memorize Trig Identities (Double Angle, Sum/Difference, Half-Angle, Power-Reducing).</li>
+<li>Write them out on a blank sheet 3 times without looking!</li>
+</ul>
+<h3 id="monday-september-21-2026-assignment-drill-finalization">Monday, September 21, 2026 (Assignment &amp; Drill Finalization)</h3>
+<ul>
+<li><strong>During School</strong>: Pay close attention during class drill <strong>TD 23</strong>. Note any question types the teacher emphasizes.</li>
+<li><strong>4:30 PM – 6:00 PM</strong>: Complete <strong>DeltaMath – Unit 3: Practice 1</strong> (Due at 11:59 PM).</li>
+<li>Ensure 100% completion and rework any missed problem until you understand the underlying concept.</li>
+<li><strong>6:30 PM – 7:30 PM</strong>: Solve Worksheet C word problems (Angle of elevation, descent, ladder).</li>
+<li>Check with <a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU03_WkstC_Applications_Answers.pdf">Worksheet C Answer Key</a>.</li>
+<li><strong>7:45 PM – 8:30 PM</strong>: Take the <strong>10-Question Practice Quiz Simulation</strong> in this guide under timed exam conditions (20 minutes).</li>
+<li><strong>8:30 PM – 9:00 PM</strong>: Final review of the <strong>Pillar 2 &amp; 3 Trap Alerts</strong> (out-of-bounds arc functions, negative QIV angles).</li>
+<li><strong>Good night's rest</strong>: Sleep by 10:00 PM so your recall speed is peak tomorrow!</li>
+</ul>
+<hr />
+<p><em>This guide is prepared specifically for Antony's AP Precalculus class at South Forsyth High School. All files and videos are permanently accessible without school login.</em></p>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

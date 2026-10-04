@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Precalculus Course Archive  Video Stream Portal - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="./index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="./index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="./index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="./unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="./Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="./index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      
+      <span class="text-slate-200 font-semibold truncate max-w-xs">📐 AP Precalculus Course Archive &amp; Video Strea...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="ap-precalculus-course-archive-video-stream-portal">📐 AP Precalculus Course Archive &amp; Video Stream Portal</h1>
+<p>This repository and backup archive serves as the centralized offline and cloud hub for <strong>AP Precalculus (Grade 9)</strong>. It contains lesson video archives, direct MP4 streaming links, textbooks, worksheets, and answer keys hosted publicly with <strong>zero authentication required</strong>.</p>
+<hr />
+<h2 id="live-web-portal-repository-details">🌐 Live Web Portal &amp; Repository Details</h2>
+<ul>
+<li><strong>GitHub Username</strong>: <code>MegaAntony</code></li>
+<li><strong>Live Website</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/">https://megaantony.github.io/ap-precalc-streams/</a></li>
+<li><strong>GitHub Repository</strong>: <a href="https://github.com/MegaAntony/ap-precalc-streams">https://github.com/MegaAntony/ap-precalc-streams</a></li>
+<li><strong>Local Git Repo Path</strong>: <code>/Users/anish/ap-precalc-streams/</code></li>
+<li><strong>Backup &amp; Materials Path</strong>: <code>/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/</code></li>
+</ul>
+<hr />
+<h2 id="github-ssh-key-authentication-details">🔑 GitHub SSH Key &amp; Authentication Details</h2>
+<h3 id="1-your-public-ssh-key">1. Your Public SSH Key</h3>
+<pre><code class="language-text">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKNMmVVgIknZ8nylByh9K74/GnaXwQ4gJ/Go24lWEy82 MegaAntony@github
+</code></pre>
+<h3 id="2-key-file-paths-on-macos">2. Key File Paths on macOS</h3>
+<ul>
+<li><strong>Public Key</strong>: <code>~/.ssh/id_ed25519.pub</code> (<code>/Users/anish/.ssh/id_ed25519.pub</code>)</li>
+<li><strong>Private Key</strong>: <code>~/.ssh/id_ed25519</code> (<code>/Users/anish/.ssh/id_ed25519</code>)</li>
+<li><strong>SSH Config</strong>: <code>~/.ssh/config</code> (<code>/Users/anish/.ssh/config</code>)</li>
+</ul>
+<h3 id="3-quick-terminal-commands">3. Quick Terminal Commands</h3>
+<ul>
+<li><strong>Copy Public Key to Clipboard</strong>:<br />
+<code>bash
+  pbcopy &lt; ~/.ssh/id_ed25519.pub</code></li>
+<li><strong>Test GitHub SSH Authentication</strong>:<br />
+<code>bash
+  ssh -T git@github.com</code></li>
+<li><strong>Re-add Key to macOS Keychain (if ever needed)</strong>:<br />
+<code>bash
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></li>
+</ul>
+<hr />
+<h2 id="directory-structure-existing-units">📁 Directory Structure &amp; Existing Units</h2>
+<pre><code class="language-text">/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/
+├── README.md                                  # Complete course and setup documentation
+├── AP_Precalculus_Direct_MP4_Streams.html     # Mirror copy of the stream portal HTML
+├── Weekly Plans/                              # Master calendar, weekly schedules, &amp; daily assignments
+│   ├── README.md                              # Semester 1 schedule, milestones &amp; deadlines
+│   ├── Week_07_Sep_14_Sep_18.md               # Unit 2 Test, Intro to Inverses &amp; Composites
+│   ├── Week_08_Sep_21_Sep_25.md               # Right Triangles, Area Formulas, Unit 3 Quiz (9/22), Law of Cosines
+│   ├── Week_Fall_Break_Sep_28_Oct_02.md       # Fall Break (no school, covers Oct 1 &amp; Oct 2)
+│   └── Week_09_Oct_05_Oct_09.md               # October First Week: Law of Sines, Ambiguous Case SSA, Review
+├── Textbook/                                  # 5 offline textbook PDF chapters &amp; solution keys
+│   ├── Precalculus_Chapter_04_Trigonometric_Functions.pdf
+│   ├── Precalculus_Chapter_05_Analytic_Trigonometry.pdf
+│   ├── Precalculus_Chapter_06_Additional_Topics_Trig.pdf
+│   ├── Precalculus_Answers_to_Odd_Problems.pdf
+│   └── Precalculus_Index_and_Formula_Pages.pdf
+├── Unit 1 - Unit Circle/
+│   ├── Unit_01_all-Lesson_Videos.md           # 12 videos with direct MP4 streams &amp; curl commands
+│   ├── Unit_01_Complete_Reference.md          # Local textbook links, Worksheets A-D, solution keys
+│   ├── unit_01_metadata.json                  # Raw parsed Canvas data
+│   ├── handouts/                              # 5 offline reference PDFs (Identities, Unit Circle, Graph Paper)
+│   │   ├── Official_Trig_Identities_Sheet.pdf
+│   │   ├── Blank_Unit_Circle_Sheet.pdf
+│   │   └── ... (3 graph paper PDFs)
+│   └── worksheets/                            # 8 offline local PDF worksheets &amp; answer keys
+│       ├── APPCU01_WkstA_AngularLinearSpeed.pdf
+│       ├── APPCU01_WkstA_AngularLinearSpeed_Answers.pdf
+│       ├── APPCU01_WkstB_ExtraPracticeQuiz.pdf
+│       ├── APPCU01_WkstB_ExtraPracticeQuiz_Answers.pdf
+│       ├── APPCU01_WkstC_ReferenceAngles.pdf
+│       ├── APPCU01_WkstC_ReferenceAngles_Answers.pdf
+│       ├── APPCU01_WkstD_ReviewForTest.pdf
+│       └── APPCU01_WkstD_ReviewForTest_Answers.pdf
+├── Unit 2 - Graphing Trigonometric Functions/
+│   ├── Unit_02_all-Lesson_Videos.md           # 12 direct MP4 streams for current &amp; older AP lessons
+│   ├── Unit_02_Complete_Reference.md          # Offline local Worksheets A-F, graphs, test reviews
+│   ├── unit_02_metadata.json                  # Raw parsed Canvas data
+│   └── worksheets/                            # 12 offline local PDF worksheets &amp; answer keys
+│       ├── APPCU02_WkstA_GraphingSineCosine.pdf
+│       ├── APPCU02_WkstA_GraphingSineCosine_Answers.pdf
+│       ├── APPCU02_WkstB_GraphingSecantCosecant.pdf
+│       ├── APPCU02_WkstB_GraphingSecantCosecant_Answers.pdf
+│       ├── APPCU02_WkstC_GraphingTangentCotangent.pdf
+│       ├── APPCU02_WkstC_GraphingTangentCotangent_Answers.pdf
+│       ├── APPCU02_Lesson4_Graphs.pdf
+│       ├── APPCU02_WkstD_WritingEquationsFromGraphs.pdf
+│       ├── APPCU02_WkstD_WritingEquationsFromGraphs_Answers.pdf
+│       ├── APPCU02_WkstE_TestReview.pdf
+│       ├── APPCU02_WkstE_TestReview_Answers.pdf
+│       └── APPCU02_WkstF_Applications.pdf
+└── Unit 3 - Inverse &amp; Composite Trigonometric Functions/
+    ├── Unit_03_all-Lesson_Videos.md           # Direct MP4 streams for 13 lessons &amp; examples
+    ├── Unit_03_Complete_Reference.md          # Worksheets A-E, oblique triangles, test reviews
+    ├── unit_03_metadata.json                  # Raw parsed Canvas data for 15 pages
+    └── worksheets/                            # 16 offline local PDF worksheets &amp; answer keys
+        ├── APPCU03_WkstA_EvalInvFxns.pdf
+        ├── APPCU03_WkstA_EvalInvFxns_Answers.pdf
+        ├── APPCU03_WkstB_EvalArcTrig.pdf
+        ├── APPCU03_WkstB_EvalArcTrig_Answers.pdf
+        ├── APPCU03_WkstB_AppsObliqueTriangles.pdf
+        ├── APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf
+        ├── APPCU03_WkstC_Applications.pdf
+        ├── APPCU03_WkstC_Applications_Answers.pdf
+        ├── APPCU03_WkstC_ExtraPracSSA.pdf
+        ├── APPCU03_WkstC_ExtraPracSSA_Answers.pdf
+        ├── APPCU03_WkstD_MorePracticeApps.pdf
+        ├── APPCU03_WkstD_MorePracticeApps_Answers.pdf
+        ├── APPCU03_WkstD_UnitReview.pdf
+        ├── APPCU03_WkstD_UnitReview_Answers.pdf
+        ├── APPCU03_WkstE_Review.pdf
+        └── APPCU03_WkstE_Review_Answers.pdf
+</code></pre>
+<p>Hosted public repository layout:</p>
+<pre><code class="language-text">/Users/anish/ap-precalc-streams/
+├── index.html                                 # Live portal with nav bar, videos &amp; worksheets
+├── docs/                                      # 46 Zero-Auth PDFs (Textbook, Handouts, Worksheets, Keys)
+│   ├── Precalculus_Chapter_04_Trigonometric_Functions.pdf
+│   ├── Precalculus_Chapter_05_Analytic_Trigonometry.pdf
+│   ├── Precalculus_Chapter_06_Additional_Topics_Trig.pdf
+│   ├── Precalculus_Answers_to_Odd_Problems.pdf
+│   ├── Precalculus_Index_and_Formula_Pages.pdf
+│   ├── Official_Trig_Identities_Sheet.pdf
+│   ├── Blank_Unit_Circle_Sheet.pdf
+│   ├── Graph_Paper_4_blocks.pdf / Graph_Paper_10_blocks.pdf / Polar_Graph_Paper.pdf
+│   ├── APPCU01_... (8 Unit 1 PDFs)
+│   ├── APPCU02_... (12 Unit 2 PDFs)
+│   └── APPCU03_... (16 Unit 3 PDFs)
+├── Unit 1 - Unit Circle/                      # Unit 1 reference docs &amp; video index
+├── Unit 2 - Graphing Trigonometric Functions/ # Unit 2 reference docs &amp; video index
+├── Unit 3 - Inverse &amp; Composite Trigonometric Functions/ # Unit 3 reference docs &amp; video index
+└── Weekly Plans/                              # Master calendar &amp; weekly schedule trackers
+</code></pre>
+<hr />
+<h2 id="complete-course-materials-100-zero-auth-links">📖 Complete Course Materials (100% Zero-Auth Links)</h2>
+<h3 id="official-course-textbook-larson-precalculus">📚 Official Course Textbook (Larson Precalculus)</h3>
+<ul>
+<li><strong>Chapter 4 - Trigonometric Functions (pgs 257–350)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_04_Trigonometric_Functions.pdf">Download Web PDF</a></li>
+<li><strong>Chapter 5 - Analytic Trigonometry (pgs 351–406)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_05_Analytic_Trigonometry.pdf">Download Web PDF</a></li>
+<li><strong>Chapter 6 - Additional Topics in Trigonometry (pgs 407–472)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_06_Additional_Topics_Trig.pdf">Download Web PDF</a></li>
+<li><strong>Answers to Odd Problems (Complete Solution Key)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Answers_to_Odd_Problems.pdf">Download Web PDF</a></li>
+<li><strong>Index and Reference Formula Pages</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Index_and_Formula_Pages.pdf">Download Web PDF</a></li>
+</ul>
+<h3 id="reference-handouts-graph-paper">📐 Reference Handouts &amp; Graph Paper</h3>
+<ul>
+<li><strong>Official Trig Identities Sheet</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Official_Trig_Identities_Sheet.pdf">Download Web PDF</a></li>
+<li><strong>Blank Unit Circle Practice Sheet</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Blank_Unit_Circle_Sheet.pdf">Download Web PDF</a></li>
+<li><strong>Cartesian Graph Paper (4 blocks/inch)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_4_blocks.pdf">Download Web PDF</a></li>
+<li><strong>Cartesian Graph Paper (10 blocks/inch)</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_10_blocks.pdf">Download Web PDF</a></li>
+<li><strong>Polar Coordinate Graph Paper</strong>: <a href="https://megaantony.github.io/ap-precalc-streams/docs/Polar_Graph_Paper.pdf">Download Web PDF</a></li>
+</ul>
+<hr />
+<h2 id="units-breakdown">📖 Units Breakdown</h2>
+<h3 id="1-unit-1-unit-circle">1. <a href="./Unit%201%20-%20Unit%20Circle/">Unit 1 - Unit Circle</a></h3>
+<ul>
+<li><strong>Video Archive</strong>: <a href="./Unit%201%20-%20Unit%20Circle/Unit_01_all-Lesson_Videos.html"><code>Unit_01_all-Lesson_Videos.md</code></a> (12 Videos)</li>
+<li>Standard Position, Radians, Coterminal Angles, Comp/Supp, Unit Circle, Angular/Linear Speed, Quadrant System, Reference Angles.</li>
+<li><strong>Reference &amp; Worksheets</strong>: <a href="./Unit%201%20-%20Unit%20Circle/Unit_01_Complete_Reference.html"><code>Unit_01_Complete_Reference.md</code></a></li>
+<li>Worksheets A–D &amp; Full Answer Keys (8 PDFs hosted live in <code>docs/</code> with zero authentication).</li>
+</ul>
+<h3 id="2-unit-2-graphing-trigonometric-functions">2. <a href="./Unit%202%20-%20Graphing%20Trigonometric%20Functions/">Unit 2 - Graphing Trigonometric Functions</a></h3>
+<ul>
+<li><strong>Video Archive</strong>: <a href="./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_all-Lesson_Videos.html"><code>Unit_02_all-Lesson_Videos.md</code></a> (12 Videos)</li>
+<li>Khan Academy Sine graphs, ScreenPal lessons 1–5 &amp; 10, Older versions (2.1a–d), Secant/Cosecant, Writing Equations from Graphs.</li>
+<li><strong>Reference &amp; Worksheets</strong>: <a href="./Unit%202%20-%20Graphing%20Trigonometric%20Functions/Unit_02_Complete_Reference.html"><code>Unit_02_Complete_Reference.md</code></a></li>
+<li>Worksheets A–F, Lesson 4 graphs, test reviews (12 PDFs hosted live in <code>docs/</code> with zero authentication).</li>
+</ul>
+<h3 id="3-unit-3-inverse-composite-trigonometric-functions">3. <a href="./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/">Unit 3 - Inverse &amp; Composite Trigonometric Functions</a></h3>
+<ul>
+<li><strong>Video Archive</strong>: <a href="./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_all-Lesson_Videos.html"><code>Unit_03_all-Lesson_Videos.md</code></a> (13 Videos)</li>
+<li><strong>Lesson 1</strong>: Review of Inverses &amp; Rational Zero Test (Synthetic Division)</li>
+<li><strong>Lesson 2</strong>: Evaluating Arctrig Functions</li>
+<li><strong>Lesson 3</strong>: Composite Trig Expressions, Numeric Only &amp; Variable Ratios</li>
+<li><strong>Lesson 4</strong>: Pythagorean &amp; Reciprocal Identities, SAS &amp; Heron's Triangle Area</li>
+<li><strong>Lesson 5</strong>: Oblique Triangles and Law of Cosines</li>
+<li><strong>Lesson 6</strong>: Law of Sines</li>
+<li><strong>Lesson 7</strong>: Ambiguous Case of Law of Sines &amp; Worked 2-Triangle Example (Mr. O'Connor notation)</li>
+<li><strong>Reference &amp; Worksheets</strong>: <a href="./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_Complete_Reference.html"><code>Unit_03_Complete_Reference.md</code></a></li>
+<li>Worksheets A–E, oblique triangles, test reviews (16 PDFs hosted live in <code>docs/</code> with zero authentication).</li>
+</ul>
+<h3 id="4-weekly-plans-assignment-tracker">4. <a href="./Weekly%20Plans/">Weekly Plans &amp; Assignment Tracker</a></h3>
+<ul>
+<li><strong>Master Schedule &amp; Milestones</strong>: <a href="./Weekly%20Plans/README.html"><code>Weekly Plans/README.md</code></a></li>
+<li><strong><a href="./Weekly%20Plans/Week_07_Sep_14_Sep_18.html">Week 7 (9/14 – 9/18)</a></strong>: Unit 2 Test, Begin Unit 3 (Lessons 1–3, Inverse Functions &amp; Graphing).</li>
+<li><strong><a href="./Weekly%20Plans/Week_08_Sep_21_Sep_25.html">Week 8 (9/21 – 9/25)</a></strong>: Right Triangles, Area Formulas ($SAS$ &amp; Heron's), <strong>Unit 3 Quiz (Tue 9/22)</strong>, Law of Cosines, DeltaMath Practice 1 (due 9/21) &amp; Practice 2 (due 9/27).</li>
+<li><strong><a href="./Weekly%20Plans/Week_Fall_Break_Sep_28_Oct_02.html">Fall Break (9/28 – 10/2)</a></strong>: Fall Break review &amp; identity practice (covers Oct 1 &amp; Oct 2).</li>
+<li><strong><a href="./Weekly%20Plans/Week_09_Oct_05_Oct_09.html">Week 9 — October First Week (10/5 – 10/9)</a></strong>: Law of Sines, Ambiguous Case (SSA Two-Triangle Case), Unit 3 Review, DeltaMath Practice 3 (due 10/8), Unit 3 Test Prep (Test: 10/12–10/13).</li>
+</ul>
+<hr />
+<h2 id="case-study-how-we-built-unit-3">🛠️ Case Study: How We Built Unit 3</h2>
+<h3 id="step-1-read-canvas-home-page-with-5-second-delay">Step 1: Read Canvas Home Page with 5-Second Delay</h3>
+<p>Using the student's Canvas session cookie, we scraped <code>https://forsyth.instructure.com/courses/276219</code> with <code>sleep 5</code> to avoid bot detection. We parsed the weekly plan (<code>AP Precalc 26/27 Week 7</code>) and discovered Unit 3 was newly active.</p>
+<h3 id="step-2-query-canvas-modules-api">Step 2: Query Canvas Modules API</h3>
+<p>We pulled all module items via:</p>
+<pre><code class="language-bash">curl -s &quot;https://forsyth.instructure.com/api/v1/courses/276219/modules?include[]=items&amp;per_page=50&quot; \
+  -H &quot;accept: application/json&quot; -b &quot;canvas_session=...&quot;
+</code></pre>
+<p>This returned the exact page slugs for all 7 video lessons and 8 worksheet pages.</p>
+<h3 id="step-3-scrape-all-unit-pages-with-5s-delay">Step 3: Scrape All Unit Pages with 5s Delay</h3>
+<p>A Python script fetched each of the 15 pages with <code>time.sleep(5)</code> intervals and exported <code>unit_03_metadata.json</code>.</p>
+<h3 id="step-4-extract-direct-video-streams">Step 4: Extract Direct Video Streams</h3>
+<ol>
+<li><strong>MyVRSpot Videos</strong>: Queried the embed player iframe (<code>https://live.myvrspot.com/iframe?v=&lt;ID&gt;</code>) which returned direct, high-res signed CloudFront MP4 stream URLs (<code>https://d1drabmetuo3qr.cloudfront.net/...mp4</code>).</li>
+<li><strong>ScreenPal Videos</strong>: Extracted the direct player stream endpoint (<code>https://go.screenpal.com/player/stream/&lt;ID&gt;</code>), usable with <code>curl -L -H "Referer: ..."</code> or downloadable in-browser.</li>
+<li><strong>Canvas Studio</strong>: Extracted the Studio embed player URLs.</li>
+</ol>
+<h3 id="step-5-solve-the-sharepoint-login-issue-auth-free-pdfs">Step 5: Solve the SharePoint Login Issue (Auth-Free PDFs)</h3>
+<ul>
+<li>School SharePoint links (<code>forsythk12org.sharepoint.com/:b:/s/SFHMath/...</code>) require Microsoft 365 student login and return HTTP 403 / redirect to Azure AD if accessed by external visitors.</li>
+<li><strong>The Solution</strong>: We downloaded all 16 PDFs using the authenticated browser session into a temporary staging folder (<code>/Volumes/Backup/scrap/x/</code>).</li>
+<li>Copied all 16 PDFs to:<br />
+  1. <code>/Volumes/Backup/.../Unit 3 - .../worksheets/</code> (permanent local backup)<br />
+  2. <code>/Users/anish/ap-precalc-streams/docs/</code> (public web hosting)</li>
+<li>Configured <code>index.html</code> buttons to link to <code>./docs/&lt;filename&gt;.pdf</code>. GitHub Pages serves these as native static files with <strong>zero authentication required</strong>!</li>
+</ul>
+<h3 id="step-6-web-portal-ui-enhancements">Step 6: Web Portal UI Enhancements</h3>
+<ul>
+<li>Added a <strong>sticky navigation bar</strong> at the top with jump links (<code>#unit-1</code>, <code>#unit-2</code>, <code>#unit-3</code>, and <code>#unit-3-review</code>).</li>
+<li>Added <code>html { scroll-behavior: smooth; }</code> and a JavaScript pulse animation that highlights the selected unit card with a glowing blue border.</li>
+<li>Committed and pushed to <code>main</code> branch:<br />
+<code>bash
+  cd ~/ap-precalc-streams
+  git add index.html docs/
+  git commit -m "Publish Unit 3 worksheets and answer key PDFs (auth-free public access)"
+  git push</code></li>
+</ul>
+<hr />
+<h2 id="how-to-add-next-chapters-unit-4-5-etc">🚀 How to Add Next Chapters (Unit 4, 5, etc.)</h2>
+<p>Whenever a new unit is posted on Canvas, follow this standard 4-step workflow:</p>
+<h3 id="step-1-copy-canvas-cookie-run-initial-extraction">Step 1: Copy Canvas Cookie &amp; Run Initial Extraction</h3>
+<ol>
+<li>Open Chrome DevTools (<code>Cmd + Option + I</code>) on Canvas -&gt; Network tab.</li>
+<li>Refresh <code>https://forsyth.instructure.com/courses/276219</code>.</li>
+<li>Right click the document request -&gt; <strong>Copy as cURL</strong>.</li>
+<li>In chat prompt, say:<blockquote>
+<p><em>"Extract Unit X with 5s delay and update the hosted website"</em></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="step-2-automatic-scrape-video-stream-resolution">Step 2: Automatic Scrape &amp; Video Stream Resolution</h3>
+<p>The assistant will:<br />
+1. Fetch <code>https://forsyth.instructure.com/api/v1/courses/276219/modules</code>.<br />
+2. Extract all Lesson pages and Worksheet pages for Unit X with 5-second delays.<br />
+3. Resolve all MyVRSpot iframes to CloudFront MP4 URLs and ScreenPal stream endpoints.<br />
+4. Create the folder:<br />
+<code>/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/Unit X - &lt;Title&gt;/</code><br />
+   containing <code>unit_0X_metadata.json</code>, <code>Unit_0X_all-Lesson_Videos.md</code>, and <code>Unit_0X_Complete_Reference.md</code>.</p>
+<h3 id="step-3-download-worksheets-for-zero-auth-hosting">Step 3: Download Worksheets for Zero-Auth Hosting</h3>
+<p>To make worksheets public without school login:<br />
+1. Open the SharePoint links for Unit X in your browser (since you are logged into Microsoft 365).<br />
+2. Download the worksheet PDFs and answer keys (either via browser Save As or into a staging folder like <code>~/Downloads</code> or <code>/Volumes/Backup/scrap/x/</code>).<br />
+3. Tell the assistant:</p>
+<blockquote>
+<p><em>"Downloaded Unit X worksheets to <path>. Copy to right folder and publish"</em><br />
+4. The assistant will copy them to <code>docs/</code> and <code>worksheets/</code>, update the portal buttons to point to the local <code>./docs/...</code> files, and update <code>Unit_0X_Complete_Reference.md</code>.</p>
+</blockquote>
+<h3 id="step-4-publish-live-to-github-pages">Step 4: Publish Live to GitHub Pages</h3>
+<p>The assistant will commit and push the updates:</p>
+<pre><code class="language-bash">cd ~/ap-precalc-streams
+git add index.html docs/
+git commit -m &quot;Add Unit X lessons, video streams, and auth-free worksheets&quot;
+git push
+</code></pre>
+<p>The website at <a href="https://megaantony.github.io/ap-precalc-streams/">https://megaantony.github.io/ap-precalc-streams/</a> will update automatically in ~30 seconds.</p>
+<hr />
+<h3 id="quick-refresh-tip">💡 Quick Refresh Tip</h3>
+<p>GitHub Pages sends <code>Cache-Control: max-age=600</code> (10-minute cache). When viewing a newly published unit, either:<br />
+* Press <strong><code>Cmd + Shift + R</code></strong> in your browser.<br />
+* Or add a query parameter to the URL (e.g. <code>https://megaantony.github.io/ap-precalc-streams/?v=4#unit-4</code>).</p>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="./index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="./unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

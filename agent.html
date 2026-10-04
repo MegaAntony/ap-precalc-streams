@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 9 Agent Master Operating Manual  Weekly Playbook - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="./index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="./index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="./index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="./unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="./Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="./index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      
+      <span class="text-slate-200 font-semibold truncate max-w-xs">Grade 9 Agent Master Operating Manual &amp; Weekl...</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="grade-9-agent-master-operating-manual-weekly-playbook">Grade 9 Agent Master Operating Manual &amp; Weekly Playbook</h1>
+<p><strong>Scope</strong>: Cobb County High School Grade 9 (Antony)<br />
+<strong>Permanent Archive Location</strong>: <code>/Volumes/Backup/Antony/HighSchool/Grade9</code><br />
+<strong>GitHub Pages Web Mirror</strong>: <code>/Users/anish/ap-precalc-streams</code> → <code>https://megaantony.github.io/ap-precalc-streams/</code><br />
+<strong>Target Subjects</strong>: AP Precalculus, Biology Honors, AP Human Geography, Intro to Software Tech  </p>
+<hr />
+<h2 id="0-quick-resume-protocol-start-here-after-restart">0. Quick Resume Protocol (Start Here After Restart)</h2>
+<p>When the user asks you to <strong>"refer to agent.md and help me"</strong>, follow this exact diagnostic sequence:</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;Step 1: Check Current Calendar &amp; Scope&quot;] --&gt; B[&quot;Step 2: Inspect Disk for Existing Materials&quot;]
+    B --&gt; C[&quot;Step 3: Check Git Status &amp; Synced Repos&quot;]
+    C --&gt; D[&quot;Step 4: Execute Weekly 6-Phase SOP&quot;]
+    D --&gt; E[&quot;Step 5: Verify Typography &amp; Video Playback&quot;]
+    E --&gt; F[&quot;Step 6: Deploy to GitHub Pages &amp; Deliver Report&quot;]
+</code></pre>
+<ol>
+<li><strong>Identify the Target Week &amp; Subject</strong>:<br />
+   - Check current date.<br />
+   - Read the corresponding syllabus or weekly agenda in:<ul>
+<li><code>/Volumes/Backup/Antony/HighSchool/Grade9/Math/AP Precalculus/Weekly Plans/</code></li>
+<li>Or the target subject's folder (<code>Biology-Honors-V2</code>, <code>HumanGeography</code>, etc.).</li>
+<li>Confirm upcoming quizzes, tests, homework deadlines, or identity drills.</li>
+</ul>
+</li>
+<li><strong>Audit Local Assets</strong>:<br />
+   - Check if all required worksheets, answer keys, and teacher videos for that lesson already exist on disk.<br />
+   - If any are missing or link to expiring cloud streams, run the extraction playbooks below.</li>
+<li><strong>Sync Check</strong>:<br />
+   - Run <code>cd /Users/anish/ap-precalc-streams &amp;&amp; git status</code> to verify synchronization.</li>
+</ol>
+<hr />
+<h2 id="1-weekly-6-phase-standard-operating-procedure-sop">1. Weekly 6-Phase Standard Operating Procedure (SOP)</h2>
+<p>Every week or for every upcoming quiz/test, the agent must execute these 6 phases:</p>
+<h3 id="phase-1-syllabus-scope-detection">Phase 1: Syllabus &amp; Scope Detection</h3>
+<ul>
+<li>Read the teacher's lesson plans, calendar, and assignment list.</li>
+<li>Pinpoint:<br />
+  1. Exact test/quiz dates and formats.<br />
+  2. Required lessons, sections, and worksheets.<br />
+  3. Daily drills (e.g. Trig Identities TD 23–25).<br />
+  4. Online assignments (DeltaMath, Edgenuity, etc.).</li>
+</ul>
+<h3 id="phase-2-100-zero-auth-local-extraction">Phase 2: 100% Zero-Auth Local Extraction</h3>
+<p>Never rely on live school logins during study sessions. All assets must be downloaded and archived locally:<br />
+- <strong>Worksheets &amp; Answer Keys</strong>: Downloaded as clean PDFs (see <a href="#5-playbook-a-downloading-protected-pdfs--worksheets">Section 5</a>).<br />
+- <strong>Teacher Video Lessons (MyVRSpot)</strong>: Extracted and downloaded as full <code>.mp4</code> files into the unit folder (see <a href="#6-playbook-b-downloading-protected-cloudfront-videos-myvrspot">Section 6</a>).<br />
+- <strong>External Video Lessons (YouTube)</strong>: Extracted as clean 11-character video IDs for embedding without ads or tracking.</p>
+<h3 id="phase-3-comprehensive-markdown-master-study-guide">Phase 3: Comprehensive Markdown Master Study Guide</h3>
+<p>Create a master Markdown study guide in the assessment subfolder:<br />
+- <strong>Pillar-Based Concept Breakdown</strong>: Deep, rigorous explanations covering:<br />
+  - Exact algebraic/geometric rules.<br />
+  - Strict domain/range constraints.<br />
+  - Out-of-bounds traps and common student pitfalls.<br />
+- <strong>Identity &amp; Formula Banks</strong>: Memorization drills formatted cleanly.<br />
+- <strong>10-Question Self-Test Simulation</strong>: Realistic exam-level problems with full, step-by-step worked solutions.<br />
+- <strong>2-Day Hour-by-Hour Study Schedule</strong>: Concrete daily roadmap leading up to test morning.</p>
+<h3 id="phase-4-publication-grade-interactive-html-study-portal">Phase 4: Publication-Grade Interactive HTML Study Portal</h3>
+<p>Build a modern dark-mode HTML study portal:<br />
+- <strong>Interactive Mastery Checklist</strong>: Checkboxes linked to a dynamic progress bar (<code>0%</code> to <code>100%</code>) with direct action buttons (<code>[▶ Play Video]</code>, <code>[📄 PDF]</code>, <code>[🔑 Answer Key]</code>).<br />
+- <strong>Interactive Video Theater</strong>: Responsive 16:9 player embedded at the top of the video section with smooth scrolling.<br />
+- <strong>Dual-Mode Video Engine</strong>:<br />
+  - Automatically plays local <code>.mp4</code> files offline when opened from disk (<code>file://</code>).<br />
+  - Automatically falls back to responsive embeds (<code>youtube-nocookie.com</code> or MyVRSpot) when hosted online.<br />
+  - Provides instant toggle buttons in the theater header (<code>[💾 Local MP4]</code> vs <code>[🌐 Web Stream]</code>).<br />
+- <strong>Accordion Active Recall Questions</strong>: Collapsible question cards with hidden answers so Antony can self-test before revealing solutions.<br />
+- <strong>Mathematical Typography Standards</strong>: (See <a href="#7-mathematical-typography--html-formatting-standards-zero-error-protocol">Section 7</a>).</p>
+<h3 id="phase-5-visual-qa-media-verification">Phase 5: Visual QA &amp; Media Verification</h3>
+<ul>
+<li>Verify that every video in the checklist plays properly without 403 errors.</li>
+<li>Verify that math typography renders clean vertical fractions and continuous square roots (no raw LaTeX strings or flat monospace code blocks).</li>
+<li>Test layout on desktop and mobile viewports.</li>
+</ul>
+<h3 id="phase-6-cloud-mirror-github-pages-deployment">Phase 6: Cloud Mirror &amp; GitHub Pages Deployment</h3>
+<ul>
+<li>Copy the final HTML portal and all PDFs to <code>/Users/anish/ap-precalc-streams/</code>.</li>
+<li>Add link in <code>index.html</code> navigation bar (e.g. <code>🔥 Unit X Quiz Hub</code>).</li>
+<li>Ensure <code>*.mp4</code> is ignored in <code>.gitignore</code> (large videos stay local on disk).</li>
+<li>Commit and push to <code>origin/main</code>.</li>
+<li>Verify live deployment using <code>curl -I https://megaantony.github.io/ap-precalc-streams/&lt;portal&gt;.html</code>.</li>
+</ul>
+<hr />
+<h2 id="2-directory-structure-file-standards">2. Directory Structure &amp; File Standards</h2>
+<p>All permanent course assets belong strictly under <code>/Volumes/Backup/Antony/HighSchool/Grade9/</code>:</p>
+<pre><code>/Volumes/Backup/Antony/HighSchool/Grade9/
+├── agent.md                                             # This Master Operations Manual
+├── Math/
+│   └── AP Precalculus/
+│       ├── Unit 1 - Unit Circle/
+│       ├── Unit 2 - Graphing Trigonometric Functions/
+│       ├── Unit 3 - Inverse &amp; Composite Trigonometric Functions/
+│       │   └── Unit 3 Quiz-9-22/
+│       │       ├── Unit_03_Quiz_Master_Study_Guide.md   # Markdown Master Guide
+│       │       ├── Unit_03_Quiz_Study_Portal.html       # Interactive Study Portal
+│       │       ├── tex-svg.js                           # Offline MathJax SVG Engine
+│       │       ├── Video_1_Review_of_Inverses.mp4       # 100% Local Offline Video
+│       │       └── Video_4_Composite_Trig_Part1.mp4     # 100% Local Offline Video
+│       └── Weekly Plans/
+├── Biology-Honors-V2/
+├── HumanGeography/
+└── Intro to Software Tech/
+</code></pre>
+<hr />
+<h2 id="3-playwright-mcp-configuration-setup">3. Playwright MCP Configuration &amp; Setup</h2>
+<p>When interacting with dynamic school Single Page Apps (CTLS, Cobb County Microsoft Azure SSO, Canvas):</p>
+<pre><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;playwright&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-playwright&quot;],
+      &quot;env&quot;: { &quot;HEADLESS&quot;: &quot;true&quot; }
+    }
+  }
+}
+</code></pre>
+<ul>
+<li><strong>Persistent Profile</strong>: Use <code>--user-data-dir="/Users/anish/.school-browser-profile"</code> to preserve SSO cookies and avoid repeated multi-factor authentication (MFA).</li>
+</ul>
+<hr />
+<h2 id="4-act-like-a-human-anti-bot-protocol">4. "Act Like a Human" Anti-Bot Protocol</h2>
+<blockquote>
+<p>[!CAUTION]<br />
+<strong>CRITICAL RULE</strong>: Never execute automated bursts. School Web Application Firewalls (AWS WAF, Cloudflare, Akamai) monitor request velocity and immediately issue IP rate-limits or CAPTCHAs if requests appear machine-generated.</p>
+</blockquote>
+<ol>
+<li><strong>Human-Paced Delays</strong>: Inject 1.8s–4.5s random pauses between page navigations and clicks:<br />
+<code>python
+   import time, random
+   time.sleep(random.uniform(2.0, 4.2))</code></li>
+<li><strong>Download Throttling</strong>: Never download multiple PDFs in parallel. Limit to <strong>1 file every 2.5 to 5.0 seconds</strong>.</li>
+<li><strong>Human Typing Simulation</strong>: Type queries with 50ms–150ms keystroke jitter instead of instant form fills.</li>
+<li><strong>Natural Scrolling &amp; Hovering</strong>: Scroll incrementally (<code>window.scrollBy({ behavior: 'smooth' })</code>) and hover over buttons for 200–400ms before clicking.</li>
+<li><strong>Authentic Browser Viewport</strong>: Use desktop dimensions (<code>1440x900</code> or <code>1920x1080</code>) and real macOS Safari/Chrome User-Agents.</li>
+<li><strong>Headed Fallback for MFA</strong>: If a 2FA prompt appears, switch Playwright to headed mode or attach via Chrome Remote Debugging (<code>--remote-debugging-port=9222</code>) for a one-time human login.</li>
+</ol>
+<hr />
+<h2 id="5-playbook-a-downloading-protected-pdfs-worksheets">5. Playbook A: Downloading Protected PDFs &amp; Worksheets</h2>
+<ol>
+<li><strong>Capture Session Cookies</strong>: From an authenticated browser network request, grab the <code>Cookie</code> header:<br />
+<code>http
+   Cookie: AWSALBTG=...; AWSALBTGCORS=...; PHPSESSID=...; _csrf=...</code></li>
+<li><strong>Human-Paced Batch Download</strong>:<br />
+   ```python<br />
+   import time, random, requests</li>
+</ol>
+<p>cookies = {'AWSALBTG': '<COOKIE>', 'AWSALBTGCORS': '<COOKIE>'}<br />
+   headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}<br />
+   docs = {<br />
+       "Worksheet.pdf": "https://school.portal.url/Worksheet.pdf",<br />
+       "Answer_Key.pdf": "https://school.portal.url/Answer_Key.pdf"<br />
+   }</p>
+<p>for filename, url in docs.items():<br />
+       time.sleep(random.uniform(2.5, 4.5)) # Human delay<br />
+       r = requests.get(url, cookies=cookies, headers=headers, stream=True)<br />
+       if r.status_code == 200:<br />
+           with open(filename, 'wb') as f:<br />
+               for chunk in r.iter_content(chunk_size=8192):<br />
+                   f.write(chunk)<br />
+           print(f"Downloaded: {filename}")<br />
+<code>``
+3. **Verify File Headers**: Confirm file is a genuine PDF (</code>file filename.pdf`).</p>
+<hr />
+<h2 id="6-playbook-b-downloading-protected-cloudfront-videos-myvrspot">6. Playbook B: Downloading Protected CloudFront Videos (MyVRSpot)</h2>
+<p>Direct links to CloudFront MP4s (<code>d1drabmetuo3qr.cloudfront.net/....mp4?Expires=...</code>) expire quickly. <strong>Never hardcode direct CloudFront signed links.</strong></p>
+<ol>
+<li><strong>Extract Fresh Stream from Iframe</strong>:<br />
+   MyVRSpot embed endpoints (<code>https://live.myvrspot.com/iframe?v=&lt;MEDIA_ID&gt;</code>) dynamically generate fresh, valid CloudFront signatures in real-time.</li>
+<li><strong>Download Automation Script</strong>:<br />
+   ```python<br />
+   import re, requests</li>
+</ol>
+<p>def download_myvrspot_mp4(media_id, output_filename):<br />
+       res = requests.get(f"https://live.myvrspot.com/iframe?v={media_id}")<br />
+       matches = re.findall(r'https://d1drabmetuo3qr.cloudfront.net/[^\'\"\s]+.mp4\?[^\'\"\s]+', res.text)<br />
+       if not matches:<br />
+           raise ValueError("No signed CloudFront stream found.")</p>
+<pre><code>   stream_url = matches[0].replace("&amp;amp;", "&amp;")
+   print(f"Streaming from CloudFront: {stream_url[:65]}...")
+
+   with requests.get(stream_url, stream=True) as stream_res:
+       stream_res.raise_for_status()
+       with open(output_filename, 'wb') as f:
+           for chunk in stream_res.iter_content(chunk_size=1048576):
+               f.write(chunk)
+   print(f"Saved: {output_filename}")
+</code></pre>
+<p>```</p>
+<hr />
+<h2 id="7-mathematical-typography-katex-official-framework-zero-error-protocol">7. Mathematical Typography: KaTeX Official Framework &amp; Zero-Error Protocol</h2>
+<blockquote>
+<p>[!IMPORTANT]<br />
+<strong>OFFICIAL MATHEMATICAL FRAMEWORK</strong>:<br />
+<strong>KaTeX (by Khan Academy)</strong> is the designated official mathematical typography framework across all Grade 9 study materials, portals, and review documents.<br />
+Older methods (manual HTML fraction spans, flat monospace code blocks, or heavy MathJax bundles) are superseded by KaTeX.</p>
+</blockquote>
+<h3 id="why-katex-is-mandatory">Why KaTeX is Mandatory:</h3>
+<ol>
+<li><strong>Zero Human Authoring Errors</strong>: Write standard textbook LaTeX (<code>\frac{a}{b}</code>, <code>\sqrt{x}</code>, <code>\sin(2\theta)</code>). You never have to handcraft nested <code>&lt;span&gt;</code> tags.</li>
+<li><strong>Synchronous &amp; Blazing Fast</strong>: Renders synchronously ~100x faster than MathJax with <strong>zero layout shift (FOUC)</strong>.</li>
+<li><strong>Publication-Grade Computer Modern TeX Typography</strong>: Scalable vector radicals, true mathematical italic kerning, and automated fraction alignment.</li>
+<li><strong>Lightweight &amp; Offline Ready</strong>: KaTeX core is only ~250 KB and bundled locally in <code>./katex/</code> for 100% offline flight mode.</li>
+</ol>
+<hr />
+<h3 id="the-standard-3-line-katex-header-required-in-all-html-portals">The Standard 3-Line KaTeX Header (Required in All HTML Portals)</h3>
+<p>Every study portal must include this in the <code>&lt;head&gt;</code>:</p>
+<pre><code class="language-html">&lt;!-- KaTeX: Modern Standard for Mathematical Typography --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css&quot;&gt;
+&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js&quot;&gt;&lt;/script&gt;
+&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js&quot;
+        onload=&quot;renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+        });&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4 id="local-offline-fallback">Local Offline Fallback:</h4>
+<p>In offline environments (where CDN is unreachable), point the paths to the bundled local directory:<br />
+<code>./katex/katex.min.css</code>, <code>./katex/katex.min.js</code>, and <code>./katex/auto-render.min.js</code>.</p>
+<hr />
+<h3 id="katex-dark-mode-styling-polish-css">KaTeX Dark-Mode Styling Polish (CSS)</h3>
+<p>Include this CSS block in every study portal to ensure high contrast, proper sizing, and clean left borders on formula cards:</p>
+<pre><code class="language-css">/* KaTeX Typography Polish */
+.katex {
+    font-size: 1.14em !important;
+    color: #f8fafc;
+}
+.katex-display {
+    margin: 0.25em 0 !important;
+}
+.formula-row .katex-display {
+    margin: 0 !important;
+    width: 100%;
+    text-align: left;
+}
+.formula-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 14px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent, #38bdf8);
+    min-height: 44px;
+}
+</code></pre>
+<hr />
+<h3 id="formula-comparison-anti-patterns-vs-required-katex-syntax">Formula Comparison: Anti-Patterns vs Required KaTeX Syntax</h3>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Formula Concept</th>
+<th style="text-align: left;">❌ FORBIDDEN BUG (Do Not Use)</th>
+<th style="text-align: left;">✅ REQUIRED KATEX PUBLICATION SYNTAX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Double Angle Tangent</strong></td>
+<td style="text-align: left;"><code>&lt;code&gt;tan(2θ) = 2tan θ / (1 - tan²θ)&lt;/code&gt;</code></td>
+<td style="text-align: left;"><code>$$\tan(2\theta) = \frac{2\tan\theta}{1 - \tan^2\theta}$$</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Half Angle Sine</strong></td>
+<td style="text-align: left;"><code>&lt;code&gt;sin(u/2) = ±√[(1 - cos u) / 2]&lt;/code&gt;</code></td>
+<td style="text-align: left;"><code>$$\sin\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{2}}$$</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sum/Difference Tangent</strong></td>
+<td style="text-align: left;"><code>tan(u ± v) = (tan u ± tan v) / (1 ∓ tan u tan v)</code></td>
+<td style="text-align: left;"><code>$$\tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u \tan v}$$</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arc Sine Range</strong></td>
+<td style="text-align: left;">Raw unrendered <code>$\theta \in [-\frac{\pi}{2}, \frac{\pi}{2}]$</code></td>
+<td style="text-align: left;">Inline KaTeX: <code>$\theta \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Algebraic Composite</strong></td>
+<td style="text-align: left;"><code>cos(arcsin(x)) = sqrt(1 - x^2)</code></td>
+<td style="text-align: left;"><code>$$\cos(\arcsin x) = \sqrt{1 - x^2}$$</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polynomial Pre-Image</strong></td>
+<td style="text-align: left;"><code>x^3 - 7x^2 - 8x + 5 = 5 =&gt; ...</code></td>
+<td style="text-align: left;"><code>$$x(x - 8)(x + 1) = 0 \implies x \in \{0, 8, -1\}$$</code></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h3 id="the-4-non-negotiable-rules-for-ai-agents-authoring-math">The 4 Non-Negotiable Rules for AI Agents Authoring Math:</h3>
+<ol>
+<li><strong>Never Wrap Math in <code>&lt;code&gt;</code> or <code>&lt;pre&gt;</code></strong>: Monospace terminal fonts ruin mathematical readability and prevent KaTeX auto-rendering.</li>
+<li><strong>Never Use Flat Horizontal Slashes for Fractions</strong>: Always use <code>\frac{numerator}{denominator}</code>.</li>
+<li><strong>Proper Parentheses Scaling</strong>: When enclosing fractions in parentheses, always use <code>\left(</code> and <code>\right)</code> so delimiters dynamically scale to the fraction's height.</li>
+<li><strong>Automated Visual QA Verification</strong>: Before delivering any study portal, run headless Chrome screenshot verification:<br />
+<code>bash
+   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+     --headless --disable-gpu --screenshot=/tmp/math_qa.png \
+     --window-size=1280,800 "file:///path/to/portal.html#identities"</code><br />
+   Inspect <code>/tmp/math_qa.png</code> using <code>view_file</code> to visually verify 100% vector math rendering without unparsed LaTeX markup.</li>
+</ol>
+<hr />
+<h2 id="8-multi-subject-expansion-guide">8. Multi-Subject Expansion Guide</h2>
+<p>This exact architecture applies across all of Antony's Grade 9 courses:</p>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Course</th>
+<th style="text-align: left;">Key Folder</th>
+<th style="text-align: left;">Primary Asset Types</th>
+<th style="text-align: left;">Study Portal Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AP Precalculus</strong></td>
+<td style="text-align: left;"><code>Math/AP Precalculus/</code></td>
+<td style="text-align: left;">Worksheets, Solution Keys, Teacher Videos, DeltaMath</td>
+<td style="text-align: left;">Formula Banks, Unit Circle exact values, Graph models, Step-by-step simulations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Biology Honors</strong></td>
+<td style="text-align: left;"><code>Biology-Honors-V2/</code></td>
+<td style="text-align: left;">Lab manuals, Concept Maps, Diagrams, Vocabulary</td>
+<td style="text-align: left;">Cell/Genetics diagrams, Vocabulary flashcard grids, Practice multiple-choice simulations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AP Human Geography</strong></td>
+<td style="text-align: left;"><code>HumanGeography/</code></td>
+<td style="text-align: left;">Models, Case Studies, FRQ Rubrics, Maps</td>
+<td style="text-align: left;">Demographic Transition Models, Map analyses, FRQ step-by-step templates.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Intro to Software Tech</strong></td>
+<td style="text-align: left;"><code>Intro to Software Tech/</code></td>
+<td style="text-align: left;">Python/HTML projects, Quizzes, Specs</td>
+<td style="text-align: left;">Code snippets, Live output previews, Algorithm walkthroughs.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="9-git-repository-rules-ap-precalc-streams">9. Git Repository Rules (<code>ap-precalc-streams</code>)</h2>
+<ul>
+<li><strong>Repo Path</strong>: <code>/Users/anish/ap-precalc-streams/</code></li>
+<li><strong>Remote</strong>: <code>https://github.com/MegaAntony/ap-precalc-streams.git</code></li>
+<li><strong>Branch</strong>: <code>main</code></li>
+<li><strong>Git Ignore Policy</strong>: Keep <code>*.mp4</code> in <code>.gitignore</code> at all times. Large binary videos stay on the local drive (<code>/Volumes/Backup/...</code>), while HTML study portals, CSS, SVGs, and PDFs are committed to GitHub for web access.</li>
+<li><strong>Verification Command</strong>: After every push, run:<br />
+<code>bash
+  curl -s -I "https://megaantony.github.io/ap-precalc-streams/&lt;new_portal&gt;.html" | head -n 5
+  # Verify HTTP/2 200 OK</code></li>
+</ul>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="./index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="./unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

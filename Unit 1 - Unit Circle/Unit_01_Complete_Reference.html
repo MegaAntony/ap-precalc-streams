@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 - Unit Circle (AP Precalculus) - AP Precalculus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    
+    .prose-precalc h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #334155;
+      letter-spacing: -0.025em;
+    }
+    .prose-precalc h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .prose-precalc h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose-precalc p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .prose-precalc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .prose-precalc ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+      color: #cbd5e1;
+    }
+    .prose-precalc li {
+      margin-bottom: 0.375rem;
+      line-height: 1.6;
+    }
+    .prose-precalc a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .prose-precalc a:hover {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .prose-precalc blockquote {
+      border-left: 4px solid #38bdf8;
+      background-color: rgba(56, 189, 248, 0.08);
+      padding: 0.75rem 1rem;
+      margin: 1.25rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+    .prose-precalc code {
+      background-color: #1e293b;
+      color: #38bdf8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.375rem;
+      font-size: 0.85em;
+      border: 1px solid #334155;
+    }
+    .prose-precalc pre {
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+    .prose-precalc pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #a78bfa;
+      font-size: 0.875rem;
+    }
+    .prose-precalc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      background-color: #131b2e;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+    .prose-precalc th {
+      background-color: #0b0f19;
+      color: #38bdf8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .prose-precalc td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+    .prose-precalc tr:last-child td {
+      border-bottom: none;
+    }
+    .prose-precalc tr:nth-child(even) td {
+      background-color: rgba(11, 15, 25, 0.4);
+    }
+    .prose-precalc tr:hover td {
+      background-color: rgba(30, 41, 59, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/20 hover:scale-105 transition">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </a>
+        <div>
+          <a href="../index.html" class="text-lg font-black tracking-tight text-white hover:text-sky-400 transition">AP Precalculus Portal</a>
+          <p class="text-xs text-slate-400 font-medium">South Forsyth High School • Course 276219</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="../index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-sky-400"></i> Home
+        </a>
+        <a href="../unit-3-exam.html" class="text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-purple-600/30">
+          <i class="fa-solid fa-bullseye"></i> Unit 3 Exam Hub
+        </a>
+        <a href="../Weekly Plans/index.html" class="text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-2 rounded-xl border border-slate-700 transition flex items-center gap-1.5 hidden sm:flex">
+          <i class="fa-regular fa-calendar-check text-purple-400"></i> Weekly Plans
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-1 w-full space-y-6">
+
+    <!-- BREADCRUMB -->
+    <nav class="flex items-center gap-2 text-xs text-slate-400">
+      <a href="../index.html" class="hover:text-sky-400 transition flex items-center gap-1">
+        <i class="fa-solid fa-house text-[10px]"></i> Home
+      </a>
+      <i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-400">Unit 1   Unit Circle</span><i class="fa-solid fa-chevron-right text-[9px] text-slate-600"></i>
+      <span class="text-slate-200 font-semibold truncate max-w-xs">Unit 1 - Unit Circle (AP Precalculus)</span>
+    </nav>
+
+    <!-- CONTENT CARD -->
+    <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+      <article class="prose-precalc">
+        <h1 id="unit-1-unit-circle-ap-precalculus">Unit 1 - Unit Circle (AP Precalculus)</h1>
+<hr />
+<h2 id="1-textbook-chapters-zero-auth-offline-public-web">📚 1. Textbook Chapters (Zero-Auth Offline &amp; Public Web)</h2>
+<ul>
+<li><strong>Chapter 4 - Trigonometric Functions (pgs 257-350)</strong>: <a href="../Textbook/Precalculus_Chapter_04_Trigonometric_Functions.pdf">Local PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_04_Trigonometric_Functions.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Chapter 5 - Analytic Trigonometry (pgs 351-406)</strong>: <a href="../Textbook/Precalculus_Chapter_05_Analytic_Trigonometry.pdf">Local PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_05_Analytic_Trigonometry.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Chapter 6 - Additional Topics in Trigonometry (pgs 407-472)</strong>: <a href="../Textbook/Precalculus_Chapter_06_Additional_Topics_Trig.pdf">Local PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Chapter_06_Additional_Topics_Trig.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Answers to Odd Problems</strong>: <a href="../Textbook/Precalculus_Answers_to_Odd_Problems.pdf">Local PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Answers_to_Odd_Problems.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Index and Formula Pages</strong>: <a href="../Textbook/Precalculus_Index_and_Formula_Pages.pdf">Local PDF</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Precalculus_Index_and_Formula_Pages.pdf">Public Web PDF (Zero Auth)</a></li>
+</ul>
+<hr />
+<h2 id="2-core-trig-resources-handouts">🛠️ 2. Core Trig Resources &amp; Handouts</h2>
+<ul>
+<li><strong>Trig Identities</strong>: <a href="./handouts/Official_Trig_Identities_Sheet.pdf">Official Trig Identities Sheet (Local PDF)</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Official_Trig_Identities_Sheet.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Practice Drills</strong>: <a href="http://oconnorclass.com/aat/trig-ident-quiz.php">Trig Drill Web Site</a></li>
+<li><strong>Blank Unit Circle</strong>: <a href="./handouts/Blank_Unit_Circle_Sheet.pdf">Blank Unit Circle Sheet (Local PDF)</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Blank_Unit_Circle_Sheet.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><strong>Graph Paper</strong>:</li>
+<li><a href="./handouts/Graph_Paper_4_blocks.pdf">4 blocks per inch (Local PDF)</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_4_blocks.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><a href="./handouts/Graph_Paper_10_blocks.pdf">10 blocks per inch (Local PDF)</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Graph_Paper_10_blocks.pdf">Public Web PDF (Zero Auth)</a></li>
+<li><a href="./handouts/Polar_Graph_Paper.pdf">Polar Graph Paper (Local PDF)</a> • <a href="https://megaantony.github.io/ap-precalc-streams/docs/Polar_Graph_Paper.pdf">Public Web PDF (Zero Auth)</a></li>
+</ul>
+<hr />
+<h2 id="3-lesson-video-links">🎥 3. Lesson Video Links</h2>
+<p>Complete video links, direct streams, and download commands are archived in <a href="./Unit_01_all-Lesson_Videos.html">Unit_01_all-Lesson_Videos.md</a>.</p>
+<ul>
+<li><strong>Lesson 1</strong>: <a href="https://screencast-o-matic.com/watch/c36OYfVuqho">AccPreCalc Unit 4 Lesson 1 (ScreenPal)</a></li>
+<li><strong>Lesson 2</strong>: <a href="https://live.myvrspot.com/iframe?v=YTFlYzMzY2Y4ZGRmZmM0ZjlhOTcwNTMzNjkyMDUyODA">Part 1</a> • <a href="https://live.myvrspot.com/iframe?v=ZDE5ODk3MmQ2NjY3NDQ2OTAwNjEyYTM4ZmYxYzc5YWY">Part 2</a> • <a href="https://live.myvrspot.com/iframe?v=NjZjYzkzNmM2ODFkMmYzM2FhMGY1NTVkNjM0ZjIwNGY">Part 3</a></li>
+<li><strong>Lesson 3</strong>: <a href="https://live.myvrspot.com/iframe?v=MmQ2ODM4ZWJlODRlZWU5YzVlNGExOTg1NzRiNWRlMjM">Part 1</a> • <a href="https://screencast-o-matic.com/watch/c0QrljVC78d">Part 2</a></li>
+<li><strong>Lesson 4</strong>: <a href="https://live.myvrspot.com/iframe?v=Zjg1NDkzODcwODVhYzgyYWM5NWY3YzI5ZjVmODIzOGM">Part 1</a></li>
+<li><strong>Lesson 5</strong>: <a href="https://live.myvrspot.com/iframe?v=YWViMTFiNWUyZGIzNWUzMmEyYjVhZGM2MjhjODBlOTc">1.5a Unit Circle</a> • <a href="https://live.myvrspot.com/iframe?v=MTA0YmZiZDU5YTA4NzdhYjI3Njk3ZDEzNzU1NDk1ZmI">1.5b</a></li>
+<li><strong>Lesson 6</strong>: <a href="https://live.myvrspot.com/iframe?v=YzEyYzExYTc3NDllOWUxMjRiNGE5N2FiMGJlM2JmNDM">Part 1</a></li>
+<li><strong>Lesson 7</strong>: <a href="https://live.myvrspot.com/iframe?v=fOGQ1M2JmMTFmNDUyYjM5NWRkOWZhMDVkYTJhNDJhYjk">Part 1</a> • <a href="https://live.myvrspot.com/iframe?v=M2YwOGMzMjBkODg3OTBiZDFhOTI0OTYwODRhODU2MTU">Part 2</a></li>
+</ul>
+<hr />
+<h2 id="4-worksheets-solution-keys-zero-auth-offline-public-web">📝 4. Worksheets &amp; Solution Keys (Zero-Auth Offline &amp; Public Web)</h2>
+<p>All Unit 1 worksheets and answer keys are saved locally in <a href="./worksheets/"><code>worksheets/</code></a> and hosted live on GitHub Pages for instant viewing/downloading without requiring any login.</p>
+<div class="overflow-x-auto my-4"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Worksheet</th>
+<th style="text-align: left;">Offline Local PDF</th>
+<th style="text-align: left;">Offline Answer Key</th>
+<th style="text-align: left;">Direct Public Web PDF (Zero Auth)</th>
+<th style="text-align: left;">Direct Public Key (Zero Auth)</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Worksheet A</strong> (Angular &amp; Linear Speed)</td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstA_AngularLinearSpeed.pdf">Worksheet A PDF</a></td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstA_AngularLinearSpeed_Answers.pdf">Solutions PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstA_AngularLinearSpeed.pdf">Web PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstA_AngularLinearSpeed_Answers.pdf">Web Key</a></td>
+<td style="text-align: left;"><em>(Note: #10 answer is AS = 2π/45 rad/sec)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Worksheet B</strong> (Extra Quiz Practice)</td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstB_ExtraPracticeQuiz.pdf">Worksheet B PDF</a></td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstB_ExtraPracticeQuiz_Answers.pdf">Answer Key PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstB_ExtraPracticeQuiz.pdf">Web PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstB_ExtraPracticeQuiz_Answers.pdf">Web Key</a></td>
+<td style="text-align: left;">Pre-quiz practice</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Worksheet C</strong> (Reference Angles)</td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstC_ReferenceAngles.pdf">Worksheet C PDF</a></td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstC_ReferenceAngles_Answers.pdf">Answer Key PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstC_ReferenceAngles.pdf">Web PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstC_ReferenceAngles_Answers.pdf">Web Key</a></td>
+<td style="text-align: left;">Reference angles &amp; coordinates</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Worksheet D</strong> (Test Review)</td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstD_ReviewForTest.pdf">Worksheet D PDF</a></td>
+<td style="text-align: left;"><a href="./worksheets/APPCU01_WkstD_ReviewForTest_Answers.pdf">Answer Key PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstD_ReviewForTest.pdf">Web PDF</a></td>
+<td style="text-align: left;"><a href="https://megaantony.github.io/ap-precalc-streams/docs/APPCU01_WkstD_ReviewForTest_Answers.pdf">Web Key</a></td>
+<td style="text-align: left;">Unit 1 comprehensive exam review</td>
+</tr>
+</tbody>
+</table></div>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 bg-slate-900 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>AP Precalculus • South Forsyth High School • Mr. O'Connor & Mrs. Shaw</p>
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="hover:text-slate-300 transition">Portal Home</a>
+        <a href="../unit-3-exam.html" class="hover:text-slate-300 transition">Unit 3 Exam Hub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
