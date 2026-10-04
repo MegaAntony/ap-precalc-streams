@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Precalculus — Unit 3 Exam Master Study Hub & Preparation Plan</title>
+    <!-- KaTeX CSS & JS for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --surface: #131b2e;
+            --surface-card: #1c2640;
+            --surface-hover: #243254;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --accent-hover: #0284c7;
+            --key-bg: #10b981;
+            --key-hover: #059669;
+            --warning-bg: #f59e0b;
+            --danger-bg: #ef4444;
+            --purple-bg: #8b5cf6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(56, 189, 248, 0.4);
+            --radius: 12px;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px 16px 80px 16px;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding: 36px 20px;
+            background: linear-gradient(180deg, #16223d 0%, var(--surface) 100%);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 380px;
+            height: 120px;
+            background: var(--accent);
+            filter: blur(90px);
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        h1 {
+            font-size: 2.3rem;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0 0 16px 0;
+        }
+        .meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .meta-tag {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .meta-tag strong { color: var(--text-main); }
+        .meta-tag.exam-tag {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+            font-weight: 700;
+        }
+
+        /* Nav Bar */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: rgba(30, 41, 59, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 28px;
+            position: sticky;
+            top: 16px;
+            z-index: 100;
+        }
+        .nav-label { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+        .nav-pill {
+            text-decoration: none;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.86rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+        .nav-pill:hover { background: var(--accent); color: #0f172a; font-weight: 600; }
+        .nav-pill.home-pill { background: #3b82f6; color: white; font-weight: 700; }
+
+        /* Countdown Grid */
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .count-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .count-card.card-calc { border-top: 4px solid var(--accent); }
+        .count-card.card-nocalc { border-top: 4px solid var(--purple-bg); }
+        .count-card.card-lock { border-top: 4px solid var(--warning-bg); }
+        .count-title { font-size: 0.95rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+        .count-timer { font-size: 1.8rem; font-family: var(--font-mono); font-weight: 800; color: var(--text-main); margin: 8px 0; }
+        .count-date { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 32px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+        }
+        .section-title { font-size: 1.4rem; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .badge-calc { background: rgba(56, 189, 248, 0.2); color: var(--accent); border: 1px solid var(--accent); }
+        .badge-nocalc { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid var(--purple-bg); }
+        .badge-urgent { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid var(--danger-bg); }
+
+        /* Daily Timeline Table */
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        .timeline-table th {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+            text-align: left;
+            padding: 12px 14px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+        }
+        .timeline-table td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.92rem;
+            vertical-align: top;
+        }
+        .timeline-table tr:hover td { background: rgba(255, 255, 255, 0.02); }
+        .date-col { font-weight: 700; color: var(--accent); width: 140px; }
+        .drill-badge {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid var(--warning-bg);
+            color: #fbbf24;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+        .exam-row td { background: rgba(239, 68, 68, 0.08); font-weight: 600; }
+        .exam-row td.date-col { color: #f87171; }
+
+        /* Study Order Grid */
+        .order-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .order-step {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            transition: all 0.2s ease;
+        }
+        .order-step:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+        }
+        .step-num {
+            background: linear-gradient(135deg, var(--accent) 0%, #0284c7 100%);
+            color: #0f172a;
+            font-weight: 900;
+            font-size: 1.2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-content { flex: 1; }
+        .step-title { font-size: 1.1rem; font-weight: 700; color: #ffffff; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+        .step-desc { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 12px; }
+        .step-tasks { list-style: none; padding: 0; margin: 0; }
+        .step-tasks li {
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Checkbox styling */
+        .study-check {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--key-bg);
+            cursor: pointer;
+        }
+
+        /* Worksheets Grid */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+            margin-top: 14px;
+        }
+        .res-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .res-title { font-weight: 700; font-size: 0.96rem; color: #ffffff; margin-bottom: 8px; }
+        .res-desc { font-size: 0.84rem; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1; }
+        .res-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn-pdf {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .btn-pdf:hover { background: #1d4ed8; }
+        .btn-key {
+            background: var(--key-bg);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .btn-key:hover { background: var(--key-hover); }
+
+        /* Formula Card */
+        .formula-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .formula-title { font-weight: 700; font-size: 0.95rem; color: var(--accent); margin-bottom: 6px; }
+
+        /* Progress Bar */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            height: 14px;
+            margin: 16px 0 8px 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--key-bg) 0%, var(--accent) 100%);
+            transition: width 0.3s ease;
+        }
+        .progress-text { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-align: right; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Header -->
+        <header>
+            <h1>📐 AP Precalculus: Unit 3 Exam Hub</h1>
+            <div class="subtitle">Complete Calendar, Step-by-Step Study Order &amp; Zero-Auth Resource Archive</div>
+            <div class="meta-tags">
+                <span class="meta-tag"><strong>Student:</strong> Antony Anish</span>
+                <span class="meta-tag"><strong>School:</strong> South Forsyth High School</span>
+                <span class="meta-tag"><strong>Teachers:</strong> Mr. O'Connor &amp; Mrs. Shaw</span>
+                <span class="meta-tag exam-tag">⚡ Unit 3 Exam: Mon Oct 12 &amp; Tue Oct 13</span>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <span class="nav-label">Navigation:</span>
+            <a href="index.html" class="nav-pill home-pill">🏠 All Streams</a>
+            <a href="#dates" class="nav-pill">📅 Dates &amp; Calendar</a>
+            <a href="#order" class="nav-pill">🎯 Study Order</a>
+            <a href="#worksheets" class="nav-pill">📄 Worksheets &amp; Keys</a>
+            <a href="#videos" class="nav-pill">🎥 Public Videos</a>
+            <a href="#cheatsheet" class="nav-pill">📝 Formulas &amp; SSA Rules</a>
+        </nav>
+
+        <!-- Live Countdown Grid -->
+        <div class="countdown-grid">
+            <div class="count-card card-calc">
+                <div class="count-title">Part 1: Calculator Exam</div>
+                <div class="count-timer" id="cd-calc">--d --h --m</div>
+                <div class="count-date">Monday, Oct 12 @ 8:00 AM EDT</div>
+            </div>
+            <div class="count-card card-nocalc">
+                <div class="count-title">Part 2: No-Calculator Exam</div>
+                <div class="count-timer" id="cd-nocalc">--d --h --m</div>
+                <div class="count-date">Tuesday, Oct 13 @ 8:00 AM EDT</div>
+            </div>
+            <div class="count-card card-lock">
+                <div class="count-title">DeltaMath Permanent Lockout</div>
+                <div class="count-timer" id="cd-lock">--d --h --m</div>
+                <div class="count-date">Sunday, Oct 11 @ 11:59 PM EDT</div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="section-card" style="padding: 20px 28px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 700; font-size: 1.05rem; color: #ffffff;">📊 Your Unit 3 Study Completion Progress</span>
+                <span class="progress-text" id="progressPct">0% Completed (0 / 18 Tasks)</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Section 1: Detailed Timeline with Dates -->
+        <div class="section-card" id="dates">
+            <div class="section-header">
+                <div class="section-title">📅 Master Daily Calendar &amp; Deadlines (Oct 4 – Oct 13)</div>
+                <span class="badge badge-calc">Canvas Confirmed</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: -10px;">
+                Official schedule from Mr. O'Connor and Mrs. Shaw's Canvas page. All in-class drills, homework deadlines, and exam portions:
+            </p>
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>Date &amp; Day</th>
+                        <th>In-Class Lesson &amp; Activities</th>
+                        <th>Daily Drill</th>
+                        <th>Homework &amp; Deadlines</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="date-col">Sun, Oct 4</td>
+                        <td>Diagnostic Check &amp; Study Hub Setup</td>
+                        <td>—</td>
+                        <td>Review Unit 3 Inverses &amp; Complete delta practice backlogs</td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">Mon, Oct 5</td>
+                        <td><strong>Lesson 6:</strong> Law of Sines ($AAS, ASA$) oblique triangles</td>
+                        <td><span class="drill-badge">TD 29</span></td>
+                        <td>Begin <strong>DeltaMath Practice 3</strong>; Textbook p. 414 #1–13 odd</td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">Tue, Oct 6</td>
+                        <td><strong>Lesson 7:</strong> Ambiguous Case ($SSA$) &amp; Altitude Test ($h=b\sin A$)</td>
+                        <td><span class="drill-badge">TD 30</span></td>
+                        <td>Wkst C (Extra Practice SSA) &amp; Wkst D (Oblique Apps)</td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">Wed 10/7 &amp; Thu 10/8</td>
+                        <td>Finish Lesson 7; Return &amp; Review <strong>Unit 3 Quiz</strong> (9/22) &amp; <strong>Unit 2 Test</strong></td>
+                        <td><span class="drill-badge">FD 9 &amp; TD Bonus</span></td>
+                        <td><strong style="color: #f87171;">⏰ DUE THU 10/8 @ 11:59 PM:</strong> DeltaMath Practice 3</td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">Fri, Oct 9</td>
+                        <td><strong>Comprehensive Unit 3 Review &amp; Practice Day</strong></td>
+                        <td><span class="drill-badge">TD 31/32</span></td>
+                        <td>Worksheet D (Test Review) &amp; Worksheet E (Review Problems)</td>
+                    </tr>
+                    <tr style="background: rgba(245, 158, 11, 0.06);">
+                        <td class="date-col" style="color: #fbbf24;">Sun, Oct 11</td>
+                        <td>Final Exam Prep Weekend (Timed Mock Simulations)</td>
+                        <td>—</td>
+                        <td><strong style="color: #fbbf24;">🚨 HARD DEADLINE (11:59 PM):</strong> ALL DeltaMath locks permanently!</td>
+                    </tr>
+                    <tr class="exam-row">
+                        <td class="date-col">Mon, Oct 12</td>
+                        <td><strong style="color: #38bdf8;">UNIT 3 EXAM — PART 1: CALCULATOR</strong><br><small style="color: var(--text-muted);">Law of Sines, Law of Cosines, Heron's, Area, SSA 2-Triangle calculations</small></td>
+                        <td><span class="badge badge-calc">In-Class Written</span></td>
+                        <td>Review No-Calc Unit Circle &amp; Arc-Trig rules tonight</td>
+                    </tr>
+                    <tr class="exam-row">
+                        <td class="date-col">Tue, Oct 13</td>
+                        <td><strong style="color: #c4b5fd;">UNIT 3 EXAM — PART 2: NO CALCULATOR</strong><br><small style="color: var(--text-muted);">Inverses, Arc-Trig Principal Branches, Composite Expressions, Memorized Identities</small></td>
+                        <td><span class="badge badge-nocalc">In-Class Written</span></td>
+                        <td>Unit 3 Complete 🎉</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 2: Step-by-Step Study Order Protocol -->
+        <div class="section-card" id="order">
+            <div class="section-header">
+                <div class="section-title">🎯 Recommended Study Order: How to Prepare Step-by-Step</div>
+                <span class="badge badge-calc">Optimal Strategy</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: -10px;">
+                Do not study randomly. Follow this pedagogical 5-phase order to maximize retention and guarantee mastery for both Calculator and No-Calculator days:
+            </p>
+
+            <div class="order-grid">
+                <!-- Step 1 -->
+                <div class="order-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <div class="step-title">
+                            <span>Phase 1: Lock in No-Calculator Core Foundations (Lessons 1, 2, 3)</span>
+                            <span class="badge badge-nocalc">No-Calc Focus</span>
+                        </div>
+                        <div class="step-desc">
+                            Review algebraic inverses, the restricted principal branches for arc-trig, and composite expressions.
+                        </div>
+                        <ul class="step-tasks">
+                            <li>
+                                <input type="checkbox" class="study-check" id="t1" onchange="updateProgress()">
+                                <label for="t1">Memorize exact principal branches: $\arcsin x \in [-\frac{\pi}{2}, \frac{\pi}{2}]$, $\arccos x \in [0, \pi]$, $\arctan x \in (-\frac{\pi}{2}, \frac{\pi}{2})$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t2" onchange="updateProgress()">
+                                <label for="t2">Practice Unit Circle exact values without looking at notes (e.g. $\arccos(-\frac{1}{2}) = \frac{2\pi}{3}$, $\arcsin(-\frac{\sqrt{3}}{2}) = -\frac{\pi}{3}$).</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t3" onchange="updateProgress()">
+                                <label for="t3">Master algebraic composite expressions using reference right triangles (e.g. $\tan(\arccos(x)) = \frac{\sqrt{1-x^2}}{x}$).</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t4" onchange="updateProgress()">
+                                <label for="t4">Complete Worksheet A (Evaluating Inverses) &amp; Worksheet B (Evaluating Arc Trig) without calculator.</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="order-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <div class="step-title">
+                            <span>Phase 2: Drill Memorized Identities &amp; Area Formulas (Lesson 4)</span>
+                            <span class="badge badge-nocalc">Drill Readiness</span>
+                        </div>
+                        <div class="step-desc">
+                            Vital for scoring 100% on daily TD drills (TD 29, 30, 31/32) and triangle area questions.
+                        </div>
+                        <ul class="step-tasks">
+                            <li>
+                                <input type="checkbox" class="study-check" id="t5" onchange="updateProgress()">
+                                <label for="t5">Recite Pythagorean identities: $\sin^2\theta + \cos^2\theta = 1$, $1 + \tan^2\theta = \sec^2\theta$, $1 + \cot^2\theta = \csc^2\theta$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t6" onchange="updateProgress()">
+                                <label for="t6">Recite Double Angle formulas: $\sin(2\theta) = 2\sin\theta\cos\theta$ and the 3 forms of $\cos(2\theta)$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t7" onchange="updateProgress()">
+                                <label for="t7">Practice $SAS$ Area: $\text{Area} = \frac{1}{2}ab\sin C$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t8" onchange="updateProgress()">
+                                <label for="t8">Practice $SSS$ Heron's Formula: Semi-perimeter $s = \frac{a+b+c}{2}$, $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$.</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="order-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <div class="step-title">
+                            <span>Phase 3: Master Calculator Oblique Triangles &amp; SSA Ambiguous Case (Lessons 5, 6, 7)</span>
+                            <span class="badge badge-calc">Calculator Focus</span>
+                        </div>
+                        <div class="step-desc">
+                            The core of Monday's Calculator portion. Learn when to use Law of Cosines vs Law of Sines.
+                        </div>
+                        <ul class="step-tasks">
+                            <li>
+                                <input type="checkbox" class="study-check" id="t9" onchange="updateProgress()">
+                                <label for="t9">Law of Cosines for $SAS$ and $SSS$: $c^2 = a^2 + b^2 - 2ab\cos C$. <em>Rule: In SSS, always find the largest angle first!</em></label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t10" onchange="updateProgress()">
+                                <label for="t10">Law of Sines for $AAS$ and $ASA$: $\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t11" onchange="updateProgress()">
+                                <label for="t11">Ambiguous Case ($SSA$): Calculate altitude $h = b\sin A$. Test whether $a < h$ (0), $a = h$ (1 right), $h < a < b$ (2 triangles), or $a \ge b$ (1 triangle).</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t12" onchange="updateProgress()">
+                                <label for="t12">Watch Mr. O'Connor's 2-Triangle Worked Example and practice finding $B_2 = 180^\circ - B_1$.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t13" onchange="updateProgress()">
+                                <label for="t13">Complete Worksheet C (Extra Practice with SSA) and verify against the answer key.</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="order-step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <div class="step-title">
+                            <span>Phase 4: Complete All DeltaMath Practice Sets Before Lockout</span>
+                            <span class="badge badge-urgent">Hard Lock Sun 10/11</span>
+                        </div>
+                        <div class="step-desc">
+                            No late work is accepted after Sunday, Oct 11 at 11:59 PM.
+                        </div>
+                        <ul class="step-tasks">
+                            <li>
+                                <input type="checkbox" class="study-check" id="t14" onchange="updateProgress()">
+                                <label for="t14">Verify 100% on <strong>DeltaMath Unit 3: Practice 1</strong> (Inverses &amp; Arc-trig).</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t15" onchange="updateProgress()">
+                                <label for="t15">Verify 100% on <strong>DeltaMath Unit 3: Practice 2</strong> (Composites, Identities &amp; Area).</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t16" onchange="updateProgress()">
+                                <label for="t16">Complete 100% on <strong>DeltaMath Unit 3: Practice 3</strong> (Law of Sines &amp; Ambiguous Case) before Thursday 10/8.</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="order-step">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <div class="step-title">
+                            <span>Phase 5: Timed Mock Exam Simulation (Worksheets D &amp; E)</span>
+                            <span class="badge badge-calc">Final Dress Rehearsal</span>
+                        </div>
+                        <div class="step-desc">
+                            Simulate the exact conditions of Monday and Tuesday under a countdown timer.
+                        </div>
+                        <ul class="step-tasks">
+                            <li>
+                                <input type="checkbox" class="study-check" id="t17" onchange="updateProgress()">
+                                <label for="t17">Take <strong>Worksheet D (Inverses Test Review)</strong> with NO CALCULATOR in 45 minutes; grade with Answer Key.</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="study-check" id="t18" onchange="updateProgress()">
+                                <label for="t18">Take <strong>Worksheet E (Oblique Triangles Review)</strong> WITH CALCULATOR in 45 minutes; grade with Answer Key.</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Auth-Free Worksheets & Answer Keys -->
+        <div class="section-card" id="worksheets">
+            <div class="section-header">
+                <div class="section-title">📄 Unit 3 Worksheets &amp; Answer Keys (Zero-Auth Static PDFs)</div>
+                <span class="badge badge-calc">Public / No Login</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: -10px;">
+                All 8 blank worksheets and 8 teacher answer keys hosted statically on GitHub Pages. No Microsoft 365 or SharePoint login required:
+            </p>
+
+            <div class="resource-grid">
+                <!-- Wkst A -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet A: Evaluating Inverse Trig Functions</div>
+                    <div class="res-desc">Basic algebraic inverses, horizontal line test, restricted domains and ranges for $\arcsin$, $\arccos$, $\arctan$.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstA_EvalInvFxns.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstA_EvalInvFxns_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst B Arc -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet B: Evaluating Arc Trig Functions</div>
+                    <div class="res-desc">Exact values on the Unit Circle, negative radian values, principal branches (Quadrant I, II, IV).</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstB_EvalArcTrig.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstB_EvalArcTrig_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst B Oblique -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet B: Applications of Oblique Triangles</div>
+                    <div class="res-desc">Law of Cosines applications, bearing word problems, finding angles of non-right triangles.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstB_AppsObliqueTriangles.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstB_AppsObliqueTriangles_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst C Inverses -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet C: Applications of Inverse Trig</div>
+                    <div class="res-desc">Angle of elevation/depression real-world modeling and composite inverse problems.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstC_Applications.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstC_Applications_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst C SSA -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet C: Extra Practice with SSA (Ambiguous Case)</div>
+                    <div class="res-desc">Determining 0, 1, or 2 triangles; calculating the second acute/obtuse solution pair ($B_1$ and $B_2$).</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstC_ExtraPracSSA.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstC_ExtraPracSSA_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst D Apps -->
+                <div class="res-card">
+                    <div class="res-title">Worksheet D: More Practice with Oblique Applications</div>
+                    <div class="res-desc">Multi-step word problems combining Law of Sines, Law of Cosines, and area calculations.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstD_MorePracticeApps.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstD_MorePracticeApps_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst D Test Review -->
+                <div class="res-card" style="border: 1px solid var(--accent);">
+                    <div class="res-title" style="color: var(--accent);">⭐ Worksheet D: Inverses &amp; Composite Test Review</div>
+                    <div class="res-desc"><strong>Target for Tuesday No-Calc Exam:</strong> Numerical compositions, algebraic triangle setups, principal branch evaluations.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstD_UnitReview.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstD_UnitReview_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+
+                <!-- Wkst E Review -->
+                <div class="res-card" style="border: 1px solid var(--key-bg);">
+                    <div class="res-title" style="color: #6ee7b7;">⭐ Worksheet E: Oblique Triangles Review Problems</div>
+                    <div class="res-desc"><strong>Target for Monday Calc Exam:</strong> Full mixed review of Law of Sines, Law of Cosines, Heron's Formula, and Ambiguous Case.</div>
+                    <div class="res-btns">
+                        <a href="./docs/APPCU03_WkstE_Review.pdf" target="_blank" class="btn-pdf">Blank PDF</a>
+                        <a href="./docs/APPCU03_WkstE_Review_Answers.pdf" target="_blank" class="btn-key">Answer Key</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Public Video Streams -->
+        <div class="section-card" id="videos">
+            <div class="section-header">
+                <div class="section-title">🎥 Unit 3 Lesson Videos (Permanent Public Unauthenticated Players)</div>
+                <span class="badge badge-calc">13 Streams Verified</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: -10px;">
+                These player links do not expire and require zero login. Click to open directly in a new tab:
+            </p>
+
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>Lesson</th>
+                        <th>Video Title &amp; Topic</th>
+                        <th>Platform</th>
+                        <th>Public Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Lesson 1</strong></td>
+                        <td>Review of Inverses (from Algebra)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM" target="_blank" class="btn-pdf">Watch Video 1</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 1</strong></td>
+                        <td>Rational Zero Test (Synthetic Division)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ" target="_blank" class="btn-pdf">Watch Video 2</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 2</strong></td>
+                        <td>Evaluating Arctrig Functions</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE" target="_blank" class="btn-pdf">Watch Video 3</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 3</strong></td>
+                        <td>Composite Trig Expressions (Part 1)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI" target="_blank" class="btn-pdf">Watch Video 4</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 3</strong></td>
+                        <td>Composite Inverses - Numeric Only (Part 2)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=fOWU3MDJiODA5NWY3NDE5M2MzOWYzNTZiOTgxMWU0M2I" target="_blank" class="btn-pdf">Watch Video 5</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 3</strong></td>
+                        <td>Composite Inverses - Variable Ratios (Part 3)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=fMjY3MmM4OTQ5YmI4NzY3ZjY0ZTJmNzhlMjEyNzRhMjY" target="_blank" class="btn-pdf">Watch Video 6</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 4</strong></td>
+                        <td>Pythagorean Theorem &amp; Reciprocal Identities</td>
+                        <td>InstructureMedia</td>
+                        <td><a href="https://forsyth.instructuremedia.com/embed/5fee7cfe-e359-4640-a7be-a96c6b6d4b0d" target="_blank" class="btn-pdf">Watch Video 7</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 4</strong></td>
+                        <td>Trig &amp; Inverse Trig Functions</td>
+                        <td>InstructureMedia</td>
+                        <td><a href="https://forsyth.instructuremedia.com/embed/528c62be-4ea5-4138-a044-b6c2472989b6" target="_blank" class="btn-pdf">Watch Video 8</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 4</strong></td>
+                        <td>Area of a Triangle: $SAS$ Formula &amp; Heron's Formula</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc" target="_blank" class="btn-pdf">Watch Video 9</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 5</strong></td>
+                        <td>Intro to Oblique Triangles &amp; Law of Cosines</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU" target="_blank" class="btn-pdf">Watch Video 10</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 6</strong></td>
+                        <td>Law of Sines</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ" target="_blank" class="btn-pdf">Watch Video 11</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 7</strong></td>
+                        <td>Ambiguous Case of the Law of Sines ($SSA$)</td>
+                        <td>MyVideoSpot</td>
+                        <td><a href="https://live.myvrspot.com/iframe?v=YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE" target="_blank" class="btn-pdf">Watch Video 12</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lesson 7</strong></td>
+                        <td>Worked Out Example: 2-Triangle Ambiguous Case (Mr. O'Connor)</td>
+                        <td>ScreenPal</td>
+                        <td><a href="https://go.screenpal.com/player/c0jYryVpYmq" target="_blank" class="btn-key">Watch Video 13</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 5: Formulas & Cheatsheets -->
+        <div class="section-card" id="cheatsheet">
+            <div class="section-header">
+                <div class="section-title">📝 Master Formula Cheatsheet &amp; Decision Trees</div>
+                <span class="badge badge-calc">Exam Quick Reference</span>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-title">1. Principal Branches of Inverse Trigonometric Functions (No-Calc Day)</div>
+                <p style="margin: 4px 0; font-size: 0.95rem;">
+                    $$\arcsin x \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \quad (\text{Quadrants I and IV, where IV is negative: } [-\pi/2, 0))$$
+                    $$\arccos x \in [0, \pi] \quad (\text{Quadrants I and II})$$
+                    $$\arctan x \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \quad (\text{Quadrants I and IV, open interval})$$
+                </p>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-title">2. Oblique Triangle Area Formulas (Calculator Day)</div>
+                <p style="margin: 4px 0; font-size: 0.95rem;">
+                    <strong>SAS Configuration (Two sides &amp; included angle):</strong>
+                    $$\text{Area} = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ac\sin B$$
+                    <strong>SSS Configuration (Heron's Formula):</strong>
+                    $$\text{Semi-perimeter: } s = \frac{a + b + c}{2}$$
+                    $$\text{Area} = \sqrt{s(s - a)(s - b)(s - c)}$$
+                </p>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-title">3. Law of Cosines &amp; Law of Sines (Calculator Day)</div>
+                <p style="margin: 4px 0; font-size: 0.95rem;">
+                    <strong>Law of Cosines ($SAS$ or $SSS$):</strong>
+                    $$c^2 = a^2 + b^2 - 2ab\cos C \iff \cos C = \frac{a^2 + b^2 - c^2}{2ab}$$
+                    <em>★ Pro-Tip: For SSS, ALWAYS solve for the LARGEST side's opposite angle first! That guarantees the remaining angles are strictly acute.</em><br><br>
+                    <strong>Law of Sines ($AAS, ASA$, or $SSA$):</strong>
+                    $$\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$$
+                </p>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-title">4. Ambiguous Case ($SSA$) Decision Tree for Acute Angle $A$</div>
+                <p style="margin: 4px 0; font-size: 0.95rem;">
+                    Given acute angle $A$ and adjacent side $b$, first compute the altitude: <strong>$h = b\sin A$</strong>:
+                </p>
+                <ul style="margin: 6px 0; padding-left: 20px; font-size: 0.92rem; color: #e2e8f0;">
+                    <li><strong>$a < h$:</strong> Opposite side is too short to reach base $\implies$ <strong>0 Triangles (No Solution)</strong>.</li>
+                    <li><strong>$a = h$:</strong> Opposite side drops as a perpendicular altitude $\implies$ <strong>1 Right Triangle</strong>.</li>
+                    <li><strong>$h < a < b$:</strong> Opposite side can swing inward or outward $\implies$ <strong>2 Oblique Triangles</strong>.
+                        <br>&bull; Triangle 1: $B_1 = \arcsin\left(\frac{b\sin A}{a}\right)$ (acute)
+                        <br>&bull; Triangle 2: $B_2 = 180^\circ - B_1$ (obtuse). Check: $A + B_2 < 180^\circ$.
+                    </li>
+                    <li><strong>$a \ge b$:</strong> Opposite side swings outward only $\implies$ <strong>1 Oblique Triangle</strong>.</li>
+                </ul>
+                <p style="margin: 4px 0; font-size: 0.92rem;">
+                    <strong>For Obtuse Angle $A$:</strong> If $a \le b \implies$ <strong>0 Triangles</strong>. If $a > b \implies$ <strong>1 Triangle</strong>.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Live Countdown Clocks
+        function updateCountdowns() {
+            const now = new Date().getTime();
+            
+            // Oct 12, 2026 08:00:00 EDT
+            const tCalc = new Date("2026-10-12T08:00:00-04:00").getTime();
+            // Oct 13, 2026 08:00:00 EDT
+            const tNoCalc = new Date("2026-10-13T08:00:00-04:00").getTime();
+            // Oct 11, 2026 23:59:00 EDT
+            const tLock = new Date("2026-10-11T23:59:00-04:00").getTime();
+
+            function formatDiff(target) {
+                const diff = target - now;
+                if (diff <= 0) return "ACTIVE / COMPLETED";
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                return `${d}d ${h}h ${m}m`;
+            }
+
+            document.getElementById('cd-calc').textContent = formatDiff(tCalc);
+            document.getElementById('cd-nocalc').textContent = formatDiff(tNoCalc);
+            document.getElementById('cd-lock').textContent = formatDiff(tLock);
+        }
+
+        setInterval(updateCountdowns, 1000);
+        updateCountdowns();
+
+        // LocalStorage Progress Tracker
+        const totalTasks = 18;
+        function updateProgress() {
+            let checkedCount = 0;
+            for (let i = 1; i <= totalTasks; i++) {
+                const cb = document.getElementById(`t${i}`);
+                if (cb && cb.checked) {
+                    checkedCount++;
+                    localStorage.setItem(`appc_u3_t${i}`, '1');
+                } else if (cb) {
+                    localStorage.removeItem(`appc_u3_t${i}`);
+                }
+            }
+            const pct = Math.round((checkedCount / totalTasks) * 100);
+            document.getElementById('progressBar').style.width = `${pct}%`;
+            document.getElementById('progressPct').textContent = `${pct}% Completed (${checkedCount} / ${totalTasks} Tasks)`;
+        }
+
+        // Restore Progress
+        window.addEventListener('DOMContentLoaded', () => {
+            for (let i = 1; i <= totalTasks; i++) {
+                const val = localStorage.getItem(`appc_u3_t${i}`);
+                const cb = document.getElementById(`t${i}`);
+                if (cb && val === '1') {
+                    cb.checked = true;
+                }
+            }
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
