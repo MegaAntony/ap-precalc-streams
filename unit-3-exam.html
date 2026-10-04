@@ -350,6 +350,77 @@
             transition: width 0.3s ease;
         }
         .progress-text { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-align: right; }
+
+        /* Critical Intel Section */
+        .critical-intel-card {
+            border: 2px solid #f59e0b !important;
+            background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(19, 27, 46, 0.95) 100%) !important;
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.15) !important;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 18px;
+        }
+        @media (max-width: 860px) {
+            .compare-grid { grid-template-columns: 1fr; }
+        }
+        .memo-col {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .concept-col {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .col-header {
+            font-size: 1.15rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .col-header.memo { color: #f87171; }
+        .col-header.concept { color: #38bdf8; }
+        .sub-card {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+        .sub-card-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .branch-badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+        .badge-q14 { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+        .badge-q12 { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+        .warning-tip {
+            font-size: 0.82rem;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.12);
+            border-left: 3px solid #f59e0b;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
     </style>
 </head>
 <body>
@@ -371,6 +442,7 @@
         <nav class="nav-bar">
             <span class="nav-label">Navigation:</span>
             <a href="index.html" class="nav-pill home-pill">🏠 All Streams</a>
+            <a href="#must-memorize" class="nav-pill" style="background: rgba(245, 158, 11, 0.2); border-color: #f59e0b; color: #fbbf24; font-weight: 700; box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);">🚨 Must Memorize vs Picture</a>
             <a href="#dates" class="nav-pill">📅 Dates &amp; Calendar</a>
             <a href="#order" class="nav-pill">🎯 Study Order</a>
             <a href="#worksheets" class="nav-pill">📄 Worksheets &amp; Keys</a>

@@ -18,6 +18,55 @@ The Unit 3 Exam is an in-class written test divided across two consecutive days:
 
 ---
 
+
+---
+
+## 🚨 VERY IMPORTANT: What to Memorize By Heart vs. What to Picture Conceptually
+
+> [!WARNING]
+> **Zero Formula Sheets on Exam!**
+> Mr. O'Connor and Mrs. Shaw **DO NOT** provide formula sheets on the Unit 3 Exam. However, you do **not** need to memorize giant tables of inequalities like a robot. Here is the exact distinction between what must be memorized cold by heart versus the geometric picture that makes the rest effortless:
+
+### 🛑 1. MUST MEMORIZE 100% BY HEART (Zero Reference Given)
+1. **Restricted Principal Branches (Tuesday No-Calc):**
+   * $rcsin(x) \in [-rac{\pi}{2}, rac{\pi}{2}]$ (Right half of circle: QI & QIV. *Write QIV angles as negative, e.g., $-rac{\pi}{6}$!*)
+   * $rccos(x) \in [0, \pi]$ (Top half of circle: QI & QII. *Negative input always yields obtuse angle in QII!*)
+   * $rctan(x) \in (-rac{\pi}{2}, rac{\pi}{2})$ (Right half open interval, vertical asymptotes at $\pm rac{\pi}{2}$)
+2. **Triangle Area Formulas (Monday Calculator):**
+   * $SAS$ Formula: $	ext{Area} = rac{1}{2}ab\sin C$ (trapped angle)
+   * $SSS$ Heron's Formula: $s = rac{a+b+c}{2} \implies 	ext{Area} = \sqrt{s(s-a)(s-b)(s-c)}$
+3. **Law of Sines & Cosines (Monday Calculator):**
+   * Law of Sines: $rac{\sin A}{a} = rac{\sin B}{b} = rac{\sin C}{c}$
+   * Law of Cosines: $c^2 = a^2 + b^2 - 2ab\cos C \iff \cos C = rac{a^2 + b^2 - c^2}{2ab}$
+   * *★ Golden SSS Rule:* Always solve for the **largest side's opposite angle first!** If obtuse, $\cos$ is negative; once found, all other angles must be acute!
+4. **Daily Drill Memorized Identities (TD 29, 30, 31):**
+   * $\sin^2	heta + \cos^2	heta = 1$, $1 + 	an^2	heta = \sec^2	heta$
+   * $\sin(2	heta) = 2\sin	heta\cos	heta$
+   * $\cos(2	heta) = \cos^2	heta - \sin^2	heta = 2\cos^2	heta - 1 = 1 - 2\sin^2	heta$
+
+---
+
+### 💡 2. DO NOT CRAM TABLES — PICTURE THE SWINGING ARM INSTEAD!
+For the **$SSA$ Ambiguous Case**, do NOT try to memorize abstract inequalities ($a < h$, $h < a < b$, etc.). Picture side $a$ as a **Swinging Crane Arm / Pendulum** hanging from Vertex $C$:
+
+```
+                 Vertex C
+                  / |                  /  |         Side b   /   |   \  Swinging Arm (Side a)
+      (Fixed)  /    |h                 /     |         Angle A  /______|______            A       Base    B₁ (Outward)
+                    B₂ (Inward)
+```
+
+1. **Calculate the straight vertical altitude:**
+   $$h = b\sin A$$
+2. **Compare side $a$ (the swinging arm) to $h$ and $b$:**
+   * **Case 1: $a < h$ (Too Short):** The arm dangles in mid-air and cannot reach the base $\implies$ **0 Triangles (No Solution)**.
+   * **Case 2: $a = h$ (Exact Drop):** The arm touches the base at exactly $90^\circ$ $\implies$ **1 Right Triangle**.
+   * **Case 3: $h < a < b$ (Double Swing!):** The arm is longer than $h$, but shorter than $b$. It can swing inward **OR** outward $\implies$ **2 Triangles!**
+     * **Triangle 1 (Outward):** Calculator gives you acute $B_1 = rcsin\left(rac{b\sin A}{a}ight)$.
+     * **Triangle 2 (Inward):** Second angle is supplementary: **$B_2 = 180^\circ - B_1$** (obtuse). Check: $A + B_2 < 180^\circ$.
+   * **Case 4: $a \ge b$ (Single Outward Swing):** The arm is longer than $b$. If it swung inward, it would pass angle $A$ and break the triangle $\implies$ **1 Oblique Triangle**.
+   * **For Obtuse Angle $A$:** If $a \le b \implies$ 0 Triangles. If $a > b \implies$ 1 Triangle.
+
 ## 📅 Day-by-Day Master Schedule with Dates (Oct 4 – Oct 13)
 
 ```
