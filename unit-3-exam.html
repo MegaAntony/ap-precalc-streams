@@ -478,6 +478,171 @@
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
+        <!-- VERY IMPORTANT: What to Memorize vs What to Picture -->
+        <div class="section-card critical-intel-card" id="must-memorize">
+            <div class="section-header">
+                <div class="section-title" style="color: #fbbf24;">
+                    🚨 VERY IMPORTANT: Memorize By Heart vs. Conceptual Picture
+                </div>
+                <span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b;">Zero Formula Sheet on Exam</span>
+            </div>
+            <p style="color: #e2e8f0; font-size: 0.95rem; margin-top: -8px;">
+                <strong>Teachers DO NOT provide a formula sheet on the Unit 3 Exam!</strong> However, you <em>do not</em> need to memorize giant tables of abstract inequalities. Here is the exact breakdown of what to memorize cold by heart vs. the <strong>Swinging Pendulum Picture</strong> that makes the Ambiguous Case effortless:
+            </p>
+
+            <div class="compare-grid">
+                <!-- Column 1: MUST MEMORIZE 100% BY HEART -->
+                <div class="memo-col">
+                    <div class="col-header memo">
+                        <span>🛑 1. MUST MEMORIZE 100% BY HEART</span>
+                    </div>
+
+                    <!-- Card A: Principal Branches -->
+                    <div class="sub-card">
+                        <div class="sub-card-title">
+                            <span style="color: #38bdf8;">A. Restricted Inverse Branches</span>
+                            <span class="branch-badge badge-q14">Tue No-Calc</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 18px; font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">
+                            <li><strong>$\arcsin(x) \in [-\frac{\pi}{2}, \frac{\pi}{2}]$</strong> $\implies$ <strong>Right Half (QI &amp; QIV)</strong></li>
+                            <li><strong>$\arccos(x) \in [0, \pi]$</strong> $\implies$ <strong>Top Half (QI &amp; QII)</strong></li>
+                            <li><strong>$\arctan(x) \in (-\frac{\pi}{2}, \frac{\pi}{2})$</strong> $\implies$ <strong>Right Half Open Interval</strong></li>
+                        </ul>
+                        <div class="warning-tip">
+                            ⚡ <strong>Exam Trap:</strong> In $\arcsin$, QIV angles MUST be negative (e.g. $-\frac{\pi}{6}$, never $\frac{11\pi}{6}$). In $\arccos$, negative input ALWAYS yields an obtuse angle in QII (e.g. $\arccos(-\frac{1}{2}) = \frac{2\pi}{3}$).
+                        </div>
+                    </div>
+
+                    <!-- Card B: Area Formulas -->
+                    <div class="sub-card">
+                        <div class="sub-card-title">
+                            <span style="color: #6ee7b7;">B. Triangle Area Formulas</span>
+                            <span class="branch-badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7;">Mon Calc</span>
+                        </div>
+                        <p style="margin: 0; font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">
+                            • <strong>$SAS$ Trapped Angle:</strong> $\text{Area} = \frac{1}{2}ab\sin C$<br>
+                            • <strong>$SSS$ Heron's Formula:</strong> Semi-perimeter $s = \frac{a+b+c}{2}$<br>
+                            &nbsp;&nbsp;&nbsp;$$\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$$
+                        </p>
+                    </div>
+
+                    <!-- Card C: LoS & LoC -->
+                    <div class="sub-card">
+                        <div class="sub-card-title">
+                            <span style="color: #fca5a5;">C. Law of Sines &amp; Cosines</span>
+                            <span class="branch-badge" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5;">Mon Calc</span>
+                        </div>
+                        <p style="margin: 0; font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">
+                            • <strong>Law of Sines:</strong> $\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$<br>
+                            • <strong>Law of Cosines:</strong> $c^2 = a^2 + b^2 - 2ab\cos C$<br>
+                            &nbsp;&nbsp;&nbsp;<em>Angle Form:</em> $\cos C = \frac{a^2 + b^2 - c^2}{2ab}$
+                        </p>
+                        <div class="warning-tip">
+                            ★ <strong>Golden SSS Rule:</strong> Always solve for the <strong>LARGEST side's opposite angle first!</strong> If obtuse, $\cos$ handles the sign. Once found, all remaining angles are guaranteed acute!
+                        </div>
+                    </div>
+
+                    <!-- Card D: Daily Drill Identities -->
+                    <div class="sub-card">
+                        <div class="sub-card-title">
+                            <span style="color: #fbbf24;">D. Drill Identities (TD 29, 30, 31)</span>
+                            <span class="branch-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24;">Daily Drills</span>
+                        </div>
+                        <p style="margin: 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+                            • $\sin^2\theta + \cos^2\theta = 1 \quad|\quad 1 + \tan^2\theta = \sec^2\theta$<br>
+                            • $\sin(2\theta) = 2\sin\theta\cos\theta$<br>
+                            • $\cos(2\theta) = \cos^2\theta - \sin^2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta$
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: DO NOT CRAM - PICTURE IT INSTEAD! -->
+                <div class="concept-col">
+                    <div class="col-header concept">
+                        <span>💡 2. DO NOT CRAM TABLES — PICTURE THIS!</span>
+                    </div>
+
+                    <div style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 12px;">
+                        For the <strong>$SSA$ Ambiguous Case</strong>, do NOT memorize abstract inequalities ($a &lt; h$, $h &lt; a &lt; b$, etc.). Picture side $a$ as a <strong>Swinging Crane Arm / Pendulum</strong> hanging from Vertex $C$:
+                    </div>
+
+                    <!-- Visual SVG Diagram of the Pendulum -->
+                    <div style="text-align: center; margin-bottom: 14px;">
+                        <svg viewBox="0 0 650 310" style="width: 100%; max-width: 520px; height: auto; background: #0f172a; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12);">
+                            <!-- Base line -->
+                            <line x1="30" y1="250" x2="620" y2="250" stroke="#475569" stroke-width="2" stroke-dasharray="4" />
+                            <text x="540" y="240" fill="#64748b" font-size="11" font-family="sans-serif">Base Line</text>
+
+                            <!-- Side b from A(50, 250) to C(220, 50) -->
+                            <line x1="50" y1="250" x2="220" y2="50" stroke="#38bdf8" stroke-width="3" />
+                            <circle cx="50" cy="250" r="5" fill="#38bdf8" />
+                            <circle cx="220" cy="50" r="6" fill="#f59e0b" />
+                            <text x="35" y="275" fill="#38bdf8" font-weight="bold" font-size="14">Angle A</text>
+                            <text x="110" y="145" fill="#38bdf8" font-weight="bold" font-size="13">Side b (Fixed)</text>
+                            <text x="215" y="35" fill="#f59e0b" font-weight="bold" font-size="15">Vertex C</text>
+
+                            <!-- Altitude h straight down from C -->
+                            <line x1="220" y1="50" x2="220" y2="250" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="5" />
+                            <rect x="220" y="235" width="15" height="15" fill="none" stroke="#f43f5e" stroke-width="1.5" />
+                            <text x="228" y="160" fill="#f43f5e" font-weight="bold" font-size="13">h = b · sin A</text>
+
+                            <!-- Pendulum Arc Path -->
+                            <path d="M 110 250 A 170 170 0 0 1 330 250" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3" />
+
+                            <!-- Swinging Arm Inward: Triangle 2 -->
+                            <line x1="220" y1="50" x2="125" y2="250" stroke="#10b981" stroke-width="2.5" />
+                            <circle cx="125" cy="250" r="5" fill="#10b981" />
+                            <text x="80" y="275" fill="#10b981" font-weight="bold" font-size="12">B₂ (Obtuse)</text>
+                            <text x="120" y="195" fill="#10b981" font-size="11">Swings IN</text>
+
+                            <!-- Swinging Arm Outward: Triangle 1 -->
+                            <line x1="220" y1="50" x2="315" y2="250" stroke="#c084fc" stroke-width="2.5" />
+                            <circle cx="315" cy="250" r="5" fill="#c084fc" />
+                            <text x="315" y="275" fill="#c084fc" font-weight="bold" font-size="12">B₁ (Acute)</text>
+                            <text x="275" y="195" fill="#c084fc" font-size="11">Swings OUT</text>
+
+                            <!-- Legend / Rules Box inside SVG -->
+                            <rect x="390" y="30" width="240" height="185" rx="6" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.15)" />
+                            <text x="405" y="55" fill="#fbbf24" font-size="12" font-weight="bold">THE 4 PENDULUM CASES:</text>
+                            
+                            <text x="405" y="80" fill="#f87171" font-size="11">1. a &lt; h (Too short):</text>
+                            <text x="418" y="96" fill="#cbd5e1" font-size="10.5">Dangles in air &rArr; 0 Triangles</text>
+
+                            <text x="405" y="118" fill="#38bdf8" font-size="11">2. a = h (Exact drop):</text>
+                            <text x="418" y="134" fill="#cbd5e1" font-size="10.5">Touches base &rArr; 1 Right &Delta;</text>
+
+                            <text x="405" y="156" fill="#34d399" font-size="11">3. h &lt; a &lt; b (Double swing!):</text>
+                            <text x="418" y="172" fill="#cbd5e1" font-size="10.5">Swings IN &amp; OUT &rArr; 2 Triangles!</text>
+
+                            <text x="405" y="194" fill="#a78bfa" font-size="11">4. a &ge; b (Single swing):</text>
+                            <text x="418" y="206" fill="#cbd5e1" font-size="10.5">Swings OUT only &rArr; 1 &Delta;</text>
+                        </svg>
+                    </div>
+
+                    <!-- Step-by-Step 30-Second Algorithm -->
+                    <div class="sub-card" style="border-left: 3px solid #38bdf8;">
+                        <div style="font-weight: 700; font-size: 0.92rem; color: #ffffff; margin-bottom: 6px;">
+                            ⚙️ The 30-Second Mental Algorithm on the Exam:
+                        </div>
+                        <ol style="margin: 0; padding-left: 18px; font-size: 0.86rem; color: #cbd5e1; line-height: 1.6;">
+                            <li>Calculate altitude: <strong>$h = b\sin A$</strong> in your calculator.</li>
+                            <li>Compare side $a$ to $h$:
+                                <ul>
+                                    <li>If $a &lt; h$: Stop immediately $\implies$ <strong>No solution (0 Triangles)</strong>.</li>
+                                    <li>If $h &lt; a &lt; b$: Alarm bells! $\implies$ <strong>2 Triangles!</strong></li>
+                                </ul>
+                            </li>
+                            <li><strong>When 2 Triangles exist:</strong>
+                                <ul>
+                                    <li>Your TI-84 gives you acute $B_1 = \arcsin(\frac{b\sin A}{a})$.</li>
+                                    <li>Second triangle's obtuse angle is simply: <strong>$B_2 = 180^\circ - B_1$</strong>.</li>
+                                    <li>Verify $A + B_2 &lt; 180^\circ$, then find angle $C_2 = 180^\circ - (A + B_2)$.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Section 1: Detailed Timeline with Dates -->
