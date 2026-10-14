@@ -184,7 +184,19 @@ Hosted public repository layout:
 * **Reference & Worksheets**: [`Unit_03_Complete_Reference.md`](./Unit%203%20-%20Inverse%20%26%20Composite%20Trigonometric%20Functions/Unit_03_Complete_Reference.md)
   * Worksheets A–E, oblique triangles, test reviews (16 PDFs hosted live in `docs/` with zero authentication).
 
-### 4. [Weekly Plans & Assignment Tracker](./Weekly%20Plans/)
+### 4. [Unit 4 - Analytical Trigonometry](./Unit%204%20-%20Analytical%20Trigonometry/)
+* **Video Archive**: [](./Unit%204%20-%20Analytical%20Trigonometry/Unit_04_all-Lesson_Videos.md) (30 Videos)
+  * **Work Organization**: Demonstration for Worksheets A, B, and C (ScreenPal).
+  * **Solving Trig Equations (STE)**: Intro, Factoring, Identities, Squaring Both Sides, Multiple Angles, General Solutions (Videos 2–7).
+  * **Simplifying, Rewriting, Evaluating (SRE)**: Sum/Difference, Half-Angle, Double-Angle, Sum-to-Product, Product-to-Sum, Power-Reducing (Videos 8–19).
+  * **Verifying Trig Identities (VTI)**: Mandatory Left-Side Proof Rules, Quotient, Reciprocal, Pythagorean, Common Denominators, Combo Techniques (Videos 20–30).
+* **Reference & Worksheets**: [](./Unit%204%20-%20Analytical%20Trigonometry/Unit_04_Complete_Reference.md)
+  * Worksheet A (STE) + [Online Problem Picker / Cover Sheet Generator](http://oconnorclass.com/aat/wksta.php) (30 bonus points opportunity!).
+  * Worksheet B (SRE) - Required problems due 10/27.
+  * Worksheet C (VTI) - Required problems due 11/4–11/5.
+  * [Trig Identities Practice Quiz Generator](http://oconnorclass.com/aat/trig-ident-quiz.php).
+
+### 5. [Weekly Plans & Assignment Tracker](./Weekly%20Plans/)
 * **Master Schedule & Milestones**: [`Weekly Plans/README.md`](./Weekly%20Plans/README.md)
 * **[Week 7 (9/14 – 9/18)](./Weekly%20Plans/Week_07_Sep_14_Sep_18.md)**: Unit 2 Test, Begin Unit 3 (Lessons 1–3, Inverse Functions & Graphing).
 * **[Week 8 (9/21 – 9/25)](./Weekly%20Plans/Week_08_Sep_21_Sep_25.md)**: Right Triangles, Area Formulas ($SAS$ & Heron's), **Unit 3 Quiz (Tue 9/22)**, Law of Cosines, DeltaMath Practice 1 (due 9/21) & Practice 2 (due 9/27).
