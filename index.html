@@ -164,7 +164,7 @@
         }
         .resource-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
             gap: 12px;
         }
         .resource-card {
@@ -175,18 +175,22 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 12px;
             scroll-margin-top: 100px;
         }
         .resource-title {
             font-size: 0.88rem;
             font-weight: 500;
             color: #f1f5f9;
+            min-width: 0;
+            flex: 1;
         }
         .btn-group {
             display: flex;
             gap: 6px;
             flex-shrink: 0;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
         .btn-pdf {
             background: var(--badge-bg);
@@ -893,47 +897,50 @@
             </h2>
             <div class="resource-box">
                 <h3 class="resource-heading">📄 Worksheets, Interactive Tools &amp; Cover Page Generator <span class="badge-public">⚡ Public / Zero Auth</span></h3>
+                
+                <!-- Unit 4 Milestones & Rules Notice -->
+                <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 0.82rem; color: #d1fae5; display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+                    <span>🎁 <strong style="color: #6ee7b7;">+30 Bonus Points:</strong> Turn in Worksheet A on Test Day (11/9) with printed Cover Sheet from the Problem Picker!</span>
+                    <span>⏰ <strong style="color: #6ee7b7;">Wkst B:</strong> Due Tue 10/27 (Quiz Day)</span>
+                    <span>⏰ <strong style="color: #6ee7b7;">Wkst C:</strong> Due Wed/Thu 11/4–5</span>
+                    <span>⚠️ <strong style="color: #fcd34d;">Rules:</strong> 2 columns, margin numbers, no calculators, no broken problems.</span>
+                </div>
+
                 <div class="resource-grid">
-                    <div class="resource-card" style="border-left: 4px solid #10b981;">
-                        <span class="resource-title">Worksheet A - Solving Trig Equations (STE)</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Solve on [0, 2π] + general solutions. Earn +30 Bonus Points on Test Day (11/9)!</p>
+                    <div class="resource-card" style="border-left: 3px solid #10b981;">
+                        <span class="resource-title">Worksheet A (Solving Trig Equations)</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="http://oconnorclass.com/aat/wksta.php" target="_blank" style="background: #059669; font-weight: 700;">⚙️ Problem Picker / Cover Sheet</a>
-                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Eax-8yk4y1RPlAvjSRNACdgB6hkLFdBywpvZSDRw7jcpOw?e=4cv8GN" target="_blank">Worksheet A PDF</a>
+                            <a class="btn-pdf" href="http://oconnorclass.com/aat/wksta.php" target="_blank" style="background: #059669;">Problem Picker</a>
+                            <a class="btn-key" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/Eax-8yk4y1RPlAvjSRNACdgB6hkLFdBywpvZSDRw7jcpOw?e=4cv8GN" target="_blank">Worksheet PDF</a>
                         </div>
                     </div>
                     <div class="resource-card">
-                        <span class="resource-title">Worksheet B - Simplifying &amp; Rewriting (SRE)</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Required problems due Tuesday, Oct 27 at start of class.</p>
+                        <span class="resource-title">Worksheet B (Simplifying &amp; Rewriting)</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EZldyS5oi15IojU-cb5b4EsBpWTjOMd0z1JD4hHKqXmc-Q?e=pCcktZ" target="_blank">Worksheet B PDF</a>
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EZldyS5oi15IojU-cb5b4EsBpWTjOMd0z1JD4hHKqXmc-Q?e=pCcktZ" target="_blank">Worksheet PDF</a>
                         </div>
                     </div>
                     <div class="resource-card">
-                        <span class="resource-title">Worksheet C - Verifying Trig Identities (VTI)</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Required problems due Wednesday 11/4 (even) / Thursday 11/5 (odd).</p>
+                        <span class="resource-title">Worksheet C (Verifying Identities)</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQ0eG37JbbxIi0_nmOdjP4cBmhWu_8pJWjAiCFpMxJXA1A?e=HlzIDJ" target="_blank">Worksheet C PDF</a>
+                            <a class="btn-pdf" href="https://forsythk12org.sharepoint.com/:b:/s/SFHMath/EQ0eG37JbbxIi0_nmOdjP4cBmhWu_8pJWjAiCFpMxJXA1A?e=HlzIDJ" target="_blank">Worksheet PDF</a>
                         </div>
                     </div>
                     <div class="resource-card">
-                        <span class="resource-title">Trig Identities Interactive Drill &amp; Quiz</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Practice instant recall for Unit 4 drills &amp; assessments.</p>
+                        <span class="resource-title">Trig Identities Practice Quiz</span>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="http://oconnorclass.com/aat/trig-ident-quiz.php" target="_blank" style="background: #2563eb;">🎯 Launch Quiz Generator</a>
-                            <a class="btn-key" href="./docs/Official_Trig_Identities_Sheet.pdf" target="_blank">Identities Sheet</a>
+                            <a class="btn-pdf" href="http://oconnorclass.com/aat/trig-ident-quiz.php" target="_blank" style="background: #2563eb;">Quiz Drill</a>
+                            <a class="btn-key" href="./docs/Official_Trig_Identities_Sheet.pdf" target="_blank">Identities PDF</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Work Organization Guidelines</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Strict formatting rules: 2 columns, margin numbers, no calculators, no broken problems.</p>
                         <div class="btn-group">
-                            <a class="btn-pdf" href="https://go.screenpal.com/player/c06w37VE7uf" target="_blank">🎥 Demo Video</a>
+                            <a class="btn-pdf" href="https://go.screenpal.com/player/c06w37VE7uf" target="_blank">Demo Video</a>
                         </div>
                     </div>
                     <div class="resource-card">
                         <span class="resource-title">Textbook Chapter 5: Analytic Trig</span>
-                        <p style="font-size: 0.8rem; color: #94a3b8; margin: 4px 0 8px 0;">Larson Precalculus pgs 351–406 + Complete Solutions to Odd Problems.</p>
                         <div class="btn-group">
                             <a class="btn-pdf" href="./docs/Precalculus_Chapter_05_Analytic_Trigonometry.pdf" target="_blank">Chapter 5 PDF</a>
                             <a class="btn-key" href="./docs/Precalculus_Answers_to_Odd_Problems.pdf" target="_blank">Odd Answers</a>
