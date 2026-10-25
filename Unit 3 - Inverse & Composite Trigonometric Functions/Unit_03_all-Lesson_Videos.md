@@ -7,10 +7,10 @@
 ### 📹 Video 1: Unit 3 Lesson 1: Review of Inverses (from Algebra)
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1792986566&Signature=u3gWJl2jETQEXNMDYri~wWebG2oCXlu33Sz8Cmg9jYt916m4rfsYTLI69esbhuwrBzScuvrFsCKsj4vYs-UwAjUIUqTBO3Oi6WxXOFBP9j4I9yP0TGfvxN9jHuQElXtdptwgiQdvMDcFy5rCzDSjjKrmVNcBy8qhXxBnL4fW5iRV0ND7UjZN~QA6kqiLYh68qqq74yqDK8zUTXH33i4R6ea4oKJnMZ1aIyW9DIDH5FuW6arorAwARBFVXSos4IT6MsvPe-8lC5VDj8xvwIGSE4nPvGI8WO64ZKThEIMDYoBLp~Vp8IiTbxRaNme68-NlmTEjFzTh4JITYsSN41SKwQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_1___Review_of_Inverses__from_Algebra.mp4" "https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1789532248&Signature=q8U5RB755V1hLtE0CtjXzu3TZ9hmjcI9bhniMxPyFC-TH7CW-8qsvg46PNc1BYjTbMf31zQr1b44Ad7~Dd~SvaEXDBXg8XVOA42mzfSwp9P-ca60p~86~kGI8QSuExNZGKDvt9v~zw4leqQGSslXjrD-p2e5Z1ntw9NqOyp9kTQPQT7094kx4ivtPIU~a7~Vfj6OQjdQ9OT4Hj8eiBIgCvXiPuGp9Vqd-U0pEq81OO8oD~5iTI9x9NclJ52HazjUvkI3tZEODAeXV12xUvpbaFN2J1URcXhq6T9KDRYvTmPIpmtptD0W8a1SHFvvIeGZ7w8pCl2U7ji8QNtijEqnug__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_1___Review_of_Inverses__from_Algebra.mp4" "https://d1drabmetuo3qr.cloudfront.net/MjgxNGFhYmQzODAwNGQxZGU4YmE1MWUxZTIyZDc4MWM.midres.mp4?Expires=1792986566&Signature=u3gWJl2jETQEXNMDYri~wWebG2oCXlu33Sz8Cmg9jYt916m4rfsYTLI69esbhuwrBzScuvrFsCKsj4vYs-UwAjUIUqTBO3Oi6WxXOFBP9j4I9yP0TGfvxN9jHuQElXtdptwgiQdvMDcFy5rCzDSjjKrmVNcBy8qhXxBnL4fW5iRV0ND7UjZN~QA6kqiLYh68qqq74yqDK8zUTXH33i4R6ea4oKJnMZ1aIyW9DIDH5FuW6arorAwARBFVXSos4IT6MsvPe-8lC5VDj8xvwIGSE4nPvGI8WO64ZKThEIMDYoBLp~Vp8IiTbxRaNme68-NlmTEjFzTh4JITYsSN41SKwQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -18,10 +18,10 @@ curl -o "Unit_3_Lesson_1___Review_of_Inverses__from_Algebra.mp4" "https://d1drab
 ### 📹 Video 2: Unit 3 Lesson 1: Review of Rational Zero Test (Solving Polynomials using Synthetic Division)
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=fNDI2NjFhY2RjMjUyOGFhMGViZjA3MzZlNmZjZDcyMWQ
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1792986566&Signature=aik1I9GygcSrPlYI1sDWuNoRxPBk1YwD2Xwi7ljj~4fmlUbv-eX9LKroDfuG5EJ0aFcCao7uespD3g6gh0IPLkcb7AdUnfsKFOCaPKsjciH7B-oLElEED2U4Lmmqi0JkbIj0UV2x05y~emUufVbhL-7BBxDNFJe~592gwDnmHtf5RMWGf5D3nzCxq4lTYEpAv4kI57eMmV6ghgL1KwNeM5kJpLJIRKYHw5acg53gofE33PDfnGs7v3vK5apIDnXnN2Tf2ZHB-gfraw6PERZ8HuEYSUNnPecfN~3~TU6etsK-AAIs5G7vWmPbc9x3C38qYivWV~TZUe5hGCBYg~1IFQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_1___Review_of_Rational_Zero_Test__Solving_Polynomials_using_Synthetic_Division.mp4" "https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1789532248&Signature=CEEtDJzh0BcUubXLbAp1tXr48BmE8HSz03SmbKDkMbMmgKKE7D~ljZA-QhSsjxnK3Fy0HSJ5~kKJ9--W4OepTul0e3wSOi1dgZDVa~-UJ5Y6CQ0XwnSXP~Z4ERQSpw5hC39fw5irJd84o9n~WqJopb9yTitjUiVDSC5XQTBhZ~36rs5GlllFgAiWTDnXaSraRx~VCh0Z379YhBKPB2pqBVGVn~uYVL5yoI6bicUQe5BANqRZZ-ACnrPPmAIFt5Epc2cy3xjj4vMenmuBMA14KkhzcuxVu7W66nc~VedhJKh7vIml5IwTyJAHHBXAs9dNM0wUaEkJ6TiUCY5OjetWeA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_1___Review_of_Rational_Zero_Test__Solving_Polynomials_using_Synthetic_Division.mp4" "https://d1drabmetuo3qr.cloudfront.net/4XytYH35AP0.mp4?Expires=1792986566&Signature=aik1I9GygcSrPlYI1sDWuNoRxPBk1YwD2Xwi7ljj~4fmlUbv-eX9LKroDfuG5EJ0aFcCao7uespD3g6gh0IPLkcb7AdUnfsKFOCaPKsjciH7B-oLElEED2U4Lmmqi0JkbIj0UV2x05y~emUufVbhL-7BBxDNFJe~592gwDnmHtf5RMWGf5D3nzCxq4lTYEpAv4kI57eMmV6ghgL1KwNeM5kJpLJIRKYHw5acg53gofE33PDfnGs7v3vK5apIDnXnN2Tf2ZHB-gfraw6PERZ8HuEYSUNnPecfN~3~TU6etsK-AAIs5G7vWmPbc9x3C38qYivWV~TZUe5hGCBYg~1IFQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -31,10 +31,10 @@ curl -o "Unit_3_Lesson_1___Review_of_Rational_Zero_Test__Solving_Polynomials_usi
 ### 📹 Video 3: Unit 3 Lesson 2: Evaluating Arctrig functions
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=fMjI5MmRjNmNiMDRmOTE0OTljMTA2ODRkZmViOGU1MDE
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1792986566&Signature=nL6sTBXF8Dtbt7CUsL4bEeJ0U6Rw0r~pYIfIS0BE4xoPzjDXspAI8sCIYrkIN0RTJJe4kHbMMytcASGz6cZ3SCIZ--xvfq9X0oxZ~o3FpG2~FtjOJwIE0RoICltvN9QGNQDd2QKAt5BvZ6hFAsLGC2yj-Qz44KbuG9lIXXRsaJe7VdC4FMHJ6k63F4x~SrASDJUqqaZMF530Uex6Yva67Mem4dCQXseLM4JaPixqS7FoByPLylhHDXSY4QPKvy5bAk6Z254x4qGTmqPeOZKLNXa2sKwkzROfJXNEDzdIAR9nU8jT3ZvPxEZwfJFG7CcKqGPJlF5U0z7JCmfIoQIwxg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_2___Evaluating_Arctrig_functions.mp4" "https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1789532249&Signature=tvUoyT1cFRQ0QzIz6TlDDBMfbHReDVNgNxxAUrOqr6kLRc6k-H9lG1CbOe8kJk3VfwSs~t1mIakn3EKoMjYK0ro46o8uYrSsE2fU3WUGg0MfbTqr0TrnMq7F1Bga-1MZ3UKxspBE1dkeiuwoRSpazRULJ-kwc3C-zSD0dkFz2-mNvq3npnl3ZdWaSnqK8ElF1jwzSbg2famv9Szu15qY61Y0ya6YAWRPFKzL0ripGKIGy1PSWkik1ATNn8i1Uei2U~GOY4w~EbSUro9vpnm2GBbwWR2QV3EJf6ZPynvERUks5omILx420Ngb5mQDkYuGMYOgCbbhXsHvHU9YCtbwpw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_2___Evaluating_Arctrig_functions.mp4" "https://d1drabmetuo3qr.cloudfront.net/8oDUbIYDpno.mp4?Expires=1792986566&Signature=nL6sTBXF8Dtbt7CUsL4bEeJ0U6Rw0r~pYIfIS0BE4xoPzjDXspAI8sCIYrkIN0RTJJe4kHbMMytcASGz6cZ3SCIZ--xvfq9X0oxZ~o3FpG2~FtjOJwIE0RoICltvN9QGNQDd2QKAt5BvZ6hFAsLGC2yj-Qz44KbuG9lIXXRsaJe7VdC4FMHJ6k63F4x~SrASDJUqqaZMF530Uex6Yva67Mem4dCQXseLM4JaPixqS7FoByPLylhHDXSY4QPKvy5bAk6Z254x4qGTmqPeOZKLNXa2sKwkzROfJXNEDzdIAR9nU8jT3ZvPxEZwfJFG7CcKqGPJlF5U0z7JCmfIoQIwxg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -44,10 +44,10 @@ curl -o "Unit_3_Lesson_2___Evaluating_Arctrig_functions.mp4" "https://d1drabmetu
 ### 📹 Video 4: Unit 3 Lesson 3: Composite Trig Expressions (Part 1)
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1792986567&Signature=itbV94nkoeaow3SVhMheVW-IX2E4OARX7GR813xHxm8V4lZeu7bbhkg75~uX8bfWirXHP94PO7G1OjEmjmn8vAVwWuVZu3fQ55Jrq02hGmZ~z-SkqGTmL31G5LsNExtDfWJmG0xVjO~8ADJXzFYxoagTzJF~EerUz7HbiiFVcwJ2sN-c0HZfkz90wy~migG4Bcka8L2DeBwuQEK8RHuw9fDE~3ryM7s3JiGDhJFBUIUTz-w~sKJF23J3FzuxCZXkKoVPQ2oLSThjePELljAnyZI7O00-iAtgvKMV8jcsdS4YNUPp4bxTsuQByTekvPfOoEy~FL-mbFqxa6K2uJrVhg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_3___Composite_Trig_Expressions__Part_1.mp4" "https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1789532249&Signature=N0sQJNkp5nMBgcyrHOaLXPqj9pkmAV~lRp3HvQUCOAaFnZyrplAAeLLCyRnHI87xL-fNP0rFac4m-fPqUJ53I8Hw8yy0F0RDQLSHe~buQqX9UYAy0ynIJF6hgKksuEneFQSEFqEupCNf7Us4nSe~7X5d1OTynlALaVKBTka0lDh59FuYT33UY-sA8O0guBPqpoNU2QcmdNq4S4By5WPUkyqNOGkEbaKhFBrrnSGQAf41rnuRF2v~yXrNiT0j8siObUKHJtLKwNT6NwmKhlUOiYVUUHgYreVoqq9XRPch0-y9FREQGEuYg23AtoNRCa8bQwe8tQsd2jvX9CgIwTrpFg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_3___Composite_Trig_Expressions__Part_1.mp4" "https://d1drabmetuo3qr.cloudfront.net/MTFkYmY2Y2M3ZjAyOGM3MzU1YjI4YjMxYmRlMmU3ZDI.highres.mp4?Expires=1792986567&Signature=itbV94nkoeaow3SVhMheVW-IX2E4OARX7GR813xHxm8V4lZeu7bbhkg75~uX8bfWirXHP94PO7G1OjEmjmn8vAVwWuVZu3fQ55Jrq02hGmZ~z-SkqGTmL31G5LsNExtDfWJmG0xVjO~8ADJXzFYxoagTzJF~EerUz7HbiiFVcwJ2sN-c0HZfkz90wy~migG4Bcka8L2DeBwuQEK8RHuw9fDE~3ryM7s3JiGDhJFBUIUTz-w~sKJF23J3FzuxCZXkKoVPQ2oLSThjePELljAnyZI7O00-iAtgvKMV8jcsdS4YNUPp4bxTsuQByTekvPfOoEy~FL-mbFqxa6K2uJrVhg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -85,10 +85,10 @@ curl -o "Unit_3_Lesson_3___Composite_Trig_Expressions__Part_1.mp4" "https://d1dr
 ### 📹 Video 9: Unit 3 Lesson 4: Area of a Triangle - SAS Formula and Heron's Formula
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1789532250&Signature=NKb3MAdO15VK9-1J0l42WxIGLgk0dzkgc-h9FKM0xiMhmqbR44-9LPQZTE4XM9bUh1zIyOlXzluW0PPSg0XWCDz0v2D4qoLJfLopgQUIHkHqClC6-NwqnSyfzI7sE6V4wRGNzkZ5IuK-ukysrfA--sgFFBSrkATlomsZvUx7ESRyGiZyaL18ZvhvQP4CkStYUumExg9BWhvoocRTQWXrg1Jkm~5mv4kfi2cjHA8GgR8SauO39Lxj5s2NNaY3F8U8MQJWrWHwonFmtzXPFqmWOuHGAdEoHC3AxggoRIWvUv-nsJ0sfI68~j~m0HMvkf5mhtph1fQk7xEto~MrUpXwCQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1792986567&Signature=etW-txMoaSF1T2utrayU1~FwZM8h~r5WXoq4G-J8A94Ha~23QZLlfbWa-qlCxGOTVd7o614htbRszkyz4037fWqHO0o1vDAzGWWjQdlbLbNCbIhw6VfISH5YlJ~uH6FlV-hDqLcJGfUrHYdMUzW7JxwIapFvu9mHm-ExTDgQcwos9bkR34qx0EjBqRz6PeKsJ9vnu0z8n~bzkmHlrJ9avxRLo606AoeE9j9cirShps5uM-h6rHBm1rS0hHU7z4ARCp4UZ3fdPX7wyn~0SApGW1EhBlU-M2Fr5T3Cq9W-5pjJ91g5acuP2aryb7rnJzX6rnb2sPuunh3bihvR20qo0A__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_4___Area_of_a_Triangle___SAS_Formula_and_Heron_s_Formula.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1789532250&Signature=NKb3MAdO15VK9-1J0l42WxIGLgk0dzkgc-h9FKM0xiMhmqbR44-9LPQZTE4XM9bUh1zIyOlXzluW0PPSg0XWCDz0v2D4qoLJfLopgQUIHkHqClC6-NwqnSyfzI7sE6V4wRGNzkZ5IuK-ukysrfA--sgFFBSrkATlomsZvUx7ESRyGiZyaL18ZvhvQP4CkStYUumExg9BWhvoocRTQWXrg1Jkm~5mv4kfi2cjHA8GgR8SauO39Lxj5s2NNaY3F8U8MQJWrWHwonFmtzXPFqmWOuHGAdEoHC3AxggoRIWvUv-nsJ0sfI68~j~m0HMvkf5mhtph1fQk7xEto~MrUpXwCQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_4___Area_of_a_Triangle___SAS_Formula_and_Heron_s_Formula.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZmZlM2QxOTkwY2E4ZTk0OGIxODU0M2ZkYjY0Y2IzYTc.highres.mp4?Expires=1792986567&Signature=etW-txMoaSF1T2utrayU1~FwZM8h~r5WXoq4G-J8A94Ha~23QZLlfbWa-qlCxGOTVd7o614htbRszkyz4037fWqHO0o1vDAzGWWjQdlbLbNCbIhw6VfISH5YlJ~uH6FlV-hDqLcJGfUrHYdMUzW7JxwIapFvu9mHm-ExTDgQcwos9bkR34qx0EjBqRz6PeKsJ9vnu0z8n~bzkmHlrJ9avxRLo606AoeE9j9cirShps5uM-h6rHBm1rS0hHU7z4ARCp4UZ3fdPX7wyn~0SApGW1EhBlU-M2Fr5T3Cq9W-5pjJ91g5acuP2aryb7rnJzX6rnb2sPuunh3bihvR20qo0A__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -98,10 +98,10 @@ curl -o "Unit_3_Lesson_4___Area_of_a_Triangle___SAS_Formula_and_Heron_s_Formula.
 ### 📹 Video 10: Unit 3 Lesson 5: Intro to Oblique Triangles and the Law of Cosines
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1789532250&Signature=YvJD9PvyRV~hvxj7i4RBNWAU75G~iSblDue~cWWA2ni1Ol4E9mMr-it~NXunTievpatB8DfmYLk2~9Ikk1x5~WGXGdWoFr0wnO2xd6OZXi2-vrldetgRIDhNomYWe-8ykYpuuiow4JdqbPlfnHFN2Dk77PaCg9c1QEuzAzh1a~h0iSgWLnu9S7xAtFJqKqDPSHxdCVCQoC12~9rPLeVgsrl0zTIDn~O2kYCqdWhBfEk-znBO-8y7rKDwM9GpzorRuLwNYUV~mWecD4OwKo~KD-kBtvqOzVlQa7LmWp10Pb8Q3XlBywCAc6YZYegeDki~AeY4QTI8yy29XyzTyX6nng__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1792986567&Signature=AQhcvRW1fXqM08js0HkL~1xyUAXQHtEnV6sAelELJ5PEq6qD6OBxlKyG1Bf8rQprTylUddEjhbN0w5LsqUfkzn80~se7-lj2tHSXiIzfirIxoQ5FEhWNutTKAxxC2hycCv1CW6iHZtiaR4ngInPidGqHk-TFv7GOL6tYb6whTojUwaqTM2dVQBEuzQAlHIBa~CFmG7dgf9imICcn95SDMlghI8QB1Xyxo8L4eWZjFByFk-rOFS-mk6RW7PzlkR-gLdXBSabYwS4PdK16xUV-NfyDkHjo05JtxUfgbgAxDgOmOmv3vvJATxldLSoaX5OPJOELVJ0Ilta~E-i6XAuxvQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_5___Intro_to_Oblique_Triangles_and_the_Law_of_Cosines.mp4" "https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1789532250&Signature=YvJD9PvyRV~hvxj7i4RBNWAU75G~iSblDue~cWWA2ni1Ol4E9mMr-it~NXunTievpatB8DfmYLk2~9Ikk1x5~WGXGdWoFr0wnO2xd6OZXi2-vrldetgRIDhNomYWe-8ykYpuuiow4JdqbPlfnHFN2Dk77PaCg9c1QEuzAzh1a~h0iSgWLnu9S7xAtFJqKqDPSHxdCVCQoC12~9rPLeVgsrl0zTIDn~O2kYCqdWhBfEk-znBO-8y7rKDwM9GpzorRuLwNYUV~mWecD4OwKo~KD-kBtvqOzVlQa7LmWp10Pb8Q3XlBywCAc6YZYegeDki~AeY4QTI8yy29XyzTyX6nng__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_5___Intro_to_Oblique_Triangles_and_the_Law_of_Cosines.mp4" "https://d1drabmetuo3qr.cloudfront.net/NmE3MDhkMWUzOTc1NzJmMmQ1NjdmNThhNmVjYjM5ZGU.highres.mp4?Expires=1792986567&Signature=AQhcvRW1fXqM08js0HkL~1xyUAXQHtEnV6sAelELJ5PEq6qD6OBxlKyG1Bf8rQprTylUddEjhbN0w5LsqUfkzn80~se7-lj2tHSXiIzfirIxoQ5FEhWNutTKAxxC2hycCv1CW6iHZtiaR4ngInPidGqHk-TFv7GOL6tYb6whTojUwaqTM2dVQBEuzQAlHIBa~CFmG7dgf9imICcn95SDMlghI8QB1Xyxo8L4eWZjFByFk-rOFS-mk6RW7PzlkR-gLdXBSabYwS4PdK16xUV-NfyDkHjo05JtxUfgbgAxDgOmOmv3vvJATxldLSoaX5OPJOELVJ0Ilta~E-i6XAuxvQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -111,10 +111,10 @@ curl -o "Unit_3_Lesson_5___Intro_to_Oblique_Triangles_and_the_Law_of_Cosines.mp4
 ### 📹 Video 11: Unit 3 Lesson 6: Law of Sines
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1789532251&Signature=t3xaiGIRBb80gewemwGObf32ZG9k08DCPUxQZLaU1fZJLQlcggDUISWJfQbz-rOeF0yB6CdKlw4nBtK3T-DgDgXpiGvzwj32sp5Z0V3zO1nW8KFa9Y1rMGiD8dgGsvNH0y90MQ2uTZjcdGEVIt5ZeDW5YyhGZBQ3AQNbv248tsu1fcoRa~TbKPYSWhEGAoDPEJ3cVul96maXJdqdnI6NXkIu5cmxqGaQhFwUZOpq~ccvWoUxb2OyoSxuB5zXnn01lRGI9~o6w3HTIqN0JgD-aeNt8VljOs-BV6fNNWL1K5uCzi4pOCl4l3NEO8FXv6XFVgJQXj73T1YE1gC99ytDZA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1792986567&Signature=eg908EUcBIjX~F3-l6nOo5gj5TMgF4g1CJxZz94z7615VCrGT~ADSTSjFa9IXcywSbH12VzcWA5wpmTud8dzkn9cwn~4xnV-VKC-kxi0vEsv77ZsenqmHQMs7GUgy~kYvuGKl57PltcCI8KqqxLNk8SclNBe8kgyHL7YclahdMyHmriWV~IbW6jFWGOgLDrtDc3tQfusivExgFEovIuznIeRyZWeBn7FaYY2AmXXpIrVJi6zgwgKFPuPH5YXptpNB2tdktkCI2FM4BjwtU~NiDYSJ1DYtkj2br2BzwHE0IxtMVihQGR0Cto78pCYWG7L~mD7-737lBG5nxaSm4jnXQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_6___Law_of_Sines.mp4" "https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1789532251&Signature=t3xaiGIRBb80gewemwGObf32ZG9k08DCPUxQZLaU1fZJLQlcggDUISWJfQbz-rOeF0yB6CdKlw4nBtK3T-DgDgXpiGvzwj32sp5Z0V3zO1nW8KFa9Y1rMGiD8dgGsvNH0y90MQ2uTZjcdGEVIt5ZeDW5YyhGZBQ3AQNbv248tsu1fcoRa~TbKPYSWhEGAoDPEJ3cVul96maXJdqdnI6NXkIu5cmxqGaQhFwUZOpq~ccvWoUxb2OyoSxuB5zXnn01lRGI9~o6w3HTIqN0JgD-aeNt8VljOs-BV6fNNWL1K5uCzi4pOCl4l3NEO8FXv6XFVgJQXj73T1YE1gC99ytDZA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_6___Law_of_Sines.mp4" "https://d1drabmetuo3qr.cloudfront.net/MjQ5MWU2Zjg5MzBmNjVkNmUyMGVhOTcxNzg5MzNlMjQ.highres.mp4?Expires=1792986567&Signature=eg908EUcBIjX~F3-l6nOo5gj5TMgF4g1CJxZz94z7615VCrGT~ADSTSjFa9IXcywSbH12VzcWA5wpmTud8dzkn9cwn~4xnV-VKC-kxi0vEsv77ZsenqmHQMs7GUgy~kYvuGKl57PltcCI8KqqxLNk8SclNBe8kgyHL7YclahdMyHmriWV~IbW6jFWGOgLDrtDc3tQfusivExgFEovIuznIeRyZWeBn7FaYY2AmXXpIrVJi6zgwgKFPuPH5YXptpNB2tdktkCI2FM4BjwtU~NiDYSJ1DYtkj2br2BzwHE0IxtMVihQGR0Cto78pCYWG7L~mD7-737lBG5nxaSm4jnXQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -124,10 +124,10 @@ curl -o "Unit_3_Lesson_6___Law_of_Sines.mp4" "https://d1drabmetuo3qr.cloudfront.
 ### 📹 Video 12: Unit 3 Lesson 7: Ambiguous Case of the Law of Sines
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1789532251&Signature=HTa3sVhjRnJw2C62~Mk756Ojiu1xnUU6gzE7vwqae4A2TYJyHM~gmo2qvomtpa2NuMIiV3raRGUlJZSVgoB27vrJG8-r14do6MLhEroIb-MAOv7vhNft8yHsVbQJvC9~W6FJM8aymo1xaTT9j1NYYZbdH~ndVIOTJGxVgSO69YdRHvl7ZSTNvUNiYdCO~EzZYijxInF9qmNf~iSgXlVk7n6Sp6OS9dU-5AanSdwb25RBwUClBA4~9wATPcmhf9iMvIdc5UdS0L5eiPmfn2DpcZItu4CT~53mw3pWSAq48c~W6msWn-wQ351GBMkpf3~h~~y8ToNyC-hdyoxngurJzg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1792986567&Signature=mFowq6DAD0Mv9ic47Vch5rCFDhIjNJESbLw7MqII26Ro11ewx5xXzuYWRHguhpaHOB44jVH6DaELGp1fUi8fia2Uy7F9ZqxXVuIYumOJpeH~B0HvqRxEpopaWTFE9Gc1a5hnIEqRzYAiq5iuge52JLbUG18mKZfqcJ8g9exQg824nxdLJGt0WjREvC8QddP25xfKzuXlI7HWyp7ZRCIxDcMc0nH0vaL9sXzzj5a~kxqiRHhgKu371v3mLR1hiqFD6RZzQTsfqfQIA4kxw14vwwcZ1HoOGQDq5PqDvY6KZVDrpO7zn31tUy9XImALJlQnqy4iFa7LBiDYnCmaM7GpNg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_3_Lesson_7___Ambiguous_Case_of_the_Law_of_Sines.mp4" "https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1789532251&Signature=HTa3sVhjRnJw2C62~Mk756Ojiu1xnUU6gzE7vwqae4A2TYJyHM~gmo2qvomtpa2NuMIiV3raRGUlJZSVgoB27vrJG8-r14do6MLhEroIb-MAOv7vhNft8yHsVbQJvC9~W6FJM8aymo1xaTT9j1NYYZbdH~ndVIOTJGxVgSO69YdRHvl7ZSTNvUNiYdCO~EzZYijxInF9qmNf~iSgXlVk7n6Sp6OS9dU-5AanSdwb25RBwUClBA4~9wATPcmhf9iMvIdc5UdS0L5eiPmfn2DpcZItu4CT~53mw3pWSAq48c~W6msWn-wQ351GBMkpf3~h~~y8ToNyC-hdyoxngurJzg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_3_Lesson_7___Ambiguous_Case_of_the_Law_of_Sines.mp4" "https://d1drabmetuo3qr.cloudfront.net/YTdkNTI3ZjA5ODFhMGRhNTIzOWQ4ZjI3OGRhMzVhMDE.highres.mp4?Expires=1792986567&Signature=mFowq6DAD0Mv9ic47Vch5rCFDhIjNJESbLw7MqII26Ro11ewx5xXzuYWRHguhpaHOB44jVH6DaELGp1fUi8fia2Uy7F9ZqxXVuIYumOJpeH~B0HvqRxEpopaWTFE9Gc1a5hnIEqRzYAiq5iuge52JLbUG18mKZfqcJ8g9exQg824nxdLJGt0WjREvC8QddP25xfKzuXlI7HWyp7ZRCIxDcMc0nH0vaL9sXzzj5a~kxqiRHhgKu371v3mLR1hiqFD6RZzQTsfqfQIA4kxw14vwwcZ1HoOGQDq5PqDvY6KZVDrpO7zn31tUy9XImALJlQnqy4iFa7LBiDYnCmaM7GpNg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---

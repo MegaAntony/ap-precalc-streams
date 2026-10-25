@@ -9,10 +9,10 @@
 ### 📹 Video 1: Unit 2, Lesson 1, Part 0: Graph, domain, and range of sine function | Trigonometry | Khan Academy
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=fZWEwMGY2Yjk2ZTllMGYyZDAzZjNlNmI5ZDgwNjgxNGU
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1787364170&Signature=jxVD56jL2Kij5-6tlRkVPRbz-N-OOhdTG7JQSu-Gq5bJJX-aQs54ZkxQNsercq4m2SuPPaHzyk~3IIG~EgdxOaRjQYCYKLxMAJ-HGrcTDAYagm-zNFx9pZkauQLU7rVQ-G~O7gGf5m~Y~wwGlOPXuVF95Umfz3ByXRwgXgLSDF0madBkBClYZ5zs9er7ow06IhTcf-drIZW5si0~BPedEQTtNmA0PnBXf~J-LK8wJgrElu-p6IPk~Htr6qFr8nmnm0SMlJrwtrXN~Ut9uNJnhuSW9ymqFlOe7PJuBoxNtR1B0MMI~PDqMtFXmlqAQ4WL7eL7U0vHr2Mo73lhAJO4cg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1792986566&Signature=axtpMrAS3F7ksEnQmPym6-10IDmcMoFyMXEoG6-jUvclPFi9O6EQmLzd9CCMG9HF~bSBu8lwy0aW49YVmygKCGfobKfNyLeewsSvZhB2609gFbXjT6H4RBbiHn~pByuR0L6VerpzWVx~DxjFG2bA-IS1BSHcZRAbSQ2ieb7Yy8hkejz-n0dX2UzGO4EddSPxKE4Mp3uG2Ap2DtmpNFE6lo-Fxkjo4IIaMbQgbCargwGIqQ3A-rDKLtbEQD~v6QrfoHAreHC6GBsxto9rI5F7VL0uOnqZlJSI6KgHA3JRK-ASdD3ObWM~hNDbL2gNHFREX381u9xeIMyCdtPejnT95Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "Unit_2__Lesson_1__Part_0__Graph__domain__and_range_of_sine_function___Trigonometry___Khan_Academy.mp4" "https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1787364170&Signature=jxVD56jL2Kij5-6tlRkVPRbz-N-OOhdTG7JQSu-Gq5bJJX-aQs54ZkxQNsercq4m2SuPPaHzyk~3IIG~EgdxOaRjQYCYKLxMAJ-HGrcTDAYagm-zNFx9pZkauQLU7rVQ-G~O7gGf5m~Y~wwGlOPXuVF95Umfz3ByXRwgXgLSDF0madBkBClYZ5zs9er7ow06IhTcf-drIZW5si0~BPedEQTtNmA0PnBXf~J-LK8wJgrElu-p6IPk~Htr6qFr8nmnm0SMlJrwtrXN~Ut9uNJnhuSW9ymqFlOe7PJuBoxNtR1B0MMI~PDqMtFXmlqAQ4WL7eL7U0vHr2Mo73lhAJO4cg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "Unit_2__Lesson_1__Part_0__Graph__domain__and_range_of_sine_function___Trigonometry___Khan_Academy.mp4" "https://d1drabmetuo3qr.cloudfront.net/sjUhr0HkLUg.mp4?Expires=1792986566&Signature=axtpMrAS3F7ksEnQmPym6-10IDmcMoFyMXEoG6-jUvclPFi9O6EQmLzd9CCMG9HF~bSBu8lwy0aW49YVmygKCGfobKfNyLeewsSvZhB2609gFbXjT6H4RBbiHn~pByuR0L6VerpzWVx~DxjFG2bA-IS1BSHcZRAbSQ2ieb7Yy8hkejz-n0dX2UzGO4EddSPxKE4Mp3uG2Ap2DtmpNFE6lo-Fxkjo4IIaMbQgbCargwGIqQ3A-rDKLtbEQD~v6QrfoHAreHC6GBsxto9rI5F7VL0uOnqZlJSI6KgHA3JRK-ASdD3ObWM~hNDbL2gNHFREX381u9xeIMyCdtPejnT95Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -68,10 +68,10 @@ curl -L -H "Referer: https://go.screenpal.com/player/cZjurPVRQAF?width=883&heigh
 ### 📹 Video 6: 2.1a Graph Sine &amp; Cosine Part 2
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ZGY0YWQ4MmM4ZTQ1MDA5ZDBmMzAwYWNkODU3YzI2MDQ
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZGY0YWQ4MmM4ZTQ1MDA5ZDBmMzAwYWNkODU3YzI2MDQ.highres.mp4?Expires=1787364170&Signature=s3NBVfeRxW7UMBRALkdMK~kJ87xWe2t7gXrk8Ay39Uo9cxzNsTOysY5H9y1omt3F7ZJXFIdirxCQfmH8miaxwMC94IO1m13MsCmIL1UiyG9TphaqXaEpKPzzBu-TlQmoyKZD6NV4~KsEC9CY4dQZzPm6xmqUsvL0DMIZyvgcXZj3fk44n57VNnNL5bdOfhhJujLF83wAdLJZMZXLncfTP6hWjhOP-lYj0VihkYXgdmra208B-j8NRzB7quTZ3ZwKDfJc6tSpwuzGwPxdoV9Wqsfd~e0KbuenQkTdngIxf9JkchSBInbP1tDNTaeMHmVWCw17OT-aV15AQWR-GMCDig__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZGY0YWQ4MmM4ZTQ1MDA5ZDBmMzAwYWNkODU3YzI2MDQ.highres.mp4?Expires=1792986566&Signature=MZ8ggiwZ4oZNI4J7QPru6AxM2oYA~ZjpKeW-o5QBehsD4W0CtquyGbcXs5D723G5BckSzrMAasveCYoGmgCIKx42B0dke7W-gQzaV~2a46H8fIYyh3SYEckreRsK81Mk4fsWltmSjU0Pu~TxZcPFVDOSAQtVnvi4sEDNjcJQMHM8oE1giQAVqy86divuZoajNCTJa1D81LxnHqlhLWagHlQs8Oq6EG~KoZdYGPM3zXXXCGGzrRnJUY9DL-qjokZVNdxycwDqAukXg-T2juAjiQiCGyNVIR8ZzUSQ24h45xlTLL0xjccTrF55zRVRvj~rBzrSVz9cvg9V2nt9AdRsGA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_1a_Graph_Sine__amp__Cosine_Part_2.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZGY0YWQ4MmM4ZTQ1MDA5ZDBmMzAwYWNkODU3YzI2MDQ.highres.mp4?Expires=1787364170&Signature=s3NBVfeRxW7UMBRALkdMK~kJ87xWe2t7gXrk8Ay39Uo9cxzNsTOysY5H9y1omt3F7ZJXFIdirxCQfmH8miaxwMC94IO1m13MsCmIL1UiyG9TphaqXaEpKPzzBu-TlQmoyKZD6NV4~KsEC9CY4dQZzPm6xmqUsvL0DMIZyvgcXZj3fk44n57VNnNL5bdOfhhJujLF83wAdLJZMZXLncfTP6hWjhOP-lYj0VihkYXgdmra208B-j8NRzB7quTZ3ZwKDfJc6tSpwuzGwPxdoV9Wqsfd~e0KbuenQkTdngIxf9JkchSBInbP1tDNTaeMHmVWCw17OT-aV15AQWR-GMCDig__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_1a_Graph_Sine__amp__Cosine_Part_2.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZGY0YWQ4MmM4ZTQ1MDA5ZDBmMzAwYWNkODU3YzI2MDQ.highres.mp4?Expires=1792986566&Signature=MZ8ggiwZ4oZNI4J7QPru6AxM2oYA~ZjpKeW-o5QBehsD4W0CtquyGbcXs5D723G5BckSzrMAasveCYoGmgCIKx42B0dke7W-gQzaV~2a46H8fIYyh3SYEckreRsK81Mk4fsWltmSjU0Pu~TxZcPFVDOSAQtVnvi4sEDNjcJQMHM8oE1giQAVqy86divuZoajNCTJa1D81LxnHqlhLWagHlQs8Oq6EG~KoZdYGPM3zXXXCGGzrRnJUY9DL-qjokZVNdxycwDqAukXg-T2juAjiQiCGyNVIR8ZzUSQ24h45xlTLL0xjccTrF55zRVRvj~rBzrSVz9cvg9V2nt9AdRsGA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -79,10 +79,10 @@ curl -o "2_1a_Graph_Sine__amp__Cosine_Part_2.mp4" "https://d1drabmetuo3qr.cloudf
 ### 📹 Video 7: 2.1b Graph Sine Cosine Part 3
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ODU1ODRlNDc1MzYyN2U0ZjA5YzM4OWM0MTdkMWYxOWM
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ODU1ODRlNDc1MzYyN2U0ZjA5YzM4OWM0MTdkMWYxOWM.highres.mp4?Expires=1787364171&Signature=X~j5an5KyAjRylcNTEL7kM85r9APvuVc6qII1y-xNie0IZyAsZSXSRYq~scfVQLr0IUgRU6b2YwrcFLpo5VJDb36oq5wtYHlsq13JeHijeNVd-qTMy~j5T0QMGe4n6MNcHXiIEjFNp8vITy4cwKLBkMoaNxtDhF0xhTZgn4iusSsJT9f-FgX-cxGOKmz2mfAPJ3E80ZRESkrLGzqcC-9vpTdW9O0OyBDtorhwv70jdRze2yiC0n9jUjuWFGF3JdX0wj042~Hx4FzzrYXZcVUBMtt2AVK49ZngZGM9TT9kHftmD-ztR-wFO8qnIRG6E4OQms5bpEPVS6Ju-xTZWFL3g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ODU1ODRlNDc1MzYyN2U0ZjA5YzM4OWM0MTdkMWYxOWM.highres.mp4?Expires=1792986566&Signature=hhbGsrc4BtRuGDKrVS9xyKxRjOMsg6InA7IlbzJTpM8HxEK6d1pfaIc3JwAL3cdSWt1JzyLzrcgnz7cQ1auAWReoqvv091q~25KdMFd90NOEq7r6K5FRIbPilZoD5QqGYa2ZWvk~Dlaoc22Ku0ppEKhbqirl4uORepRHZS2vH2fsOc8n7eLko57mjrZGW2WhAJFhJ0xJjRtS-2SlwVzFlFeLDXBax2hHJBL6a-GG7AviouSDOj46x82glxzvWtOjtZ84bFDC70jytwtOdXVqGkPL2U9tKaTEtLx5a~J08zjwdS5ixoq19EXoTJsuq2rft25T~BeylhEyvC22~q3GVw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_1b_Graph_Sine_Cosine_Part_3.mp4" "https://d1drabmetuo3qr.cloudfront.net/ODU1ODRlNDc1MzYyN2U0ZjA5YzM4OWM0MTdkMWYxOWM.highres.mp4?Expires=1787364171&Signature=X~j5an5KyAjRylcNTEL7kM85r9APvuVc6qII1y-xNie0IZyAsZSXSRYq~scfVQLr0IUgRU6b2YwrcFLpo5VJDb36oq5wtYHlsq13JeHijeNVd-qTMy~j5T0QMGe4n6MNcHXiIEjFNp8vITy4cwKLBkMoaNxtDhF0xhTZgn4iusSsJT9f-FgX-cxGOKmz2mfAPJ3E80ZRESkrLGzqcC-9vpTdW9O0OyBDtorhwv70jdRze2yiC0n9jUjuWFGF3JdX0wj042~Hx4FzzrYXZcVUBMtt2AVK49ZngZGM9TT9kHftmD-ztR-wFO8qnIRG6E4OQms5bpEPVS6Ju-xTZWFL3g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_1b_Graph_Sine_Cosine_Part_3.mp4" "https://d1drabmetuo3qr.cloudfront.net/ODU1ODRlNDc1MzYyN2U0ZjA5YzM4OWM0MTdkMWYxOWM.highres.mp4?Expires=1792986566&Signature=hhbGsrc4BtRuGDKrVS9xyKxRjOMsg6InA7IlbzJTpM8HxEK6d1pfaIc3JwAL3cdSWt1JzyLzrcgnz7cQ1auAWReoqvv091q~25KdMFd90NOEq7r6K5FRIbPilZoD5QqGYa2ZWvk~Dlaoc22Ku0ppEKhbqirl4uORepRHZS2vH2fsOc8n7eLko57mjrZGW2WhAJFhJ0xJjRtS-2SlwVzFlFeLDXBax2hHJBL6a-GG7AviouSDOj46x82glxzvWtOjtZ84bFDC70jytwtOdXVqGkPL2U9tKaTEtLx5a~J08zjwdS5ixoq19EXoTJsuq2rft25T~BeylhEyvC22~q3GVw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -90,10 +90,10 @@ curl -o "2_1b_Graph_Sine_Cosine_Part_3.mp4" "https://d1drabmetuo3qr.cloudfront.n
 ### 📹 Video 8: 2.1c Graph Sine &amp; Cosine Part 4
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ZmEzYzYzYWVlZjVmZWY1OGMxNTJhNjAxOGQxY2QxMmM
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZmEzYzYzYWVlZjVmZWY1OGMxNTJhNjAxOGQxY2QxMmM.highres.mp4?Expires=1787364171&Signature=mjoRMpMPSEahv3-0kHcTuaqhk1cPZXY~YwBmAAWIe72j8d4AQRUiSvArlFlkW-6RoMEpIYV~s3zt5DZlqA5AVRUaMxSniZhmnLwxCpNP4v2Zl7bVNwcz8sQAQN8eqnW~LWBop~r8xvx2hfj8djiIeU-lVMZv2pIJ0x6Nlbx7wJ1fG5-as4ftLAnepFQ0prmvH9Hf2PIsl6r6rCODW1TeVjV-l9XIQ5kmZwfUgKYOosMKQsU66BMhSyOnVE8JtUNG~tMNZLWRogP1iJo~-2tdYuXXU3-USKxIBZXpi3RXOP0tmDqKiE~~mIM8~dvp22o094A64M6lJgs~LDJrnP7aqQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZmEzYzYzYWVlZjVmZWY1OGMxNTJhNjAxOGQxY2QxMmM.highres.mp4?Expires=1792986566&Signature=ZCRRO00rR09Lgw5T7lVKPSzQJBQ6kj7tGVDMqovxHKL-QL3supiOnYQLExyP8aeEcjc4kk1jKoM1urHkurV8BS5JU73UqPt2eJQw~SZiaiB4ACQongx17NFHmqZJyQUjKKbHldZ7WQlEmqT0gnq4mGB7Cq8xf9cBQY1ANumSd0xtmsv59eGN1w0zK9P1N5nWsSRZnqSB8DtAS1QvX8VicVRBWJMZjQocG8mTY366ExtafYIIaCVQX2HfDzWL2dj~ICLtu9m9zfgS2qubZaAhIx77KYC24RCA1VMduaN~VUZSEP15WJI7iFS~9E~DiQy09HfUEblyJV8I6IjMStYEzg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_1c_Graph_Sine__amp__Cosine_Part_4.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZmEzYzYzYWVlZjVmZWY1OGMxNTJhNjAxOGQxY2QxMmM.highres.mp4?Expires=1787364171&Signature=mjoRMpMPSEahv3-0kHcTuaqhk1cPZXY~YwBmAAWIe72j8d4AQRUiSvArlFlkW-6RoMEpIYV~s3zt5DZlqA5AVRUaMxSniZhmnLwxCpNP4v2Zl7bVNwcz8sQAQN8eqnW~LWBop~r8xvx2hfj8djiIeU-lVMZv2pIJ0x6Nlbx7wJ1fG5-as4ftLAnepFQ0prmvH9Hf2PIsl6r6rCODW1TeVjV-l9XIQ5kmZwfUgKYOosMKQsU66BMhSyOnVE8JtUNG~tMNZLWRogP1iJo~-2tdYuXXU3-USKxIBZXpi3RXOP0tmDqKiE~~mIM8~dvp22o094A64M6lJgs~LDJrnP7aqQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_1c_Graph_Sine__amp__Cosine_Part_4.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZmEzYzYzYWVlZjVmZWY1OGMxNTJhNjAxOGQxY2QxMmM.highres.mp4?Expires=1792986566&Signature=ZCRRO00rR09Lgw5T7lVKPSzQJBQ6kj7tGVDMqovxHKL-QL3supiOnYQLExyP8aeEcjc4kk1jKoM1urHkurV8BS5JU73UqPt2eJQw~SZiaiB4ACQongx17NFHmqZJyQUjKKbHldZ7WQlEmqT0gnq4mGB7Cq8xf9cBQY1ANumSd0xtmsv59eGN1w0zK9P1N5nWsSRZnqSB8DtAS1QvX8VicVRBWJMZjQocG8mTY366ExtafYIIaCVQX2HfDzWL2dj~ICLtu9m9zfgS2qubZaAhIx77KYC24RCA1VMduaN~VUZSEP15WJI7iFS~9E~DiQy09HfUEblyJV8I6IjMStYEzg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -101,10 +101,10 @@ curl -o "2_1c_Graph_Sine__amp__Cosine_Part_4.mp4" "https://d1drabmetuo3qr.cloudf
 ### 📹 Video 9: 2.1d Graphing Cosine Example
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ZjJlNDc1NjFlNWRlZTQ3Y2VjZDZkZGI2NTFiZDBjMGE
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZjJlNDc1NjFlNWRlZTQ3Y2VjZDZkZGI2NTFiZDBjMGE.highres.mp4?Expires=1787364172&Signature=ff~UL1WFQT4POqeXh2ywQIBbXbrO1zNqRsMjjuTO3hYU9Y5PGPneacFOX1C8YNYiUEJfPzZKoWkDN-O9jMFcDO8VVQAJgql~3uugEmziUXR74TIQuZ116AOqHfqx6~kVmlTHYprttMol~JGRYDEIzlG2yzmvAZ17danEzMqG4QwawU9J-BLpmJYNKjUqY1Hjg8W4LbksJ5zOuxDGJlzP2qOhbhb5wZdXv-2d0RBoLrnfUa0MQmgT3Pv24bsYw3M8g6OdrVL-A6g1pOnP1gchx3DI07fdSQZ2kC66tZnY1oFy7-RKfdRyOsqxe8ad7z6edt42t7Rom~iHuXE7J6lo6g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZjJlNDc1NjFlNWRlZTQ3Y2VjZDZkZGI2NTFiZDBjMGE.highres.mp4?Expires=1792986566&Signature=iEmQLDf2umgf0ut~U2rkdyLaZTDI1vQ3lQX4NmqkygZ3AMGkmopM0Y95IwsPaw~ir3lx6dWoSgoI9hFxYxMeAolf8rFrROT2b0lM-V4t7YoIjAXIrelxLVCwdyuVuPSsYORmkX6Xus7FpCzifRHOp9wbyKlgEbf~TecPk8ZeNkRgsX6bEGNfuS4c3ITT4bn62PvwCdoyrgUAQieY1buZkAxA-AtxopBj5aFchgH9RuYUzWDBXJQkZinDx~bnuwOxOEq3wpPmcupFge7ZnZnEhYuTKO7wWuJ9TuYnFZZO6r29hvna8n54yNVGlBtIqXd84NUsW3UwV8rOuaOIg0YSsQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_1d_Graphing_Cosine_Example.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZjJlNDc1NjFlNWRlZTQ3Y2VjZDZkZGI2NTFiZDBjMGE.highres.mp4?Expires=1787364172&Signature=ff~UL1WFQT4POqeXh2ywQIBbXbrO1zNqRsMjjuTO3hYU9Y5PGPneacFOX1C8YNYiUEJfPzZKoWkDN-O9jMFcDO8VVQAJgql~3uugEmziUXR74TIQuZ116AOqHfqx6~kVmlTHYprttMol~JGRYDEIzlG2yzmvAZ17danEzMqG4QwawU9J-BLpmJYNKjUqY1Hjg8W4LbksJ5zOuxDGJlzP2qOhbhb5wZdXv-2d0RBoLrnfUa0MQmgT3Pv24bsYw3M8g6OdrVL-A6g1pOnP1gchx3DI07fdSQZ2kC66tZnY1oFy7-RKfdRyOsqxe8ad7z6edt42t7Rom~iHuXE7J6lo6g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_1d_Graphing_Cosine_Example.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZjJlNDc1NjFlNWRlZTQ3Y2VjZDZkZGI2NTFiZDBjMGE.highres.mp4?Expires=1792986566&Signature=iEmQLDf2umgf0ut~U2rkdyLaZTDI1vQ3lQX4NmqkygZ3AMGkmopM0Y95IwsPaw~ir3lx6dWoSgoI9hFxYxMeAolf8rFrROT2b0lM-V4t7YoIjAXIrelxLVCwdyuVuPSsYORmkX6Xus7FpCzifRHOp9wbyKlgEbf~TecPk8ZeNkRgsX6bEGNfuS4c3ITT4bn62PvwCdoyrgUAQieY1buZkAxA-AtxopBj5aFchgH9RuYUzWDBXJQkZinDx~bnuwOxOEq3wpPmcupFge7ZnZnEhYuTKO7wWuJ9TuYnFZZO6r29hvna8n54yNVGlBtIqXd84NUsW3UwV8rOuaOIg0YSsQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -128,10 +128,10 @@ curl -L -H "Referer: https://go.screenpal.com/player/c0QqqxVCGag?width=883&heigh
 ### 📹 Video 1: 2.2 Graphing Secant and Cosecant
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=ZDFiZjBkMGJkNzg3ZDkzMmUxZDdiMGQ3NTM5MjQ5NjM
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZDFiZjBkMGJkNzg3ZDkzMmUxZDdiMGQ3NTM5MjQ5NjM.highres.mp4?Expires=1787364172&Signature=QoDXU5A6jDTQi5qYJz2iN883g313u0-4mP0vUbatohNjfkrTdkB6XUjPMcbx27RfDcGq3xWqwUwf0vkM7Ce-UIBLeU~ekFs99bTOAQq2Wvmhp0X9WkYA8croea8o3JW2n9Kz2YCtU08OeBd08lohKlgxEGs0mFchgw-Akg5vL5DlFpK0E-kSVVVnWAkkQZcTcrHtsUEjfbTd54eT~DWOMlRODVoKLZBosBA1w7gthUHSaNB1WUMbKIhxr-EtnCuwKj7XxhgQDF~4Jy3T~SNIJj4hlF8vXOkt1gJg3FYSFp~GV4bqXYU8LFJtbi1dQssXxet4vbBXE-8fZWqQCN2-IA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/ZDFiZjBkMGJkNzg3ZDkzMmUxZDdiMGQ3NTM5MjQ5NjM.highres.mp4?Expires=1792986566&Signature=NZujygb0xDSLsaVkIUUp5puMsowbSvVhhbRiE-z3AHTCbKAbb9MujtBiv3PdZ9rB9GW0aL4QuTPTxS~HIrCO6sRo4uQ~7zQEoSTHTQXTlm-4T3KFVoW83e44yE6Cwsya7LMA-NXomfFoEVFNW1tO1IvsEf9Z7gSzPWvoEjoLgbhSZrRBNIY92DEQy4M7mknZfK2T9SnXjXpeoiiuYHuWWhxDJXauChr2w5YHuDiow8dRxt8ECFCBeBsLOLsOvilzzcVUMZj1RAIG1d6WhSPGJ6sJj49cFcXDV3e7O2Dm-lhBWSegMWyA7n5EUadFeK5lX-8XewaTqPbWmNGrhjknKQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_2_Graphing_Secant_and_Cosecant.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZDFiZjBkMGJkNzg3ZDkzMmUxZDdiMGQ3NTM5MjQ5NjM.highres.mp4?Expires=1787364172&Signature=QoDXU5A6jDTQi5qYJz2iN883g313u0-4mP0vUbatohNjfkrTdkB6XUjPMcbx27RfDcGq3xWqwUwf0vkM7Ce-UIBLeU~ekFs99bTOAQq2Wvmhp0X9WkYA8croea8o3JW2n9Kz2YCtU08OeBd08lohKlgxEGs0mFchgw-Akg5vL5DlFpK0E-kSVVVnWAkkQZcTcrHtsUEjfbTd54eT~DWOMlRODVoKLZBosBA1w7gthUHSaNB1WUMbKIhxr-EtnCuwKj7XxhgQDF~4Jy3T~SNIJj4hlF8vXOkt1gJg3FYSFp~GV4bqXYU8LFJtbi1dQssXxet4vbBXE-8fZWqQCN2-IA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_2_Graphing_Secant_and_Cosecant.mp4" "https://d1drabmetuo3qr.cloudfront.net/ZDFiZjBkMGJkNzg3ZDkzMmUxZDdiMGQ3NTM5MjQ5NjM.highres.mp4?Expires=1792986566&Signature=NZujygb0xDSLsaVkIUUp5puMsowbSvVhhbRiE-z3AHTCbKAbb9MujtBiv3PdZ9rB9GW0aL4QuTPTxS~HIrCO6sRo4uQ~7zQEoSTHTQXTlm-4T3KFVoW83e44yE6Cwsya7LMA-NXomfFoEVFNW1tO1IvsEf9Z7gSzPWvoEjoLgbhSZrRBNIY92DEQy4M7mknZfK2T9SnXjXpeoiiuYHuWWhxDJXauChr2w5YHuDiow8dRxt8ECFCBeBsLOLsOvilzzcVUMZj1RAIG1d6WhSPGJ6sJj49cFcXDV3e7O2Dm-lhBWSegMWyA7n5EUadFeK5lX-8XewaTqPbWmNGrhjknKQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---
@@ -147,10 +147,10 @@ curl -o "2_2_Graphing_Secant_and_Cosecant.mp4" "https://d1drabmetuo3qr.cloudfron
 ### 📹 Video 1: 2.4 Writing Sinusoidal Equations
 * **Platform**: MyVRSpot
 * **Embed Player**: https://live.myvrspot.com/iframe?v=NjM0MTNlZDU2MmFkZTEzN2NmYzcwNDMyNzI1OGU2MTY
-* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/NjM0MTNlZDU2MmFkZTEzN2NmYzcwNDMyNzI1OGU2MTY.highres.mp4?Expires=1787364172&Signature=kTGuvv9mw7E6B6Ag3DPpnApkEV-GSe70ztO8Pkck9yO2Hwm6P5765Z9WkR8sta5nS2vLvgjUKmfapiPcHSRSLMOHqS1wR5cfYsrM7EbKR2Zw9w~ql5sMz5FumtSmZitdM1dNGIEMMKDBkXW22EpfKOWOeRJSuGa7xnDxA77Pn3vCIRUuCCO39KsWURbvynP9mne-Sh5iW6u9rAm2VrV6Ze1ZaW~GYjxXpql7yqRy0y9saK6DFSteeDfnRyJX4qAYCdHyZNI217J5msyPqvOSqMXQnjGrfTm7jjYTobg~Ewe8ZugKhfqpIOW71482tjSeXCjoFNM0lbGCn2KHPZ8yqQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
+* **Direct MP4 Stream**: https://d1drabmetuo3qr.cloudfront.net/NjM0MTNlZDU2MmFkZTEzN2NmYzcwNDMyNzI1OGU2MTY.highres.mp4?Expires=1792986566&Signature=w7lXlkPLYmaDOm35fiorijHczej-D0MudlGC6RJOBhRoitWqC-vJumr7IDwM4TDjCEWekeKU-BYssGcGhtkY8le90tfUYmRVUITuX0foXtY-uRXJV0HcB9tsODIc4ckyRmLYe02mKN-64ZR65ARTscJZ6JPMF8VKbZqowGg1b60F87qQM-VwYMmlszs19nzKeBbWMg-bOyk903XYVeMnwNFpYoEPeXLAb4tI1zs8YZcYQh29rcwHto01HzguyUL1jjEY9N8s1gA1GFvMNZEu7zrYz~-G1TjqluRRm6iqtFmIuQq3EwbiYGjZizcIPYzmy4-BJn8sdcNLFS093IYCBA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA
 * **Download Command**:
 ```bash
-curl -o "2_4_Writing_Sinusoidal_Equations.mp4" "https://d1drabmetuo3qr.cloudfront.net/NjM0MTNlZDU2MmFkZTEzN2NmYzcwNDMyNzI1OGU2MTY.highres.mp4?Expires=1787364172&Signature=kTGuvv9mw7E6B6Ag3DPpnApkEV-GSe70ztO8Pkck9yO2Hwm6P5765Z9WkR8sta5nS2vLvgjUKmfapiPcHSRSLMOHqS1wR5cfYsrM7EbKR2Zw9w~ql5sMz5FumtSmZitdM1dNGIEMMKDBkXW22EpfKOWOeRJSuGa7xnDxA77Pn3vCIRUuCCO39KsWURbvynP9mne-Sh5iW6u9rAm2VrV6Ze1ZaW~GYjxXpql7yqRy0y9saK6DFSteeDfnRyJX4qAYCdHyZNI217J5msyPqvOSqMXQnjGrfTm7jjYTobg~Ewe8ZugKhfqpIOW71482tjSeXCjoFNM0lbGCn2KHPZ8yqQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+curl -o "2_4_Writing_Sinusoidal_Equations.mp4" "https://d1drabmetuo3qr.cloudfront.net/NjM0MTNlZDU2MmFkZTEzN2NmYzcwNDMyNzI1OGU2MTY.highres.mp4?Expires=1792986566&Signature=w7lXlkPLYmaDOm35fiorijHczej-D0MudlGC6RJOBhRoitWqC-vJumr7IDwM4TDjCEWekeKU-BYssGcGhtkY8le90tfUYmRVUITuX0foXtY-uRXJV0HcB9tsODIc4ckyRmLYe02mKN-64ZR65ARTscJZ6JPMF8VKbZqowGg1b60F87qQM-VwYMmlszs19nzKeBbWMg-bOyk903XYVeMnwNFpYoEPeXLAb4tI1zs8YZcYQh29rcwHto01HzguyUL1jjEY9N8s1gA1GFvMNZEu7zrYz~-G1TjqluRRm6iqtFmIuQq3EwbiYGjZizcIPYzmy4-BJn8sdcNLFS093IYCBA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
 ```
 
 ---

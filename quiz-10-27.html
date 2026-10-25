@@ -559,15 +559,17 @@
                 <div class="now-playing-tag"><span class="pulse-dot"></span> ACTIVE UNIT 4 QUIZ STREAM THEATER (VIDEOS 1–19)</div>
                 <div id="player-title">Unit 4 — Video 2: Intro to Solving Trig Equations (STE Level 1 &amp; 2)</div>
             </div>
-            <div style="font-size: 0.84rem; color: var(--text-muted);">
-                Click any <strong>[▶ Play Video]</strong> button in the study guide below to load that exact lesson here.
+            <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                <button id="mode-mp4-btn" onclick="switchPlayerMode('mp4')" style="background:var(--accent-blue); color:#0b1120; border:none; padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🎬 Direct MP4 Player</button>
+                <button id="mode-embed-btn" onclick="switchPlayerMode('embed')" style="background:rgba(255,255,255,0.08); color:#e2e8f0; border:1px solid var(--border-color); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🌐 MyVRSpot Embed (Never Expires)</button>
+                <a id="external-embed-link" href="https://live.myvrspot.com/iframe?v=MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ" target="_blank" style="background:rgba(16,185,129,0.15); color:#34d399; border:1px solid rgba(16,185,129,0.4); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; text-decoration:none;">↗ Open in New Tab</a>
             </div>
         </div>
 
         <div class="theater-grid">
             <div class="video-wrapper">
                 <video id="main-player" controls preload="metadata">
-                    <source id="main-source" src="https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792108030&Signature=QcoWvbYmVsvv1mKuE9Ee9O7VJHir2Qe7Zn2xFvj1YEmf3cw~khd-QhHEnqQvB7jLePBxZUrFd~P7zBxE9JKND2M6FJyHoHnHJgjqeHrT5jDuf7JXGZODDCxpYiJF13nIQfhTMSJOmbAN0VUGIqhjqJqt~9v1OaEocfbz6gZIc3hngelLa4CsVrVhUiBTj32SAh6ywEiuO7quCqKJ5tInfEUTIeC98WXIchDRjSz2ucVOf1eknkXXT-WsS04X6UFQ8VFA9V7cVoIG8q5lU~T3Mc36EZhx0n9Kkps~Q8PPKoGGgC1X2LyxRZnXjkg8yEW6x~uTiV48zxkzQbK11g2wsg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" type="video/mp4">
+                    <source id="main-source" src="https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792986567&Signature=kvEjGNnK9J0CpZcG8vn0F~S51epwBE9kTJSqMtxDt4LvOVdRr1~kryr4iDvJtEGxZPRJfNUmqJ~9JwUof0RKYz8ZKNqhhAgG0zubsUNP0uRv-dzm4rFg1WwxOVyVrj943QV3lTBcLk1pk62K0rNUaYLXBp1mXqI2YOBE2H1eGKSie56d~NcW6iHAAjmWuGeXrPgFsnIRy9wRBBXbfKcpH9qnyYgnpYjiZqpXZHwfOoFwxjvUa3glLw7IHIg-Cq5NxDzzkAMcETVSQHwRdd6S4M7KC8N6rqK8hHOO0SkO6V5dcgxvrhTmnJL9fYD7zIWNlCywuO5YGgnMMPCsOyxdXA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" type="video/mp4">
                 </video>
                 <iframe id="iframe-player" class="iframe-player" allowfullscreen></iframe>
             </div>
@@ -1402,6 +1404,7 @@ const quizVideos = [
         title: "Video 1: Organizing Work for Worksheets A, B, and C",
         badge: "Rules",
         type: "iframe",
+        embedUrl: "https://go.screenpal.com/player/c06w37VE7uf",
         url: "https://go.screenpal.com/player/c06w37VE7uf"
     },
     {
@@ -1409,128 +1412,149 @@ const quizVideos = [
         title: "Video 2: Intro to Solving Trig Equations (Isolate & Sq Roots)",
         badge: "STE Lv 1–2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792108030&Signature=QcoWvbYmVsvv1mKuE9Ee9O7VJHir2Qe7Zn2xFvj1YEmf3cw~khd-QhHEnqQvB7jLePBxZUrFd~P7zBxE9JKND2M6FJyHoHnHJgjqeHrT5jDuf7JXGZODDCxpYiJF13nIQfhTMSJOmbAN0VUGIqhjqJqt~9v1OaEocfbz6gZIc3hngelLa4CsVrVhUiBTj32SAh6ywEiuO7quCqKJ5tInfEUTIeC98WXIchDRjSz2ucVOf1eknkXXT-WsS04X6UFQ8VFA9V7cVoIG8q5lU~T3Mc36EZhx0n9Kkps~Q8PPKoGGgC1X2LyxRZnXjkg8yEW6x~uTiV48zxkzQbK11g2wsg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792986567&Signature=kvEjGNnK9J0CpZcG8vn0F~S51epwBE9kTJSqMtxDt4LvOVdRr1~kryr4iDvJtEGxZPRJfNUmqJ~9JwUof0RKYz8ZKNqhhAgG0zubsUNP0uRv-dzm4rFg1WwxOVyVrj943QV3lTBcLk1pk62K0rNUaYLXBp1mXqI2YOBE2H1eGKSie56d~NcW6iHAAjmWuGeXrPgFsnIRy9wRBBXbfKcpH9qnyYgnpYjiZqpXZHwfOoFwxjvUa3glLw7IHIg-Cq5NxDzzkAMcETVSQHwRdd6S4M7KC8N6rqK8hHOO0SkO6V5dcgxvrhTmnJL9fYD7zIWNlCywuO5YGgnMMPCsOyxdXA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 1: Solving Trig Equations (STE)",
         title: "Video 3: Solving Technique — Factoring (GCF & Trinomials)",
         badge: "STE Lv 1–2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ODNjOWE3MGZhMjEzY2M1ZTU5YjVhZjk3Mjc0MzM4YTM.highres.mp4?Expires=1792108032&Signature=YVx8jfu3xEYVZ05~fE-VN1xZPw~qOyzf1Fbzn8kd~RobSAVW~mgl1aofJm94TUakizzCb5xF46AMmrPjbAMJea5D9D5oMsqRf58jd6DbRhMq1jZvkFf1HnUMYJ9tMBzwYg6i6Cg0zT0OdVnVqOWbjk3x4B3wmL~IC~jLcLac5RkXteUFDpw~VWBN8nue9Utr9BVUHaDkhoH86fLpoI33hBUugAB96KmHefkyE88MtzdA1eJCJJwfWbIaPqK13DQ25pClu9cxVi6votryDuSdazMg2hicMJqhjqnd2H8jLERIg~ueG3EvMlqJQjZIiAWJ58nbp4bz3hO1Deu6nJd8JQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ODNjOWE3MGZhMjEzY2M1ZTU5YjVhZjk3Mjc0MzM4YTM",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODNjOWE3MGZhMjEzY2M1ZTU5YjVhZjk3Mjc0MzM4YTM.highres.mp4?Expires=1792986567&Signature=tc49NobFcpWGhlrftHeXFIrll1hBA1w-cqJKGFyiR9qLm6EwSsCBYetkg5xEgofzEuY6gWdQu7MDzJovd12oHCAJvyDFHjePw~b5QwT9GnM1EGT73us-LCdtKjOl6ipJLMF7PXzo3uXXXqRGPXZD5fa4U9lwyld4vMBfaP-Y2FeUef-lCOj8UV8T3UDosrlaPDl2tLnGtZD0MfUKEE7jCnrGE-yD-iSGEuN~EHV5fTh7PV4F6QNB4XinLdPXgV5cZRc9eYEAF3dt9F1bq~KmhtrR3O-HK6mtpHfF0c7jFPcHFfiS749HSmX6gW4t3TB4RADn~zZwTAhLlpdu3QHZLQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 1: Solving Trig Equations (STE)",
         title: "Video 4: Solving Technique — Using Identities",
         badge: "STE Ref",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/OTVhYzE0NDFkZGEzMzAwZWY4MTU0ZTMyNDUwYWJlM2E.highres.mp4?Expires=1792108034&Signature=QGzy3nCLmPpcJ5h2CRScnQcWahvglACX6nJdLjUEhMR4vdCIcBj~kRj8AKJlHYPi6fUjJcrKIs2gpxmNZXNE1O~eA925o6hFPygO7EnoAjzWa8qxEb-TZCGBSUqBSzmtlX-9japrrfdLtLBdh8b5HM4p46LzEpUcg0Kr4L0DLdQ7ge1VnuYhWR2rMdOzgU9~ib4zCgfMuF~oH9HlaPniGUrJADIEHhJ4pwRKm8KWs4O0u2qC7K-scyo1dpRIi8N0uzZXJBkE5ykWMM8mHbHf62LaphnWhR5Z2~Y3JGamkAUyHGq02L16gV5voBOdfRXJSvya1LzRP5LbenMeaVKdJg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=OTVhYzE0NDFkZGEzMzAwZWY4MTU0ZTMyNDUwYWJlM2E",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTVhYzE0NDFkZGEzMzAwZWY4MTU0ZTMyNDUwYWJlM2E.highres.mp4?Expires=1792986567&Signature=kSFw7RQui8S0t0XQ5eumaALzZWGZF-nPUqQwcBmrd-ZzxJM0TsLGNPquI4~GPB6bJyiVpGpE6BL52GRZr14LWJabgg1LVd1jc-6tw7QHlYlMWOlS35sVwi4mKyvCxrFxiiVqHNjoPX40F6waak4EhhirDie875-OqOq97pYMwUx~vFN9K7kCeosYkrOjoHv34x8t6lzNzK6vadthbJwlYYnD-QYhWTY26bvHHLTU1sFscSqBFV5zNfv8VZH4qnEbJ~qTxcTSfdyyaAAX-ggXbhMnI7cHHLyRX3Tgi2dLcdIlet4lFXYoyGs~vEylFF3mlv5dqwM6UDYjBHqY8M9OVg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 1: Solving Trig Equations (STE)",
         title: "Video 5: Solving Technique — Squaring Both Sides",
         badge: "STE Ref",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/NjI0ZWIyYTlmZDU3ZDIyYzVjZjhjOTA3MTJlZThmMjE.highres.mp4?Expires=1792108032&Signature=eVcqugufgCUv27gw~zz0yfiHPj0LKXqxiec8423EJ8BUbABmkXzxlgXmGlKrEl~Nsl0GA7xa9sUGqyThRh3cdNP6RtRfor45bAuPGxiJcdfwXrU4JWf5icjDl~7tU1Vie3~vzjOuZD~b0fksZV28jFfeRwEHTLAoLS1ji7acf2kCkKeknAHvrEG2PiTdujLQLhPpHG9s3h9013c33hBVENQ0f8ozyR8eVjVJbLViITrbxhckh3yHeJjRK8d9prP453-SB5UH04oo6VnEmkR~da1eLj9xbwxJd-YMekqbZHZGegdDqyjyNjM6A1oQhx4Lx7Pd6je4fcLJrEa67DT0pw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=NjI0ZWIyYTlmZDU3ZDIyYzVjZjhjOTA3MTJlZThmMjE",
+        url: "https://d1drabmetuo3qr.cloudfront.net/NjI0ZWIyYTlmZDU3ZDIyYzVjZjhjOTA3MTJlZThmMjE.highres.mp4?Expires=1792986567&Signature=b3GfZSfMMWsY-xYAeVqErVcjQR3IqzqATMvLppzYL~TKvsLYMwwFRQ2rwv90-Rg3Ks68JOxL7wnat9wkParfs8wUYmcASLzpIPFy09DfGJm~d1V5KiKsbulSdnAmiCLcYkJ4BxTYcr7vohuHPqcDAkGW8~bePA~pyLtlnn17z54p8kd~iJTgGs-iUktitAT4frIZBJbAQb6ecIz5j6SopzHthvk71Aoh3wqMcUsTZXH9sqTUG3ftSl-cj9L7KzACcWFei7pmknfc0PX-qkmIDvQFkrZ7-SSX6A5hc53F0aFQbm1UxZQMrW5X~E7xuWBs8HMUrLB2RBEWz2qSLDh2yA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 1: Solving Trig Equations (STE)",
         title: "Video 6: Solving Technique — Multiple Angles (sin 2x, cos 3x)",
         badge: "STE Lv 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ODcwNzE1YmI1ZWZkMWU3OGE2ZTRlZjQ3NWEwNzFmZWI.highres.mp4?Expires=1792108033&Signature=CvhtBAhQTWTKRcGjz~RbZsm7O5NZ42DKLZnAlh5-FhaUKe5oX1P78LqBC1CP9KAurE9aUJM~QRtC6aL2U561KuHbvzxsS4s5uYuGolXdxLSqIlqyYo-x9cEGOlF6QvhqQ11MpatzFltxurGt0bE6T2zx2kEGLttrFar20pSNTLdkHrTAeMOHJPhLNCxfg6p7nbzU3HJbNpB~8~f~luWKD3yTz0-L62DmP5aF8Y~aZTWi48pTOxdad6te0V6d2dlRlzcuwmSlkpO4MpQkpJF6x3yzRKSoussp0G5Hru6Ohcd-SjPs15Cv74bLDa1-dQW34mJvcRFB4DACSszeFPIu4w__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ODcwNzE1YmI1ZWZkMWU3OGE2ZTRlZjQ3NWEwNzFmZWI",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODcwNzE1YmI1ZWZkMWU3OGE2ZTRlZjQ3NWEwNzFmZWI.highres.mp4?Expires=1792986567&Signature=cfXRv7CvgT5x8EoIfqggZ9gpIceid4UIs6H2s8Hv4btVwd-xQ7NzAMD3-oplc7khDtiOAnuivwpsDCSBFbTZRQ75KLLnPOTGfkqP~vQ-uIPag5pwdhG1iOxTyzqTD3eDi54On0kKzmN4WNhjMrVcQGDlYsygmqu35WZn07gUYLAfTwOAeI3jwxY0wMBPJS3K3X8UUfyokkN6iFImWUlgZz7XC5GVSR4AcRZyBzMGy7h1RiuLwqW9WyoaM-juKypnc8f6vURwSFbdsLERa2JomcSO-LIJ7UL~wegl4M6gFuF3D9~VhfTIdmJQcNAnxP~AWhOvzdE9DcxBA5WOZzVIVw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 1: Solving Trig Equations (STE)",
         title: "Video 7: Solving & General Solutions",
         badge: "STE Lv 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ODExM2ZiZWY3NDE3YjM1ZjIwMzA1OGFkMjQxMDcwMjA.highres.mp4?Expires=1792108032&Signature=kTWPEeybA8ZibTD4iqqLR3iNUM4M7o5SIMux6V9nkmqJt-USXHLfLI4Q1othJrPCaE-lYJmQfvrPLcTdnnRZUPB1CkDKMVFNiC-3N2uJr4Z0~qoeIJRfxQWkq3LguxdHLveCQNd890kARrtORcb8LmxvOO9D031m~BRh0fAbO6ade3iFdQ3YBvIdO4m7X5RTmepuZRgRs9Rn1ID9CyysZkNYh-jZKb5HamxJv1qQMlgMkRpRrWOh1W61kzymlIVFjTPAa8L3iAC9y7ICzkj7uD2BOvcbfYxpr0zmu8VYMS4b3hUkawP~zQAGBR6l2Fx6FKNmg2FElNKgp-68jLPEMg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ODExM2ZiZWY3NDE3YjM1ZjIwMzA1OGFkMjQxMDcwMjA",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODExM2ZiZWY3NDE3YjM1ZjIwMzA1OGFkMjQxMDcwMjA.highres.mp4?Expires=1792986567&Signature=AnPedRE79TohcuXcKQdnhwXfvX2xCBHI1iOVN71~EkJ2xMcX4Ozt8sCqjxaJNhWZVA0znkJWN2XJy-2lcCLlAeJzs0Y~5KneofByoTeh7ds44l9Rv8GllZuoDb77rAsjCedDDiyWqkW9joMb1nd0Z8fY58Wtx6rFEANwP6KdCh2XLnZzTIiNdmbdrZcw7IoPBFaNFcGSlyS5fFeU1MjrUeMIn8CHSD5Adk9SAP6hF84YH2u7jIct93GgwF7xKpGS4QLdmCv0W~XPmU78NQikihySnT4YPX5RGVWngoLnGdj8Jwm9PehcJ6v1urBFIHALvOKPko-oEqyizYN1zgd1EA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 1 (Evaluating)",
         title: "Video 8: SRE Sec 1 — Sum & Difference Formulas (Pg 384 #19)",
         badge: "SRE Sec 1",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ZTk0MjVhOGZmYTg3Mjg3M2Q0ZTAzNjM1NGMyMTQ0MmU.highres.mp4?Expires=1792108036&Signature=PGFMS8aeeLNIndTj0qyRL0UCriF1of01sJhhKadGGVm2ZYDyb~PAefN4Y4Gf5QpebnQSxExO0QG104xmbWjDh1s8mFyUrBcbLWeL9y~PmHK--qpHjyZRPOWWUymPmUesH5mZ4GvHRYbizwIDVpHavPYbkAXa38DY964RS0sSWxEJgsoQz-Odr2U9biPEVR~fKq-qtDKUbJubEm-jMJBXgKnITMf~hbcnqBLhPDr3dLKN6HQYQPUR-bOS9ZksS-2mLmM1~ASwNFJ0As4xhutM9Fsk-EoU5jIQsRZEB0FsjOzP4uT9XrWjHSRxzWgT6knDGkAV~Kp1kq4vBwhl4y4d1g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ZTk0MjVhOGZmYTg3Mjg3M2Q0ZTAzNjM1NGMyMTQ0MmU",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZTk0MjVhOGZmYTg3Mjg3M2Q0ZTAzNjM1NGMyMTQ0MmU.highres.mp4?Expires=1792986567&Signature=NN7UFPp4jTpFwOrdUpC3Y51di8Ry8kzbgCNtjeBT6pP3NX2S-lvZ8QPfutlEOgpHSSgaL7cUA7ZvdAQMjr2f8yGQ2byk2ouqa8fTWJIoOVbCY96YeZHeH75mvEZxxSK2Nn5ZwAA7yS8zksH8cpgS~NQTTZV6cQuGPwvgBYp9EQ787C7K72dDmKYg6w~Pfz3970bMrkxdVaACCCjX~93tXh0Y~Bzalpbh4vXHEakOIz0C3Ki2~kZC5dgg9tMDgk-ew6qAGw12L6Ss7M90lVKsFUhnfozhHZ-Rl1pzLEfRWedp5I4VROT1TUyqLcN0dn~aaLKJkw6tcORwyAr9kWx4pw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 1 (Evaluating)",
         title: "Video 9: SRE Sec 1 — Half-Angle Formulas (Pg 395 #45)",
         badge: "SRE Sec 1",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/MDliMWY0OWE3NjcyNmU0MTNkYWVlMTNiYmVlMGMzMGM.highres.mp4?Expires=1792108030&Signature=ukot0fMXIibVPp9DOOTT8Jpw2XGTINTsZqCR8MKAT~EGQdq5NIjwwvpO~no9uS3-k9hL3EtygUzz4v0vAHy2eAtr2Tr~pcPQJ9HqwcAeQapioYY-KJcz4jda~fbixSaAJh38wOyHzU9CLWgDuMMTIKKVvTPoHCq6ZBsAzjAEvoScIxtqS3PChQjhAH9DhOVKgbX-S92SlNRWRTtZ1VhthSW8MxxaBiSdSIduCpQVUDZNeuuHX0FX9qCvHO9cMsH9PL34D4O1y1h~doSjux60pbqT7e~3ER7haSsRA1TLNnviqZUv5GuLjOZPegXel~G1603SVRKLmd2IFf5oe-piFA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=MDliMWY0OWE3NjcyNmU0MTNkYWVlMTNiYmVlMGMzMGM",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MDliMWY0OWE3NjcyNmU0MTNkYWVlMTNiYmVlMGMzMGM.highres.mp4?Expires=1792986567&Signature=e43wfPxgbwO6LvSDdURLSQH~Lbb2mj4away5bnCyQTfFAQ~oT4NhYZOF~ssM~50aY8I9~RtwB8HnROhC0ozm96tPuODdA63N7P0wUGq6NqMDsStc-tGciasCbnCpxWwGpClL~Fho02wTPTLi781RPDS9ZJPoAlabE6h9aBKcl1bEjKIU6rpW6IprhKNJWCEqI07NycGkZR3Fi8p2fVyy3pP4bxI3r4Wrfu9bBdfLNiPxcif3qOvTq1XnqEYDMnxazAKIaZozASxIImGFRBFy8EHn9qky~PazcK8WigjtAk5Shjqlr2YHZ4i47AuIiE81lRBaP~cUoztaLSd7p9VvyA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 1 (Evaluating)",
         title: "Video 10: SRE Sec 1 — Sum-to-Product Formulas (Pg 396 #83)",
         badge: "SRE Sec 1",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ZTljOWZjMzNjZWIwNjk4NWJlYWVmODMxODM1NzY2ZDg.highres.mp4?Expires=1792108037&Signature=xfqnXJDkZkSiz0HVIVm66PMHW~AFumaZR2f1C4nx2Lx1ptJuyPsWFfaYIrbdioy1mDcSUfn5uowgtfVjn17C0rBku8bKUHnpd9Ydh-C7a3rqj0RgQFpG3nXHT6S0fKOSycvHpHB68zPMVjhhqTEz9C-p9gIhhHqksWSK35ffLLKyDf8s7oGKlOLT7LFg41WTirqw1g3GXLpbIjP9fzZglx1t1wBI1xr4Bnpke1Qw4SsgKDVDVZPqNMGBZEF2JbWwSEH0UkxKvQEd-3-zhsGSoihQqHXN-aozLkpdUU0T1b9zpMRj2T1idx8LtwXJg58rPTkvmMzviilhQu7PinLPCA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ZTljOWZjMzNjZWIwNjk4NWJlYWVmODMxODM1NzY2ZDg",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZTljOWZjMzNjZWIwNjk4NWJlYWVmODMxODM1NzY2ZDg.highres.mp4?Expires=1792986568&Signature=TjVUeGBt29qzoS8BEh9SnRAPmXET0gHZ3r9rOfJ4B0kbe4NI9s1N6RA6MN-t--8E0u8rA3bGpI2yNdcuIrOry46q59QWQqHSis--~a8m9goXxuNNQIK01bUSSiWFXUvfbEGRZBK8CuRlob~9tZmpoHqwGJDu4D8TFSJ72~kZPvON78orvZOzDgj3wKJt53MIU~pKGJTHwONz~dcktik8AebBzcjhsCrwlKDTZmCixBF5yJY34NrL8TiiXECmhCWvkTT~-ke1Rb5fb3Ov9rLxc00l4G9i4w6S031Vk6geVxS71sDksfAI8g~-B0-8rHcHoqy-xHOSRElK0ucv0GDlUw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
         title: "Video 11: SRE Sec 2 — Sum/Diff, Half-Angle & Double-Angle",
         badge: "SRE Sec 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/OTQxNWM2OGNmMGNkNWMxNDczYzFmMDNlOTY1ZDY3NzU.highres.mp4?Expires=1792108033&Signature=jbyC6FWz9696wMEBEfejrqNs4i0XIB6UsNr0HDi8MaByRhaJOedErfpbauUHtMQKBi64tQXBACWvGkXp5cytvKEhELZN5mN-7ie6d-i1N2UadtmrYqPfaBI9b6rWy0orQk~xalTTWKcW8aMG22RVM0iHHhOk8SEr75mUVTD6wiFaI7dRX~sAuWKHPJLCaHAh4RB1-9eDlJRMuXWxhkZ8jCqDC2dOnWTncKrhv2IjDbQqEIqWgmE4Lwa3elUGtfjag3ZxPUIZhUUZaY4EifpjZSwtrnEpa83qg2~QSLxM~Dn~tSrPg3ZhifC0DxhrVJ7aS8Pp-g22CmXG7zT3fdKWpg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=OTQxNWM2OGNmMGNkNWMxNDczYzFmMDNlOTY1ZDY3NzU",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTQxNWM2OGNmMGNkNWMxNDczYzFmMDNlOTY1ZDY3NzU.highres.mp4?Expires=1792986568&Signature=KOhyKC0FukRtMXunjWq-fytZS5XQ3pONzBe4b57Ryn9gcZprrqSbS2ZHbSi5Gzb3Bz5miXACsetbotjqPY5frkI3JR6-3X7mWJ42qf4Oy9sr0Es-2wfFCm-gtgc3VXdqtoeVenio5XjpQhqbDp5x~w9~ahze8Kehwyy5mNsgw4UAn5R~ow1mdYBT~a0hAMdHXT7RGCQvuO55lzmuAtlfo6qX-QsXuGY~EPZ8LdgvEGlznSRPm7lZPEK3ZWaiNRNNBqZ8CmrlgMQz2y3dTLUmZiryzlLM4DE~RBflePxLNHxj88R1PsSNWykxR3CM1ORvC6QPA5aUk~n6YwY-OV1Baw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
         title: "Video 12: SRE Sec 2 — Sum-to-Product & Product-to-Sum",
         badge: "SRE Sec 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/MDA4ZWE4NWMyOWMzMDg5NDQ0OTk2NzZiY2Y4ZDRiNzk.highres.mp4?Expires=1792108029&Signature=i2I0la9dhb8c6dSaec1NJ2dBTXTfqLxse9idAp~R-UwNXgh16bbZV8sK51A-GHlALIHHfvkNAMnwCv9P~4a41mZoh1hMHY0Wmg1GzT-xr~yHC0liOqPfv3u3znmmYTG-v1dTg1C3Y9E2TkHqbLJn9dl5J6G3UBgrnoOtLkyCThxci9SLsWJrisTMiIBAgnyJRVq65p8ZH~uYMus2gvx00yXrDFevjU02svItIWRaZp8EQbStfFFUyzzPdZ2QCWjZCkhI4zry6DZ6Xr3rZ6gdijEuLioXKKlBdck7K3p6lPsn-Qm~KpEtfr7nGlZPDA3dU~E9mzFdIB~EPHhFKh5otQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=MDA4ZWE4NWMyOWMzMDg5NDQ0OTk2NzZiY2Y4ZDRiNzk",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MDA4ZWE4NWMyOWMzMDg5NDQ0OTk2NzZiY2Y4ZDRiNzk.highres.mp4?Expires=1792986568&Signature=gs0vtXECQ8pNfddhdSr7rCcPYHWEUy6glEEkcPEKyy26M05W6-iDCJ-Yy1f4gnFLAx21La3DBLHMMqfKns0QaW9h3MBBLkDSeufWPV8MmKw0MHuSfWBjxPNvNiRrpVi8Cga0x314oACG85iJskHfdpHGKiuK6fkkUWefw~nArKB9BCvhNzvYlr4QeCUBUBqXidv3-vr67IoefvysAPFv0T~NL3mDNwK5EY0anvnvGEArcTnWVNfL1o6rPcpfTki3p1vEZXG0J7F5OgZWjpvjt20MTwTGPdu1Dyh3xGKO8DMMsrMOHtqWh-y5mghMMIyLeDyVBOAtZETd1AyGpTWGqQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
         title: "Video 13: SRE Sec 2 — Power Reducing (Example 1: Pg 394 #25)",
         badge: "SRE Sec 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/MzdkNzAyN2E3MzNhZGFlNTVjMmNhNzY5OGE1ZWNmZGM.highres.mp4?Expires=1792108031&Signature=xRdsUHxBudtPu1hQkBbX0U0QK0e2lim0kiW0gBS7Wy-vFEQ4rG~IRLMgVCuIemYebZjxEG3azQHxKMwVhy8iWwnNQaaTNoV3omBZrMM~pjzgOc01sFoc-ojyEYAHMgCu-1N~ZLGhb3Uz3J9QwSBu2BGlmrEReh5AWh7JHjL-xTO0djItoatoITK~l9kefp46pfRgcNFDMa58wQ9iuIjf6TBQ8AUbCu-wDf2~S4DDeakV8ZG5XvW8r-Uf76pG7Jw3YECbSqk7sjdIFz-Ma4GDmMr7ym7zVINSwo8h07UHiYaOvPYrAt2hd26g2q~AAgBOIvMToJsZr8J1eRaubFXtuA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=MzdkNzAyN2E3MzNhZGFlNTVjMmNhNzY5OGE1ZWNmZGM",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MzdkNzAyN2E3MzNhZGFlNTVjMmNhNzY5OGE1ZWNmZGM.highres.mp4?Expires=1792986568&Signature=mPsfIH6YnzaJfYVpX6UjS4R~gahxcKp4oE~Mp8vmxaCK6hOJIoaH-lp-ZwisO2P~8O7TlsEXNtvfpZ4ywE8TMZ3GVwE0392r7aj8sDhkYO6jRz0C5n-pc-vGHwVGiLGx2~Q99Vu0ZF8bB277zca1WbAVrYcmVLJ4tgT-c~DvhEOTrdJsb9tB2NXD977NuRGGyWFGlQ4NLjc6FN4YFdQ~z84pc6-jpvkLCjzUxOFIE1yiypnPeHgEfvntGJEzIMK3uXWy3orqXJ7mg55afnOxRIqk0C-FDcTFCDqFXHwbAGvGFtr6MFH3UF0lqe3suvfcjQhvt1Y0stjm-eVmW4~HTA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
         title: "Video 14: SRE Sec 2 — Power Reducing (Example 2: Pg 394 #27)",
         badge: "SRE Sec 2",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ZjQzYjU3OTg0MDViNmI3YzRhOTJmODA2YWFkZDBkMmI.highres.mp4?Expires=1792108037&Signature=N01KGsBgddHMfzy7omiFcrdMpFxbxFutkON~v6OZVmO1n9HhcFp-ALzsKX47PGJn171fozhYVYR-ra6vEFf7UjdS1up3jXPbiJsnCPGQdwlX9YzTzZSkc~zSapaS~bHVdtmQSS-78GKIfwrXWry0sScQ7KyWayPDbxLgCFZ04XiwkW2nPaR4HP8nxZb7c8HGoh4XBqA9kQyr985RPKr2p~M0SsyikVZ8t9i3jJIOlr7Q4xx7XGvXwN-qr8ZT3DSSKXq-ydK6uqDMz9q1XW9S94GDE1jgk6uE7KlGf4izqXqC~-ZLG6ZXgvlMDicv1XKffs30ud9-dP2YLfnDFBsnaA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ZjQzYjU3OTg0MDViNmI3YzRhOTJmODA2YWFkZDBkMmI",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZjQzYjU3OTg0MDViNmI3YzRhOTJmODA2YWFkZDBkMmI.highres.mp4?Expires=1792986568&Signature=n81rl7FhFApFrl~hiexIjPVO2qO8LphRFafTv8hRVhoQUfHP0iM02vPPAcd04LPLQUKsRzxrCmsirIrSFdKdrpaNH252pgppYXXtC06iNd1IjdGm8U4awLSTrF-ueZ65yMHB6Fkf5wEEGaWDV8y5wi56y~H4UW4rmZFpDzcOravMvYkALOsReWLDVHYIm300vFlmEYEFTHBwQKyzmwm7DohHPMTcoxqhKekfpyzQiHEd0xo6osIe0wxSN9Tl~pQQhzZEZerSmCjoqGnu-3Z5ow3DNm5IcuR-4kBv04v2bnUb6wByUULc7YGJJdkZkjhO9KiXxA-oWqT1Q~pOkufhrA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
         title: "Video 15: SRE Sec 3 — Sum/Difference with 2 Triangles (Pg 384 #41)",
         badge: "SRE Sec 3",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/YzMwMzljODc0NDU2ZmEyY2M3NTc5YmYzYTA0Y2E5ZGI.highres.mp4?Expires=1792108035&Signature=n5mlv-5wU2KiezWGN4IIg7ktWUgHTR8Xx4VrrQH0~3aq~jzGt6WKwjWi2mkE7CjQ38VuXHDHaM82mXxLGm6aUDC7VkIPI9Uqtynt1Rq0H3hHx373I9SAoyyd-6f5HVYpR1hMrAMaTayJn2qRerI2Ag7dg7MZHlRewBFDfJMUw3Fe-6psTSVx3smeQpGsZ9tsHtKJ6ta4DxSVTeeMPGFc5FUelSdSTuB4h6StDoNqn9QUm0WqJ5nrm-tdBIWqYCX1lM7F8lBxl4kd6oNHm9HozqBPS-JMDeq2D02WQBWSxjLuRVPJB2m4DSSDiJ-ADR5J18Sac65ajZnOEIzqGxjgWA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=YzMwMzljODc0NDU2ZmEyY2M3NTc5YmYzYTA0Y2E5ZGI",
+        url: "https://d1drabmetuo3qr.cloudfront.net/YzMwMzljODc0NDU2ZmEyY2M3NTc5YmYzYTA0Y2E5ZGI.highres.mp4?Expires=1792986568&Signature=GAkW1SwtOZWJnY0iS1tCSnz2V38joLBt40OHRu8v~oT0XrJOQveLipaVGlaWEVzEmRvH8dYRWZTWI1BU4B3cfoQYFV6BciAuZu3pPYz16HnTQuzqBBkJYofemJTSS0mXFbB99GwlJE4NIKH1X8IjASMLcCdahsUsc42eYSkdr6lMOgFLIuaYJYAdNNiYu3zAR6digaOhm5snYXaBkb7GKWCg2o7GgjVq0Z5b0romfMwDtfjC8Ue-F6apHEG4z3xSXKfVn7b69HgxbPSJ73C7sfmiPSAPDQ25dT4WnhZ7Xz2iLsShOf7vrV-TG15HTKfwqTRiezqOEkrwJ8~eQzCiBA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
         title: "Video 16: SRE Sec 3 — Half-Angle Triangle Problems (Pg 395 #49)",
         badge: "SRE Sec 3",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/ZDgxMTkzYTJlZjQ1MDQyODZlOTk0NzJkMmRmNGE0NjY.highres.mp4?Expires=1792108035&Signature=BITR-eVeYIiE1g~8FrUBFZEUWB8jfw2pTLeCsDwLm0D4zMYQMsINA1yltv9zfCzgRfUJGPxD9C5Pvs3gsgqJPIBQMFEohGBvhJcJyXcLAubHkXyKHY29q1j3LHnnIpo622U4ydT8Wu0O0TsecS7ZS~DPXFyDi~29II8vf5ldzQi4-6s2I6VDkQPr3VdtQMX1bU3ptpNz5BgvE5CCfv7ytL9z3triqymyKmP5eb0Jb~FVjfkNm-FtMPclko8oylMhves40uAABw0DUgPbsBmo5RNnyzY7t0LbYuguUj6-zqt745-w-xAXhzj2MAVpfAIJ4Z46iDuLAW8LHv-Wl3BVLw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=ZDgxMTkzYTJlZjQ1MDQyODZlOTk0NzJkMmRmNGE0NjY",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZDgxMTkzYTJlZjQ1MDQyODZlOTk0NzJkMmRmNGE0NjY.highres.mp4?Expires=1792986568&Signature=kQZJKY85Xw5tjsn5ofP3OuynqxeH4stdlvVqovMWox6Yr1ihJaAOfHY1-I-DdTu8qyEQg~H5wAytLbEfhSzWS5sTTrDLDNrImFonCqy8ZWYujlVE5W2KXSDYmD8XL66ThSHRMAkgnbyBtDJcY4jxPn9-LotNzCaN2c-fGggTBBPEnc1S55X-u~p0kWKssSWyNIAAUxpw6mD-KTAAbfU3Kt1qHUGyrtDMbOfEC8YCnrBnTDV8PTTQuIp9QTSBp-GHz-ZZzwA1i0txlZC1dYYUVUBszMkJSHT4KRw40bxS2jbeq-suCnyc8ciHNlqJ-c6BmfNpWzHz8iOnQfUzviDj9Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
         title: "Video 17: SRE Sec 3 — Double-Angle Triangle Problems (Pg 394 #17)",
         badge: "SRE Sec 3",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/YzdkZGY2NTIxYmVkYTU3ZmVkMGI4NmQxYTk1NTQxNDY.highres.mp4?Expires=1792108035&Signature=q5hM2~UAs1Exg7EBs3W5AxYX27Z~lfrphhRFVCzhQUwK1HMK9rThtLwyKG-w0WaaYJc7jQNHqwyxLR7Aa7wMFgx6sIkPbnlFNKp4H6bAMRBVfPfkRjTugkUncLDEU48YcZmdJJWVDfwfgCcFvxSb~8RGguZNw~49z0Z4L7wme6q1V4zOzMsJz1TKaz9T61T65iUgYJJpssgLKuLqWc4QthZf7X2Rvedg5mt4L~mM~TEhtVAqloXJ2tEejZXuEVnNjmY~XKPbwwxigQ5wTs64rnIn2lnev-2SJFxhMJNSGx5vO4Xe5liEqLsBnwrH0gYZwt9FCO-Bt2bY8CTISm49eg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=YzdkZGY2NTIxYmVkYTU3ZmVkMGI4NmQxYTk1NTQxNDY",
+        url: "https://d1drabmetuo3qr.cloudfront.net/YzdkZGY2NTIxYmVkYTU3ZmVkMGI4NmQxYTk1NTQxNDY.highres.mp4?Expires=1792986568&Signature=r96ODycdr6N3Y-FSkX2egZxxq5Y9XUtlqnXxvCwg1kOZQIwelbYi-d6AkYSiTGGYHdE92bXw1A5p~EIcB27zhkTTwPgP2EF5uZoOvn4IL6jN2idkbVWBvjFmM7rR3CJGxSb5hVawKABeFvwAlPAm0jHGr6UMd5gxxPH7v2gAI5VpFtnQ-gyNgZDv~S1cCs3o-Y-hIqHBsv1QYkUI0-HMg-AKvmVZUVMKPa07RK1FyT6vUShdN8ENENnnYESIWyRyXXydZdHOMzG7N-b8A77-7IgNJg1XFJbojGJwDlfuI9SS-nKkBA0T3vp5lX9z6xCIF3RqEYeiR66Sjxn9iLha~Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 4 (Inverse Composites in x)",
         title: "Video 18: SRE Sec 4 — Sum/Diff with Inverse Trig (Pg 385 #45 & #61)",
         badge: "SRE Sec 4",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/OTE3OTlmYTkxMTAxZmQyNzlkNDg1NTdhOWM1MTBkMDg.highres.mp4?Expires=1792108033&Signature=XaYE1DreFAVL833Z~1HZSYcVsxlaR-U1s1Iq-KXfcAdlM4xrGbOjmJYgjwSLY8mpIwDhUjPM6qWRo7KbwdE9jYgkDgr2HVraGjl9DId7gAQZ6mcJy45xe12SPDFmKyKLZIg5cFlimwXZl2b-mVdZlav2qqEt0eQrCK96UkHYmBA7jJX8tyaZxA8BBX~o6RHQHkv0X117UYjulyQWokBe307OK~U2Y1Awrh6m9vWQ3ZVA0Werkdviecy7xoKDYK75Cu85J0x5DgXzBNMDwh0NzKUaf9x6jxBdMcWiPCfkqvQMWu1PHJhR~50Od3J6kvjzOcSngjznC-hGSnfyC-zA1Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=OTE3OTlmYTkxMTAxZmQyNzlkNDg1NTdhOWM1MTBkMDg",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTE3OTlmYTkxMTAxZmQyNzlkNDg1NTdhOWM1MTBkMDg.highres.mp4?Expires=1792986568&Signature=AurbauvyesKufAhG5ZOMhWZ7yV~gwxSBo2emo3JUjpAHxRdI16EZ2K5WG0x-87dZcifqb7276XMx-BdSXfk7oyS0~DULEZ8pFgNsYc75ZFMWSjA4hfWWoLqqOIDUeng~dTifgOka6f6X6xqrXo5IHqJEr3gjpLMBr7pwDydjRM957AbL7IBX30gP8G3kg5d2MN16-22OXvT43Va-f3Ygpj3bnmOWRDXSM706vLIijW1MB7KsUlWBgJIM1n1jH3pLZqhxzEYlO7DRxFjr79wg2aRVg7~ildAAM5duZumb9nslpMfu8kLPTeaApmFww57TwD0TUgdu~vE~d~awFwS5wQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     },
     {
         group: "Part 2: SRE Section 4 (Inverse Composites in x)",
         title: "Video 19: SRE Sec 4 — Double-Angle with Inverse Trig (Pg 396 #115)",
         badge: "SRE Sec 4",
         type: "mp4",
-        url: "https://d1drabmetuo3qr.cloudfront.net/MmE5MWZiNjBmZTc1OTIyNTZmZGE5Mzg3ZjIzMmZiZDk.highres.mp4?Expires=1792108031&Signature=DQbeUjS0e0pM8S6WjeOfgrZ2ke7HzstqpKLYahB08HoVTzaOYZAaWidnIFiytMMKv~ikNdIyYgCH7sk5exWKnG01MlU8eYyeeXhc4xrPyrwqd4aoaEUnMCynQLdlUAagRvXO0ZBCds-ThRe4-zp3AjAHbEzc8OmQAvFdDjfisqj02NUoQSoHKZ9tba7JHV6ripEQRq0kwsY7nRl2oNkhJcpiVhrIfE-1ImM5js6eo0902d6AXyg8AV9HJqrasmxDdBe0h2pZ10caTHv1tY007V9bKHSn3ZyOvhmfKjvxdQUsw~J8kh6Yh54dT0-sF8ddx49CL3iC12SSbQ6COzKYXQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+        embedUrl: "https://live.myvrspot.com/iframe?v=MmE5MWZiNjBmZTc1OTIyNTZmZGE5Mzg3ZjIzMmZiZDk",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MmE5MWZiNjBmZTc1OTIyNTZmZGE5Mzg3ZjIzMmZiZDk.highres.mp4?Expires=1792986568&Signature=f02unPavYTAgus2f0ZHge0Na1GmfqZSEVJ1Ulm~e2rka06~Ci5vTNN7ifZIydKNkWN7kaTmSQRL5lQmrZusZksAHdKZ4f8F1lkE7pY1Z1Xv4inlA-AdziH5ioQeLahviE3fkM02pwevHLo~axl49JHth0t3RyjJtcQW5zLJ0wGWtyvVS5fDV5WMzKGlZsxDLh6JHtEkxtZqGSJaG8G-iF-SsRV-o46mShkywzrVVz~IJ~6HuoOnFB~MHg2tHSRGAkVV4kxO7fcRjy3CnvrLn-xX2ffcc9i8iZff-Use8XtSTB1qLHDbDOmjk0WBsALbfD6kaVfiZr2Ja9SbZ9pbrXQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
     }
 ];
+
+let currentVideoIdx = 1;
+let preferredMode = 'mp4';
 
 function renderPlaylist() {
     const container = document.getElementById('playlist-container');
@@ -1550,26 +1574,62 @@ function renderPlaylist() {
         `;
     });
     container.innerHTML = html;
+
+    // Auto-fallback to permanent MyVRSpot embed if a CloudFront MP4 ever fails to load
+    const videoEl = document.getElementById('main-player');
+    videoEl.addEventListener('error', () => {
+        if (preferredMode === 'mp4') {
+            switchPlayerMode('embed');
+        }
+    }, true);
 }
 
-function playVideo(idx) {
+function updateModeButtons(mode) {
+    const mp4Btn = document.getElementById('mode-mp4-btn');
+    const embedBtn = document.getElementById('mode-embed-btn');
+    if (!mp4Btn || !embedBtn) return;
+    if (mode === 'mp4') {
+        mp4Btn.style.background = 'var(--accent-blue)';
+        mp4Btn.style.color = '#0b1120';
+        embedBtn.style.background = 'rgba(255,255,255,0.08)';
+        embedBtn.style.color = '#e2e8f0';
+    } else {
+        embedBtn.style.background = 'var(--accent-blue)';
+        embedBtn.style.color = '#0b1120';
+        mp4Btn.style.background = 'rgba(255,255,255,0.08)';
+        mp4Btn.style.color = '#e2e8f0';
+    }
+}
+
+function switchPlayerMode(mode) {
+    preferredMode = mode;
+    playVideo(currentVideoIdx, false);
+}
+
+function playVideo(idx, shouldScroll = true) {
     const v = quizVideos[idx];
     if (!v) return;
+    currentVideoIdx = idx;
     document.getElementById('player-title').textContent = "Unit 4 — " + v.title;
     document.querySelectorAll('.playlist-btn').forEach(btn => btn.classList.remove('active'));
     const activeBtn = document.getElementById('pbtn-' + idx);
     if (activeBtn) activeBtn.classList.add('active');
 
+    const extLink = document.getElementById('external-embed-link');
+    if (extLink) extLink.href = v.embedUrl || v.url;
+
     const videoEl = document.getElementById('main-player');
     const sourceEl = document.getElementById('main-source');
     const iframeEl = document.getElementById('iframe-player');
 
-    if (v.type === 'iframe') {
+    if (v.type === 'iframe' || preferredMode === 'embed') {
+        updateModeButtons('embed');
         videoEl.pause();
         videoEl.style.display = 'none';
         iframeEl.style.display = 'block';
-        iframeEl.src = v.url;
+        iframeEl.src = v.embedUrl || v.url;
     } else {
+        updateModeButtons('mp4');
         iframeEl.src = '';
         iframeEl.style.display = 'none';
         videoEl.style.display = 'block';
@@ -1577,7 +1637,9 @@ function playVideo(idx) {
         videoEl.load();
         videoEl.play().catch(() => {});
     }
-    document.getElementById('theater-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (shouldScroll) {
+        document.getElementById('theater-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', renderPlaylist);
