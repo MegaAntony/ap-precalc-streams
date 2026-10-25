@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Precalculus: Unit 4 Quiz (10/27) Study & Video Portal — STE (Lv 1 & 2) + SRE</title>
+    <!-- Google Fonts: Google Sans / Roboto / Plus Jakarta Sans for Google Style Clean Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- KaTeX for High-Precision Mathematical Typesetting (Local Offline Bundle + CDN Fallback) -->
     <link rel="stylesheet" href="katex/katex.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
@@ -26,9 +30,41 @@
             initKaTeX();
             setTimeout(initKaTeX, 150);
         });
+        // Prevent theme flash before paint
+        (function() {
+            try {
+                if (localStorage.getItem('precalc_theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            } catch (e) {}
+        })();
     </script>
     <style>
         :root {
+            --bg-dark: #f8f9fa;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f3f4;
+            --bg-theater: #ffffff;
+            --accent-blue: #1a73e8;
+            --accent-indigo: #1a73e8;
+            --accent-emerald: #1e8e3e;
+            --accent-amber: #e37400;
+            --accent-rose: #d93025;
+            --accent-purple: #9334e6;
+            --text-main: #202124;
+            --text-muted: #5f6368;
+            --border-color: #dadce0;
+            --box-shadow-card: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+            --box-shadow-subtle: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            --header-bg: #ffffff;
+            --nav-bg: rgba(255, 255, 255, 0.95);
+            --math-box-bg: #f8f9fa;
+            --playlist-bg: #f8f9fa;
+            --details-bg: #f8f9fa;
+            --table-header-bg: #f1f3f4;
+        }
+
+        body.dark-theme, :root.dark-theme {
             --bg-dark: #0b1120;
             --bg-card: #151f32;
             --bg-card-hover: #1e293b;
@@ -42,19 +78,29 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #26354d;
+            --box-shadow-card: 0 10px 20px -5px rgba(0, 0, 0, 0.35);
+            --box-shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.25);
+            --header-bg: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #070b14);
+            --nav-bg: rgba(11, 17, 32, 0.95);
+            --math-box-bg: #090e1a;
+            --playlist-bg: rgba(15, 23, 42, 0.75);
+            --details-bg: #090d16;
+            --table-header-bg: rgba(30, 41, 59, 0.9);
         }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.65;
             padding-bottom: 5rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         /* Top Global Bar */
         .global-bar {
-            background: #060911;
+            background: var(--bg-card);
             border-bottom: 1px solid var(--border-color);
             padding: 0.65rem 1.5rem;
             display: flex;
@@ -68,6 +114,7 @@
             display: flex;
             gap: 0.6rem;
             flex-wrap: wrap;
+            align-items: center;
         }
         .global-link {
             color: var(--text-muted);
@@ -75,27 +122,28 @@
             padding: 0.35rem 0.75rem;
             border-radius: 0.45rem;
             border: 1px solid var(--border-color);
-            background: rgba(30, 41, 59, 0.5);
+            background: var(--bg-card);
             font-weight: 600;
             transition: all 0.2s;
         }
         .global-link:hover {
-            color: #fff;
+            color: var(--accent-blue);
             border-color: var(--accent-blue);
-            background: rgba(56, 189, 248, 0.12);
+            background: rgba(26, 115, 232, 0.08);
         }
         .global-link.active {
-            background: linear-gradient(135deg, #f43f5e, #d97706);
-            color: #fff;
+            background: var(--accent-blue);
+            color: #ffffff;
             border-color: transparent;
         }
 
         /* Header */
         header {
-            background: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #070b14);
+            background: var(--header-bg);
             padding: 2.5rem 2rem 2rem;
             border-bottom: 1px solid var(--border-color);
             text-align: center;
+            transition: background 0.2s ease;
         }
         .badge-row {
             display: flex;
@@ -106,49 +154,55 @@
         }
         .badge {
             display: inline-block;
-            background: rgba(244, 63, 94, 0.16);
-            color: #fda4af;
+            background: rgba(217, 48, 37, 0.1);
+            color: var(--accent-rose);
             padding: 0.3rem 0.9rem;
             border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            border: 1px solid rgba(244, 63, 94, 0.4);
+            border: 1px solid rgba(217, 48, 37, 0.3);
         }
         .badge-blue {
-            background: rgba(56, 189, 248, 0.15);
+            background: rgba(26, 115, 232, 0.1);
             color: var(--accent-blue);
-            border-color: rgba(56, 189, 248, 0.35);
+            border-color: rgba(26, 115, 232, 0.3);
         }
         .badge-emerald {
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.35);
+            background: rgba(30, 142, 62, 0.1);
+            color: var(--accent-emerald);
+            border-color: rgba(30, 142, 62, 0.3);
         }
         h1 {
             font-size: 2.35rem;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 0.5rem;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+        body.dark-theme h1 {
             background: linear-gradient(to right, #38bdf8, #818cf8, #f472b6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 860px; margin: 0 auto; }
+        .subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 860px; margin: 0 auto; line-height: 1.55; }
 
         /* Sticky Navigation */
         .sticky-nav {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 17, 32, 0.95);
+            background: var(--nav-bg);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             padding: 0.7rem 1rem;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 0.55rem;
             flex-wrap: wrap;
+            box-shadow: 0 1px 3px rgba(60,64,67,0.08);
         }
         .nav-pill {
             color: var(--text-main);
@@ -163,9 +217,49 @@
             cursor: pointer;
         }
         .nav-pill:hover, .nav-pill.primary {
+            background: rgba(26, 115, 232, 0.1);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+        body.dark-theme .nav-pill:hover, body.dark-theme .nav-pill.primary {
             background: rgba(56, 189, 248, 0.16);
             border-color: var(--accent-blue);
             color: var(--accent-blue);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.42rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-main);
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+            box-shadow: 0 1px 2px rgba(60,64,67,0.15);
+        }
+        .theme-toggle-btn:hover {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            box-shadow: 0 2px 6px rgba(26, 115, 232, 0.25);
+        }
+        body.dark-theme .theme-toggle-btn, :root.dark-theme .theme-toggle-btn {
+            background: #1e293b;
+            color: #f8fafc;
+            border-color: #334155;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        body.dark-theme .theme-toggle-btn:hover, :root.dark-theme .theme-toggle-btn:hover {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
         }
 
         .container { max-width: 1320px; margin: 1.75rem auto; padding: 0 1.5rem; }
@@ -173,11 +267,11 @@
         /* Theater Section */
         .theater-box {
             background: var(--bg-theater);
-            border: 2px solid #2e4369;
+            border: 1px solid var(--border-color);
             border-radius: 1rem;
             padding: 1.4rem;
             margin-bottom: 2.25rem;
-            box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.6);
+            box-shadow: var(--box-shadow-card);
         }
         .theater-header {
             display: flex;
@@ -269,7 +363,7 @@
         .playlist-btn {
             width: 100%;
             text-align: left;
-            background: rgba(15, 23, 42, 0.75);
+            background: var(--playlist-bg);
             color: var(--text-main);
             border: 1px solid var(--border-color);
             padding: 0.55rem 0.75rem;
@@ -288,6 +382,12 @@
             border-color: var(--accent-blue);
         }
         .playlist-btn.active {
+            background: rgba(26, 115, 232, 0.12);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+        body.dark-theme .playlist-btn.active {
             background: rgba(56, 189, 248, 0.18);
             border-color: var(--accent-blue);
             color: var(--accent-blue);
@@ -295,11 +395,15 @@
         }
         .v-badge {
             font-size: 0.68rem;
-            background: rgba(129, 140, 248, 0.2);
-            color: var(--accent-indigo);
+            background: rgba(26, 115, 232, 0.15);
+            color: var(--accent-blue);
             padding: 0.12rem 0.45rem;
             border-radius: 0.25rem;
             white-space: nowrap;
+        }
+        body.dark-theme .v-badge {
+            background: rgba(129, 140, 248, 0.2);
+            color: var(--accent-indigo);
         }
 
         /* Section Styling */
@@ -309,7 +413,7 @@
             border-radius: 1rem;
             padding: 1.85rem;
             margin-bottom: 2.25rem;
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.35);
+            box-shadow: var(--box-shadow-card);
         }
         .section-header {
             display: flex;
@@ -323,7 +427,7 @@
         }
         .section-title {
             font-size: 1.45rem;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--accent-blue);
             display: flex;
             align-items: center;
@@ -335,7 +439,7 @@
             color: var(--accent-indigo);
             margin: 1.35rem 0 0.65rem;
         }
-        p, li { color: #e2e8f0; }
+        p, li { color: var(--text-main); }
         ul, ol { padding-left: 1.35rem; margin-bottom: 0.9rem; }
         li { margin-bottom: 0.4rem; }
 
@@ -344,9 +448,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.35rem;
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.4);
+            background: rgba(30, 142, 62, 0.12);
+            color: var(--accent-emerald);
+            border: 1px solid rgba(30, 142, 62, 0.35);
             padding: 0.28rem 0.7rem;
             border-radius: 0.4rem;
             font-size: 0.78rem;
@@ -358,7 +462,7 @@
         }
         .watch-btn:hover {
             background: var(--accent-emerald);
-            color: #06281e;
+            color: #ffffff;
             transform: translateY(-1px);
         }
 
@@ -367,10 +471,11 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(11, 17, 32, 0.6);
+            background: var(--bg-card);
             border-radius: 0.6rem;
             overflow: hidden;
             font-size: 0.92rem;
+            border: 1px solid var(--border-color);
         }
         th, td {
             padding: 0.8rem 0.95rem;
@@ -378,14 +483,14 @@
             border-bottom: 1px solid var(--border-color);
         }
         th {
-            background: rgba(30, 41, 59, 0.9);
+            background: var(--table-header-bg);
             color: var(--accent-blue);
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.76rem;
             letter-spacing: 0.05em;
         }
-        tr:hover td { background: rgba(30, 41, 59, 0.45); }
+        tr:hover td { background: var(--bg-card-hover); }
 
         /* Callout Cards & Grids */
         .grid-2 {
@@ -404,10 +509,11 @@
             .grid-2, .grid-3 { grid-template-columns: 1fr; }
         }
         .card {
-            background: rgba(11, 17, 32, 0.72);
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 0.75rem;
             padding: 1.2rem;
+            box-shadow: var(--box-shadow-subtle);
         }
         .card-header {
             display: flex;
@@ -416,24 +522,30 @@
             gap: 0.5rem;
             margin-bottom: 0.65rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid var(--border-color);
         }
         .card-title { font-weight: 700; color: var(--accent-amber); font-size: 1.02rem; }
         .math-box {
-            background: #090e1a;
-            border-left: 3px solid var(--accent-blue);
+            background: var(--math-box-bg);
+            border-left: 4px solid var(--accent-blue);
             padding: 0.75rem 1rem;
             border-radius: 0.4rem;
             margin: 0.6rem 0;
-            color: #e2e8f0;
+            color: var(--text-main);
             overflow-x: auto;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
         .trap-box {
-            background: rgba(244, 63, 94, 0.09);
+            background: rgba(217, 48, 37, 0.08);
             border-left: 4px solid var(--accent-rose);
             padding: 0.9rem 1.1rem;
             border-radius: 0.5rem;
             margin: 0.85rem 0;
+            border-top: 1px solid rgba(217, 48, 37, 0.2);
+            border-right: 1px solid rgba(217, 48, 37, 0.2);
+            border-bottom: 1px solid rgba(217, 48, 37, 0.2);
         }
         .trap-title {
             color: var(--accent-rose);
@@ -444,14 +556,17 @@
             margin-bottom: 0.25rem;
         }
         .tip-box {
-            background: rgba(16, 185, 129, 0.09);
+            background: rgba(30, 142, 62, 0.08);
             border-left: 4px solid var(--accent-emerald);
             padding: 0.9rem 1.1rem;
             border-radius: 0.5rem;
             margin: 0.85rem 0;
+            border-top: 1px solid rgba(30, 142, 62, 0.2);
+            border-right: 1px solid rgba(30, 142, 62, 0.2);
+            border-bottom: 1px solid rgba(30, 142, 62, 0.2);
         }
         .tip-title {
-            color: #34d399;
+            color: var(--accent-emerald);
             font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -459,20 +574,24 @@
             margin-bottom: 0.25rem;
         }
         .amber-box {
-            background: rgba(245, 158, 11, 0.09);
+            background: rgba(227, 116, 0, 0.08);
             border-left: 4px solid var(--accent-amber);
             padding: 0.9rem 1.1rem;
             border-radius: 0.5rem;
             margin: 0.85rem 0;
+            border-top: 1px solid rgba(227, 116, 0, 0.2);
+            border-right: 1px solid rgba(227, 116, 0, 0.2);
+            border-bottom: 1px solid rgba(227, 116, 0, 0.2);
         }
 
         /* Interactive Self-Test Cards */
         .quiz-card {
-            background: rgba(11, 17, 32, 0.82);
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 0.75rem;
             padding: 1.15rem;
             margin-bottom: 1rem;
+            box-shadow: var(--box-shadow-subtle);
         }
         .quiz-q {
             font-weight: 700;
@@ -485,7 +604,7 @@
             flex-wrap: wrap;
         }
         .q-num {
-            background: rgba(56, 189, 248, 0.16);
+            background: rgba(26, 115, 232, 0.12);
             color: var(--accent-blue);
             padding: 0.15rem 0.55rem;
             border-radius: 0.35rem;
@@ -495,7 +614,7 @@
         }
         details {
             margin-top: 0.55rem;
-            background: #090d16;
+            background: var(--details-bg);
             border: 1px solid var(--border-color);
             border-radius: 0.5rem;
             padding: 0.6rem 0.95rem;
@@ -512,7 +631,7 @@
             padding-top: 0.65rem;
             border-top: 1px solid var(--border-color);
             font-size: 0.94rem;
-            color: #cbd5e1;
+            color: var(--text-main);
         }
 
         /* KaTeX Customizations */
@@ -524,29 +643,33 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: linear-gradient(135deg, #10b981, #0ea5e9);
-            color: #06131f;
-            font-weight: 800;
+            background: var(--accent-emerald);
+            color: #ffffff;
+            font-weight: 700;
             font-size: 0.92rem;
             padding: 0.65rem 1.35rem;
             border-radius: 9999px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+            box-shadow: 0 2px 6px rgba(30, 142, 62, 0.3);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
             margin-top: 1.1rem;
         }
         .how-to-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(56, 189, 248, 0.45);
+            box-shadow: 0 4px 12px rgba(30, 142, 62, 0.4);
+        }
+        body.dark-theme .how-to-btn {
+            background: linear-gradient(135deg, #10b981, #0ea5e9);
+            color: #06131f;
         }
         .how-to-panel {
-            background: linear-gradient(145deg, #111c33 0%, #0d1526 100%);
+            background: var(--bg-card);
             border: 2px solid var(--accent-emerald);
             border-radius: 1rem;
             padding: 1.6rem;
             margin-bottom: 2rem;
-            box-shadow: 0 18px 36px -8px rgba(0, 0, 0, 0.65);
+            box-shadow: var(--box-shadow-card);
             display: none;
             animation: fadeInPanel 0.22s ease-out;
         }
@@ -565,24 +688,25 @@
             height: 26px;
             border-radius: 50%;
             background: var(--accent-emerald);
-            color: #051b14;
+            color: #ffffff;
             font-weight: 800;
             font-size: 0.82rem;
             margin-right: 0.45rem;
             flex-shrink: 0;
         }
         .study-step-card {
-            background: rgba(11, 17, 32, 0.8);
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 0.75rem;
             padding: 1.05rem;
             display: flex;
             flex-direction: column;
             gap: 0.45rem;
+            box-shadow: var(--box-shadow-subtle);
         }
         .study-step-title {
-            font-weight: 800;
-            color: #f8fafc;
+            font-weight: 700;
+            color: var(--text-main);
             font-size: 0.96rem;
             display: flex;
             align-items: center;
@@ -593,12 +717,13 @@
 
 <!-- Global Cross-Portal Bar -->
 <div class="global-bar">
-    <div style="font-weight:700; color:#e2e8f0;">📐 AP Precalculus — Course 276219 (Mr. O'Connor)</div>
+    <div style="font-weight:700; color:var(--text-main);">📐 AP Precalculus — Course 276219 (Mr. O'Connor)</div>
     <div class="global-bar-links">
         <a href="https://megaantony.github.io/grade9-exam-portal/" class="global-link">🏠 All-Course Exam Hub</a>
         <a href="https://megaantony.github.io/ap-precalc-streams/" class="global-link">🎬 All 68 Video Streams</a>
         <a href="https://megaantony.github.io/ap-precalc-streams/quiz-10-27.html" class="global-link active">🔥 Unit 4 Quiz (Tue 10/27)</a>
         <a href="https://megaantony.github.io/ap-precalc-streams/unit-3-exam.html" class="global-link">📘 Unit 3 Exam Archive</a>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" id="global-theme-btn" title="Toggle between Google Clean and Dark Mode">🌙 Dark Mode</button>
     </div>
 </div>
 
@@ -615,17 +740,17 @@
             <span>🧭 How to Study &amp; Use This Page (Show Guide)</span>
             <span id="how-to-arrow">▼</span>
         </button>
-        <a href="docs/APPCU04_WkstA_SolveTrigEquationsPractice_2025.pdf" target="_blank" class="how-to-btn" style="margin-top:0; background: rgba(56, 189, 248, 0.2); border: 1px solid var(--accent-blue); color: var(--accent-blue); text-decoration: none;">
+        <a href="docs/APPCU04_WkstA_SolveTrigEquationsPractice_2025.pdf" target="_blank" class="how-to-btn" style="margin-top:0; background: rgba(26, 115, 232, 0.1); border: 1px solid var(--accent-blue); color: var(--accent-blue); text-decoration: none;">
             📄 Worksheet A PDF (STE Practice)
         </a>
-        <a href="docs/APPCU04_WkstB_SimpEvalRewrite_IdentityPractice.pdf" target="_blank" class="how-to-btn" style="margin-top:0; background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent-amber); color: var(--accent-amber); text-decoration: none;">
+        <a href="docs/APPCU04_WkstB_SimpEvalRewrite_IdentityPractice.pdf" target="_blank" class="how-to-btn" style="margin-top:0; background: rgba(227, 116, 0, 0.1); border: 1px solid var(--accent-amber); color: var(--accent-amber); text-decoration: none;">
             📝 Worksheet B PDF (Due Tue 10/27)
         </a>
     </div>
 </header>
 
 <nav class="sticky-nav">
-    <button id="how-to-nav-btn" class="nav-pill" style="background:rgba(16,185,129,0.2); border-color:#10b981; color:#34d399; font-weight:800;" onclick="toggleHowToStudy()">🧭 How to Study (Show/Hide)</button>
+    <button id="how-to-nav-btn" class="nav-pill" style="background:rgba(30, 142, 62, 0.12); border-color:var(--accent-emerald); color:var(--accent-emerald); font-weight:800;" onclick="toggleHowToStudy()">🧭 How to Study (Show/Hide)</button>
     <a href="#theater-anchor" class="nav-pill primary">🎬 Video Theater (19 Quiz Videos)</a>
     <a href="#checklist" class="nav-pill">✅ Scope &amp; Video Checklist</a>
     <a href="#pillar1" class="nav-pill">📐 Pillar 1: Identity Vault (TD 35–40)</a>
@@ -633,6 +758,7 @@
     <a href="#pillar3" class="nav-pill">📝 Pillar 3: Worksheet B Solutions (Due 10/27)</a>
     <a href="#pillar4" class="nav-pill">⚠️ Pillar 4: Top 6 Quiz Traps</a>
     <a href="#selftest" class="nav-pill">🏆 12-Problem Quiz Simulation</a>
+    <button class="theme-toggle-btn" onclick="toggleTheme()" id="nav-theme-btn" title="Toggle between Google Clean and Dark Mode">🌙 Dark Mode</button>
 </nav>
 
 <div class="container">
@@ -640,10 +766,10 @@
     <!-- COLLAPSIBLE HOW TO STUDY & USE THIS LIVE PAGE GUIDE -->
     <div id="how-to-study-panel" class="how-to-panel">
         <div class="section-header" style="margin-bottom:1rem; padding-bottom:0.75rem;">
-            <div class="section-title" style="color:#34d399; font-size:1.3rem;">
+            <div class="section-title" style="color:var(--accent-emerald); font-size:1.3rem;">
                 🧭 Step-by-Step Study Order &amp; How to Use This Live Portal
             </div>
-            <button onclick="toggleHowToStudy()" style="background:rgba(244,63,94,0.18); color:#fda4af; border:1px solid rgba(244,63,94,0.4); padding:0.35rem 0.85rem; border-radius:0.45rem; font-size:0.8rem; font-weight:700; cursor:pointer;">
+            <button onclick="toggleHowToStudy()" style="background:rgba(217, 48, 37, 0.08); color:var(--accent-rose); border:1px solid rgba(217, 48, 37, 0.25); padding:0.35rem 0.85rem; border-radius:0.45rem; font-size:0.8rem; font-weight:700; cursor:pointer;">
                 ✕ Hide Guide
             </button>
         </div>
@@ -661,32 +787,32 @@
         <div class="grid-3">
             <div class="study-step-card">
                 <div class="study-step-title"><span class="step-badge">1</span> Lock In the Identity Vault (20 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Start at <a href="#pillar1" style="color:var(--accent-blue); font-weight:700;">Pillar 1: Identity Vault</a>. Write out the Sum/Difference, Double-Angle (all 3 forms of $\cos 2u$), Half-Angle (rational $\tan\frac{u}{2}$ forms), and Power-Reducing formulas on blank paper from memory.</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Start at <a href="#pillar1" style="color:var(--accent-blue); font-weight:700;">Pillar 1: Identity Vault</a>. Write out the Sum/Difference, Double-Angle (all 3 forms of $\cos 2u$), Half-Angle (rational $\tan\frac{u}{2}$ forms), and Power-Reducing formulas on blank paper from memory.</p>
             </div>
 
             <div class="study-step-card">
                 <div class="study-step-title"><span class="step-badge">2</span> Master STE Level 1 &amp; 2 (30 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Go to <a href="#pillar2" style="color:var(--accent-blue); font-weight:700;">Pillar 2: Solving Trig Equations</a>. Watch <strong>Videos 2, 3, and 6</strong> and work through the 4 categories: Isolating, Square Roots ($\pm$ 4 quadrants!), Factoring GCF/Trinomials, and Multiple Angles ($\sin 2x, \cos 3x$).</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Go to <a href="#pillar2" style="color:var(--accent-blue); font-weight:700;">Pillar 2: Solving Trig Equations</a>. Watch <strong>Videos 2, 3, and 6</strong> and work through the 4 categories: Isolating, Square Roots ($\pm$ 4 quadrants!), Factoring GCF/Trinomials, and Multiple Angles ($\sin 2x, \cos 3x$).</p>
             </div>
 
             <div class="study-step-card">
                 <div class="step-title study-step-title"><span class="step-badge">3</span> Complete &amp; Check Worksheet B (45 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Open <a href="#pillar3" style="color:var(--accent-blue); font-weight:700;">Pillar 3: Worksheet B Solutions</a>. **Worksheet B is due at the start of class on Quiz Day (Tue 10/27)!** Verify all 17 required textbook problems (`Pg 384–396`) and check all 6 of Mr. O'Connor's formatting rules (2 columns, <strong>do not box/circle answers</strong>).</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Open <a href="#pillar3" style="color:var(--accent-blue); font-weight:700;">Pillar 3: Worksheet B Solutions</a>. **Worksheet B is due at the start of class on Quiz Day (Tue 10/27)!** Verify all 17 required textbook problems (`Pg 384–396`) and check all 6 of Mr. O'Connor's formatting rules (2 columns, <strong>do not box/circle answers</strong>).</p>
             </div>
 
             <div class="study-step-card">
                 <div class="study-step-title"><span class="step-badge">4</span> Drill SRE Triangles &amp; Inverses (25 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Focus on <strong>SRE Sections 3 &amp; 4</strong> inside <a href="#pillar3" style="color:var(--accent-blue); font-weight:700;">Pillar 3</a> (Videos 15–19): drawing 2-triangle quadrant diagrams (`Pg 384 #41`), finding the half-angle quadrant $\frac{u}{2}$ (`Pg 395 #49`), and converting $\sin(\arctan x + \arccos x)$ to algebra (`Pg 385 #61`).</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Focus on <strong>SRE Sections 3 &amp; 4</strong> inside <a href="#pillar3" style="color:var(--accent-blue); font-weight:700;">Pillar 3</a> (Videos 15–19): drawing 2-triangle quadrant diagrams (`Pg 384 #41`), finding the half-angle quadrant $\frac{u}{2}$ (`Pg 395 #49`), and converting $\sin(\arctan x + \arccos x)$ to algebra (`Pg 385 #61`).</p>
             </div>
 
             <div class="study-step-card">
                 <div class="study-step-title"><span class="step-badge">5</span> Audit the Top 6 Quiz Traps (10 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Read <a href="#pillar4" style="color:var(--accent-blue); font-weight:700;">Pillar 4: Top 6 Quiz Traps</a> so you never divide by $\tan x$ or $\sin x$, never forget $\pm$ on square roots, and never stop halfway on power-reducing $\cos^4 x$.</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Read <a href="#pillar4" style="color:var(--accent-blue); font-weight:700;">Pillar 4: Top 6 Quiz Traps</a> so you never divide by $\tan x$ or $\sin x$, never forget $\pm$ on square roots, and never stop halfway on power-reducing $\cos^4 x$.</p>
             </div>
 
             <div class="study-step-card">
                 <div class="study-step-title"><span class="step-badge">6</span> Take the 12-Problem Quiz Simulation (25 mins)</div>
-                <p style="font-size:0.87rem; color:#cbd5e1;">Scroll to <a href="#selftest" style="color:var(--accent-blue); font-weight:700;">🏆 12-Problem Quiz Simulation</a>. Put away your notes and calculator, solve Q1–Q12 on paper in 25 minutes, and click each dropdown to grade yourself.</p>
+                <p style="font-size:0.88rem; color:var(--text-main); line-height:1.55;">Scroll to <a href="#selftest" style="color:var(--accent-blue); font-weight:700;">🏆 12-Problem Quiz Simulation</a>. Put away your notes and calculator, solve Q1–Q12 on paper in 25 minutes, and click each dropdown to grade yourself.</p>
             </div>
         </div>
     </div>
@@ -699,9 +825,9 @@
                 <div id="player-title">Unit 4 — Video 2: Intro to Solving Trig Equations (STE Level 1 &amp; 2)</div>
             </div>
             <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
-                <button id="mode-mp4-btn" onclick="switchPlayerMode('mp4')" style="background:var(--accent-blue); color:#0b1120; border:none; padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🎬 Direct MP4 Player</button>
-                <button id="mode-embed-btn" onclick="switchPlayerMode('embed')" style="background:rgba(255,255,255,0.08); color:#e2e8f0; border:1px solid var(--border-color); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🌐 MyVRSpot Embed (Never Expires)</button>
-                <a id="external-embed-link" href="https://live.myvrspot.com/iframe?v=MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ" target="_blank" style="background:rgba(16,185,129,0.15); color:#34d399; border:1px solid rgba(16,185,129,0.4); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; text-decoration:none;">↗ Open in New Tab</a>
+                <button id="mode-mp4-btn" onclick="switchPlayerMode('mp4')" style="background:var(--accent-blue); color:#ffffff; border:none; padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🎬 Direct MP4 Player</button>
+                <button id="mode-embed-btn" onclick="switchPlayerMode('embed')" style="background:var(--bg-card); color:var(--text-muted); border:1px solid var(--border-color); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; cursor:pointer;">🌐 MyVRSpot Embed (Never Expires)</button>
+                <a id="external-embed-link" href="https://live.myvrspot.com/iframe?v=MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ" target="_blank" style="background:rgba(30, 142, 62, 0.1); color:var(--accent-emerald); border:1px solid rgba(30, 142, 62, 0.3); padding:0.35rem 0.75rem; border-radius:0.4rem; font-size:0.78rem; font-weight:700; text-decoration:none;">↗ Open in New Tab</a>
             </div>
         </div>
 
@@ -1729,14 +1855,18 @@ function updateModeButtons(mode) {
     if (!mp4Btn || !embedBtn) return;
     if (mode === 'mp4') {
         mp4Btn.style.background = 'var(--accent-blue)';
-        mp4Btn.style.color = '#0b1120';
-        embedBtn.style.background = 'rgba(255,255,255,0.08)';
-        embedBtn.style.color = '#e2e8f0';
+        mp4Btn.style.color = '#ffffff';
+        mp4Btn.style.border = 'none';
+        embedBtn.style.background = 'var(--bg-card)';
+        embedBtn.style.color = 'var(--text-muted)';
+        embedBtn.style.border = '1px solid var(--border-color)';
     } else {
         embedBtn.style.background = 'var(--accent-blue)';
-        embedBtn.style.color = '#0b1120';
-        mp4Btn.style.background = 'rgba(255,255,255,0.08)';
-        mp4Btn.style.color = '#e2e8f0';
+        embedBtn.style.color = '#ffffff';
+        embedBtn.style.border = 'none';
+        mp4Btn.style.background = 'var(--bg-card)';
+        mp4Btn.style.color = 'var(--text-muted)';
+        mp4Btn.style.border = '1px solid var(--border-color)';
     }
 }
 
@@ -1800,7 +1930,45 @@ function toggleHowToStudy() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', renderPlaylist);
+/* Theme Toggle Support (Google Clean Light <-> Dark Mode) */
+function toggleTheme() {
+    const isDark = document.body.classList.toggle('dark-theme');
+    document.documentElement.classList.toggle('dark-theme', isDark);
+    try {
+        localStorage.setItem('precalc_theme', isDark ? 'dark' : 'google');
+    } catch (e) {}
+    updateThemeButtons(isDark);
+    // Refresh video player mode button styling for current theme
+    updateModeButtons(preferredMode);
+}
+
+function updateThemeButtons(isDark) {
+    const label = isDark ? '☀️ Google Clean' : '🌙 Dark Mode';
+    const gBtn = document.getElementById('global-theme-btn');
+    const nBtn = document.getElementById('nav-theme-btn');
+    if (gBtn) gBtn.innerHTML = label;
+    if (nBtn) nBtn.innerHTML = label;
+}
+
+function initTheme() {
+    try {
+        const saved = localStorage.getItem('precalc_theme');
+        const isDark = (saved === 'dark');
+        if (isDark) {
+            document.body.classList.add('dark-theme');
+            document.documentElement.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+            document.documentElement.classList.remove('dark-theme');
+        }
+        updateThemeButtons(isDark);
+    } catch (e) {}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    renderPlaylist();
+});
 </script>
 </body>
 </html>
