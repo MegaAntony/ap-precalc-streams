@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Precalculus: Unit 4 Quiz (10/27) Study & Video Portal — STE (Lv 1 & 2) + SRE</title>
+    <!-- KaTeX for High-Precision Mathematical Typesetting (Local Offline Bundle + CDN Fallback) -->
+    <link rel="stylesheet" href="katex/katex.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';">
+    <script defer src="katex/katex.min.js" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js';document.head.appendChild(s);"></script>
+    <script defer src="katex/contrib/auto-render.min.js" onload="initKaTeX();" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js';s.onload=initKaTeX;document.head.appendChild(s);"></script>
+    <script>
+        function initKaTeX() {
+            if (typeof renderMathInElement === 'function') {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(initKaTeX, 150);
+        });
+    </script>
+    <style>
+        :root {
+            --bg-dark: #0b1120;
+            --bg-card: #151f32;
+            --bg-card-hover: #1e293b;
+            --bg-theater: #070b14;
+            --accent-blue: #38bdf8;
+            --accent-indigo: #818cf8;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --accent-purple: #c084fc;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #26354d;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding-bottom: 5rem;
+        }
+
+        /* Top Global Bar */
+        .global-bar {
+            background: #060911;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.65rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+        }
+        .global-bar-links {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .global-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.45rem;
+            border: 1px solid var(--border-color);
+            background: rgba(30, 41, 59, 0.5);
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .global-link:hover {
+            color: #fff;
+            border-color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.12);
+        }
+        .global-link.active {
+            background: linear-gradient(135deg, #f43f5e, #d97706);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        /* Header */
+        header {
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a 65%, #070b14);
+            padding: 2.5rem 2rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.85rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(244, 63, 94, 0.16);
+            color: #fda4af;
+            padding: 0.3rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid rgba(244, 63, 94, 0.4);
+        }
+        .badge-blue {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+        .badge-emerald {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        h1 {
+            font-size: 2.35rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 860px; margin: 0 auto; }
+
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 17, 32, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.7rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+        }
+        .nav-pill {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.84rem;
+            font-weight: 600;
+            padding: 0.42rem 0.9rem;
+            border-radius: 999px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .nav-pill:hover, .nav-pill.primary {
+            background: rgba(56, 189, 248, 0.16);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .container { max-width: 1320px; margin: 1.75rem auto; padding: 0 1.5rem; }
+
+        /* Theater Section */
+        .theater-box {
+            background: var(--bg-theater);
+            border: 2px solid #2e4369;
+            border-radius: 1rem;
+            padding: 1.4rem;
+            margin-bottom: 2.25rem;
+            box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.6);
+        }
+        .theater-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .now-playing-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-emerald);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .pulse-dot {
+            width: 9px;
+            height: 9px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--accent-emerald);
+        }
+        #player-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 0.2rem;
+        }
+        .theater-grid {
+            display: grid;
+            grid-template-columns: 2.15fr 1fr;
+            gap: 1.25rem;
+            align-items: start;
+        }
+        @media (max-width: 980px) {
+            .theater-grid { grid-template-columns: 1fr; }
+        }
+        .video-wrapper {
+            background: #000;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        video {
+            width: 100%;
+            max-height: 500px;
+            display: block;
+            background: #000;
+        }
+        .iframe-player {
+            width: 100%;
+            height: 440px;
+            border: 0;
+            display: none;
+            background: #000;
+        }
+        .playlist-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .playlist-panel h3 {
+            font-size: 0.92rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-blue);
+            margin-bottom: 0.65rem;
+        }
+        .playlist-group-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--accent-amber);
+            margin: 0.75rem 0 0.35rem;
+            padding-left: 0.25rem;
+        }
+        .playlist-btn {
+            width: 100%;
+            text-align: left;
+            background: rgba(15, 23, 42, 0.75);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.55rem 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.4rem;
+            cursor: pointer;
+            font-size: 0.83rem;
+            transition: all 0.15s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .playlist-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-blue);
+        }
+        .playlist-btn.active {
+            background: rgba(56, 189, 248, 0.18);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+        .v-badge {
+            font-size: 0.68rem;
+            background: rgba(129, 140, 248, 0.2);
+            color: var(--accent-indigo);
+            padding: 0.12rem 0.45rem;
+            border-radius: 0.25rem;
+            white-space: nowrap;
+        }
+
+        /* Section Styling */
+        .section-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.85rem;
+            margin-bottom: 2.25rem;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.35);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.9rem;
+            margin-bottom: 1.4rem;
+        }
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-indigo);
+            margin: 1.35rem 0 0.65rem;
+        }
+        p, li { color: #e2e8f0; }
+        ul, ol { padding-left: 1.35rem; margin-bottom: 0.9rem; }
+        li { margin-bottom: 0.4rem; }
+
+        /* Watch Video Inline Button */
+        .watch-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 0.28rem 0.7rem;
+            border-radius: 0.4rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .watch-btn:hover {
+            background: var(--accent-emerald);
+            color: #06281e;
+            transform: translateY(-1px);
+        }
+
+        /* Tables */
+        .table-wrap { overflow-x: auto; margin: 0.9rem 0 1.35rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(11, 17, 32, 0.6);
+            border-radius: 0.6rem;
+            overflow: hidden;
+            font-size: 0.92rem;
+        }
+        th, td {
+            padding: 0.8rem 0.95rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background: rgba(30, 41, 59, 0.9);
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.76rem;
+            letter-spacing: 0.05em;
+        }
+        tr:hover td { background: rgba(30, 41, 59, 0.45); }
+
+        /* Callout Cards & Grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+            gap: 1.2rem;
+            margin: 1rem 0;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.1rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 520px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: rgba(11, 17, 32, 0.72);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.2rem;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.65rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card-title { font-weight: 700; color: var(--accent-amber); font-size: 1.02rem; }
+        .math-box {
+            background: #090e1a;
+            border-left: 3px solid var(--accent-blue);
+            padding: 0.75rem 1rem;
+            border-radius: 0.4rem;
+            margin: 0.6rem 0;
+            color: #e2e8f0;
+            overflow-x: auto;
+        }
+        .trap-box {
+            background: rgba(244, 63, 94, 0.09);
+            border-left: 4px solid var(--accent-rose);
+            padding: 0.9rem 1.1rem;
+            border-radius: 0.5rem;
+            margin: 0.85rem 0;
+        }
+        .trap-title {
+            color: var(--accent-rose);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.25rem;
+        }
+        .tip-box {
+            background: rgba(16, 185, 129, 0.09);
+            border-left: 4px solid var(--accent-emerald);
+            padding: 0.9rem 1.1rem;
+            border-radius: 0.5rem;
+            margin: 0.85rem 0;
+        }
+        .tip-title {
+            color: #34d399;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.25rem;
+        }
+        .amber-box {
+            background: rgba(245, 158, 11, 0.09);
+            border-left: 4px solid var(--accent-amber);
+            padding: 0.9rem 1.1rem;
+            border-radius: 0.5rem;
+            margin: 0.85rem 0;
+        }
+
+        /* Interactive Self-Test Cards */
+        .quiz-card {
+            background: rgba(11, 17, 32, 0.82);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.15rem;
+            margin-bottom: 1rem;
+        }
+        .quiz-q {
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .q-num {
+            background: rgba(56, 189, 248, 0.16);
+            color: var(--accent-blue);
+            padding: 0.15rem 0.55rem;
+            border-radius: 0.35rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-right: 0.45rem;
+        }
+        details {
+            margin-top: 0.55rem;
+            background: #090d16;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.95rem;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--accent-emerald);
+            font-size: 0.88rem;
+            user-select: none;
+        }
+        .ans-body {
+            margin-top: 0.65rem;
+            padding-top: 0.65rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.94rem;
+            color: #cbd5e1;
+        }
+
+        /* KaTeX Customizations */
+        .katex { font-size: 1.06em; }
+        .katex-display { margin: 0.55em 0; overflow-x: auto; overflow-y: hidden; padding: 0.15em 0; }
+    </style>
+</head>
+<body>
+
+<!-- Global Cross-Portal Bar -->
+<div class="global-bar">
+    <div style="font-weight:700; color:#e2e8f0;">📐 AP Precalculus — Course 276219 (Mr. O'Connor)</div>
+    <div class="global-bar-links">
+        <a href="https://megaantony.github.io/grade9-exam-portal/" class="global-link">🏠 All-Course Exam Hub</a>
+        <a href="https://megaantony.github.io/ap-precalc-streams/" class="global-link">🎬 All 68 Video Streams</a>
+        <a href="https://megaantony.github.io/ap-precalc-streams/quiz-10-27.html" class="global-link active">🔥 Unit 4 Quiz (Tue 10/27)</a>
+        <a href="https://megaantony.github.io/ap-precalc-streams/unit-3-exam.html" class="global-link">📘 Unit 3 Exam Archive</a>
+    </div>
+</div>
+
+<header id="top">
+    <div class="badge-row">
+        <span class="badge">🔥 Quiz Day: Tuesday, October 27, 2026</span>
+        <span class="badge badge-blue">STE (Level 1 &amp; Level 2) + SRE (Sections 1–4)</span>
+        <span class="badge badge-emerald">🚫 100% No Calculator • Exact Radian Answers</span>
+    </div>
+    <h1>AP Precalculus: Unit 4 Quiz Master Study Portal</h1>
+    <p class="subtitle">Complete Interactive Preparation Suite for <strong>Solving Trigonometric Equations (STE Level 1 &amp; 2)</strong> and <strong>Simplifying, Rewriting &amp; Evaluating Trig Expressions (SRE Worksheet B)</strong> — with 19 Direct Instructional Videos, KaTeX Identity Vault, Worked Solutions to Every Required Worksheet B Problem, and a 12-Question Timed Quiz Simulation.</p>
+</header>
+
+<nav class="sticky-nav">
+    <a href="#theater-anchor" class="nav-pill primary">🎬 Video Theater (19 Quiz Videos)</a>
+    <a href="#checklist" class="nav-pill">✅ Scope &amp; Video Checklist</a>
+    <a href="#pillar1" class="nav-pill">📐 Pillar 1: Identity Vault (TD 35–40)</a>
+    <a href="#pillar2" class="nav-pill">🧮 Pillar 2: STE Level 1 &amp; 2</a>
+    <a href="#pillar3" class="nav-pill">📝 Pillar 3: Worksheet B Solutions (Due 10/27)</a>
+    <a href="#pillar4" class="nav-pill">⚠️ Pillar 4: Top 6 Quiz Traps</a>
+    <a href="#selftest" class="nav-pill">🏆 12-Problem Quiz Simulation</a>
+</nav>
+
+<div class="container">
+
+    <!-- INTERACTIVE VIDEO THEATER -->
+    <div id="theater-anchor" class="theater-box">
+        <div class="theater-header">
+            <div>
+                <div class="now-playing-tag"><span class="pulse-dot"></span> ACTIVE UNIT 4 QUIZ STREAM THEATER (VIDEOS 1–19)</div>
+                <div id="player-title">Unit 4 — Video 2: Intro to Solving Trig Equations (STE Level 1 &amp; 2)</div>
+            </div>
+            <div style="font-size: 0.84rem; color: var(--text-muted);">
+                Click any <strong>[▶ Play Video]</strong> button in the study guide below to load that exact lesson here.
+            </div>
+        </div>
+
+        <div class="theater-grid">
+            <div class="video-wrapper">
+                <video id="main-player" controls preload="metadata">
+                    <source id="main-source" src="https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792108030&Signature=QcoWvbYmVsvv1mKuE9Ee9O7VJHir2Qe7Zn2xFvj1YEmf3cw~khd-QhHEnqQvB7jLePBxZUrFd~P7zBxE9JKND2M6FJyHoHnHJgjqeHrT5jDuf7JXGZODDCxpYiJF13nIQfhTMSJOmbAN0VUGIqhjqJqt~9v1OaEocfbz6gZIc3hngelLa4CsVrVhUiBTj32SAh6ywEiuO7quCqKJ5tInfEUTIeC98WXIchDRjSz2ucVOf1eknkXXT-WsS04X6UFQ8VFA9V7cVoIG8q5lU~T3Mc36EZhx0n9Kkps~Q8PPKoGGgC1X2LyxRZnXjkg8yEW6x~uTiV48zxkzQbK11g2wsg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA" type="video/mp4">
+                </video>
+                <iframe id="iframe-player" class="iframe-player" allowfullscreen></iframe>
+            </div>
+
+            <div class="playlist-panel">
+                <h3>📺 Unit 4 Quiz Video Playlist (Videos 1–19)</h3>
+                <div id="playlist-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUIZ SCOPE & VIDEO CHECKLIST -->
+    <section id="checklist" class="section-block">
+        <div class="section-header">
+            <div class="section-title">✅ Unit 4 Quiz (Tuesday, Oct 27) Scope &amp; Video Mastery Matrix</div>
+            <span class="badge badge-emerald">Worksheet B Due Tuesday 10/27 at Start of Class</span>
+        </div>
+
+        <div class="amber-box">
+            <div style="font-weight:800; color:var(--accent-amber); margin-bottom:0.3rem;">📌 Exact Assessment Breakdown (Verified from Mr. O'Connor's Weekly Plan &amp; Canvas Course 276219)</div>
+            <ul style="margin-bottom:0;">
+                <li><strong>Quiz Date</strong>: <strong>Tuesday, October 27, 2026</strong> (In-Class, 100% No Calculator).</li>
+                <li><strong>Part A — Solving Trigonometric Equations (STE)</strong>: Covers <strong>Level 1 &amp; Level 2</strong> on Worksheet A (Isolating, Square Roots, Factoring GCF/Trinomials, and Multiple Angles $\sin(2x), \cos(3x)$). <em>Note: STE Level 3 &amp; Level 4 are saved for the Unit 4 Test on Friday, Nov 6.</em></li>
+                <li><strong>Part B — Simplifying, Rewriting &amp; Evaluating (SRE)</strong>: Covers <strong>all 4 sections of Worksheet B</strong> (Sum &amp; Difference, Double-Angle, Half-Angle, Power-Reducing, Product-to-Sum, Sum-to-Product, 2-Triangle problems, and Inverse Trig Composites in terms of $x$).</li>
+                <li><strong>Homework Due at Bell on Tuesday 10/27</strong>: <strong>Worksheet B Required Problems</strong> (17 textbook problems from Pages 384–396). Full worked solutions are in <a href="#pillar3" style="color:var(--accent-blue); font-weight:700;">Pillar 3 below</a>.</li>
+            </ul>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quiz Topic</th>
+                        <th>Sub-Skill &amp; Required Worksheet Problems</th>
+                        <th>Key Formula / Strategy</th>
+                        <th>Direct Video Stream</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Notebook Formatting</strong></td>
+                        <td>6 Mandatory Rules for Worksheets A, B, and C</td>
+                        <td>2 columns, write original problem, never split across columns, <strong>DO NOT box/circle answers</strong></td>
+                        <td><button class="watch-btn" onclick="playVideo(0)">▶ Video 1 (Demo)</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>STE Category 1 &amp; 2</strong></td>
+                        <td>Isolating &amp; Extracting Square Roots (Lv 1 &amp; 2)</td>
+                        <td>Isolate $\text{trig}(x) = c$; for $\text{trig}^2(x) = k$, take $\pm\sqrt{k}$ (all 4 quadrants!)</td>
+                        <td><button class="watch-btn" onclick="playVideo(1)">▶ Video 2 (Intro STE)</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>STE Category 3</strong></td>
+                        <td>Solving by Factoring (GCF &amp; Trinomials — Lv 1 &amp; 2)</td>
+                        <td>Set $= 0$ and factor! <strong>Never divide both sides by a trig function</strong></td>
+                        <td><button class="watch-btn" onclick="playVideo(2)">▶ Video 3 (Factoring)</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>STE Category 5</strong></td>
+                        <td>Multiple-Angle Equations ($\sin(2x), \cos(3x)$ — Lv 2)</td>
+                        <td>Solve for $nx \in [0, 2n\pi)$ across $n$ revolutions first, then divide by $n$</td>
+                        <td>
+                            <button class="watch-btn" onclick="playVideo(5)">▶ Video 6 (Multi-Angle)</button>
+                            <button class="watch-btn" onclick="playVideo(6)">▶ Video 7 (Gen Sol)</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE Section 1</strong></td>
+                        <td>Evaluating Exact Values (`Pg 384 #19`, `Pg 395 #45`, `Pg 396 #83`)</td>
+                        <td>Split $\frac{11\pi}{12} = \frac{2\pi}{3} + \frac{\pi}{4}$; use $\frac{u}{2} = \frac{7\pi}{8}$ with $u = \frac{7\pi}{4}$; Sum-to-Product</td>
+                        <td>
+                            <button class="watch-btn" onclick="playVideo(7)">▶ Video 8 (Sum/Diff)</button>
+                            <button class="watch-btn" onclick="playVideo(8)">▶ Video 9 (Half-Angle)</button>
+                            <button class="watch-btn" onclick="playVideo(9)">▶ Video 10 (Sum→Prod)</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE Section 2</strong></td>
+                        <td>Rewriting &amp; Power-Reducing (`Pg 384 #29`, `Pg 394 #21, #25, #27`, `Pg 395 #53, #69`, `Pg 396 #79`)</td>
+                        <td>Collapse patterns; apply $\cos^2 u = \frac{1+\cos(2u)}{2}$ twice to reduce 4th powers to 1st power</td>
+                        <td>
+                            <button class="watch-btn" onclick="playVideo(10)">▶ Video 11 (Sum/Half/Dbl)</button>
+                            <button class="watch-btn" onclick="playVideo(11)">▶ Video 12 (Prod↔Sum)</button>
+                            <button class="watch-btn" onclick="playVideo(12)">▶ Video 13 (Power Ex 1)</button>
+                            <button class="watch-btn" onclick="playVideo(13)">▶ Video 14 (Power Ex 2)</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE Section 3</strong></td>
+                        <td>Identities &amp; Right Triangles (`Pg 384 #41`, `Pg 394 #17`, `Pg 395 #37a, #38h, #49`)</td>
+                        <td>Draw signed triangles in given quadrants; for $\frac{u}{2}$, divide inequality by $2$ to find sign!</td>
+                        <td>
+                            <button class="watch-btn" onclick="playVideo(14)">▶ Video 15 (Sec 3 Sum/Diff)</button>
+                            <button class="watch-btn" onclick="playVideo(15)">▶ Video 16 (Sec 3 Half)</button>
+                            <button class="watch-btn" onclick="playVideo(16)">▶ Video 17 (Sec 3 Double)</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE Section 4</strong></td>
+                        <td>Algebraic Inverse Composites (`Pg 385 #45, #61`, `Pg 396 #115`)</td>
+                        <td>Let $u = \arctan x, v = \arccos x$, build right triangles with legs in terms of $x$, expand identity</td>
+                        <td>
+                            <button class="watch-btn" onclick="playVideo(17)">▶ Video 18 (Sec 4 Sum/Diff)</button>
+                            <button class="watch-btn" onclick="playVideo(18)">▶ Video 19 (Sec 4 Double)</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- PILLAR 1: COMPLETE IDENTITY VAULT -->
+    <section id="pillar1" class="section-block">
+        <div class="section-header">
+            <div class="section-title">📐 Pillar 1: Complete Analytical Trigonometry Identity Vault (TD 35–40 / FD 11)</div>
+            <span class="badge badge-blue">Memorize Cold for Tuesday's Quiz</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">1. Sum &amp; Difference Formulas (Larson 5.4)</span>
+                    <button class="watch-btn" onclick="playVideo(7)">▶ Video 8</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);"><strong>Memory Rule</strong>: <em>"Sine mixes $\sin\cos$ and keeps the sign; Cosine groups $\cos\cos - \sin\sin$ and flips the sign."</em></p>
+                <div class="math-box">
+                    $$\sin(u + v) = \sin u \cos v + \cos u \sin v$$
+                    $$\sin(u - v) = \sin u \cos v - \cos u \sin v$$
+                    $$\cos(u + v) = \cos u \cos v - \sin u \sin v$$
+                    $$\cos(u - v) = \cos u \cos v + \sin u \sin v$$
+                    $$\tan(u + v) = \frac{\tan u + \tan v}{1 - \tan u \tan v}, \qquad \tan(u - v) = \frac{\tan u - \tan v}{1 + \tan u \tan v}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">2. Double-Angle Formulas (Larson 5.5)</span>
+                    <button class="watch-btn" onclick="playVideo(16)">▶ Video 17</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);"><strong>Crucial</strong>: Know all <strong>three</strong> forms of $\cos(2u)$ so you can pick the one that matches your given info!</p>
+                <div class="math-box">
+                    $$\sin(2u) = 2\sin u \cos u$$
+                    $$\cos(2u) = \cos^2 u - \sin^2 u$$
+                    $$\cos(2u) = 2\cos^2 u - 1$$
+                    $$\cos(2u) = 1 - 2\sin^2 u$$
+                    $$\tan(2u) = \frac{2\tan u}{1 - \tan^2 u}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">3. Half-Angle Formulas (Larson 5.5)</span>
+                    <button class="watch-btn" onclick="playVideo(8)">▶ Video 9</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);"><strong>Sign Rule</strong>: You must choose $+$ or $-$ based on the <strong>quadrant of $\frac{u}{2}$</strong>! For $\tan\left(\frac{u}{2}\right)$, use the rational forms—no $\pm$ needed!</p>
+                <div class="math-box">
+                    $$\sin\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{2}}, \qquad \cos\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 + \cos u}{2}}$$
+                    $$\tan\left(\frac{u}{2}\right) = \pm\sqrt{\frac{1 - \cos u}{1 + \cos u}} = \frac{1 - \cos u}{\sin u} = \frac{\sin u}{1 + \cos u}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">4. Power-Reducing Formulas (Larson 5.5)</span>
+                    <button class="watch-btn" onclick="playVideo(12)">▶ Video 13</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);"><strong>Angle Doubling</strong>: Every time you apply a power-reducing formula, the angle inside $\cos$ <strong>doubles</strong> ($u \to 2u \to 4u$).</p>
+                <div class="math-box">
+                    $$\sin^2 u = \frac{1 - \cos(2u)}{2}$$
+                    $$\cos^2 u = \frac{1 + \cos(2u)}{2}$$
+                    $$\tan^2 u = \frac{1 - \cos(2u)}{1 + \cos(2u)}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">5. Product-to-Sum Formulas (Larson 5.5)</span>
+                    <button class="watch-btn" onclick="playVideo(11)">▶ Video 12</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);">Converts a product of two trig functions into a sum or difference:</p>
+                <div class="math-box">
+                    $$\sin u \sin v = \frac{1}{2}\big[\cos(u - v) - \cos(u + v)\big]$$
+                    $$\cos u \cos v = \frac{1}{2}\big[\cos(u - v) + \cos(u + v)\big]$$
+                    $$\sin u \cos v = \frac{1}{2}\big[\sin(u + v) + \sin(u - v)\big]$$
+                    $$\cos u \sin v = \frac{1}{2}\big[\sin(u + v) - \sin(u - v)\big]$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">6. Sum-to-Product Formulas (Larson 5.5)</span>
+                    <button class="watch-btn" onclick="playVideo(9)">▶ Video 10</button>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-muted);">Converts a sum or difference into a product using average $\frac{u+v}{2}$ and half-difference $\frac{u-v}{2}$:</p>
+                <div class="math-box">
+                    $$\sin u + \sin v = 2\sin\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$$
+                    $$\sin u - \sin v = 2\cos\left(\frac{u + v}{2}\right)\sin\left(\frac{u - v}{2}\right)$$
+                    $$\cos u + \cos v = 2\cos\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$$
+                    $$\cos u - \cos v = -2\sin\left(\frac{u + v}{2}\right)\sin\left(\frac{u - v}{2}\right)$$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR 2: SOLVING TRIG EQUATIONS (STE LEVEL 1 & LEVEL 2) -->
+    <section id="pillar2" class="section-block">
+        <div class="section-header">
+            <div class="section-title">🧮 Pillar 2: Solving Trigonometric Equations (STE Level 1 &amp; Level 2 — Worksheet A)</div>
+            <div>
+                <button class="watch-btn" onclick="playVideo(1)">▶ Video 2: Intro</button>
+                <button class="watch-btn" onclick="playVideo(2)">▶ Video 3: Factoring</button>
+                <button class="watch-btn" onclick="playVideo(5)">▶ Video 6: Multi-Angle</button>
+            </div>
+        </div>
+
+        <p>On Tuesday's quiz, all STE problems are drawn from <strong>Level 1 and Level 2</strong> across Categories 1, 2, 3, and 5, solved on $[0, 2\pi)$ without a calculator.</p>
+
+        <div class="grid-2">
+            <!-- Category 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Category 1: Isolating a Trig Function (Lv 1 &amp; 2)</span>
+                    <button class="watch-btn" onclick="playVideo(1)">▶ Watch</button>
+                </div>
+                <p><strong>Method</strong>: Move all terms with the trig function to one side, constants to the other, convert reciprocals ($\sec x = \frac{1}{\cos x}$, $\csc x = \frac{1}{\sin x}$, $\cot x = \frac{1}{\tan x}$), and identify the two quadrants on $[0, 2\pi)$.</p>
+                <div class="math-box">
+                    <strong>Ex 1 (Wkst A Lv 1 #3):</strong> Solve $3\sqrt{3}\tan x = 3$ on $[0, 2\pi)$.
+                    $$\tan x = \frac{3}{3\sqrt{3}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$$
+                    $$\text{QI &amp; QIII } \left(\theta_{\text{ref}} = \frac{\pi}{6}\right) \implies x = \frac{\pi}{6}, \frac{7\pi}{6}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 2 (Wkst A Lv 2 #13):</strong> Solve $4\sec x - 2 = 2\sec x$ on $[0, 2\pi)$.
+                    $$2\sec x = 2 \implies \sec x = 1 \implies \cos x = 1 \implies x = 0$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 3 (Wkst A Lv 2 #4):</strong> Solve $\sqrt{3}\sec x + 2 = 0$ on $[0, 2\pi)$.
+                    $$\sec x = -\frac{2}{\sqrt{3}} \implies \cos x = -\frac{\sqrt{3}}{2} \implies x = \frac{5\pi}{6}, \frac{7\pi}{6}$$
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Category 2: By Square Roots (Lv 1 &amp; 2)</span>
+                    <button class="watch-btn" onclick="playVideo(1)">▶ Watch</button>
+                </div>
+                <p><strong>Method</strong>: Isolate the squared trig function $\text{trig}^2(x) = k$, then take $\pm\sqrt{k}$. Because both positive and negative values are included, you get solutions in <strong>all 4 quadrants</strong>!</p>
+                <div class="math-box">
+                    <strong>Ex 1 (Wkst A Lv 1 #8):</strong> Solve $4\cos^2 x - 3 = 0$ on $[0, 2\pi)$.
+                    $$\cos^2 x = \frac{3}{4} \implies \cos x = \pm\frac{\sqrt{3}}{2}$$
+                    $$x = \frac{\pi}{6}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{11\pi}{6}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 2 (Wkst A Lv 2 #7):</strong> Solve $3\csc^2 x - 4 = 0$ on $[0, 2\pi)$.
+                    $$\csc^2 x = \frac{4}{3} \implies \sin^2 x = \frac{3}{4} \implies \sin x = \pm\frac{\sqrt{3}}{2}$$
+                    $$x = \frac{\pi}{3}, \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{5\pi}{3}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 3 (Wkst A Lv 2 #11):</strong> Solve $\csc^2 x - 2 = 0$ on $[0, 2\pi)$.
+                    $$\csc^2 x = 2 \implies \sin x = \pm\frac{\sqrt{2}}{2} \implies x = \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \frac{7\pi}{4}$$
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Category 3: By Factoring — GCF &amp; Trinomials (Lv 1 &amp; 2)</span>
+                    <button class="watch-btn" onclick="playVideo(2)">▶ Watch</button>
+                </div>
+                <p><strong>Method</strong>: Move every term to the left side so the right side is $0$. Factor out a GCF or factor as a quadratic $(a u + b)(c u + d) = 0$. <strong>Never divide both sides by a trig function!</strong></p>
+                <div class="math-box">
+                    <strong>Ex 1 (Wkst A Lv 2 #18 — GCF Trap):</strong> Solve $3\tan^3 x = \tan x$.
+                    $$3\tan^3 x - \tan x = 0 \implies \tan x(3\tan^2 x - 1) = 0$$
+                    $$\tan x = 0 \implies x = 0, \pi$$
+                    $$\tan x = \pm\frac{1}{\sqrt{3}} \implies x = \frac{\pi}{6}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{11\pi}{6}$$
+                    $$\text{All 6 roots: } x = 0, \frac{\pi}{6}, \frac{5\pi}{6}, \pi, \frac{7\pi}{6}, \frac{11\pi}{6}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 2 (Wkst A Lv 2 #20 — Quadratic):</strong> Solve $\sec^2 x - \sec x = 2$.
+                    $$\sec^2 x - \sec x - 2 = 0 \implies (\sec x - 2)(\sec x + 1) = 0$$
+                    $$\sec x = 2 \implies \cos x = \frac{1}{2} \implies x = \frac{\pi}{3}, \frac{5\pi}{3}$$
+                    $$\sec x = -1 \implies \cos x = -1 \implies x = \pi$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 3 (Wkst A Lv 2 #28):</strong> Solve $2\sin^2 x + 5\sin x = 3$.
+                    $$2\sin^2 x + 5\sin x - 3 = 0 \implies (2\sin x - 1)(\sin x + 3) = 0$$
+                    $$\sin x = \frac{1}{2} \implies x = \frac{\pi}{6}, \frac{5\pi}{6} \quad (\sin x = -3 \text{ has no solution})$$
+                </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Category 5: Multiple-Angle Equations (Lv 2)</span>
+                    <button class="watch-btn" onclick="playVideo(5)">▶ Watch</button>
+                </div>
+                <p><strong>Method</strong>: When solving $\text{trig}(nx) = c$ on $0 \le x < 2\pi$, first find all solutions for the multiple angle $nx$ on $[0, 2n\pi)$ (go around the circle $n$ times!), and <strong>divide by $n$ last</strong>.</p>
+                <div class="math-box">
+                    <strong>Ex 1 (Wkst A Lv 2 #42):</strong> Solve $\sin(2x) = -\frac{1}{\sqrt{2}}$ on $[0, 2\pi)$.
+                    $$\text{Since } 0 \le x < 2\pi \implies 0 \le 2x < 4\pi \text{ (2 revolutions):}$$
+                    $$2x = \frac{5\pi}{4}, \frac{7\pi}{4}, \frac{13\pi}{4}, \frac{15\pi}{4}$$
+                    $$\text{Divide by } 2: \quad x = \frac{5\pi}{8}, \frac{7\pi}{8}, \frac{13\pi}{8}, \frac{15\pi}{8}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 2 (Wkst A Lv 2 #37):</strong> Solve $\cos(3x) = 0$ on $[0, 2\pi)$.
+                    $$\text{Since } 0 \le x < 2\pi \implies 0 \le 3x < 6\pi \text{ (3 revolutions):}$$
+                    $$3x = \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \frac{7\pi}{2}, \frac{9\pi}{2}, \frac{11\pi}{2}$$
+                    $$\text{Divide by } 3: \quad x = \frac{\pi}{6}, \frac{\pi}{2}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{3\pi}{2}, \frac{11\pi}{6}$$
+                </div>
+                <div class="math-box">
+                    <strong>Ex 3 (Wkst A Lv 2 #38):</strong> Solve $\sqrt{3}\tan(3x) = 0$ on $[0, 2\pi)$.
+                    $$\tan(3x) = 0 \text{ on } [0, 6\pi) \implies 3x = 0, \pi, 2\pi, 3\pi, 4\pi, 5\pi$$
+                    $$\text{Divide by } 3: \quad x = 0, \frac{\pi}{3}, \frac{2\pi}{3}, \pi, \frac{4\pi}{3}, \frac{5\pi}{3}$$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR 3: WORKSHEET B REQUIRED PROBLEMS (DUE TUESDAY 10/27) -->
+    <section id="pillar3" class="section-block">
+        <div class="section-header">
+            <div class="section-title">📝 Pillar 3: Complete Worked Solutions to Worksheet B Required Problems (Due Tue 10/27)</div>
+            <button class="watch-btn" onclick="playVideo(0)">▶ Video 1: Notebook Formatting Rules</button>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-title">📏 Mr. O'Connor's 6 Mandatory Worksheet B Formatting Rules (Check Before Turning In!)</div>
+            <ol style="margin-bottom:0;">
+                <li><strong>No Calculators</strong>: Every radical and fraction step must be shown by hand.</li>
+                <li><strong>Write Page &amp; Problem Number</strong>: Clearly label every problem (e.g., <strong>Pg 384 #19</strong>).</li>
+                <li><strong>Fold Paper Vertically in 2 Columns</strong>: Work top-to-bottom in the left column, then top-to-bottom in the right column.</li>
+                <li><strong>Copy the Original Problem</strong>: Never start a problem with an step—write the given problem statement first.</li>
+                <li><strong>Never Split a Problem Across Columns/Pages</strong>: If a problem won't fit at the bottom of a column, start it at the top of the next column.</li>
+                <li><strong>DO NOT Box or Circle Final Answers</strong>: Leave your final simplified expression unboxed and uncircled!</li>
+            </ol>
+        </div>
+
+        <!-- SRE SECTION 1 -->
+        <h3>🔹 SRE Section 1: Evaluating Trigonometric Expressions Using Identities (3 Required Problems)</h3>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">1. Sum/Difference: Pg 384 #19</span>
+                    <button class="watch-btn" onclick="playVideo(7)">▶ Video 8</button>
+                </div>
+                <p><strong>Problem</strong>: Find the exact values of $\sin, \cos,$ and $\tan$ of $\frac{11\pi}{12}$.</p>
+                <div class="math-box">
+                    <strong>Decompose Angle:</strong>
+                    $$\frac{11\pi}{12} = \frac{8\pi}{12} + \frac{3\pi}{12} = \frac{2\pi}{3} + \frac{\pi}{4}$$
+                    <strong>Sine:</strong>
+                    $$\sin\left(\frac{2\pi}{3} + \frac{\pi}{4}\right) = \sin\frac{2\pi}{3}\cos\frac{\pi}{4} + \cos\frac{2\pi}{3}\sin\frac{\pi}{4}$$
+                    $$= \left(\frac{\sqrt{3}}{2}\right)\left(\frac{\sqrt{2}}{2}\right) + \left(-\frac{1}{2}\right)\left(\frac{\sqrt{2}}{2}\right) = \frac{\sqrt{6} - \sqrt{2}}{4}$$
+                    <strong>Cosine:</strong>
+                    $$\cos\left(\frac{2\pi}{3} + \frac{\pi}{4}\right) = \cos\frac{2\pi}{3}\cos\frac{\pi}{4} - \sin\frac{2\pi}{3}\sin\frac{\pi}{4}$$
+                    $$= \left(-\frac{1}{2}\right)\left(\frac{\sqrt{2}}{2}\right) - \left(\frac{\sqrt{3}}{2}\right)\left(\frac{\sqrt{2}}{2}\right) = \frac{-\sqrt{2} - \sqrt{6}}{4}$$
+                    <strong>Tangent:</strong>
+                    $$\tan\left(\frac{2\pi}{3} + \frac{\pi}{4}\right) = \frac{-\sqrt{3} + 1}{1 - (-\sqrt{3})(1)} = \frac{1 - \sqrt{3}}{1 + \sqrt{3}} = \sqrt{3} - 2$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">2. Half-Angle: Pg 395 #45</span>
+                    <button class="watch-btn" onclick="playVideo(8)">▶ Video 9</button>
+                </div>
+                <p><strong>Problem</strong>: Use half-angle formulas to find exact $\sin, \cos, \tan$ of $\frac{7\pi}{8}$.</p>
+                <div class="math-box">
+                    <strong>Setup:</strong> $\frac{7\pi}{8} = \frac{7\pi/4}{2}$ so $u = \frac{7\pi}{4}$. Since $\frac{7\pi}{8} \in \text{QII}$, $\sin > 0, \cos < 0, \tan < 0$.
+                    $$\cos\left(\frac{7\pi}{4}\right) = \frac{\sqrt{2}}{2}, \qquad \sin\left(\frac{7\pi}{4}\right) = -\frac{\sqrt{2}}{2}$$
+                    <strong>Sine ($\text{QII} \implies +$):</strong>
+                    $$\sin\left(\frac{7\pi}{8}\right) = +\sqrt{\frac{1 - \frac{\sqrt{2}}{2}}{2}} = \sqrt{\frac{2 - \sqrt{2}}{4}} = \frac{\sqrt{2 - \sqrt{2}}}{2}$$
+                    <strong>Cosine ($\text{QII} \implies -$):</strong>
+                    $$\cos\left(\frac{7\pi}{8}\right) = -\sqrt{\frac{1 + \frac{\sqrt{2}}{2}}{2}} = -\frac{\sqrt{2 + \sqrt{2}}}{2}$$
+                    <strong>Tangent:</strong>
+                    $$\tan\left(\frac{7\pi}{8}\right) = \frac{1 - \cos\left(\frac{7\pi}{4}\right)}{\sin\left(\frac{7\pi}{4}\right)} = \frac{1 - \frac{\sqrt{2}}{2}}{-\frac{\sqrt{2}}{2}} = 1 - \sqrt{2}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">3. Sum-to-Product: Pg 396 #83</span>
+                    <button class="watch-btn" onclick="playVideo(9)">▶ Video 10</button>
+                </div>
+                <p><strong>Problem</strong>: Use a sum-to-product formula to find the exact value of $\sin(75^\circ) + \sin(15^\circ)$.</p>
+                <div class="math-box">
+                    <strong>Formula:</strong>
+                    $$\sin u + \sin v = 2\sin\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$$
+                    <strong>Substitute $u = 75^\circ, v = 15^\circ$:</strong>
+                    $$\sin(75^\circ) + \sin(15^\circ) = 2\sin\left(\frac{75^\circ + 15^\circ}{2}\right)\cos\left(\frac{75^\circ - 15^\circ}{2}\right)$$
+                    $$= 2\sin(45^\circ)\cos(30^\circ)$$
+                    $$= 2\left(\frac{\sqrt{2}}{2}\right)\left(\frac{\sqrt{3}}{2}\right) = \frac{\sqrt{6}}{2}$$
+                </div>
+            </div>
+        </div>
+
+        <!-- SRE SECTION 2 -->
+        <h3>🔹 SRE Section 2: Rewriting Trigonometric Expressions Using Identities (6 Required Problems)</h3>
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">4. Sum/Diff Pattern: Pg 384 #29 &amp; Double-Angle: Pg 394 #21</span>
+                    <button class="watch-btn" onclick="playVideo(10)">▶ Video 11</button>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 384 #29:</strong> Write as the sine, cosine, or tangent of an angle:
+                    $$\cos(3x)\cos(2y) + \sin(3x)\sin(2y) = \cos(3x - 2y)$$
+                    <em>(Recognize $\cos u \cos v + \sin u \sin v = \cos(u - v)$.)</em>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 394 #21:</strong> Rewrite using double-angle formulas:
+                    $$6\sin x \cos x = 3(2\sin x \cos x) = 3\sin(2x)$$
+                    <em>(And if $4 - 8\sin^2 x = 4(1 - 2\sin^2 x) = 4\cos(2x)$.)</em>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 395 #53 (Half-Angle Rewrite):</strong> Simplify radical expression:
+                    $$\sqrt{\frac{1 - \cos(6x)}{2}} = \left|\sin\left(\frac{6x}{2}\right)\right| = |\sin(3x)|$$
+                    $$\frac{\sin(4x)}{1 + \cos(4x)} = \tan\left(\frac{4x}{2}\right) = \tan(2x)$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">5. Power-Reducing: Pg 394 #25 &amp; #27 (High-Probability Quiz Problem!)</span>
+                    <button class="watch-btn" onclick="playVideo(12)">▶ Video 13 &amp; 14</button>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 394 #25:</strong> Rewrite $\cos^4 x$ in terms of the first power of cosine:
+                    $$\cos^4 x = (\cos^2 x)^2 = \left(\frac{1 + \cos(2x)}{2}\right)^2 = \frac{1 + 2\cos(2x) + \cos^2(2x)}{4}$$
+                    $$\text{Replace } \cos^2(2x) = \frac{1 + \cos(4x)}{2}:$$
+                    $$= \frac{1}{4}\left(1 + 2\cos(2x) + \frac{1 + \cos(4x)}{2}\right) = \frac{3 + 4\cos(2x) + \cos(4x)}{8}$$
+                </div>
+                <div class="math-box">
+                    <strong>Pg 394 #27:</strong> Rewrite $\sin^2 x \cos^2 x$ in terms of the first power of cosine:
+                    $$\sin^2 x \cos^2 x = \left(\frac{1 - \cos(2x)}{2}\right)\left(\frac{1 + \cos(2x)}{2}\right) = \frac{1 - \cos^2(2x)}{4}$$
+                    $$= \frac{1}{4}\left(1 - \frac{1 + \cos(4x)}{2}\right) = \frac{1 - \cos(4x)}{8}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">6. Product-to-Sum: Pg 395 #69</span>
+                    <button class="watch-btn" onclick="playVideo(11)">▶ Video 12</button>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 395 #69:</strong> Use product-to-sum formulas to rewrite the product as a sum or difference:
+                    $$\sin(5\theta)\sin(3\theta) = \frac{1}{2}\big[\cos(5\theta - 3\theta) - \cos(5\theta + 3\theta)\big]$$
+                    $$= \frac{1}{2}\big[\cos(2\theta) - \cos(8\theta)\big]$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">7. Sum-to-Product: Pg 396 #79</span>
+                    <button class="watch-btn" onclick="playVideo(11)">▶ Video 12</button>
+                </div>
+                <div class="math-box">
+                    <strong>Pg 396 #79:</strong> Use sum-to-product formulas to rewrite the sum or difference as a product:
+                    $$\sin(5\theta) - \sin(3\theta) = 2\cos\left(\frac{5\theta + 3\theta}{2}\right)\sin\left(\frac{5\theta - 3\theta}{2}\right)$$
+                    $$= 2\cos(4\theta)\sin(\theta)$$
+                </div>
+            </div>
+        </div>
+
+        <!-- SRE SECTION 3 -->
+        <h3>🔹 SRE Section 3: Using Identities &amp; Right Triangles Given Quadrant Conditions (5 Required Problems)</h3>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">8. Two-Triangle Sum/Diff: Pg 384 #41</span>
+                    <button class="watch-btn" onclick="playVideo(14)">▶ Video 15</button>
+                </div>
+                <p><strong>Setup</strong>: Given $\sin u = \frac{5}{13}$ ($u \in \text{QII}$) and $\cos v = -\frac{3}{5}$ ($v \in \text{QII}$):</p>
+                <div class="math-box">
+                    <strong>Triangle $u$ (QII):</strong> $\text{opp}=5, \text{hyp}=13 \implies \text{adj}=-12$
+                    $$\sin u = \frac{5}{13}, \quad \cos u = -\frac{12}{13}, \quad \tan u = -\frac{5}{12}$$
+                    <strong>Triangle $v$ (QII):</strong> $\text{adj}=-3, \text{hyp}=5 \implies \text{opp}=4$
+                    $$\sin v = \frac{4}{5}, \quad \cos v = -\frac{3}{5}, \quad \tan v = -\frac{4}{3}$$
+                    <strong>Evaluate $\sin(u + v)$:</strong>
+                    $$\sin(u+v) = \left(\frac{5}{13}\right)\left(-\frac{3}{5}\right) + \left(-\frac{12}{13}\right)\left(\frac{4}{5}\right) = -\frac{63}{65}$$
+                    <strong>Evaluate $\cos(u - v)$:</strong>
+                    $$\cos(u-v) = \left(-\frac{12}{13}\right)\left(-\frac{3}{5}\right) + \left(\frac{5}{13}\right)\left(\frac{4}{5}\right) = \frac{56}{65}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">9. Double-Angle Triangle: Pg 394 #17 &amp; Pg 395 #38h</span>
+                    <button class="watch-btn" onclick="playVideo(16)">▶ Video 17</button>
+                </div>
+                <p><strong>Setup</strong>: Given $\sin u = -\frac{3}{5}$ with $\frac{3\pi}{2} < u < 2\pi$ (Quadrant IV):</p>
+                <div class="math-box">
+                    <strong>Triangle $u$ (QIV):</strong> $\text{opp}=-3, \text{hyp}=5 \implies \text{adj}=+4$
+                    $$\sin u = -\frac{3}{5}, \quad \cos u = \frac{4}{5}, \quad \tan u = -\frac{3}{4}$$
+                    <strong>Exact Double-Angle Values:</strong>
+                    $$\sin(2u) = 2\sin u \cos u = 2\left(-\frac{3}{5}\right)\left(\frac{4}{5}\right) = -\frac{24}{25}$$
+                    $$\cos(2u) = \cos^2 u - \sin^2 u = \frac{16}{25} - \frac{9}{25} = \frac{7}{25}$$
+                    $$\tan(2u) = \frac{\sin(2u)}{\cos(2u)} = -\frac{24}{7}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">10. Half-Angle Triangle: Pg 395 #37a &amp; #49</span>
+                    <button class="watch-btn" onclick="playVideo(15)">▶ Video 16</button>
+                </div>
+                <p><strong>Setup</strong>: Given $\cot u = 3$ with $\pi < u < \frac{3\pi}{2}$ (Quadrant III):</p>
+                <div class="math-box">
+                    <strong>Step 1 — Quadrant of $\frac{u}{2}$:</strong>
+                    $$\pi < u < \frac{3\pi}{2} \implies \frac{\pi}{2} < \frac{u}{2} < \frac{3\pi}{4} \implies \frac{u}{2} \in \text{QII!}$$
+                    <strong>Step 2 — Triangle $u$ (QIII):</strong> $\text{adj}=-3, \text{opp}=-1, \text{hyp}=\sqrt{10}$
+                    $$\cos u = -\frac{3}{\sqrt{10}}, \qquad \sin u = -\frac{1}{\sqrt{10}}$$
+                    <strong>Step 3 — Half-Angle Values ($\frac{u}{2} \in \text{QII}$):</strong>
+                    $$\sin\left(\frac{u}{2}\right) = +\sqrt{\frac{1 + \frac{3}{\sqrt{10}}}{2}} = \sqrt{\frac{10 + 3\sqrt{10}}{20}}$$
+                    $$\cos\left(\frac{u}{2}\right) = -\sqrt{\frac{1 - \frac{3}{\sqrt{10}}}{2}} = -\sqrt{\frac{10 - 3\sqrt{10}}{20}}$$
+                    $$\tan\left(\frac{u}{2}\right) = \frac{1 - \cos u}{\sin u} = \frac{1 + \frac{3}{\sqrt{10}}}{-\frac{1}{\sqrt{10}}} = -3 - \sqrt{10}$$
+                </div>
+            </div>
+        </div>
+
+        <!-- SRE SECTION 4 -->
+        <h3>🔹 SRE Section 4: Rewriting Inverse Trig Composites as Algebraic Expressions in $x$ (3 Required Problems)</h3>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">11. Single Inverse Sum/Diff: Pg 385 #45</span>
+                    <button class="watch-btn" onclick="playVideo(17)">▶ Video 18</button>
+                </div>
+                <p><strong>Problem</strong>: Write $\sin\left(\frac{\pi}{3} - \arccos x\right)$ as an algebraic expression in $x$.</p>
+                <div class="math-box">
+                    <strong>Let $v = \arccos x$:</strong>
+                    $$\cos v = \frac{x}{1} \implies \text{adj}=x, \text{hyp}=1 \implies \text{opp}=\sqrt{1 - x^2}$$
+                    $$\sin v = \sqrt{1 - x^2}$$
+                    <strong>Apply $\sin(u - v)$:</strong>
+                    $$\sin\left(\frac{\pi}{3}\right)\cos v - \cos\left(\frac{\pi}{3}\right)\sin v$$
+                    $$= \left(\frac{\sqrt{3}}{2}\right)(x) - \left(\frac{1}{2}\right)\sqrt{1 - x^2} = \frac{\sqrt{3}x - \sqrt{1 - x^2}}{2}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">12. Two-Inverse Sum/Diff: Pg 385 #61</span>
+                    <button class="watch-btn" onclick="playVideo(17)">▶ Video 18</button>
+                </div>
+                <p><strong>Problem</strong>: Write $\sin(\arctan x + \arccos x)$ as an algebraic expression in $x$.</p>
+                <div class="math-box">
+                    <strong>Triangle $u = \arctan x$:</strong> $\text{opp}=x, \text{adj}=1, \text{hyp}=\sqrt{1 + x^2}$
+                    $$\sin u = \frac{x}{\sqrt{1 + x^2}}, \qquad \cos u = \frac{1}{\sqrt{1 + x^2}}$$
+                    <strong>Triangle $v = \arccos x$:</strong> $\text{adj}=x, \text{hyp}=1, \text{opp}=\sqrt{1 - x^2}$
+                    $$\sin v = \sqrt{1 - x^2}, \qquad \cos v = x$$
+                    <strong>Expand $\sin(u + v) = \sin u \cos v + \cos u \sin v$:</strong>
+                    $$= \left(\frac{x}{\sqrt{1 + x^2}}\right)(x) + \left(\frac{1}{\sqrt{1 + x^2}}\right)\sqrt{1 - x^2}$$
+                    $$= \frac{x^2 + \sqrt{1 - x^2}}{\sqrt{1 + x^2}}$$
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">13. Double-Angle Inverse: Pg 396 #115</span>
+                    <button class="watch-btn" onclick="playVideo(18)">▶ Video 19</button>
+                </div>
+                <p><strong>Problem</strong>: Write $\sin(2\arcsin x)$ and $\cos(2\arcsin x)$ as algebraic expressions in $x$.</p>
+                <div class="math-box">
+                    <strong>Let $u = \arcsin x$:</strong> $\text{opp}=x, \text{hyp}=1 \implies \text{adj}=\sqrt{1 - x^2}$
+                    $$\sin u = x, \qquad \cos u = \sqrt{1 - x^2}$$
+                    <strong>For $\sin(2\arcsin x)$:</strong>
+                    $$\sin(2u) = 2\sin u \cos u = 2x\sqrt{1 - x^2}$$
+                    <strong>For $\cos(2\arcsin x)$:</strong>
+                    $$\cos(2u) = 1 - 2\sin^2 u = 1 - 2x^2$$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR 4: TOP 6 QUIZ TRAPS -->
+    <section id="pillar4" class="section-block">
+        <div class="section-header">
+            <div class="section-title">⚠️ Pillar 4: Top 6 Unit 4 Quiz Traps &amp; Error Prevention</div>
+            <span class="badge">Read Before Walking Into Class Tuesday</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="trap-box">
+                <div class="trap-title">Trap 1: Dividing Both Sides by a Trig Function (STE Cat 3)</div>
+                <p>In $3\tan^3 x = \tan x$ or $\sec x \csc x = 2\csc x$, <strong>NEVER divide by $\tan x$ or $\csc x$</strong>! Dividing erases every root where that function equals zero. Always subtract to make one side $0$ and factor out the GCF.</p>
+            </div>
+
+            <div class="trap-box">
+                <div class="trap-title">Trap 2: Forgetting $\pm$ When Taking Square Roots (STE Cat 2)</div>
+                <p>In $4\cos^2 x - 3 = 0 \implies \cos^2 x = \frac{3}{4}$, taking the square root gives $\cos x = \pm\frac{\sqrt{3}}{2}$. Forgetting the $-$ sign costs you half the solutions (Quadrants II and III)!</p>
+            </div>
+
+            <div class="trap-box">
+                <div class="trap-title">Trap 3: Dividing by $n$ Too Early in Multiple-Angle Equations (STE Cat 5)</div>
+                <p>In $\sin(2x) = -\frac{\sqrt{2}}{2}$ on $[0, 2\pi)$, do NOT divide $\frac{5\pi}{4}$ and $\frac{7\pi}{4}$ by $2$ and stop! Because $2x \in [0, 4\pi)$, you must add $2\pi$ to get $\frac{13\pi}{4}$ and $\frac{15\pi}{4}$ <em>before</em> dividing by $2$.</p>
+            </div>
+
+            <div class="trap-box">
+                <div class="trap-title">Trap 4: Using the Quadrant of $u$ Instead of $\frac{u}{2}$ (SRE Sec 3)</div>
+                <p>If $u$ is in Quadrant III ($\pi < u < \frac{3\pi}{2}$), $\cos u$ is negative—but $\frac{u}{2}$ satisfies $\frac{\pi}{2} < \frac{u}{2} < \frac{3\pi}{4}$ (Quadrant II!), so $\sin\left(\frac{u}{2}\right)$ is <strong>positive</strong> and $\cos\left(\frac{u}{2}\right)$ is <strong>negative</strong>.</p>
+            </div>
+
+            <div class="trap-box">
+                <div class="trap-title">Trap 5: Stopping Halfway on Power-Reducing (SRE Sec 2)</div>
+                <p>When rewriting $\cos^4 x$ or $\sin^2 x \cos^2 x$ to the <em>first power of cosine</em>, a $\cos^2(2x)$ term appears after the first step. You must apply Power-Reducing a <strong>second time</strong>: $\cos^2(2x) = \frac{1 + \cos(4x)}{2}$.</p>
+            </div>
+
+            <div class="trap-box">
+                <div class="trap-title">Trap 6: Boxing or Circling Answers on Worksheet B</div>
+                <p>Mr. O'Connor's Rule #6 explicitly states: <strong>DO NOT box or circle your final answers</strong> on Worksheets A, B, or C. Leave the final line clean!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE 12-PROBLEM QUIZ SIMULATION -->
+    <section id="selftest" class="section-block">
+        <div class="section-header">
+            <div class="section-title">🏆 Interactive 12-Question Unit 4 Quiz Simulation (No Calculator)</div>
+            <span class="badge badge-emerald">Click Any Question to Reveal Full Step-by-Step KaTeX Solution</span>
+        </div>
+        <p style="margin-bottom:1.1rem;">Work each problem on scratch paper without a calculator first, then click <strong>Reveal Step-by-Step Solution</strong> to grade your work.</p>
+
+        <!-- Q1 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q1 • STE Level 1 (Isolate)</span> Solve $2\sin x + \sqrt{3} = 0$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(1)">▶ Review Video 2</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    $$2\sin x = -\sqrt{3} \implies \sin x = -\frac{\sqrt{3}}{2}$$
+                    Sine is negative in Quadrants III and IV with reference angle $\frac{\pi}{3}$:
+                    $$x = \frac{4\pi}{3}, \frac{5\pi}{3}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q2 • STE Level 2 (Isolate Reciprocal)</span> Solve $\sqrt{3}\csc x - 2 = 0$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(1)">▶ Review Video 2</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    $$\csc x = \frac{2}{\sqrt{3}} \implies \sin x = \frac{\sqrt{3}}{2}$$
+                    Sine is positive in Quadrants I and II with reference angle $\frac{\pi}{3}$:
+                    $$x = \frac{\pi}{3}, \frac{2\pi}{3}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q3 • STE Level 2 (Square Roots)</span> Solve $3\cot^2 x - 1 = 0$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(1)">▶ Review Video 2</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    $$\cot^2 x = \frac{1}{3} \implies \tan^2 x = 3 \implies \tan x = \pm\sqrt{3}$$
+                    Reference angle is $\frac{\pi}{3}$ in all 4 quadrants:
+                    $$x = \frac{\pi}{3}, \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{5\pi}{3}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q4 • STE Level 2 (Factoring GCF Trap)</span> Solve $2\sin^2 x = \sin x$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(2)">▶ Review Video 3</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    Subtract $\sin x$ (do NOT divide by $\sin x$):
+                    $$2\sin^2 x - \sin x = 0 \implies \sin x(2\sin x - 1) = 0$$
+                    <ul>
+                        <li>$\sin x = 0 \implies x = 0, \pi$</li>
+                        <li>$2\sin x - 1 = 0 \implies \sin x = \frac{1}{2} \implies x = \frac{\pi}{6}, \frac{5\pi}{6}$</li>
+                    </ul>
+                    $$x = 0, \frac{\pi}{6}, \frac{5\pi}{6}, \pi$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q5 • STE Level 2 (Factoring Quadratic)</span> Solve $2\cos^2 x + \cos x - 1 = 0$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(2)">▶ Review Video 3</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    $$(2\cos x - 1)(\cos x + 1) = 0$$
+                    <ul>
+                        <li>$\cos x = \frac{1}{2} \implies x = \frac{\pi}{3}, \frac{5\pi}{3}$</li>
+                        <li>$\cos x = -1 \implies x = \pi$</li>
+                    </ul>
+                    $$x = \frac{\pi}{3}, \pi, \frac{5\pi}{3}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q6 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q6 • STE Level 2 (Multiple Angles)</span> Solve $\cos(2x) = -\frac{1}{2}$ on $[0, 2\pi)$.</span>
+                <button class="watch-btn" onclick="playVideo(5)">▶ Review Video 6</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    Let $u = 2x \in [0, 4\pi)$. Cosine equals $-\frac{1}{2}$ in Quadrants II and III ($\frac{2\pi}{3}, \frac{4\pi}{3}$):
+                    $$2x = \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{8\pi}{3}, \frac{10\pi}{3}$$
+                    Divide all solutions by $2$:
+                    $$x = \frac{\pi}{3}, \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{5\pi}{3}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q7 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q7 • SRE Section 1 (Exact Sum/Diff Evaluation)</span> Find the exact value of $\cos\left(\frac{7\pi}{12}\right)$.</span>
+                <button class="watch-btn" onclick="playVideo(7)">▶ Review Video 8</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    Split $\frac{7\pi}{12} = \frac{3\pi}{12} + \frac{4\pi}{12} = \frac{\pi}{4} + \frac{\pi}{3}$:
+                    $$\cos\left(\frac{\pi}{4} + \frac{\pi}{3}\right) = \cos\frac{\pi}{4}\cos\frac{\pi}{3} - \sin\frac{\pi}{4}\sin\frac{\pi}{3}$$
+                    $$= \left(\frac{\sqrt{2}}{2}\right)\left(\frac{1}{2}\right) - \left(\frac{\sqrt{2}}{2}\right)\left(\frac{\sqrt{3}}{2}\right) = \frac{\sqrt{2} - \sqrt{6}}{4}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q8 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q8 • SRE Section 1 (Exact Half-Angle Evaluation)</span> Find the exact value of $\tan\left(\frac{5\pi}{8}\right)$.</span>
+                <button class="watch-btn" onclick="playVideo(8)">▶ Review Video 9</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    Since $\frac{5\pi}{8} = \frac{5\pi/4}{2}$, let $u = \frac{5\pi}{4}$ (Quadrant III: $\sin u = -\frac{\sqrt{2}}{2}, \cos u = -\frac{\sqrt{2}}{2}$). Using the rational half-angle formula:
+                    $$\tan\left(\frac{5\pi}{8}\right) = \frac{1 - \cos\left(\frac{5\pi}{4}\right)}{\sin\left(\frac{5\pi}{4}\right)} = \frac{1 - \left(-\frac{\sqrt{2}}{2}\right)}{-\frac{\sqrt{2}}{2}} = \frac{2 + \sqrt{2}}{-\sqrt{2}} = -\sqrt{2} - 1$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q9 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q9 • SRE Section 2 (Power-Reducing)</span> Rewrite $\sin^4 x$ in terms of the first power of cosine.</span>
+                <button class="watch-btn" onclick="playVideo(12)">▶ Review Video 13</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    $$\sin^4 x = (\sin^2 x)^2 = \left(\frac{1 - \cos(2x)}{2}\right)^2 = \frac{1 - 2\cos(2x) + \cos^2(2x)}{4}$$
+                    Substitute $\cos^2(2x) = \frac{1 + \cos(4x)}{2}$:
+                    $$= \frac{1}{4}\left(1 - 2\cos(2x) + \frac{1 + \cos(4x)}{2}\right) = \frac{3 - 4\cos(2x) + \cos(4x)}{8}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q10 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q10 • SRE Section 3 (2-Triangle Sum/Diff)</span> Given $\sin u = -\frac{4}{5}$ ($u \in \text{QIII}$) and $\cos v = -\frac{12}{13}$ ($v \in \text{QII}$), find the exact value of $\cos(u + v)$.</span>
+                <button class="watch-btn" onclick="playVideo(14)">▶ Review Video 15</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    <ul>
+                        <li>For $u \in \text{QIII}$: $\sin u = -\frac{4}{5} \implies \cos u = -\frac{3}{5}$.</li>
+                        <li>For $v \in \text{QII}$: $\cos v = -\frac{12}{13} \implies \sin v = +\frac{5}{13}$.</li>
+                    </ul>
+                    $$\cos(u + v) = \cos u \cos v - \sin u \sin v = \left(-\frac{3}{5}\right)\left(-\frac{12}{13}\right) - \left(-\frac{4}{5}\right)\left(\frac{5}{13}\right) = \frac{36 + 20}{65} = \frac{56}{65}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q11 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q11 • SRE Section 3 (Half-Angle from Triangle)</span> Given $\cos u = -\frac{4}{5}$ with $\pi < u < \frac{3\pi}{2}$, find the exact value of $\cos\left(\frac{u}{2}\right)$.</span>
+                <button class="watch-btn" onclick="playVideo(15)">▶ Review Video 16</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    First find the quadrant of $\frac{u}{2}$:
+                    $$\pi < u < \frac{3\pi}{2} \implies \frac{\pi}{2} < \frac{u}{2} < \frac{3\pi}{4} \implies \frac{u}{2} \in \text{Quadrant II } (\cos(u/2) < 0)$$
+                    $$\cos\left(\frac{u}{2}\right) = -\sqrt{\frac{1 + \cos u}{2}} = -\sqrt{\frac{1 - \frac{4}{5}}{2}} = -\sqrt{\frac{1}{10}} = -\frac{\sqrt{10}}{10}$$
+                </div>
+            </details>
+        </div>
+
+        <!-- Q12 -->
+        <div class="quiz-card">
+            <div class="quiz-q">
+                <span><span class="q-num">Q12 • SRE Section 4 (Algebraic Inverse Composite)</span> Rewrite $\cos(\arcsin x + \arctan x)$ as an algebraic expression in $x$.</span>
+                <button class="watch-btn" onclick="playVideo(17)">▶ Review Video 18</button>
+            </div>
+            <details>
+                <summary>Reveal Step-by-Step Solution</summary>
+                <div class="ans-body">
+                    <ul>
+                        <li>Let $u = \arcsin x \implies \sin u = x, \cos u = \sqrt{1 - x^2}$.</li>
+                        <li>Let $v = \arctan x \implies \sin v = \frac{x}{\sqrt{1 + x^2}}, \cos v = \frac{1}{\sqrt{1 + x^2}}$.</li>
+                    </ul>
+                    $$\cos(u + v) = \cos u \cos v - \sin u \sin v = \left(\sqrt{1 - x^2}\right)\left(\frac{1}{\sqrt{1 + x^2}}\right) - (x)\left(\frac{x}{\sqrt{1 + x^2}}\right) = \frac{\sqrt{1 - x^2} - x^2}{\sqrt{1 + x^2}}$$
+                </div>
+            </details>
+        </div>
+    </section>
+
+</div>
+
+<script>
+const quizVideos = [
+    {
+        group: "Demonstration & Rules",
+        title: "Video 1: Organizing Work for Worksheets A, B, and C",
+        badge: "Rules",
+        type: "iframe",
+        url: "https://go.screenpal.com/player/c06w37VE7uf"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 2: Intro to Solving Trig Equations (Isolate & Sq Roots)",
+        badge: "STE Lv 1–2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MTgwMGUzMmJkZDVkOTY5YmUwMTkxNmQ1YWM1ZDE4ZjQ.highres.mp4?Expires=1792108030&Signature=QcoWvbYmVsvv1mKuE9Ee9O7VJHir2Qe7Zn2xFvj1YEmf3cw~khd-QhHEnqQvB7jLePBxZUrFd~P7zBxE9JKND2M6FJyHoHnHJgjqeHrT5jDuf7JXGZODDCxpYiJF13nIQfhTMSJOmbAN0VUGIqhjqJqt~9v1OaEocfbz6gZIc3hngelLa4CsVrVhUiBTj32SAh6ywEiuO7quCqKJ5tInfEUTIeC98WXIchDRjSz2ucVOf1eknkXXT-WsS04X6UFQ8VFA9V7cVoIG8q5lU~T3Mc36EZhx0n9Kkps~Q8PPKoGGgC1X2LyxRZnXjkg8yEW6x~uTiV48zxkzQbK11g2wsg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 3: Solving Technique — Factoring (GCF & Trinomials)",
+        badge: "STE Lv 1–2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODNjOWE3MGZhMjEzY2M1ZTU5YjVhZjk3Mjc0MzM4YTM.highres.mp4?Expires=1792108032&Signature=YVx8jfu3xEYVZ05~fE-VN1xZPw~qOyzf1Fbzn8kd~RobSAVW~mgl1aofJm94TUakizzCb5xF46AMmrPjbAMJea5D9D5oMsqRf58jd6DbRhMq1jZvkFf1HnUMYJ9tMBzwYg6i6Cg0zT0OdVnVqOWbjk3x4B3wmL~IC~jLcLac5RkXteUFDpw~VWBN8nue9Utr9BVUHaDkhoH86fLpoI33hBUugAB96KmHefkyE88MtzdA1eJCJJwfWbIaPqK13DQ25pClu9cxVi6votryDuSdazMg2hicMJqhjqnd2H8jLERIg~ueG3EvMlqJQjZIiAWJ58nbp4bz3hO1Deu6nJd8JQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 4: Solving Technique — Using Identities",
+        badge: "STE Ref",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTVhYzE0NDFkZGEzMzAwZWY4MTU0ZTMyNDUwYWJlM2E.highres.mp4?Expires=1792108034&Signature=QGzy3nCLmPpcJ5h2CRScnQcWahvglACX6nJdLjUEhMR4vdCIcBj~kRj8AKJlHYPi6fUjJcrKIs2gpxmNZXNE1O~eA925o6hFPygO7EnoAjzWa8qxEb-TZCGBSUqBSzmtlX-9japrrfdLtLBdh8b5HM4p46LzEpUcg0Kr4L0DLdQ7ge1VnuYhWR2rMdOzgU9~ib4zCgfMuF~oH9HlaPniGUrJADIEHhJ4pwRKm8KWs4O0u2qC7K-scyo1dpRIi8N0uzZXJBkE5ykWMM8mHbHf62LaphnWhR5Z2~Y3JGamkAUyHGq02L16gV5voBOdfRXJSvya1LzRP5LbenMeaVKdJg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 5: Solving Technique — Squaring Both Sides",
+        badge: "STE Ref",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/NjI0ZWIyYTlmZDU3ZDIyYzVjZjhjOTA3MTJlZThmMjE.highres.mp4?Expires=1792108032&Signature=eVcqugufgCUv27gw~zz0yfiHPj0LKXqxiec8423EJ8BUbABmkXzxlgXmGlKrEl~Nsl0GA7xa9sUGqyThRh3cdNP6RtRfor45bAuPGxiJcdfwXrU4JWf5icjDl~7tU1Vie3~vzjOuZD~b0fksZV28jFfeRwEHTLAoLS1ji7acf2kCkKeknAHvrEG2PiTdujLQLhPpHG9s3h9013c33hBVENQ0f8ozyR8eVjVJbLViITrbxhckh3yHeJjRK8d9prP453-SB5UH04oo6VnEmkR~da1eLj9xbwxJd-YMekqbZHZGegdDqyjyNjM6A1oQhx4Lx7Pd6je4fcLJrEa67DT0pw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 6: Solving Technique — Multiple Angles (sin 2x, cos 3x)",
+        badge: "STE Lv 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODcwNzE1YmI1ZWZkMWU3OGE2ZTRlZjQ3NWEwNzFmZWI.highres.mp4?Expires=1792108033&Signature=CvhtBAhQTWTKRcGjz~RbZsm7O5NZ42DKLZnAlh5-FhaUKe5oX1P78LqBC1CP9KAurE9aUJM~QRtC6aL2U561KuHbvzxsS4s5uYuGolXdxLSqIlqyYo-x9cEGOlF6QvhqQ11MpatzFltxurGt0bE6T2zx2kEGLttrFar20pSNTLdkHrTAeMOHJPhLNCxfg6p7nbzU3HJbNpB~8~f~luWKD3yTz0-L62DmP5aF8Y~aZTWi48pTOxdad6te0V6d2dlRlzcuwmSlkpO4MpQkpJF6x3yzRKSoussp0G5Hru6Ohcd-SjPs15Cv74bLDa1-dQW34mJvcRFB4DACSszeFPIu4w__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 1: Solving Trig Equations (STE)",
+        title: "Video 7: Solving & General Solutions",
+        badge: "STE Lv 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ODExM2ZiZWY3NDE3YjM1ZjIwMzA1OGFkMjQxMDcwMjA.highres.mp4?Expires=1792108032&Signature=kTWPEeybA8ZibTD4iqqLR3iNUM4M7o5SIMux6V9nkmqJt-USXHLfLI4Q1othJrPCaE-lYJmQfvrPLcTdnnRZUPB1CkDKMVFNiC-3N2uJr4Z0~qoeIJRfxQWkq3LguxdHLveCQNd890kARrtORcb8LmxvOO9D031m~BRh0fAbO6ade3iFdQ3YBvIdO4m7X5RTmepuZRgRs9Rn1ID9CyysZkNYh-jZKb5HamxJv1qQMlgMkRpRrWOh1W61kzymlIVFjTPAa8L3iAC9y7ICzkj7uD2BOvcbfYxpr0zmu8VYMS4b3hUkawP~zQAGBR6l2Fx6FKNmg2FElNKgp-68jLPEMg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 1 (Evaluating)",
+        title: "Video 8: SRE Sec 1 — Sum & Difference Formulas (Pg 384 #19)",
+        badge: "SRE Sec 1",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZTk0MjVhOGZmYTg3Mjg3M2Q0ZTAzNjM1NGMyMTQ0MmU.highres.mp4?Expires=1792108036&Signature=PGFMS8aeeLNIndTj0qyRL0UCriF1of01sJhhKadGGVm2ZYDyb~PAefN4Y4Gf5QpebnQSxExO0QG104xmbWjDh1s8mFyUrBcbLWeL9y~PmHK--qpHjyZRPOWWUymPmUesH5mZ4GvHRYbizwIDVpHavPYbkAXa38DY964RS0sSWxEJgsoQz-Odr2U9biPEVR~fKq-qtDKUbJubEm-jMJBXgKnITMf~hbcnqBLhPDr3dLKN6HQYQPUR-bOS9ZksS-2mLmM1~ASwNFJ0As4xhutM9Fsk-EoU5jIQsRZEB0FsjOzP4uT9XrWjHSRxzWgT6knDGkAV~Kp1kq4vBwhl4y4d1g__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 1 (Evaluating)",
+        title: "Video 9: SRE Sec 1 — Half-Angle Formulas (Pg 395 #45)",
+        badge: "SRE Sec 1",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MDliMWY0OWE3NjcyNmU0MTNkYWVlMTNiYmVlMGMzMGM.highres.mp4?Expires=1792108030&Signature=ukot0fMXIibVPp9DOOTT8Jpw2XGTINTsZqCR8MKAT~EGQdq5NIjwwvpO~no9uS3-k9hL3EtygUzz4v0vAHy2eAtr2Tr~pcPQJ9HqwcAeQapioYY-KJcz4jda~fbixSaAJh38wOyHzU9CLWgDuMMTIKKVvTPoHCq6ZBsAzjAEvoScIxtqS3PChQjhAH9DhOVKgbX-S92SlNRWRTtZ1VhthSW8MxxaBiSdSIduCpQVUDZNeuuHX0FX9qCvHO9cMsH9PL34D4O1y1h~doSjux60pbqT7e~3ER7haSsRA1TLNnviqZUv5GuLjOZPegXel~G1603SVRKLmd2IFf5oe-piFA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 1 (Evaluating)",
+        title: "Video 10: SRE Sec 1 — Sum-to-Product Formulas (Pg 396 #83)",
+        badge: "SRE Sec 1",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZTljOWZjMzNjZWIwNjk4NWJlYWVmODMxODM1NzY2ZDg.highres.mp4?Expires=1792108037&Signature=xfqnXJDkZkSiz0HVIVm66PMHW~AFumaZR2f1C4nx2Lx1ptJuyPsWFfaYIrbdioy1mDcSUfn5uowgtfVjn17C0rBku8bKUHnpd9Ydh-C7a3rqj0RgQFpG3nXHT6S0fKOSycvHpHB68zPMVjhhqTEz9C-p9gIhhHqksWSK35ffLLKyDf8s7oGKlOLT7LFg41WTirqw1g3GXLpbIjP9fzZglx1t1wBI1xr4Bnpke1Qw4SsgKDVDVZPqNMGBZEF2JbWwSEH0UkxKvQEd-3-zhsGSoihQqHXN-aozLkpdUU0T1b9zpMRj2T1idx8LtwXJg58rPTkvmMzviilhQu7PinLPCA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
+        title: "Video 11: SRE Sec 2 — Sum/Diff, Half-Angle & Double-Angle",
+        badge: "SRE Sec 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTQxNWM2OGNmMGNkNWMxNDczYzFmMDNlOTY1ZDY3NzU.highres.mp4?Expires=1792108033&Signature=jbyC6FWz9696wMEBEfejrqNs4i0XIB6UsNr0HDi8MaByRhaJOedErfpbauUHtMQKBi64tQXBACWvGkXp5cytvKEhELZN5mN-7ie6d-i1N2UadtmrYqPfaBI9b6rWy0orQk~xalTTWKcW8aMG22RVM0iHHhOk8SEr75mUVTD6wiFaI7dRX~sAuWKHPJLCaHAh4RB1-9eDlJRMuXWxhkZ8jCqDC2dOnWTncKrhv2IjDbQqEIqWgmE4Lwa3elUGtfjag3ZxPUIZhUUZaY4EifpjZSwtrnEpa83qg2~QSLxM~Dn~tSrPg3ZhifC0DxhrVJ7aS8Pp-g22CmXG7zT3fdKWpg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
+        title: "Video 12: SRE Sec 2 — Sum-to-Product & Product-to-Sum",
+        badge: "SRE Sec 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MDA4ZWE4NWMyOWMzMDg5NDQ0OTk2NzZiY2Y4ZDRiNzk.highres.mp4?Expires=1792108029&Signature=i2I0la9dhb8c6dSaec1NJ2dBTXTfqLxse9idAp~R-UwNXgh16bbZV8sK51A-GHlALIHHfvkNAMnwCv9P~4a41mZoh1hMHY0Wmg1GzT-xr~yHC0liOqPfv3u3znmmYTG-v1dTg1C3Y9E2TkHqbLJn9dl5J6G3UBgrnoOtLkyCThxci9SLsWJrisTMiIBAgnyJRVq65p8ZH~uYMus2gvx00yXrDFevjU02svItIWRaZp8EQbStfFFUyzzPdZ2QCWjZCkhI4zry6DZ6Xr3rZ6gdijEuLioXKKlBdck7K3p6lPsn-Qm~KpEtfr7nGlZPDA3dU~E9mzFdIB~EPHhFKh5otQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
+        title: "Video 13: SRE Sec 2 — Power Reducing (Example 1: Pg 394 #25)",
+        badge: "SRE Sec 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MzdkNzAyN2E3MzNhZGFlNTVjMmNhNzY5OGE1ZWNmZGM.highres.mp4?Expires=1792108031&Signature=xRdsUHxBudtPu1hQkBbX0U0QK0e2lim0kiW0gBS7Wy-vFEQ4rG~IRLMgVCuIemYebZjxEG3azQHxKMwVhy8iWwnNQaaTNoV3omBZrMM~pjzgOc01sFoc-ojyEYAHMgCu-1N~ZLGhb3Uz3J9QwSBu2BGlmrEReh5AWh7JHjL-xTO0djItoatoITK~l9kefp46pfRgcNFDMa58wQ9iuIjf6TBQ8AUbCu-wDf2~S4DDeakV8ZG5XvW8r-Uf76pG7Jw3YECbSqk7sjdIFz-Ma4GDmMr7ym7zVINSwo8h07UHiYaOvPYrAt2hd26g2q~AAgBOIvMToJsZr8J1eRaubFXtuA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 2 (Rewriting & Power-Reducing)",
+        title: "Video 14: SRE Sec 2 — Power Reducing (Example 2: Pg 394 #27)",
+        badge: "SRE Sec 2",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZjQzYjU3OTg0MDViNmI3YzRhOTJmODA2YWFkZDBkMmI.highres.mp4?Expires=1792108037&Signature=N01KGsBgddHMfzy7omiFcrdMpFxbxFutkON~v6OZVmO1n9HhcFp-ALzsKX47PGJn171fozhYVYR-ra6vEFf7UjdS1up3jXPbiJsnCPGQdwlX9YzTzZSkc~zSapaS~bHVdtmQSS-78GKIfwrXWry0sScQ7KyWayPDbxLgCFZ04XiwkW2nPaR4HP8nxZb7c8HGoh4XBqA9kQyr985RPKr2p~M0SsyikVZ8t9i3jJIOlr7Q4xx7XGvXwN-qr8ZT3DSSKXq-ydK6uqDMz9q1XW9S94GDE1jgk6uE7KlGf4izqXqC~-ZLG6ZXgvlMDicv1XKffs30ud9-dP2YLfnDFBsnaA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
+        title: "Video 15: SRE Sec 3 — Sum/Difference with 2 Triangles (Pg 384 #41)",
+        badge: "SRE Sec 3",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/YzMwMzljODc0NDU2ZmEyY2M3NTc5YmYzYTA0Y2E5ZGI.highres.mp4?Expires=1792108035&Signature=n5mlv-5wU2KiezWGN4IIg7ktWUgHTR8Xx4VrrQH0~3aq~jzGt6WKwjWi2mkE7CjQ38VuXHDHaM82mXxLGm6aUDC7VkIPI9Uqtynt1Rq0H3hHx373I9SAoyyd-6f5HVYpR1hMrAMaTayJn2qRerI2Ag7dg7MZHlRewBFDfJMUw3Fe-6psTSVx3smeQpGsZ9tsHtKJ6ta4DxSVTeeMPGFc5FUelSdSTuB4h6StDoNqn9QUm0WqJ5nrm-tdBIWqYCX1lM7F8lBxl4kd6oNHm9HozqBPS-JMDeq2D02WQBWSxjLuRVPJB2m4DSSDiJ-ADR5J18Sac65ajZnOEIzqGxjgWA__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
+        title: "Video 16: SRE Sec 3 — Half-Angle Triangle Problems (Pg 395 #49)",
+        badge: "SRE Sec 3",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/ZDgxMTkzYTJlZjQ1MDQyODZlOTk0NzJkMmRmNGE0NjY.highres.mp4?Expires=1792108035&Signature=BITR-eVeYIiE1g~8FrUBFZEUWB8jfw2pTLeCsDwLm0D4zMYQMsINA1yltv9zfCzgRfUJGPxD9C5Pvs3gsgqJPIBQMFEohGBvhJcJyXcLAubHkXyKHY29q1j3LHnnIpo622U4ydT8Wu0O0TsecS7ZS~DPXFyDi~29II8vf5ldzQi4-6s2I6VDkQPr3VdtQMX1bU3ptpNz5BgvE5CCfv7ytL9z3triqymyKmP5eb0Jb~FVjfkNm-FtMPclko8oylMhves40uAABw0DUgPbsBmo5RNnyzY7t0LbYuguUj6-zqt745-w-xAXhzj2MAVpfAIJ4Z46iDuLAW8LHv-Wl3BVLw__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 3 (Right Triangles & Quadrants)",
+        title: "Video 17: SRE Sec 3 — Double-Angle Triangle Problems (Pg 394 #17)",
+        badge: "SRE Sec 3",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/YzdkZGY2NTIxYmVkYTU3ZmVkMGI4NmQxYTk1NTQxNDY.highres.mp4?Expires=1792108035&Signature=q5hM2~UAs1Exg7EBs3W5AxYX27Z~lfrphhRFVCzhQUwK1HMK9rThtLwyKG-w0WaaYJc7jQNHqwyxLR7Aa7wMFgx6sIkPbnlFNKp4H6bAMRBVfPfkRjTugkUncLDEU48YcZmdJJWVDfwfgCcFvxSb~8RGguZNw~49z0Z4L7wme6q1V4zOzMsJz1TKaz9T61T65iUgYJJpssgLKuLqWc4QthZf7X2Rvedg5mt4L~mM~TEhtVAqloXJ2tEejZXuEVnNjmY~XKPbwwxigQ5wTs64rnIn2lnev-2SJFxhMJNSGx5vO4Xe5liEqLsBnwrH0gYZwt9FCO-Bt2bY8CTISm49eg__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 4 (Inverse Composites in x)",
+        title: "Video 18: SRE Sec 4 — Sum/Diff with Inverse Trig (Pg 385 #45 & #61)",
+        badge: "SRE Sec 4",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/OTE3OTlmYTkxMTAxZmQyNzlkNDg1NTdhOWM1MTBkMDg.highres.mp4?Expires=1792108033&Signature=XaYE1DreFAVL833Z~1HZSYcVsxlaR-U1s1Iq-KXfcAdlM4xrGbOjmJYgjwSLY8mpIwDhUjPM6qWRo7KbwdE9jYgkDgr2HVraGjl9DId7gAQZ6mcJy45xe12SPDFmKyKLZIg5cFlimwXZl2b-mVdZlav2qqEt0eQrCK96UkHYmBA7jJX8tyaZxA8BBX~o6RHQHkv0X117UYjulyQWokBe307OK~U2Y1Awrh6m9vWQ3ZVA0Werkdviecy7xoKDYK75Cu85J0x5DgXzBNMDwh0NzKUaf9x6jxBdMcWiPCfkqvQMWu1PHJhR~50Od3J6kvjzOcSngjznC-hGSnfyC-zA1Q__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    },
+    {
+        group: "Part 2: SRE Section 4 (Inverse Composites in x)",
+        title: "Video 19: SRE Sec 4 — Double-Angle with Inverse Trig (Pg 396 #115)",
+        badge: "SRE Sec 4",
+        type: "mp4",
+        url: "https://d1drabmetuo3qr.cloudfront.net/MmE5MWZiNjBmZTc1OTIyNTZmZGE5Mzg3ZjIzMmZiZDk.highres.mp4?Expires=1792108031&Signature=DQbeUjS0e0pM8S6WjeOfgrZ2ke7HzstqpKLYahB08HoVTzaOYZAaWidnIFiytMMKv~ikNdIyYgCH7sk5exWKnG01MlU8eYyeeXhc4xrPyrwqd4aoaEUnMCynQLdlUAagRvXO0ZBCds-ThRe4-zp3AjAHbEzc8OmQAvFdDjfisqj02NUoQSoHKZ9tba7JHV6ripEQRq0kwsY7nRl2oNkhJcpiVhrIfE-1ImM5js6eo0902d6AXyg8AV9HJqrasmxDdBe0h2pZ10caTHv1tY007V9bKHSn3ZyOvhmfKjvxdQUsw~J8kh6Yh54dT0-sF8ddx49CL3iC12SSbQ6COzKYXQ__&Key-Pair-Id=APKAI62FB7DDTEKY56BA"
+    }
+];
+
+function renderPlaylist() {
+    const container = document.getElementById('playlist-container');
+    let currentGroup = '';
+    let html = '';
+    quizVideos.forEach((v, idx) => {
+        if (v.group !== currentGroup) {
+            currentGroup = v.group;
+            html += `<div class="playlist-group-label">${currentGroup}</div>`;
+        }
+        const activeClass = idx === 1 ? 'active' : '';
+        html += `
+            <button class="playlist-btn ${activeClass}" id="pbtn-${idx}" onclick="playVideo(${idx})">
+                <span>${v.title}</span>
+                <span class="v-badge">${v.badge}</span>
+            </button>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+function playVideo(idx) {
+    const v = quizVideos[idx];
+    if (!v) return;
+    document.getElementById('player-title').textContent = "Unit 4 — " + v.title;
+    document.querySelectorAll('.playlist-btn').forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.getElementById('pbtn-' + idx);
+    if (activeBtn) activeBtn.classList.add('active');
+
+    const videoEl = document.getElementById('main-player');
+    const sourceEl = document.getElementById('main-source');
+    const iframeEl = document.getElementById('iframe-player');
+
+    if (v.type === 'iframe') {
+        videoEl.pause();
+        videoEl.style.display = 'none';
+        iframeEl.style.display = 'block';
+        iframeEl.src = v.url;
+    } else {
+        iframeEl.src = '';
+        iframeEl.style.display = 'none';
+        videoEl.style.display = 'block';
+        sourceEl.src = v.url;
+        videoEl.load();
+        videoEl.play().catch(() => {});
+    }
+    document.getElementById('theater-anchor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.addEventListener('DOMContentLoaded', renderPlaylist);
+</script>
+</body>
+</html>
