@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Precalculus: Unit 4 Quiz (10/27) Study & Video Portal — STE (Lv 1 & 2) + SRE</title>
     <!-- KaTeX for High-Precision Mathematical Typesetting (Local Offline Bundle + CDN Fallback) -->
-    <link rel="stylesheet" href="katex/katex.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';">
-    <script defer src="katex/katex.min.js" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js';document.head.appendChild(s);"></script>
-    <script defer src="katex/contrib/auto-render.min.js" onload="initKaTeX();" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js';s.onload=initKaTeX;document.head.appendChild(s);"></script>
+    <link rel="stylesheet" href="katex/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="katex/katex.min.js"></script>
+    <script defer src="katex/auto-render.min.js" onload="initKaTeX();"></script>
     <script>
         function initKaTeX() {
             if (typeof renderMathInElement === 'function') {
@@ -20,7 +21,9 @@
                 });
             }
         }
+        window.addEventListener("load", initKaTeX);
         document.addEventListener("DOMContentLoaded", function() {
+            initKaTeX();
             setTimeout(initKaTeX, 150);
         });
     </script>
@@ -798,7 +801,7 @@
                 <div class="math-box">
                     <strong>Ex 1 (Wkst A Lv 1 #3):</strong> Solve $3\sqrt{3}\tan x = 3$ on $[0, 2\pi)$.
                     $$\tan x = \frac{3}{3\sqrt{3}} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}$$
-                    $$\text{QI &amp; QIII } \left(\theta_{\text{ref}} = \frac{\pi}{6}\right) \implies x = \frac{\pi}{6}, \frac{7\pi}{6}$$
+                    $$\text{QI and QIII } \left(\theta_{\text{ref}} = \frac{\pi}{6}\right) \implies x = \frac{\pi}{6}, \frac{7\pi}{6}$$
                 </div>
                 <div class="math-box">
                     <strong>Ex 2 (Wkst A Lv 2 #13):</strong> Solve $4\sec x - 2 = 2\sec x$ on $[0, 2\pi)$.
