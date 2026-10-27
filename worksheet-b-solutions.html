@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worksheet B Solutions</title>
+<meta name="description" content="Step-by-step solutions to every required problem on AP Precalculus Unit 4 Worksheet B (simplify, rewrite, evaluate), with the formula used for each and the textbook answer check.">
+<link rel="stylesheet" href="katex/katex.min.css">
+<script defer src="katex/katex.min.js"></script>
+<script defer src="katex/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"></script>
+<style>
+  :root { --bg:#f8f9fa; --card:#ffffff; --text:#202124; --muted:#5f6368; --border:#dadce0; --blue:#1a73e8; --green:#137333; --greenbg:#e6f4ea; --amber:#b06000; --amberbg:#fef7e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --border:#374151; --blue:#8ab4f8; --green:#81c995; --greenbg:#10291a; --amber:#fdd663; --amberbg:#2b2410; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:'Google Sans',Roboto,-apple-system,'Segoe UI',sans-serif; line-height:1.55; }
+  .wrap { max-width:1100px; margin:0 auto; padding:16px; }
+  header { padding:24px 0 8px; }
+  h1 { margin:0 0 6px; font-size:1.9rem; }
+  .sub { color:var(--muted); margin:0; }
+  .bar { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+  .bar a, .bar button { border:1px solid var(--border); background:var(--card); color:var(--blue); padding:6px 12px; border-radius:999px; font-weight:700; font-size:.85rem; text-decoration:none; cursor:pointer; }
+  .note { background:var(--amberbg); border:1px solid var(--amber); border-radius:12px; padding:12px 16px; margin:12px 0; }
+  details.sheet { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px 16px; }
+  details.sheet > summary { cursor:pointer; font-weight:800; color:var(--blue); }
+  .fgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); gap:10px 18px; margin-top:10px; }
+  .fgroup h4 { margin:6px 0; }
+  .frow { margin:4px 0; overflow-x:auto; }
+  h2 { margin:28px 0 4px; font-size:1.4rem; }
+  .idea { margin:0 0 10px; color:var(--muted); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px; }
+  .num { font-weight:800; font-size:1.05rem; }
+  .kind { font-size:.75rem; font-weight:700; padding:2px 8px; border-radius:999px; background:var(--amberbg); color:var(--amber); text-align:right; }
+  .problem { font-size:1.02rem; margin:6px 0 8px; }
+  figure { margin:4px 0 8px; text-align:center; }
+  .fig { width:100%; max-width:280px; height:auto; color:var(--text); }
+  figcaption { font-size:.75rem; color:var(--muted); }
+  .formula { font-size:.9rem; color:var(--muted); border-left:3px solid var(--blue); padding-left:10px; margin-bottom:8px; }
+  details.sol summary { cursor:pointer; color:var(--blue); font-weight:700; }
+  .step { overflow-x:auto; margin:6px 0; text-align:center; }
+  .step-text { margin:4px 0; font-size:.95rem; }
+  .answer { background:var(--greenbg); border:1px solid var(--green); border-radius:8px; padding:8px 10px; overflow-x:auto; margin-top:8px; text-align:center; }
+  .booknote { font-size:.8rem; margin-top:4px; color:var(--green); font-weight:700; }
+  .booknote .even { color:var(--amber); }
+  .katex { font-size:1.08em; }
+  footer { color:var(--muted); font-size:.85rem; border-top:1px solid var(--border); margin-top:32px; padding:16px 0; }
+  @media print { details.sol { display:block; } .bar { display:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="bar"><a href="quiz-10-27.html">← Unit 4 Quiz portal</a><a href="docs/APPCU04_WkstB_SimpEvalRewrite_IdentityPractice.pdf">Worksheet B PDF</a><a href="worksheet-a-levels-1-2.html">Worksheet A solutions</a></div>
+  <h1>Worksheet B Solutions: All Required Problems</h1>
+  <p class="sub">AP Precalculus Unit 4 · Simplify, Rewrite, Evaluate (SRE) · due at the start of class Tue 10/27, the same day as the quiz</p>
+</header>
+
+<div class="note"><b>From the worksheet:</b> “On your paper, write the Page Number AND the Problem Number.” Incorrectly numbered work is returned to be redone. For power reducing you only need <b>#25 OR #27</b>; both are shown here. <b>How to study:</b> try each problem first, then open “Show steps and answer”.</div>
+
+<div class="bar"><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=true)">Show all solutions</button><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=false)">Hide all solutions</button><a href="#sec1">Section 1</a> <a href="#sec2">Section 2</a> <a href="#sec3">Section 3</a> <a href="#sec4">Section 4</a></div>
+
+<details class="sheet" open>
+  <summary>Formula sheet (every identity used on this page)</summary>
+  <div class="fgrid"><div class="fgroup"><h4>Sum and difference</h4><div class="frow">$\displaystyle \sin(u \pm v) = \sin u\cos v \pm \cos u\sin v$</div><div class="frow">$\displaystyle \cos(u \pm v) = \cos u\cos v \mp \sin u\sin v$</div><div class="frow">$\displaystyle \tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u\tan v}$</div></div><div class="fgroup"><h4>Double angle</h4><div class="frow">$\displaystyle \sin 2u = 2\sin u\cos u$</div><div class="frow">$\displaystyle \cos 2u = \cos^2 u - \sin^2 u = 2\cos^2 u - 1 = 1 - 2\sin^2 u$</div><div class="frow">$\displaystyle \tan 2u = \frac{2\tan u}{1 - \tan^2 u}$</div></div><div class="fgroup"><h4>Power reducing</h4><div class="frow">$\displaystyle \sin^2 u = \frac{1 - \cos 2u}{2}, \qquad \cos^2 u = \frac{1 + \cos 2u}{2}, \qquad \tan^2 u = \frac{1 - \cos 2u}{1 + \cos 2u}$</div></div><div class="fgroup"><h4>Half angle (sign from the quadrant of $\frac{u}{2}$)</h4><div class="frow">$\displaystyle \sin\frac{u}{2} = \pm\sqrt{\frac{1 - \cos u}{2}}, \qquad \cos\frac{u}{2} = \pm\sqrt{\frac{1 + \cos u}{2}}$</div><div class="frow">$\displaystyle \tan\frac{u}{2} = \frac{1 - \cos u}{\sin u} = \frac{\sin u}{1 + \cos u}$</div></div><div class="fgroup"><h4>Product to sum</h4><div class="frow">$\displaystyle \sin u\sin v = \tfrac{1}{2}[\cos(u - v) - \cos(u + v)]$</div><div class="frow">$\displaystyle \cos u\cos v = \tfrac{1}{2}[\cos(u - v) + \cos(u + v)]$</div><div class="frow">$\displaystyle \sin u\cos v = \tfrac{1}{2}[\sin(u + v) + \sin(u - v)]$</div><div class="frow">$\displaystyle \cos u\sin v = \tfrac{1}{2}[\sin(u + v) - \sin(u - v)]$</div></div><div class="fgroup"><h4>Sum to product</h4><div class="frow">$\displaystyle \sin u + \sin v = 2\sin\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$</div><div class="frow">$\displaystyle \sin u - \sin v = 2\cos\left(\frac{u + v}{2}\right)\sin\left(\frac{u - v}{2}\right)$</div><div class="frow">$\displaystyle \cos u + \cos v = 2\cos\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$</div><div class="frow">$\displaystyle \cos u - \cos v = -2\sin\left(\frac{u + v}{2}\right)\sin\left(\frac{u - v}{2}\right)$</div></div></div>
+</details>
+
+<section class="cat" id="sec1"><h2>Section 1: Evaluating Using Identities</h2><p class="idea">Find exact values. Break the angle into known angles, or use a half-angle or sum-to-product formula.</p><div class="grid">
+    <article class="card" id="p384-19">
+      <div class="card-head"><span class="num">Pg 384 #19</span><span class="kind">Sum/Diff</span></div>
+      <div class="problem">Find the exact values of the sine, cosine, and tangent of $\frac{13\pi}{12}$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin(u \pm v) = \sin u\cos v \pm \cos u\sin v$, $\ \cos(u \pm v) = \cos u\cos v \mp \sin u\sin v$, $\ \tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u\tan v}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Split into known angles: $\frac{13\pi}{12} = \frac{9\pi}{12} + \frac{4\pi}{12} = \frac{3\pi}{4} + \frac{\pi}{3}$.</p>
+<div class="step">$\displaystyle \sin\frac{13\pi}{12} = \sin\frac{3\pi}{4}\cos\frac{\pi}{3} + \cos\frac{3\pi}{4}\sin\frac{\pi}{3} = \frac{\sqrt{2}}{2}\cdot\frac{1}{2} + \left(-\frac{\sqrt{2}}{2}\right)\frac{\sqrt{3}}{2} = \frac{\sqrt{2} - \sqrt{6}}{4}$</div>
+<div class="step">$\displaystyle \cos\frac{13\pi}{12} = \cos\frac{3\pi}{4}\cos\frac{\pi}{3} - \sin\frac{3\pi}{4}\sin\frac{\pi}{3} = \left(-\frac{\sqrt{2}}{2}\right)\frac{1}{2} - \frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2} = -\frac{\sqrt{2} + \sqrt{6}}{4}$</div>
+<div class="step">$\displaystyle \tan\frac{13\pi}{12} = \frac{\tan\frac{3\pi}{4} + \tan\frac{\pi}{3}}{1 - \tan\frac{3\pi}{4}\tan\frac{\pi}{3}} = \frac{-1 + \sqrt{3}}{1 + \sqrt{3}} = \frac{(\sqrt{3} - 1)^2}{3 - 1} = 2 - \sqrt{3}$</div>
+<p class="step-text">Check the signs: $\frac{13\pi}{12}$ is in QIII, so sine and cosine are negative and tangent is positive.</p>
+        <div class="answer">$\displaystyle \sin\frac{13\pi}{12} = \frac{\sqrt{2} - \sqrt{6}}{4}, \quad \cos\frac{13\pi}{12} = -\frac{\sqrt{2} + \sqrt{6}}{4}, \quad \tan\frac{13\pi}{12} = 2 - \sqrt{3}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A209</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-45">
+      <div class="card-head"><span class="num">Pg 395 #45</span><span class="kind">Half Angle</span></div>
+      <div class="problem">Use the half-angle formulas to determine the exact values of the sine, cosine, and tangent of $\frac{3\pi}{8}$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin\frac{u}{2} = \pm\sqrt{\frac{1 - \cos u}{2}}$, $\ \cos\frac{u}{2} = \pm\sqrt{\frac{1 + \cos u}{2}}$, $\ \tan\frac{u}{2} = \frac{1 - \cos u}{\sin u}$. The sign comes from the quadrant of $\frac{u}{2}$.</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">$\frac{3\pi}{8} = \frac{1}{2}\cdot\frac{3\pi}{4}$, so use $u = \frac{3\pi}{4}$: $\cos u = -\frac{\sqrt{2}}{2}$, $\sin u = \frac{\sqrt{2}}{2}$.</p>
+<p class="step-text">$\frac{3\pi}{8}$ is in QI, so all three answers are positive.</p>
+<div class="step">$\displaystyle \sin\frac{3\pi}{8} = \sqrt{\frac{1 - \left(-\frac{\sqrt{2}}{2}\right)}{2}} = \sqrt{\frac{2 + \sqrt{2}}{4}} = \frac{\sqrt{2 + \sqrt{2}}}{2}$</div>
+<div class="step">$\displaystyle \cos\frac{3\pi}{8} = \sqrt{\frac{1 + \left(-\frac{\sqrt{2}}{2}\right)}{2}} = \sqrt{\frac{2 - \sqrt{2}}{4}} = \frac{\sqrt{2 - \sqrt{2}}}{2}$</div>
+<div class="step">$\displaystyle \tan\frac{3\pi}{8} = \frac{1 - \cos u}{\sin u} = \frac{1 + \frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}} = \frac{2 + \sqrt{2}}{\sqrt{2}} = \sqrt{2} + 1$</div>
+        <div class="answer">$\displaystyle \sin\frac{3\pi}{8} = \frac{\sqrt{2 + \sqrt{2}}}{2}, \quad \cos\frac{3\pi}{8} = \frac{\sqrt{2 - \sqrt{2}}}{2}, \quad \tan\frac{3\pi}{8} = \sqrt{2} + 1$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p396-83">
+      <div class="card-head"><span class="num">Pg 396 #83</span><span class="kind">Sum → Product</span></div>
+      <div class="problem">Use the sum-to-product formulas to find the exact value of $\cos\frac{5\pi}{12} + \cos\frac{\pi}{12}$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Sum-to-product: $\cos u + \cos v = 2\cos\left(\frac{u + v}{2}\right)\cos\left(\frac{u - v}{2}\right)$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \frac{u + v}{2} = \frac{1}{2}\cdot\frac{6\pi}{12} = \frac{\pi}{4}, \qquad \frac{u - v}{2} = \frac{1}{2}\cdot\frac{4\pi}{12} = \frac{\pi}{6}$</div>
+<div class="step">$\displaystyle \cos\frac{5\pi}{12} + \cos\frac{\pi}{12} = 2\cos\frac{\pi}{4}\cos\frac{\pi}{6} = 2\cdot\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2} = \frac{\sqrt{6}}{2}$</div>
+        <div class="answer">$\displaystyle \cos\frac{5\pi}{12} + \cos\frac{\pi}{12} = \frac{\sqrt{6}}{2}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article></div></section><section class="cat" id="sec2"><h2>Section 2: Rewriting Using Identities</h2><p class="idea">Spot the pattern, then collapse or expand it with the matching identity.</p><div class="grid">
+    <article class="card" id="p384-29">
+      <div class="card-head"><span class="num">Pg 384 #29</span><span class="kind">Sum/Diff</span></div>
+      <div class="problem">Write the expression as the sine, cosine, or tangent of an angle: $\cos\frac{\pi}{9}\cos\frac{\pi}{7} - \sin\frac{\pi}{9}\sin\frac{\pi}{7}$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Pattern: $\cos u\cos v - \sin u\sin v = \cos(u + v)$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \cos\frac{\pi}{9}\cos\frac{\pi}{7} - \sin\frac{\pi}{9}\sin\frac{\pi}{7} = \cos\left(\frac{\pi}{9} + \frac{\pi}{7}\right)$</div>
+<div class="step">$\displaystyle \frac{\pi}{9} + \frac{\pi}{7} = \frac{7\pi}{63} + \frac{9\pi}{63} = \frac{16\pi}{63}$</div>
+        <div class="answer">$\displaystyle \cos\frac{16\pi}{63}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A209</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-53">
+      <div class="card-head"><span class="num">Pg 395 #53</span><span class="kind">Half Angle</span></div>
+      <div class="problem">Use the half-angle formulas to simplify $\sqrt{\frac{1 - \cos 6x}{2}}$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Half angle with $u = 6x$: $\sqrt{\frac{1 - \cos u}{2}} = \left|\sin\frac{u}{2}\right|$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \sqrt{\frac{1 - \cos 6x}{2}} = \left|\sin\frac{6x}{2}\right| = |\sin 3x|$</div>
+<p class="step-text">The absolute value is needed because a principal square root is never negative, but $\sin 3x$ can be.</p>
+        <div class="answer">$\displaystyle |\sin 3x|$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article>
+    <article class="card" id="p394-21">
+      <div class="card-head"><span class="num">Pg 394 #21</span><span class="kind">Double Angle</span></div>
+      <div class="problem">Use a double-angle formula to rewrite the expression: $6 - 12\sin^2 x$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Double angle: $\cos 2u = 1 - 2\sin^2 u$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle 6 - 12\sin^2 x = 6(1 - 2\sin^2 x)$</div>
+<div class="step">$\displaystyle = 6\cos 2x$</div>
+        <div class="answer">$\displaystyle 6\cos 2x$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p396-79">
+      <div class="card-head"><span class="num">Pg 396 #79</span><span class="kind">Sum → Product</span></div>
+      <div class="problem">Use the sum-to-product formulas to write the difference as a product: $\cos\left(\theta + \frac{\pi}{2}\right) - \cos\left(\theta - \frac{\pi}{2}\right)$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Sum-to-product: $\cos u - \cos v = -2\sin\left(\frac{u + v}{2}\right)\sin\left(\frac{u - v}{2}\right)$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \frac{u + v}{2} = \frac{2\theta}{2} = \theta, \qquad \frac{u - v}{2} = \frac{\pi}{2}$</div>
+<div class="step">$\displaystyle \cos\left(\theta + \frac{\pi}{2}\right) - \cos\left(\theta - \frac{\pi}{2}\right) = -2\sin\theta\sin\frac{\pi}{2} = -2\sin\theta$</div>
+<p class="step-text">The book writes the answer as $-2\sin\theta\sin\frac{\pi}{2}$; since $\sin\frac{\pi}{2} = 1$, it equals $-2\sin\theta$.</p>
+        <div class="answer">$\displaystyle -2\sin\theta\sin\frac{\pi}{2} = -2\sin\theta$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-69">
+      <div class="card-head"><span class="num">Pg 395 #69</span><span class="kind">Product → Sum</span></div>
+      <div class="problem">Use the product-to-sum formulas to write the product as a sum or difference: $\sin(x + y)\sin(x - y)$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Product-to-sum: $\sin u\sin v = \frac{1}{2}\big[\cos(u - v) - \cos(u + v)\big]$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle u - v = (x + y) - (x - y) = 2y, \qquad u + v = (x + y) + (x - y) = 2x$</div>
+<div class="step">$\displaystyle \sin(x + y)\sin(x - y) = \frac{1}{2}(\cos 2y - \cos 2x)$</div>
+        <div class="answer">$\displaystyle \frac{1}{2}(\cos 2y - \cos 2x)$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article>
+    <article class="card" id="p394-25">
+      <div class="card-head"><span class="num">Pg 394 #25</span><span class="kind">Power Reducing (do #25 OR #27)</span></div>
+      <div class="problem">Rewrite the expression in terms of the first power of the cosine: $\sin^2 x\cos^2 x$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Power reducing: $\sin^2 u = \frac{1 - \cos 2u}{2}$, $\ \cos^2 u = \frac{1 + \cos 2u}{2}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \sin^2 x\cos^2 x = \frac{1 - \cos 2x}{2}\cdot\frac{1 + \cos 2x}{2} = \frac{1 - \cos^2 2x}{4}$</div>
+<p class="step-text">$\cos^2 2x$ is still squared, so power-reduce again: $\cos^2 2x = \frac{1 + \cos 4x}{2}$.</p>
+<div class="step">$\displaystyle = \frac{1}{4}\left(1 - \frac{1 + \cos 4x}{2}\right) = \frac{1}{4}\cdot\frac{1 - \cos 4x}{2} = \frac{1}{8}(1 - \cos 4x)$</div>
+        <div class="answer">$\displaystyle \frac{1}{8}(1 - \cos 4x)$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p394-27">
+      <div class="card-head"><span class="num">Pg 394 #27</span><span class="kind">Power Reducing (do #25 OR #27)</span></div>
+      <div class="problem">Rewrite the expression in terms of the first power of the cosine: $\sin^2 x\cos^4 x$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Power reducing: $\sin^2 u = \frac{1 - \cos 2u}{2}$, $\ \cos^2 u = \frac{1 + \cos 2u}{2}$. Product-to-sum: $\cos u\cos v = \frac{1}{2}\big[\cos(u - v) + \cos(u + v)\big]$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \sin^2 x\cos^4 x = (\sin^2 x\cos^2 x)\cos^2 x = \frac{1 - \cos 4x}{8}\cdot\frac{1 + \cos 2x}{2}$</div>
+<p class="step-text">The first factor comes from #25.</p>
+<div class="step">$\displaystyle = \frac{1 + \cos 2x - \cos 4x - \cos 2x\cos 4x}{16}$</div>
+<p class="step-text">Product-to-sum on the last term: $\cos 2x\cos 4x = \frac{1}{2}(\cos 2x + \cos 6x)$.</p>
+<div class="step">$\displaystyle = \frac{1 + \frac{1}{2}\cos 2x - \cos 4x - \frac{1}{2}\cos 6x}{16} = \frac{1}{32}(2 + \cos 2x - 2\cos 4x - \cos 6x)$</div>
+        <div class="answer">$\displaystyle \frac{1}{32}(2 + \cos 2x - 2\cos 4x - \cos 6x)$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article></div></section><section class="cat" id="sec3"><h2>Section 3: Using Identities and Triangles</h2><p class="idea">Draw the triangle in the given quadrant, find the missing side, then use the formula.</p><div class="grid">
+    <article class="card" id="p384-41">
+      <div class="card-head"><span class="num">Pg 384 #41</span><span class="kind">Sum/Diff</span></div>
+      <div class="problem">Find the exact value of $\sin(v - u)$, given that $\sin u = -\frac{8}{17}$ and $\cos v = -\frac{4}{5}$. (Both $u$ and $v$ are in Quadrant III.)</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin(u \pm v) = \sin u\cos v \pm \cos u\sin v$, $\ \cos(u \pm v) = \cos u\cos v \mp \sin u\sin v$, $\ \tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u\tan v}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Triangle for $u$ (QIII): opposite $-8$, hypotenuse $17$, so adjacent $= -\sqrt{17^2 - 8^2} = -15$ and $\cos u = -\frac{15}{17}$.</p>
+<p class="step-text">Triangle for $v$ (QIII): adjacent $-4$, hypotenuse $5$, so opposite $= -\sqrt{5^2 - 4^2} = -3$ and $\sin v = -\frac{3}{5}$.</p>
+<div class="step">$\displaystyle \sin(v - u) = \sin v\cos u - \cos v\sin u$</div>
+<div class="step">$\displaystyle = \left(-\frac{3}{5}\right)\left(-\frac{15}{17}\right) - \left(-\frac{4}{5}\right)\left(-\frac{8}{17}\right) = \frac{45}{85} - \frac{32}{85} = \frac{13}{85}$</div>
+        <div class="answer">$\displaystyle \sin(v - u) = \frac{13}{85}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-37a">
+      <div class="card-head"><span class="num">Pg 395 #37a</span><span class="kind">Half Angle</span></div>
+      <div class="problem">Use the figure to find the exact value of (a) $\cos\frac{\theta}{2}$.</div>
+      <figure><svg viewBox="0 0 260 140" class="fig" role="img" aria-label="Right triangle: theta at left, adjacent side 15, opposite side 8">
+      <polygon points="20,115 230,115 230,30" fill="none" stroke="currentColor" stroke-width="2"/>
+      <polyline points="218,115 218,103 230,103" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="125" y="134" text-anchor="middle" font-size="15" fill="currentColor">15</text>
+      <text x="242" y="78" font-size="15" fill="currentColor">8</text>
+      <text x="52" y="110" font-size="15" font-style="italic" fill="currentColor">θ</text>
+    </svg><figcaption>Figure redrawn from the textbook (not to scale).</figcaption></figure>
+      <div class="formula"><b>Formula used:</b> $\sin\frac{u}{2} = \pm\sqrt{\frac{1 - \cos u}{2}}$, $\ \cos\frac{u}{2} = \pm\sqrt{\frac{1 + \cos u}{2}}$, $\ \tan\frac{u}{2} = \frac{1 - \cos u}{\sin u}$. The sign comes from the quadrant of $\frac{u}{2}$.</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Hypotenuse: $\sqrt{8^2 + 15^2} = \sqrt{289} = 17$. The side adjacent to $\theta$ is $15$, so $\cos\theta = \frac{15}{17}$.</p>
+<p class="step-text">$\theta$ is acute, so $\frac{\theta}{2}$ is acute and its cosine is positive.</p>
+<div class="step">$\displaystyle \cos\frac{\theta}{2} = \sqrt{\frac{1 + \frac{15}{17}}{2}} = \sqrt{\frac{\frac{32}{17}}{2}} = \sqrt{\frac{16}{17}} = \frac{4}{\sqrt{17}} = \frac{4\sqrt{17}}{17}$</div>
+        <div class="answer">$\displaystyle \cos\frac{\theta}{2} = \frac{4\sqrt{17}}{17}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-49">
+      <div class="card-head"><span class="num">Pg 395 #49</span><span class="kind">Half Angle</span></div>
+      <div class="problem">Find the exact values of $\sin\frac{u}{2}$, $\cos\frac{u}{2}$, and $\tan\frac{u}{2}$, given $\tan u = -\frac{8}{5}$, $\frac{3\pi}{2} < u < 2\pi$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin\frac{u}{2} = \pm\sqrt{\frac{1 - \cos u}{2}}$, $\ \cos\frac{u}{2} = \pm\sqrt{\frac{1 + \cos u}{2}}$, $\ \tan\frac{u}{2} = \frac{1 - \cos u}{\sin u}$. The sign comes from the quadrant of $\frac{u}{2}$.</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Triangle for $u$ (QIV): opposite $-8$, adjacent $5$, hypotenuse $\sqrt{64 + 25} = \sqrt{89}$. So $\sin u = -\frac{8}{\sqrt{89}}$ and $\cos u = \frac{5}{\sqrt{89}}$.</p>
+<p class="step-text">Quadrant of $\frac{u}{2}$: divide $\frac{3\pi}{2} < u < 2\pi$ by $2$ to get $\frac{3\pi}{4} < \frac{u}{2} < \pi$, which is QII. Sine is positive and cosine is negative.</p>
+<div class="step">$\displaystyle \sin\frac{u}{2} = +\sqrt{\frac{1 - \frac{5}{\sqrt{89}}}{2}} = \sqrt{\frac{\sqrt{89} - 5}{2\sqrt{89}}} = \sqrt{\frac{89 - 5\sqrt{89}}{178}}$</div>
+<div class="step">$\displaystyle \cos\frac{u}{2} = -\sqrt{\frac{1 + \frac{5}{\sqrt{89}}}{2}} = -\sqrt{\frac{89 + 5\sqrt{89}}{178}}$</div>
+<div class="step">$\displaystyle \tan\frac{u}{2} = \frac{1 - \cos u}{\sin u} = \frac{1 - \frac{5}{\sqrt{89}}}{-\frac{8}{\sqrt{89}}} = \frac{\sqrt{89} - 5}{-8} = \frac{5 - \sqrt{89}}{8}$</div>
+        <div class="answer">$\displaystyle \sin\frac{u}{2} = \sqrt{\frac{89 - 5\sqrt{89}}{178}}, \quad \cos\frac{u}{2} = -\sqrt{\frac{89 + 5\sqrt{89}}{178}}, \quad \tan\frac{u}{2} = \frac{5 - \sqrt{89}}{8}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article>
+    <article class="card" id="p394-17">
+      <div class="card-head"><span class="num">Pg 394 #17</span><span class="kind">Double Angle</span></div>
+      <div class="problem">Find the exact values of $\sin 2u$, $\cos 2u$, and $\tan 2u$ using the double-angle formulas, given $\sec u = -\frac{5}{2}$, $\frac{\pi}{2} < u < \pi$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin 2u = 2\sin u\cos u$, $\ \cos 2u = \cos^2 u - \sin^2 u = 2\cos^2 u - 1 = 1 - 2\sin^2 u$, $\ \tan 2u = \frac{2\tan u}{1 - \tan^2 u}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">$\cos u = \frac{1}{\sec u} = -\frac{2}{5}$. Triangle for $u$ (QII): adjacent $-2$, hypotenuse $5$, so opposite $= \sqrt{25 - 4} = \sqrt{21}$ and $\sin u = \frac{\sqrt{21}}{5}$.</p>
+<div class="step">$\displaystyle \sin 2u = 2\sin u\cos u = 2\cdot\frac{\sqrt{21}}{5}\cdot\left(-\frac{2}{5}\right) = -\frac{4\sqrt{21}}{25}$</div>
+<div class="step">$\displaystyle \cos 2u = 2\cos^2 u - 1 = 2\cdot\frac{4}{25} - 1 = -\frac{17}{25}$</div>
+<div class="step">$\displaystyle \tan 2u = \frac{\sin 2u}{\cos 2u} = \frac{-\frac{4\sqrt{21}}{25}}{-\frac{17}{25}} = \frac{4\sqrt{21}}{17}$</div>
+        <div class="answer">$\displaystyle \sin 2u = -\frac{4\sqrt{21}}{25}, \quad \cos 2u = -\frac{17}{25}, \quad \tan 2u = \frac{4\sqrt{21}}{17}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p395-38h">
+      <div class="card-head"><span class="num">Pg 395 #38h</span><span class="kind">Double Angle</span></div>
+      <div class="problem">Use the figure to find the exact value of (h) $\cos 2\theta$.</div>
+      <figure><svg viewBox="0 0 290 140" class="fig" role="img" aria-label="Right triangle: legs 24 along the bottom and 7 on the right side, theta at the top vertex">
+      <polygon points="20,115 260,115 260,45" fill="none" stroke="currentColor" stroke-width="2"/>
+      <polyline points="248,115 248,103 260,103" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="140" y="134" text-anchor="middle" font-size="15" fill="currentColor">24</text>
+      <text x="270" y="85" font-size="15" fill="currentColor">7</text>
+      <text x="238" y="66" font-size="15" font-style="italic" fill="currentColor">θ</text>
+    </svg><figcaption>Figure redrawn from the textbook (not to scale).</figcaption></figure>
+      <div class="formula"><b>Formula used:</b> $\sin 2u = 2\sin u\cos u$, $\ \cos 2u = \cos^2 u - \sin^2 u = 2\cos^2 u - 1 = 1 - 2\sin^2 u$, $\ \tan 2u = \frac{2\tan u}{1 - \tan^2 u}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Hypotenuse: $\sqrt{7^2 + 24^2} = \sqrt{625} = 25$. In the figure, $\theta$ is at the top vertex, so the side adjacent to $\theta$ is $7$ and the opposite side is $24$.</p>
+<div class="step">$\displaystyle \cos\theta = \frac{7}{25}, \qquad \sin\theta = \frac{24}{25}$</div>
+<div class="step">$\displaystyle \cos 2\theta = \cos^2\theta - \sin^2\theta = \frac{49}{625} - \frac{576}{625} = -\frac{527}{625}$</div>
+<p class="step-text">#38 is even, so the book has no answer for it. Check your figure: if $\theta$ were opposite the side of length 7, the answer would be $+\frac{527}{625}$.</p>
+        <div class="answer">$\displaystyle \cos 2\theta = -\frac{527}{625}$</div>
+        <div class="booknote"><span class="book even">Even number: no book answer</span></div>
+      </details>
+    </article></div></section><section class="cat" id="sec4"><h2>Section 4: Rewrite in Terms of $x$ and Composites</h2><p class="idea">Let each inverse function be an angle, draw its right triangle, then expand.</p><div class="grid">
+    <article class="card" id="p385-45">
+      <div class="card-head"><span class="num">Pg 385 #45</span><span class="kind">Sum/Diff</span></div>
+      <div class="problem">Write the trigonometric expression as an algebraic expression: $\sin(\arctan 2x - \arccos x)$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin(u \pm v) = \sin u\cos v \pm \cos u\sin v$, $\ \cos(u \pm v) = \cos u\cos v \mp \sin u\sin v$, $\ \tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u\tan v}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Let $u = \arctan 2x$: opposite $2x$, adjacent $1$, hypotenuse $\sqrt{4x^2 + 1}$. So $\sin u = \frac{2x}{\sqrt{4x^2 + 1}}$ and $\cos u = \frac{1}{\sqrt{4x^2 + 1}}$.</p>
+<p class="step-text">Let $v = \arccos x$: adjacent $x$, hypotenuse $1$, opposite $\sqrt{1 - x^2}$. So $\cos v = x$ and $\sin v = \sqrt{1 - x^2}$.</p>
+<div class="step">$\displaystyle \sin(u - v) = \sin u\cos v - \cos u\sin v = \frac{2x}{\sqrt{4x^2 + 1}}\cdot x - \frac{1}{\sqrt{4x^2 + 1}}\cdot\sqrt{1 - x^2}$</div>
+<div class="step">$\displaystyle = \frac{2x^2 - \sqrt{1 - x^2}}{\sqrt{4x^2 + 1}}$</div>
+        <div class="answer">$\displaystyle \frac{2x^2 - \sqrt{1 - x^2}}{\sqrt{4x^2 + 1}}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p385-61">
+      <div class="card-head"><span class="num">Pg 385 #61</span><span class="kind">Sum/Diff</span></div>
+      <div class="problem">Use right triangles to evaluate the expression: $\sin\left(\tan^{-1}\frac{3}{4} + \sin^{-1}\frac{3}{5}\right)$.</div>
+      
+      <div class="formula"><b>Formula used:</b> $\sin(u \pm v) = \sin u\cos v \pm \cos u\sin v$, $\ \cos(u \pm v) = \cos u\cos v \mp \sin u\sin v$, $\ \tan(u \pm v) = \frac{\tan u \pm \tan v}{1 \mp \tan u\tan v}$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Let $u = \tan^{-1}\frac{3}{4}$: opposite $3$, adjacent $4$, hypotenuse $5$. So $\sin u = \frac{3}{5}$ and $\cos u = \frac{4}{5}$.</p>
+<p class="step-text">Let $v = \sin^{-1}\frac{3}{5}$: opposite $3$, hypotenuse $5$, adjacent $4$. So $\sin v = \frac{3}{5}$ and $\cos v = \frac{4}{5}$.</p>
+<div class="step">$\displaystyle \sin(u + v) = \sin u\cos v + \cos u\sin v = \frac{3}{5}\cdot\frac{4}{5} + \frac{4}{5}\cdot\frac{3}{5} = \frac{24}{25}$</div>
+        <div class="answer">$\displaystyle \frac{24}{25}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A210</span></div>
+      </details>
+    </article>
+    <article class="card" id="p396-115">
+      <div class="card-head"><span class="num">Pg 396 #115</span><span class="kind">Double Angle</span></div>
+      <div class="problem">Write the trigonometric expression as an algebraic expression: $\sin(2\arcsin x)$.</div>
+      
+      <div class="formula"><b>Formula used:</b> Double angle: $\sin 2u = 2\sin u\cos u$</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <p class="step-text">Let $u = \arcsin x$: opposite $x$, hypotenuse $1$, adjacent $\sqrt{1 - x^2}$. So $\sin u = x$ and $\cos u = \sqrt{1 - x^2}$.</p>
+<div class="step">$\displaystyle \sin(2\arcsin x) = \sin 2u = 2\sin u\cos u = 2x\sqrt{1 - x^2}$</div>
+        <div class="answer">$\displaystyle 2x\sqrt{1 - x^2}$</div>
+        <div class="booknote"><span class="book">✔ Book answer A211</span></div>
+      </details>
+    </article></div></section>
+
+<footer>
+  Problems are copied from the textbook (Larson Precalculus, Chapter 5, pages 384–396) as listed in the Worksheet B “Required” column. Each odd-numbered answer matches the textbook’s Answers to Odd-Numbered Exercises (pages A209–A211). #38h is even and was checked against the figure. Every answer and every formula on this page was also checked numerically. Math is typeset with KaTeX using its own fonts.
+</footer>
+</div>
+</body>
+</html>
