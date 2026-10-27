@@ -33,6 +33,7 @@
   .lvl { font-size:.75rem; font-weight:700; padding:2px 8px; border-radius:999px; }
   .lvl1 { background:var(--greenbg); color:var(--green); }
   .lvl2 { background:var(--amberbg); color:var(--amber); }
+  .lvl3 { background:#f3e8fd; color:#8430ce; }
   .problem { font-size:1.08rem; margin:6px 0 8px; }
   .formula { font-size:.9rem; color:var(--muted); border-left:3px solid var(--blue); padding-left:10px; margin-bottom:8px; }
   details.sol summary { cursor:pointer; color:var(--blue); font-weight:700; }
@@ -49,12 +50,12 @@
 <header>
   <div class="bar"><a href="quiz-10-27.html">← Unit 4 Quiz portal</a><a href="docs/APPCU04_WkstA_SolveTrigEquationsPractice_2025.pdf">Worksheet A PDF</a></div>
   <h1>Worksheet A Solutions: Levels 1 and 2</h1>
-  <p class="sub">AP Precalculus Unit 4 · Solving Trig Equations (STE) · all 30 Level 1 and Level 2 problems, the scope of the Tue 10/27 quiz</p>
+  <p class="sub">AP Precalculus Unit 4 · Solving Trig Equations (STE) · all 30 Level 1 and Level 2 problems (the scope of the Tue 10/27 quiz), plus Level 3 #61 and #62 as extra practice</p>
 </header>
 
 <div class="note"><b>Interval:</b> Worksheet A says to solve every equation on $[0, 2\pi]$, a closed interval. When $x = 0$ is a solution, $x = 2\pi$ is one too. On the quiz, use the interval printed on each problem. <b>How to study:</b> try each problem on paper first, then open “Show steps and answer”.</div>
 
-<div class="bar"><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=true)">Show all solutions</button><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=false)">Hide all solutions</button><a href="#cat1">Category 1</a> <a href="#cat2">Category 2</a> <a href="#cat3">Category 3</a> <a href="#cat5">Category 5</a></div>
+<div class="bar"><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=true)">Show all solutions</button><button onclick="document.querySelectorAll('details.sol').forEach(d=>d.open=false)">Hide all solutions</button><a href="#cat1">Category 1</a> <a href="#cat2">Category 2</a> <a href="#cat3">Category 3</a> <a href="#cat5">Category 5</a> <a href="#cat6">Category 6</a></div>
 
 <div class="ref">
   <b>Unit circle values you need</b> (QI; use the reference angle and the quadrant sign for other angles)
@@ -428,10 +429,43 @@
         <div class="answer">$\displaystyle x = 0,\ \frac{\pi}{3},\ \frac{2\pi}{3},\ \pi,\ \frac{4\pi}{3},\ \frac{5\pi}{3},\ 2\pi$</div>
       </details>
     </article></div>
+</section><section class="cat" id="cat6"><h2>Category 6: Higher Order Identities (Level 3, extra practice)</h2><p class="idea">Not in the quiz's stated scope (STE Levels 1–2), but these use the same sum-to-product formulas as Worksheet B. Level 3 also asks for the general solutions.</p>
+<h3>Level 3</h3><div class="grid">
+    <article class="card" id="p61">
+      <div class="card-head"><span class="num">#61</span><span class="lvl lvl3">Level 3 (5 pts)</span></div>
+      <div class="problem">Solve on $[0, 2\pi]$: &nbsp; $\displaystyle \sin 4x - \sin 2x = 0$</div>
+      <div class="formula"><b>Formula / idea used:</b> Sum-to-product: $\sin u - \sin v = 2\cos\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)$ and $\sin u + \sin v = 2\sin\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)$. Zero-product property: if $AB = 0$, then $A = 0$ or $B = 0$.</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \sin 4x - \sin 2x = 2\cos\left(\frac{4x + 2x}{2}\right)\sin\left(\frac{4x - 2x}{2}\right) = 2\cos 3x\,\sin x = 0$</div>
+<p class="step-text">Factor 1: $\cos 3x = 0$. Since $0 \le 3x \le 6\pi$, $3x = \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \frac{7\pi}{2}, \frac{9\pi}{2}, \frac{11\pi}{2}$.</p>
+<div class="step">$\displaystyle x = \frac{\pi}{6},\ \frac{\pi}{2},\ \frac{5\pi}{6},\ \frac{7\pi}{6},\ \frac{3\pi}{2},\ \frac{11\pi}{6}$</div>
+<p class="step-text">Factor 2: $\sin x = 0$.</p>
+<div class="step">$\displaystyle x = 0,\ \pi,\ 2\pi$</div>
+<p class="step-text">General solutions (minimum number): $x = k\pi$ and $x = \frac{\pi}{6} + \frac{k\pi}{3}$, where $k$ is any integer.</p>
+<p class="step-text">Check another way: $\sin 4x = 2\sin 2x\cos 2x$ gives $\sin 2x\,(2\cos 2x - 1) = 0$, the same nine answers.</p>
+        <div class="answer">$\displaystyle x = 0,\ \frac{\pi}{6},\ \frac{\pi}{2},\ \frac{5\pi}{6},\ \pi,\ \frac{7\pi}{6},\ \frac{3\pi}{2},\ \frac{11\pi}{6},\ 2\pi$</div>
+      </details>
+    </article>
+    <article class="card" id="p62">
+      <div class="card-head"><span class="num">#62</span><span class="lvl lvl3">Level 3 (5 pts)</span></div>
+      <div class="problem">Solve on $[0, 2\pi]$: &nbsp; $\displaystyle \sin 6x + \sin 2x = 0$</div>
+      <div class="formula"><b>Formula / idea used:</b> Sum-to-product: $\sin u - \sin v = 2\cos\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)$ and $\sin u + \sin v = 2\sin\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)$. Zero-product property: if $AB = 0$, then $A = 0$ or $B = 0$.</div>
+      <details class="sol">
+        <summary>Show steps and answer</summary>
+        <div class="step">$\displaystyle \sin 6x + \sin 2x = 2\sin\left(\frac{6x + 2x}{2}\right)\cos\left(\frac{6x - 2x}{2}\right) = 2\sin 4x\,\cos 2x = 0$</div>
+<p class="step-text">Factor 1: $\sin 4x = 0$. Since $0 \le 4x \le 8\pi$, $4x = 0, \pi, 2\pi, \dots, 8\pi$.</p>
+<div class="step">$\displaystyle x = 0,\ \frac{\pi}{4},\ \frac{\pi}{2},\ \frac{3\pi}{4},\ \pi,\ \frac{5\pi}{4},\ \frac{3\pi}{2},\ \frac{7\pi}{4},\ 2\pi$</div>
+<p class="step-text">Factor 2: $\cos 2x = 0$. Since $0 \le 2x \le 4\pi$, $2x = \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \frac{7\pi}{2}$.</p>
+<div class="step">$\displaystyle x = \frac{\pi}{4},\ \frac{3\pi}{4},\ \frac{5\pi}{4},\ \frac{7\pi}{4} \quad (\text{already in the first list})$</div>
+<p class="step-text">General solution (minimum number): $x = \frac{k\pi}{4}$, where $k$ is any integer. The $\cos 2x = 0$ solutions are already included.</p>
+        <div class="answer">$\displaystyle x = 0,\ \frac{\pi}{4},\ \frac{\pi}{2},\ \frac{3\pi}{4},\ \pi,\ \frac{5\pi}{4},\ \frac{3\pi}{2},\ \frac{7\pi}{4},\ 2\pi$</div>
+      </details>
+    </article></div>
 </section>
 
 <footer>
-  Problems copied from Worksheet A (APPCU04, updated September 2025), Levels 1–2 only. Every answer was checked numerically: each listed value satisfies its equation, and a search of $[0, 2\pi]$ found no missing solutions. Math is typeset with KaTeX using its own fonts.
+  Problems copied from Worksheet A (APPCU04, updated September 2025): all of Levels 1–2, plus Level 3 #61 and #62. For #61 and #62, the general solutions were also checked to produce exactly the listed answers on $[0, 2\pi]$. Every answer was checked numerically: each listed value satisfies its equation, and a search of $[0, 2\pi]$ found no missing solutions. Math is typeset with KaTeX using its own fonts.
 </footer>
 </div>
 </body>
